@@ -1,0 +1,161 @@
+//  1) Rotdamping causes a decay over time.  Should not be used excessively because it also effects gravity.
+//  2) Use friction instead.  Effects the same thing on the bones themselves but through a limit.
+//     Does not decay, just reduces the energy.  Anything below the friction limit will not move.
+//     Gravity not effected as this is only a limit on the bones.
+//  3) Check to see that the animations from which a ragdoll most frequently spawn on are not already in a position
+//     beyond the ragdolls limits or penetrating.  If they are, they will snap to within the clamp limits or be
+//     ejected out of whichever bone they are stuck within.
+
+
+$surfaceprop "flesh"
+
+$collisionjoints "../parts/dmx/mercenary_ragdoll.dmx" {
+
+	$mass       100.0
+	$inertia    10.00
+	$damping    0
+	$rotdamping 0
+	$rootbone   "bip_pelvis"
+
+	$jointmassbias "bip_pelvis" 1.00
+
+	$jointmassbias "bip_spine_2" 1.60
+	$jointrotdamping "bip_spine_2" 10
+	$jointconstrain "bip_spine_2" x limit -30.00 15.00 0.00
+	$jointconstrain "bip_spine_2" y limit -16.00 16.00 0.00
+	$jointconstrain "bip_spine_2" z limit -10.00 10.00 0.00
+
+	$jointmassbias "bip_spine_0" 1.20
+	$jointrotdamping "bip_spine_0" 15
+	$jointconstrain "bip_spine_0" x limit -30.00 15.00 0.00
+	$jointconstrain "bip_spine_0" y limit -16.00 16.00 0.00
+	$jointconstrain "bip_spine_0" z limit -15.00 15.00 0.00
+
+	$jointmassbias "bip_upperarm_r" 0.80
+	$jointrotdamping "bip_upperarm_r" 16
+	$jointconstrain "bip_upperarm_r" x limit -50.00 40.00 0.00
+	$jointconstrain "bip_upperarm_r" y limit -32.00 55.00 0.00
+	$jointconstrain "bip_upperarm_r" z limit -80.00 25.00 0.00
+
+	$jointmassbias "bip_lowerArm_r" 1.80
+	$jointrotdamping "bip_lowerArm_r" 4
+	$jointconstrain "bip_lowerArm_r" x limit 0.00 0.00 0.00
+	$jointconstrain "bip_lowerArm_r" y limit 0.00 0.00 0.00
+	$jointconstrain "bip_lowerArm_r" z limit -120.00 -6.00 0.00
+
+	$jointmassbias "bip_hand_r" 0.60
+	$jointrotdamping "bip_hand_r" 8
+	$jointconstrain "bip_hand_r" x limit -37.00 30.00 0.00
+	$jointconstrain "bip_hand_r" y limit -8.00 12.00 0.00
+	$jointconstrain "bip_hand_r" z limit -35.00 20.00 0.00
+
+	$jointmassbias "bip_upperarm_l" 0.80
+	$jointrotdamping "bip_upperarm_l" 16
+	$jointconstrain "bip_upperarm_l" x limit -40.00 50.00 0.00
+	$jointconstrain "bip_upperarm_l" y limit -55.00 32.00 0.00
+	$jointconstrain "bip_upperarm_l" z limit -80.00 25.00 0.00
+
+	$jointmassbias "bip_lowerArm_l" 1.80
+	$jointrotdamping "bip_lowerArm_l" 4
+	$jointconstrain "bip_lowerArm_l" x limit 0.00 0.00 0.00
+	$jointconstrain "bip_lowerArm_l" y limit 0.00 0.00 0.00
+	$jointconstrain "bip_lowerArm_l" z limit -120.00 -6.00 0.00
+
+	$jointmassbias "bip_hand_l" 0.60
+	$jointrotdamping "bip_hand_l" 8
+	$jointconstrain "bip_hand_l" x limit -30.00 37.00 0.00
+	$jointconstrain "bip_hand_l" y limit -12.00 8.00 0.00
+	$jointconstrain "bip_hand_l" z limit -20.00 35.00 0.00
+
+	$jointmassbias "bip_head" 1.50
+	$jointrotdamping "bip_head" 8
+	$jointconstrain "bip_head" x limit -20.00 20.00 0.00
+	$jointconstrain "bip_head" y limit -20.00 20.00 0.00
+	$jointconstrain "bip_head" z limit -20.00 20.00 0.00
+
+	$jointmassbias "bip_neck" 0.50
+	$jointrotdamping "bip_neck" 9
+	$jointconstrain "bip_neck" x limit -20.00 20.00 0.00
+	$jointconstrain "bip_neck" y limit -20.00 20.00 0.00
+	$jointconstrain "bip_neck" z limit -15.00 15.00 0.00
+
+	$jointmassbias "bip_hip_r" 0.80
+	$jointrotdamping "bip_hip_r" 4
+	$jointconstrain "bip_hip_r" x limit -12.00 12.00 0.00
+	$jointconstrain "bip_hip_r" y limit -12.00 30.00 0.00
+	$jointconstrain "bip_hip_r" z limit -50.00 24.00 0.00
+
+	$jointmassbias "bip_knee_r" 1.20
+	$jointrotdamping "bip_knee_r" 9
+	$jointconstrain "bip_knee_r" x limit 0.00 0.00 0.00
+	$jointconstrain "bip_knee_r" y limit -12.00 100.00 0.00
+	$jointconstrain "bip_knee_r" z limit 0.00 0.00 0.00
+
+	$jointmassbias "bip_foot_r" 0.75
+	$jointrotdamping "bip_foot_r" 7
+	$jointconstrain "bip_foot_r" x limit -30.00 45.00 0.00
+	$jointconstrain "bip_foot_r" y limit -19.00 25.00 0.00
+	$jointconstrain "bip_foot_r" z limit -25.00 24.00 0.00
+
+	$jointmassbias "bip_hip_l" 0.80
+	$jointrotdamping "bip_hip_l" 4
+	$jointconstrain "bip_hip_l" x limit -12.00 12.00 0.00
+	$jointconstrain "bip_hip_l" y limit -12.00 30.00 0.00
+	$jointconstrain "bip_hip_l" z limit -24.00 50.00 0.00
+
+	$jointmassbias "bip_knee_l" 1.20
+	$jointrotdamping "bip_knee_l" 9
+	$jointconstrain "bip_knee_l" x limit 0.00 0.00 0.00
+	$jointconstrain "bip_knee_l" y limit -12.00 100.00 0.00
+	$jointconstrain "bip_knee_l" z limit 0.00 0.00 0.00
+
+	$jointmassbias "bip_foot_l" 0.75
+	$jointrotdamping "bip_foot_l" 7
+	$jointconstrain "bip_foot_l" x limit -30.00 45.00 0.00
+	$jointconstrain "bip_foot_l" y limit -19.00 25.00 0.00
+	$jointconstrain "bip_foot_l" z limit -25.00 24.00 0.00
+
+//	$jointcollide is used to expressly define which joints will collide with which other joints.  Only what is defined will collide.
+
+	$jointcollide "bip_upperarm_l" "bip_spine_2"
+
+	$jointcollide "bip_lowerArm_l" "bip_hip_l"
+	$jointcollide "bip_lowerArm_l" "bip_pelvis"
+	$jointcollide "bip_lowerArm_l" "bip_spine_2"
+	$jointcollide "bip_lowerArm_l" "bip_head"
+	$jointcollide "bip_lowerArm_l" "bip_lowerArm_r"
+	$jointcollide "bip_lowerArm_l" "bip_hand_r"
+
+	$jointcollide "bip_hand_l" "bip_hip_l"
+	$jointcollide "bip_hand_l" "bip_pelvis"
+	$jointcollide "bip_hand_l" "bip_spine_2"
+	$jointcollide "bip_hand_l" "bip_head"
+	$jointcollide "bip_hand_l" "bip_hand_r"
+
+	$jointcollide "bip_upperarm_r" "bip_spine_2"
+
+	$jointcollide "bip_lowerArm_r" "bip_hip_r"
+	$jointcollide "bip_lowerArm_r" "bip_pelvis"
+	$jointcollide "bip_lowerArm_r" "bip_spine_2"
+	$jointcollide "bip_lowerArm_r" "bip_head"
+
+	$jointcollide "bip_hand_r" "bip_hip_r"
+	$jointcollide "bip_hand_r" "bip_pelvis"
+	$jointcollide "bip_hand_r" "bip_spine_2"
+	$jointcollide "bip_hand_r" "bip_head"
+
+	$jointcollide "bip_hip_r" "bip_hip_l"
+	$jointcollide "bip_hip_r" "bip_knee_l"
+	$jointcollide "bip_hip_r" "bip_foot_l"
+
+	$jointcollide "bip_knee_r" "bip_hip_l"
+	$jointcollide "bip_knee_r" "bip_knee_l"
+	$jointcollide "bip_knee_r" "bip_foot_l"
+
+	$jointcollide "bip_foot_r" "bip_hip_l"
+	$jointcollide "bip_foot_r" "bip_knee_l"
+	$jointcollide "bip_foot_r" "bip_foot_l"
+
+}
+
+$sequence ragdoll "../parts/dmx/mercenary_ragdoll.dmx" FPS 30 activity ACT_DIERAGDOLL 1

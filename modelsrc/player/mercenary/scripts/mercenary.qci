@@ -1,0 +1,166 @@
+// defining the upaxis is needed for maya exports
+$upaxis Y
+
+$eyeposition 0 78.62 0
+
+$attachment "eyes" "bip_head" 0 -3.42 -4.19 rotate 89.73 -90 0
+$attachment "righteye" "bip_head" -1.24 -3.42 -4.19 rotate 89.73 -90 0
+$attachment "lefteye" "bip_head" 1.24 -3.42 -4.19 rotate 89.73 -90 0
+$attachment "back_lower" "bip_spine_0" 0 0 0 rotate 0 0 0
+$attachment "foot_L" "bip_foot_L" 0 0 0 rotate 0 0 0
+$attachment "foot_R" "bip_foot_R" 0 0 0 rotate 0 0 0
+$attachment "partyhat" "bip_head" 1.3 -8.97 -1.49 rotate 84 90 161
+$attachment "head" "bip_head" 0 -8.97 -0.49 rotate 87.52 -90 0
+$attachment "eyeglow_L" "bip_head" 1.52 -2.34 -5.49 rotate 57.22 38.68 133.6
+$attachment "eyeglow_R" "bip_head" -1.52 -2.34 -5.49 rotate 57.22 141.32 -133.6
+//$attachment "weapon_bone_L" "weapon_bone_L" 0 0 0 rotate 0 0 0
+$attachment "effect_hand_L" "bip_hand_L" 0 0 0 rotate 0 0 0
+//$attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0
+$attachment "handle_bone" "weapon_bone" 0 0 0 rotate 0 0 0
+//$attachment "weapon_bone_1" "weapon_bone_1" 0 0 0 rotate 0 0 0
+$attachment "effect_hand_R" "bip_hand_R" 0 0 0 rotate 0 0 0
+$attachment "flag" "bip_spine_3" 1.42 5.01 8.82 rotate -3.7 10.88 -10.1
+$attachment "prop_bone" "bip_pelvis" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_1" "bip_pelvis" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_2" "bip_pelvis" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_3" "bip_pelvis" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_4" "bip_pelvis" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_5" "bip_pelvis" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_6" "bip_pelvis" 0 0 0 rotate 0 0 0
+
+$model mercenary $dmxFile$ {
+
+	eyeball righteye "bip_head" -1.240000 78.3989 3.39525 "eyeball_r" 1.4  4 "pupil_r" 0.75
+	eyeball lefteye  "bip_head"  1.240000 78.3989 3.39525 "eyeball_l" 1.4 -4 "pupil_l" 0.75
+
+    // remove this once you have actual eyelids that the eyeballs can drive, or they'll by default be
+    // overwriting your first flex
+    localvar %dummy_eyelid_flex
+
+	flexcontroller right_CloseLid range -1 1 "right_CloseLid"
+	flexcontroller left_CloseLid range -1 1 "left_CloseLid"
+	flexcontroller multi_CloseLid range -1 1 "multi_CloseLid"
+	flexcontroller eyes range -45 45 "eyes_updown"
+	flexcontroller eyes range -45 45 "eyes_rightleft"
+//	flexcontroller scaredUpper range 0 1 "scaredUpper"
+}
+
+//rocket bodygroup for reloading
+$bodygroup rocket
+{
+	blank
+	studio "../parts/dmx/mercenary_rocket.dmx"
+}
+
+$sequence  ref    $dmxFile$
+
+// include the standard boneset
+$include "mercenary_definebones.qci"
+
+$surfaceprop "flesh"
+
+$BoneMerge "bip_pelvis"
+$BoneMerge "bip_spine_0"
+$BoneMerge "bip_spine_1"
+$BoneMerge "bip_spine_2"
+$BoneMerge "bip_spine_3"
+$BoneMerge "bip_collar_R"
+$BoneMerge "bip_upperArm_R"
+$BoneMerge "bip_lowerArm_R"
+$BoneMerge "bip_hand_R"
+$BoneMerge "bip_collar_L"
+$BoneMerge "bip_upperArm_L"
+$BoneMerge "bip_lowerArm_L"
+$BoneMerge "bip_hand_L"
+$BoneMerge "weapon_bone_L"
+$BoneMerge "weapon_bone"
+$BoneMerge "weapon_bone_1"
+
+// include the file that sets up the ikchains
+$include "ruleshierarchy.qci"
+
+// include the animations.mdl
+$includemodel "player/mercenary_animations.mdl"
+
+// include the ragdoll
+$include "mercenary_ragdoll.qci"
+
+// include the hitboxes
+$include "mercenary_hitbox.qci"
+
+// Materials and texturegroups
+$CDMaterials "models\player\mercenary\"
+$CDMaterials "models\player\soldier\"
+$CDMaterials "models\weapons\w_rocketlauncher\"
+$CDMaterials "\"
+
+$TextureGroup "skinfamilies"
+{
+	{ "mercenary_red" "mercenary_head_red" "eyeball_r" "eyeball_l" }
+	{ "mercenary_blue" "mercenary_head_blue" "eyeball_r" "eyeball_l" }
+	{ "..\..\effects\invulnfx_red" "..\..\effects\invulnfx_red" "eyeball_invun" "eyeball_invun" }
+	{ "..\..\effects\invulnfx_blue" "..\..\effects\invulnfx_blue" "eyeball_invun" "eyeball_invun" }
+	{ "mercenary_custom" "mercenary_head_custom" "eyeball_r" "eyeball_l" }
+	{ "..\..\effects\invulnfx_mercenary" "..\..\effects\invulnfx_mercenary" "eyeball_invun" "eyeball_invun" }
+	{ "mercenary_sport" "mercenary_head_sport" "eyeball_r" "eyeball_l" }
+	{ "..\..\effects\invulnfx_sport" "..\..\effects\invulnfx_sport" "eyeball_invun" "eyeball_invun" }
+}
+
+$collisiontext
+{
+	break 
+	{
+		"model" "player\gibs\mercenarygib007"
+		"health" "0"
+		"fadetime" "15"
+	}
+	break 
+	{
+		"model" "player\gibs\mercenarygib002"
+		"health" "0"
+		"fadetime" "15"
+	}
+	break 
+	{
+		"model" "player\gibs\mercenarygib003"
+		"health" "0"
+		"fadetime" "15"
+	}
+	break 
+	{
+		"model" "player\gibs\mercenarygib006"
+		"health" "0"
+		"fadetime" "15"
+	}
+	break 
+	{
+		"model" "player\gibs\random_organ"
+		"health" "0"
+		"fadetime" "15"
+	}
+	break 
+	{
+		"model" "player\gibs\mercenarygib001"
+		"health" "0"
+		"fadetime" "15"
+	}
+	break 
+	{
+		"model" "player\gibs\mercenarygib004"
+		"health" "0"
+		"fadetime" "15"
+	}
+	break 
+	{
+		"model" "player\gibs\mercenarygib005"
+		"health" "0"
+		"fadetime" "15"
+	}
+	break 
+	{
+		"model" "player\gibs\mercenarygib008"
+		"health" "0"
+		"fadetime" "15"
+	}
+}
+
