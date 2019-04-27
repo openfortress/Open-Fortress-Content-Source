@@ -6,6 +6,7 @@ $cdmaterials ""
 
 $include "../shared.qci"
 
+$attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "weapon_bone" 0 -7.76 57.76 rotate -90 0 0
 $attachment "eject_brass" "weapon_bone" -5.00 -8.76 25.76 rotate -45 163 90
 
@@ -21,6 +22,12 @@ $sequence "m_idle" "idle.smd" {
 $sequence "m_fire" "fire.smd" {
 	fps 30
 	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event 6002 0 "3" }
+	{ event 6002 3 "3" }
+	{ event 6002 6 "3" }
+	{ event 6002 9 "3" }
+	{ event 6002 12 "3" }
+	{ event 6002 15 "3" }
 	loop
 	snap
 	node "raised"
