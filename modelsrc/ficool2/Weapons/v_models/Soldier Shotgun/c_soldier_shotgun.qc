@@ -33,7 +33,7 @@ $sequence "fire" "fire.smd" {
 	node "raised"
 	{ event 5004 7 "Weapon_ShotgunEngineer.Cock_Back" }
 	{ event 5004 12 "Weapon_ShotgunEngineer.Cock_Forward" }
-	{ event 6002 13 "2" }
+	{ event 6002 13 "3" }
 }
 
 $sequence "reload_start" "reload_start.smd" {

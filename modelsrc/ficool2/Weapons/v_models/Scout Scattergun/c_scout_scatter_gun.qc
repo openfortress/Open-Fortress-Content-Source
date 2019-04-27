@@ -44,7 +44,7 @@ $sequence "sg_reload_loop" "reload_loop.smd" {
 	fadein 0.1
 	snap
 	{ event 5004 1 "Weapon_Scatter_Gun.Reload" }
-	{ event 6002 5 "4" }
+	{ event 6002 5 "3" }
 }
 
 $sequence "sg_reload_end" "reload_end.smd" {
