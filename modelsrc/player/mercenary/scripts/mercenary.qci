@@ -37,12 +37,8 @@ $model mercenary $dmxFile$ {
     // overwriting your first flex
     localvar %dummy_eyelid_flex
 
-	flexcontroller right_CloseLid range -1 1 "right_CloseLid"
-	flexcontroller left_CloseLid range -1 1 "left_CloseLid"
-	flexcontroller multi_CloseLid range -1 1 "multi_CloseLid"
-	flexcontroller eyes range -45 45 "eyes_updown"
-	flexcontroller eyes range -45 45 "eyes_rightleft"
-//	flexcontroller scaredUpper range 0 1 "scaredUpper"
+	flexcontroller eyes range -45 45 eyes_updown
+	flexcontroller eyes range -45 45 eyes_rightleft
 }
 
 //rocket bodygroup for reloading
