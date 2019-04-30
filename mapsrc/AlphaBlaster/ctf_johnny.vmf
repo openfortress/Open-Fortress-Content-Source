@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "754"
+	"mapversion" "762"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "754"
+	"mapversion" "762"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -1022,8 +1022,8 @@ world
 			"id" "107"
 			"plane" "(-576 1088 64) (512 1088 64) (512 512 64)"
 			"material" "DEV/DEV_BLENDMEASURE"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
+			"uaxis" "[1 0 0 1] 0.25"
+			"vaxis" "[0 -1 0 1] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -44736,7 +44736,7 @@ entity
 	"respawntime" "15"
 	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
-	"skin" "2"
+	"skin" "0"
 	"solid" "0"
 	"spawn_sound" "items/itembk2.wav"
 	"targetname" "Weapon_Flamethrower"
@@ -45997,35 +45997,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 10500]"
-	}
-}
-entity
-{
-	"id" "14198"
-	"classname" "info_overlay"
-	"angles" "0 180 0"
-	"BasisNormal" "0 0 1"
-	"BasisOrigin" "-246.899 1888 297.326"
-	"BasisU" "-1 0 0"
-	"BasisV" "0 -1 0"
-	"EndU" "1"
-	"EndV" "0"
-	"fademindist" "-1"
-	"material" "signs/sign061_alt"
-	"sides" "5736"
-	"StartU" "0"
-	"StartV" "1"
-	"uv0" "-64 -64 0"
-	"uv1" "-64 64 0"
-	"uv2" "64 64 0"
-	"uv3" "64 -64 0"
-	"origin" "-246.899 1888 297.326"
-	editor
-	{
-		"color" "80 150 225"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[500 11000]"
 	}
 }
 entity
@@ -47793,35 +47764,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[1500 3500]"
-	}
-}
-entity
-{
-	"id" "14313"
-	"classname" "info_overlay"
-	"angles" "0 180 0"
-	"BasisNormal" "-1 0 0"
-	"BasisOrigin" "-128 1632 288"
-	"BasisU" "0 -1 0"
-	"BasisV" "0 0 1"
-	"EndU" "1"
-	"EndV" "0"
-	"fademindist" "-1"
-	"material" "signs/sign054"
-	"sides" "5940"
-	"StartU" "0"
-	"StartV" "1"
-	"uv0" "-24.2058 -24.3103 0"
-	"uv1" "-24.2058 24.3103 0"
-	"uv2" "24.2058 24.3103 0"
-	"uv3" "24.2058 -24.3103 0"
-	"origin" "-128 1632 288"
-	editor
-	{
-		"color" "80 150 225"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[1500 4000]"
 	}
 }
 entity
@@ -51187,7 +51129,7 @@ entity
 	"respawntime" "15"
 	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
-	"skin" "2"
+	"skin" "1"
 	"solid" "0"
 	"spawn_sound" "items/itembk2.wav"
 	"targetname" "Weapon_Flamethrower"
@@ -52084,7 +52026,7 @@ entity
 	"spawnflags" "0"
 	"targetname" "Emitter_Shotgun"
 	"texframeindex" "0"
-	"origin" "2288 3098.81 72"
+	"origin" "2288 3104 64"
 	editor
 	{
 		"color" "220 30 220"
@@ -52126,7 +52068,7 @@ entity
 		"OnPlayerTouch" "Emitter_Shotgun,skin,0,0,-1"
 		"OnPlayerTouch" "Emitter_Shotgun,skin,1,15,-1"
 	}
-	"origin" "2304 3098.81 112"
+	"origin" "2304 3104 104"
 	editor
 	{
 		"color" "220 30 220"
@@ -52688,6 +52630,155 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[2000 5000]"
+	}
+}
+entity
+{
+	"id" "38256"
+	"classname" "info_overlay"
+	"angles" "0 0 0"
+	"BasisNormal" "0 1 -0"
+	"BasisOrigin" "-120 1632 280"
+	"BasisU" "1 0 0"
+	"BasisV" "0 -0 -1"
+	"EndU" "0"
+	"EndV" "1"
+	"fademindist" "-1"
+	"material" "signs/sign054"
+	"sides" "5695"
+	"StartU" "1"
+	"StartV" "0"
+	"uv0" "-27.935 -28.1598 0"
+	"uv1" "-27.935 28.1598 0"
+	"uv2" "27.935 28.1598 0"
+	"uv3" "27.935 -28.1598 0"
+	"origin" "-120 1632 280"
+	editor
+	{
+		"color" "80 150 225"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "38274"
+	"classname" "info_overlay"
+	"angles" "0 0 0"
+	"BasisNormal" "0 -1 0"
+	"BasisOrigin" "-243.462 1888 295.567"
+	"BasisU" "1 0 0"
+	"BasisV" "-0 0 1"
+	"EndU" "1"
+	"EndV" "0"
+	"fademindist" "-1"
+	"material" "signs/sign061_alt"
+	"sides" "5192"
+	"StartU" "0"
+	"StartV" "1"
+	"uv0" "-64 -64 0"
+	"uv1" "-64 64 0"
+	"uv2" "64 64 0"
+	"uv3" "64 -64 0"
+	"origin" "-243.462 1888 295.567"
+	editor
+	{
+		"color" "80 150 225"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "38298"
+	"classname" "info_overlay"
+	"angles" "0 0 0"
+	"BasisNormal" "1 0 0"
+	"BasisOrigin" "-320 2256 432"
+	"BasisU" "0 1 0"
+	"BasisV" "0 0 1"
+	"EndU" "1"
+	"EndV" "0"
+	"fademindist" "-1"
+	"material" "signs/logo_tfc_blue"
+	"sides" "5207"
+	"StartU" "0"
+	"StartV" "1"
+	"uv0" "-128 -128 0"
+	"uv1" "-128 128 0"
+	"uv2" "128 128 0"
+	"uv3" "128 -128 0"
+	"origin" "-320 2256 432"
+	editor
+	{
+		"color" "80 150 225"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "38310"
+	"classname" "info_overlay"
+	"angles" "0 0 0"
+	"BasisNormal" "-1 0 0"
+	"BasisOrigin" "864 -80 432"
+	"BasisU" "0 1 0"
+	"BasisV" "0 0 -1"
+	"EndU" "0"
+	"EndV" "1"
+	"fademindist" "-1"
+	"material" "signs/logo_tfc_red"
+	"sides" "807"
+	"StartU" "1"
+	"StartV" "0"
+	"uv0" "-128 -128 0"
+	"uv1" "-128 128 0"
+	"uv2" "128 128 0"
+	"uv3" "128 -128 0"
+	"origin" "864 -80 432"
+	editor
+	{
+		"color" "80 150 225"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "38366"
+	"classname" "logic_auto"
+	"spawnflags" "1"
+	"targetname" "SetNoFrag"
+	connections
+	{
+		"OnMapSpawn" "servercommands,Command,mp_fraglimit 0,0,-1"
+	}
+	"origin" "-31.1696 -426.614 72"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 15000]"
+	}
+}
+entity
+{
+	"id" "38368"
+	"classname" "point_servercommand"
+	"targetname" "servercommands"
+	"origin" "-23.6616 -454.835 90.617"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 15000]"
 	}
 }
 cameras
