@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "1159"
+	"mapversion" "1162"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "1159"
+	"mapversion" "1162"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"detailmaterial" "detail/detailsprites"
@@ -20562,6 +20562,7 @@ entity
 	"rendercolor" "255 255 255"
 	"renderfx" "0"
 	"rendermode" "0"
+	"respawndelay" "300"
 	"respawntime" "300"
 	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
@@ -21151,6 +21152,7 @@ entity
 	"rendercolor" "255 255 255"
 	"renderfx" "0"
 	"rendermode" "0"
+	"respawndelay" "60"
 	"respawntime" "60"
 	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
@@ -21166,7 +21168,7 @@ entity
 		"OnPlayerTouch" "PowerupLight_Crit,TurnOn,,60,-1"
 		"OnPlayerTouch" "PowerupRespawn_Crit,PlaySound,,60,-1"
 	}
-	"origin" "1501.51 -324.674 48"
+	"origin" "1504 -352 48"
 	editor
 	{
 		"color" "0 0 200"
@@ -21198,7 +21200,7 @@ entity
 	"spinup" "0"
 	"targetname" "PowerSound_Crit"
 	"volstart" "0"
-	"origin" "1501.51 -324.674 119"
+	"origin" "1504 -352 119"
 	editor
 	{
 		"color" "220 30 220"
@@ -21224,7 +21226,7 @@ entity
 	"spawnflags" "0"
 	"style" "0"
 	"targetname" "PowerupLight_Crit"
-	"origin" "1501.51 -324.674 128.355"
+	"origin" "1504 -352 128.355"
 	editor
 	{
 		"color" "220 30 220"
@@ -21256,7 +21258,7 @@ entity
 	"spinup" "0"
 	"targetname" "PowerupRespawn_Crit"
 	"volstart" "0"
-	"origin" "1501.51 -324.674 167"
+	"origin" "1504 -352 167"
 	editor
 	{
 		"color" "220 30 220"
@@ -23105,7 +23107,7 @@ entity
 	"solid" "6"
 	"spawnflags" "0"
 	"texframeindex" "0"
-	"origin" "1498.62 -260.315 48"
+	"origin" "1496 -280 48"
 	editor
 	{
 		"color" "220 30 220"
@@ -23568,7 +23570,7 @@ entity
 	"solid" "6"
 	"spawnflags" "0"
 	"texframeindex" "0"
-	"origin" "1704.09 -281.768 128"
+	"origin" "1680 -280 128"
 	editor
 	{
 		"color" "220 30 220"
@@ -23581,7 +23583,7 @@ entity
 {
 	"id" "14411"
 	"classname" "prop_dynamic"
-	"angles" "0 316.776 0"
+	"angles" "0 316.959 0"
 	"body" "0"
 	"DisableBoneFollowers" "0"
 	"disablereceiveshadows" "0"
@@ -23610,7 +23612,7 @@ entity
 	"solid" "6"
 	"spawnflags" "0"
 	"texframeindex" "0"
-	"origin" "1738.33 -313.947 128"
+	"origin" "1732.82 -328.961 128"
 	editor
 	{
 		"color" "220 30 220"
@@ -23652,7 +23654,7 @@ entity
 	"solid" "6"
 	"spawnflags" "0"
 	"texframeindex" "0"
-	"origin" "1772.57 -346.127 128"
+	"origin" "1784 -376 128"
 	editor
 	{
 		"color" "220 30 220"
