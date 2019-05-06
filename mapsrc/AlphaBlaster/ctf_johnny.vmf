@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "771"
+	"mapversion" "772"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "771"
+	"mapversion" "772"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -45857,6 +45857,8 @@ entity
 {
 	"id" "13917"
 	"classname" "of_logic_dm"
+	"DontCountKills" "1"
+	"IsTeamplay" "1"
 	"origin" "0 -428.239 104"
 	editor
 	{
@@ -45864,19 +45866,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 1500]"
-	}
-}
-entity
-{
-	"id" "13924"
-	"classname" "of_logic_tdm"
-	"origin" "8 -459.91 80"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 2000]"
 	}
 }
 entity
