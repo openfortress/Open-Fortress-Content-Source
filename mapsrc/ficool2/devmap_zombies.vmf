@@ -1,0 +1,8252 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "8163"
+	"mapversion" "106"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+	visgroup
+	{
+		"name" "oldenv"
+		"visgroupid" "15"
+		"color" "196 213 202"
+	}
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "2"
+	"bShow3DGrid" "0"
+}
+world
+{
+	"id" "1"
+	"mapversion" "106"
+	"classname" "worldspawn"
+	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxpropscreenwidth" "-1"
+	"message" "devmap by ficool2"
+	"skyname" "sky_day01_09"
+	solid
+	{
+		"id" "2"
+		side
+		{
+			"id" "1"
+			"plane" "(-1024 -1024 0) (-1024 768 0) (1024 768 0)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2"
+			"plane" "(-1024 768 -128) (-1024 -1024 -128) (1024 -1024 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "3"
+			"plane" "(-1024 -1024 -128) (-1024 768 -128) (-1024 768 0)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "4"
+			"plane" "(1024 768 -128) (1024 -1024 -128) (1024 -1024 0)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "5"
+			"plane" "(-1024 768 -128) (1024 768 -128) (1024 768 0)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "6"
+			"plane" "(1024 -1024 -128) (-1024 -1024 -128) (-1024 -1024 0)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 150 247"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "37"
+		side
+		{
+			"id" "7"
+			"plane" "(-1024 1280 256) (1024 1280 256) (1024 1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "8"
+			"plane" "(-1024 1024 -128) (1024 1024 -128) (1024 1280 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9"
+			"plane" "(-1024 1280 256) (-1024 1024 256) (-1024 1024 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10"
+			"plane" "(1024 1280 -128) (1024 1024 -128) (1024 1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "11"
+			"plane" "(1024 1280 256) (-1024 1280 256) (-1024 1280 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "12"
+			"plane" "(1024 1024 -128) (-1024 1024 -128) (-1024 1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 220 217"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "47"
+		side
+		{
+			"id" "24"
+			"plane" "(-1024 -1024 256) (-1280 -1024 256) (-1280 1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[1 0 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "23"
+			"plane" "(-1024 1024 -128) (-1280 1024 -128) (-1280 -1024 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[1 0 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "22"
+			"plane" "(-1024 -1024 -128) (-1280 -1024 -128) (-1280 -1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[-1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "21"
+			"plane" "(-1280 1024 -128) (-1024 1024 -128) (-1024 1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[-1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "20"
+			"plane" "(-1280 -1024 -128) (-1280 1024 -128) (-1280 1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "19"
+			"plane" "(-1024 1024 -128) (-1024 -1024 -128) (-1024 -1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 8] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 220 217"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "50"
+		side
+		{
+			"id" "36"
+			"plane" "(1024 -1280 256) (-1024 -1280 256) (-1024 -1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[-1 0 0 0] 8"
+			"vaxis" "[0 1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "35"
+			"plane" "(1024 -1024 -128) (-1024 -1024 -128) (-1024 -1280 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[-1 0 0 0] 8"
+			"vaxis" "[0 1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "34"
+			"plane" "(1024 -1280 256) (1024 -1024 256) (1024 -1024 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 -1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "33"
+			"plane" "(-1024 -1280 -128) (-1024 -1024 -128) (-1024 -1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 -1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "32"
+			"plane" "(-1024 -1280 256) (1024 -1280 256) (1024 -1280 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[-1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "31"
+			"plane" "(-1024 -1024 -128) (1024 -1024 -128) (1024 -1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 8] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 220 217"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "56"
+		side
+		{
+			"id" "48"
+			"plane" "(1280 1024 256) (1280 -1024 256) (1024 -1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 -1 0 0] 8"
+			"vaxis" "[-1 0 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "47"
+			"plane" "(1024 1024 -128) (1024 -1024 -128) (1280 -1024 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 -1 0 0] 8"
+			"vaxis" "[-1 0 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "46"
+			"plane" "(1280 1024 256) (1024 1024 256) (1024 1024 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "45"
+			"plane" "(1280 -1024 -128) (1024 -1024 -128) (1024 -1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "44"
+			"plane" "(1280 -1024 256) (1280 1024 256) (1280 1024 -128)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 -1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "43"
+			"plane" "(1024 -1024 -128) (1024 1024 -128) (1024 1024 256)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 220 217"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "71"
+		side
+		{
+			"id" "78"
+			"plane" "(-1280 -1024 1024) (-1280 1024 1024) (-1024 1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 2"
+			"vaxis" "[0 -1 0 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "77"
+			"plane" "(-1024 -1024 256) (-1024 1024 256) (-1280 1024 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[1 0 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "76"
+			"plane" "(-1280 -1024 1024) (-1024 -1024 1024) (-1024 -1024 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "75"
+			"plane" "(-1280 1024 256) (-1024 1024 256) (-1024 1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "74"
+			"plane" "(-1280 1024 1024) (-1280 -1024 1024) (-1280 -1024 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "73"
+			"plane" "(-1024 1024 256) (-1024 -1024 256) (-1024 -1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 220 217"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "72"
+		side
+		{
+			"id" "84"
+			"plane" "(1024 -1280 1024) (-1024 -1280 1024) (-1024 -1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[-1 0 0 0] 2"
+			"vaxis" "[0 1 0 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "83"
+			"plane" "(1024 -1024 256) (-1024 -1024 256) (-1024 -1280 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[-1 0 0 0] 8"
+			"vaxis" "[0 1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "82"
+			"plane" "(1024 -1280 1024) (1024 -1024 1024) (1024 -1024 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "81"
+			"plane" "(-1024 -1280 256) (-1024 -1024 256) (-1024 -1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "80"
+			"plane" "(-1024 -1280 1024) (1024 -1280 1024) (1024 -1280 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "79"
+			"plane" "(-1024 -1024 256) (1024 -1024 256) (1024 -1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[-1 0 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 220 217"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "73"
+		side
+		{
+			"id" "90"
+			"plane" "(1280 1024 1024) (1280 -1024 1024) (1024 -1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 -1 0 0] 2"
+			"vaxis" "[-1 0 0 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "89"
+			"plane" "(1024 1024 256) (1024 -1024 256) (1280 -1024 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 -1 0 0] 8"
+			"vaxis" "[-1 0 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "88"
+			"plane" "(1280 1024 1024) (1024 1024 1024) (1024 1024 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "87"
+			"plane" "(1280 -1024 256) (1024 -1024 256) (1024 -1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "86"
+			"plane" "(1280 -1024 1024) (1280 1024 1024) (1280 1024 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "85"
+			"plane" "(1024 -1024 256) (1024 1024 256) (1024 1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 -1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 220 217"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "74"
+		side
+		{
+			"id" "96"
+			"plane" "(-1024 1280 1024) (1024 1280 1024) (1024 1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 2"
+			"vaxis" "[0 -1 0 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "95"
+			"plane" "(-1024 1024 256) (1024 1024 256) (1024 1280 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "94"
+			"plane" "(-1024 1280 1024) (-1024 1024 1024) (-1024 1024 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "93"
+			"plane" "(1024 1280 256) (1024 1024 256) (1024 1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "92"
+			"plane" "(1024 1280 1024) (-1024 1280 1024) (-1024 1280 256)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "91"
+			"plane" "(1024 1024 256) (-1024 1024 256) (-1024 1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[1 0 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 220 217"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "90"
+		side
+		{
+			"id" "108"
+			"plane" "(1024 -1024 1024) (-1024 -1024 1024) (-1024 -1024 1280)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[-1 0 0 0] 2"
+			"vaxis" "[0 0 1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "107"
+			"plane" "(1024 1024 1280) (-1024 1024 1280) (-1024 1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[-1 0 0 0] 2"
+			"vaxis" "[0 0 1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "106"
+			"plane" "(1024 -1024 1024) (1024 -1024 1280) (1024 1024 1280)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "105"
+			"plane" "(-1024 1024 1024) (-1024 1024 1280) (-1024 -1024 1280)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[0 1 0 0] 2"
+			"vaxis" "[0 0 -1 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "104"
+			"plane" "(-1024 -1024 1024) (1024 -1024 1024) (1024 1024 1024)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[-1 0 0 0] 2"
+			"vaxis" "[0 1 0 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "103"
+			"plane" "(-1024 1024 1280) (1024 1024 1280) (1024 -1024 1280)"
+			"material" "TOOLS/TOOLSSKYBOX"
+			"uaxis" "[-1 0 0 0] 2"
+			"vaxis" "[0 1 0 0] 2"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 220 217"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "3552"
+		side
+		{
+			"id" "150"
+			"plane" "(-1024 768 0) (-1024 1024 0) (1024 1024 0)"
+			"material" "DEV/UNREAL_DEV_YELLOW"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "149"
+			"plane" "(-1024 1024 -128) (-1024 768 -128) (1024 768 -128)"
+			"material" "DEV/UNREAL_DEV_YELLOW"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "148"
+			"plane" "(-1024 768 -128) (-1024 1024 -128) (-1024 1024 0)"
+			"material" "DEV/UNREAL_DEV_YELLOW"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "147"
+			"plane" "(1024 1024 -128) (1024 768 -128) (1024 768 0)"
+			"material" "DEV/UNREAL_DEV_YELLOW"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "146"
+			"plane" "(-1024 1024 -128) (1024 1024 -128) (1024 1024 0)"
+			"material" "DEV/UNREAL_DEV_YELLOW"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "145"
+			"plane" "(1024 768 -128) (-1024 768 -128) (-1024 768 0)"
+			"material" "DEV/UNREAL_DEV_YELLOW"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 150 247"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "4268"
+		side
+		{
+			"id" "210"
+			"plane" "(-1024 -48 12) (-1024 48 12) (-988 48 12)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "209"
+			"plane" "(-1024 48 0) (-1024 -48 0) (-988 -48 0)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "208"
+			"plane" "(-1024 -48 0) (-1024 48 0) (-1024 48 12)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "207"
+			"plane" "(-988 48 0) (-988 -48 0) (-988 -48 12)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "206"
+			"plane" "(-1024 48 0) (-988 48 0) (-988 48 12)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "205"
+			"plane" "(-988 -48 0) (-1024 -48 0) (-1024 -48 12)"
+			"material" "DEV/UNREAL_DEV"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 150 247"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "6079"
+		side
+		{
+			"id" "270"
+			"plane" "(-1824 -212 156) (-1824 364 156) (-1456 364 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 -1 0 2] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "269"
+			"plane" "(-1824 -212 -116) (-1824 364 -116) (-1824 364 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 -2] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "268"
+			"plane" "(-1456 364 -116) (-1456 -212 -116) (-1456 -212 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 -2] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "267"
+			"plane" "(-1824 364 -116) (-1456 364 -116) (-1456 364 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "266"
+			"plane" "(-1456 -212 -116) (-1824 -212 -116) (-1824 -212 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "265"
+			"plane" "(-1488 332 124) (-1792 332 124) (-1792 -180 124)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 220 220"
+			"groupid" "6091"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "6081"
+		side
+		{
+			"id" "276"
+			"plane" "(-1824 364 -116) (-1824 -212 -116) (-1456 -212 -116)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 -1 0 2] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "275"
+			"plane" "(-1824 -212 -116) (-1824 364 -116) (-1824 364 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 -2] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "274"
+			"plane" "(-1456 364 -116) (-1456 -212 -116) (-1456 -212 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 -2] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "273"
+			"plane" "(-1824 364 -116) (-1456 364 -116) (-1456 364 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "272"
+			"plane" "(-1456 -212 -116) (-1824 -212 -116) (-1824 -212 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "271"
+			"plane" "(-1488 -180 -84) (-1792 -180 -84) (-1792 332 -84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 220 220"
+			"groupid" "6091"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "6083"
+		side
+		{
+			"id" "282"
+			"plane" "(-1824 -212 -116) (-1824 364 -116) (-1824 364 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 -2] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "281"
+			"plane" "(-1824 364 -116) (-1456 364 -116) (-1456 364 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "280"
+			"plane" "(-1456 -212 -116) (-1824 -212 -116) (-1824 -212 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "279"
+			"plane" "(-1792 -180 124) (-1792 332 124) (-1488 332 124)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "278"
+			"plane" "(-1792 332 -84) (-1792 -180 -84) (-1488 -180 -84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "277"
+			"plane" "(-1792 332 124) (-1792 332 -84) (-1792 -180 -84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 220 220"
+			"groupid" "6091"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "6085"
+		side
+		{
+			"id" "288"
+			"plane" "(-1456 364 -116) (-1456 -212 -116) (-1456 -212 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 -2] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "287"
+			"plane" "(-1824 364 -116) (-1456 364 -116) (-1456 364 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "286"
+			"plane" "(-1456 -212 -116) (-1824 -212 -116) (-1824 -212 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "285"
+			"plane" "(-1792 -180 124) (-1792 332 124) (-1488 332 124)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "284"
+			"plane" "(-1792 332 -84) (-1792 -180 -84) (-1488 -180 -84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "283"
+			"plane" "(-1488 -180 124) (-1488 -180 -84) (-1488 332 -84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 220 220"
+			"groupid" "6091"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "6087"
+		side
+		{
+			"id" "294"
+			"plane" "(-1824 364 -116) (-1456 364 -116) (-1456 364 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "293"
+			"plane" "(-1792 -180 124) (-1792 332 124) (-1488 332 124)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "292"
+			"plane" "(-1792 332 -84) (-1792 -180 -84) (-1488 -180 -84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "291"
+			"plane" "(-1792 -180 -84) (-1792 332 -84) (-1792 332 124)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "290"
+			"plane" "(-1488 332 -84) (-1488 -180 -84) (-1488 -180 124)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "289"
+			"plane" "(-1488 332 124) (-1488 332 -84) (-1792 332 -84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 220 220"
+			"groupid" "6091"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "6089"
+		side
+		{
+			"id" "300"
+			"plane" "(-1456 -212 -116) (-1824 -212 -116) (-1824 -212 156)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 10.5] 8"
+			"vaxis" "[0 0 -1 1.5] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "299"
+			"plane" "(-1792 -180 124) (-1792 332 124) (-1488 332 124)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "298"
+			"plane" "(-1792 332 -84) (-1792 -180 -84) (-1488 -180 -84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "297"
+			"plane" "(-1792 -180 -84) (-1792 332 -84) (-1792 332 124)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "296"
+			"plane" "(-1488 332 -84) (-1488 -180 -84) (-1488 -180 124)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "295"
+			"plane" "(-1792 -180 124) (-1792 -180 -84) (-1488 -180 -84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 220 220"
+			"groupid" "6091"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6091"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6348"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6377"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6385"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6393"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6401"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6409"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6417"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6425"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6433"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6441"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6449"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6457"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6465"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6473"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6481"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6489"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6497"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6505"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6513"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6521"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6529"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6537"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "6545"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
+		"id" "7745"
+		editor
+		{
+			"color" "220 220 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+}
+entity
+{
+	"id" "6349"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_1"
+	"Template01" "zom_treasurebox_weapongun_1"
+	"origin" "-1740 -116 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6348"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6351"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_assault_rifle.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_1"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_assaultrifle"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1740 -116 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6348"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6354"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_1"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_1"
+	"origin" "-1740 -116 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6348"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6378"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_2"
+	"Template01" "zom_treasurebox_weapongun_2"
+	"origin" "-1750.63 -88 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6377"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6380"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_bottle.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_2"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_bottle"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 -88 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6377"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6383"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_2"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_2"
+	"origin" "-1750.63 -88 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6377"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6386"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_3"
+	"Template01" "zom_treasurebox_weapongun_3"
+	"origin" "-1750.63 -64 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6385"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6388"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_flamethrower.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_3"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_flamethrower"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 -64 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6385"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6391"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_3"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_3"
+	"origin" "-1750.63 -64 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6385"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6394"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_4"
+	"Template01" "zom_treasurebox_weapongun_4"
+	"origin" "-1750.63 -44 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6393"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6396"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_grenadelauncher_dm.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_4"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_grenadelauncher_mercenary"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 -44 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6393"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6399"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_4"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_4"
+	"origin" "-1750.63 -44 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6393"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6402"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_5"
+	"Template01" "zom_treasurebox_weapongun_5"
+	"origin" "-1750.63 -28 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6401"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6404"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_knife.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_5"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_knife"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 -28 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6401"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6407"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_5"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_5"
+	"origin" "-1750.63 -28 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6401"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6410"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_6"
+	"Template01" "zom_treasurebox_weapongun_6"
+	"origin" "-1750.63 -12 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6409"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6412"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_medigun.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_6"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_medigun"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 -12 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6409"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6415"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_6"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_6"
+	"origin" "-1750.63 -12 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6409"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6418"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_7"
+	"Template01" "zom_treasurebox_weapongun_7"
+	"origin" "-1750.63 0 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6417"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6420"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_minigun_dm.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_7"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_gatlinggun"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 0 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6417"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6423"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_7"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_7"
+	"origin" "-1750.63 0 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6417"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6426"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_8"
+	"Template01" "zom_treasurebox_weapongun_8"
+	"origin" "-1750.63 12 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6425"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6428"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_nailgun.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_8"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_nailgun"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 12 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6425"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6431"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_8"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_8"
+	"origin" "-1750.63 12 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6425"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6434"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_9"
+	"Template01" "zom_treasurebox_weapongun_9"
+	"origin" "-1750.63 28 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6433"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6436"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_pistol_mercenary.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_9"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_pistol_mercenary"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 28 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6433"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6439"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_9"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_9"
+	"origin" "-1750.63 28 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6433"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6442"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_10"
+	"Template01" "zom_treasurebox_weapongun_10"
+	"origin" "-1750.63 44 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6441"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6444"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_pistol_akimbo.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_10"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_pistol_akimbo"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 44 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6441"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6447"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_10"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_10"
+	"origin" "-1750.63 44 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6441"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6450"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_11"
+	"Template01" "zom_treasurebox_weapongun_11"
+	"origin" "-1750.63 56 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6449"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6452"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_railgun.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_11"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_railgun"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 56 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6449"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6455"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_11"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_11"
+	"origin" "-1750.63 56 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6449"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6458"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_12"
+	"Template01" "zom_treasurebox_weapongun_12"
+	"origin" "-1750.63 68 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6457"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6460"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_revolver.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_12"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_revolver"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 68 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6457"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6463"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_12"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_12"
+	"origin" "-1750.63 68 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6457"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6466"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_13"
+	"Template01" "zom_treasurebox_weapongun_13"
+	"origin" "-1754.63 80 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6465"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6468"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_revolver_dm.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_13"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_revolver_mercenary"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1754.63 80 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6465"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6471"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_13"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_13"
+	"origin" "-1754.63 80 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6465"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6474"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_14"
+	"Template01" "zom_treasurebox_weapongun_14"
+	"origin" "-1750.63 92 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6473"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6476"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_rocketlauncher.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_14"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_rocketlauncher"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 92 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6473"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6479"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_14"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_14"
+	"origin" "-1750.63 92 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6473"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6482"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_15"
+	"Template01" "zom_treasurebox_weapongun_15"
+	"origin" "-1750.63 100 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6481"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6484"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_scattergun.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_15"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_scattergun"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 100 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6481"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6487"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_15"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_15"
+	"origin" "-1750.63 100 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6481"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6490"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_16"
+	"Template01" "zom_treasurebox_weapongun_16"
+	"origin" "-1750.63 112 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6489"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6492"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_shotgun.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_16"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_shotgun_mercenary"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1750.63 112 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6489"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6495"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_16"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_16"
+	"origin" "-1750.63 112 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6489"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6498"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_17"
+	"Template01" "zom_treasurebox_weapongun_17"
+	"origin" "-1614.63 -120 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6497"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6500"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_smg.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_17"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_smg"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1614.63 -120 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6497"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6503"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_17"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_17"
+	"origin" "-1614.63 -120 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6497"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6506"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_18"
+	"Template01" "zom_treasurebox_weapongun_18"
+	"origin" "-1614.63 -104 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6505"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6508"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_smg_dm.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_18"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_smg_mercenary"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1614.63 -104 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6505"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6511"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_18"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_18"
+	"origin" "-1614.63 -104 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6505"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6514"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_19"
+	"Template01" "zom_treasurebox_weapongun_19"
+	"origin" "-1614.63 -88 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6513"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6516"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_stickybomb_launcher.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_19"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_pipebomblauncher"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1614.63 -88 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6513"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6519"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_19"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_19"
+	"origin" "-1614.63 -88 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6513"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6522"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_20"
+	"Template01" "zom_treasurebox_weapongun_20"
+	"origin" "-1610.63 -72 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6521"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6524"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_supershotgun.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_20"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_supershotgun"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1610.63 -72 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6521"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6527"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_20"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_20"
+	"origin" "-1610.63 -72 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6521"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6530"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_21"
+	"Template01" "zom_treasurebox_weapongun_21"
+	"origin" "-1614.63 -60 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6529"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6532"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_syringegun.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_21"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_syringegun_medic"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1614.63 -60 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6529"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6535"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_21"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_21"
+	"origin" "-1614.63 -60 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6529"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6538"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_22"
+	"Template01" "zom_treasurebox_weapongun_22"
+	"origin" "-1614.63 -48 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6537"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6540"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_sword.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_22"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_sword"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1614.63 -48 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6537"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6543"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_22"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_22"
+	"origin" "-1614.63 -48 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6537"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6546"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_23"
+	"Template01" "zom_treasurebox_weapongun_23"
+	"origin" "-1614.63 -36 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6545"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6548"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_tommygun.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_23"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_tommygun"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1614.63 -36 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6545"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6551"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_23"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_23"
+	"origin" "-1614.63 -36 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "6545"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7746"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_weapon_24"
+	"Template01" "zom_treasurebox_weapongun_24"
+	"origin" "-1616 -16 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "7745"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7748"
+	"classname" "dm_weapon_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disable_glow" "1"
+	"disable_spin" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/weapons/w_models/w_sniperrifle.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"respawntime" "99999"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "2"
+	"spawn_sound" "Item.Materialize"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_weapongun_24"
+	"texframeindex" "0"
+	"weaponname" "tf_weapon_sniperrifle"
+	connections
+	{
+		"OnUser1" "!self,Kill,,0.1,-1"
+	}
+	"origin" "-1616 -16 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "7745"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7751"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "zom_treasurebox_weapon_24"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0"
+	"PostSpawnInheritAngles" "0"
+	"PostSpawnSpeed" "0"
+	"spawnflags" "0"
+	"targetname" "zom_treasurebox_wepspawn_24"
+	"origin" "-1616 -16 -52"
+	editor
+	{
+		"color" "220 220 220"
+		"groupid" "7745"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7"
+	"classname" "info_player_teamspawn"
+	"angles" "0 90 0"
+	"spawnflags" "1023"
+	"SpawnMode" "0"
+	"StartDisabled" "0"
+	"TeamNum" "4"
+	"origin" "0 -128 17"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "205"
+	"classname" "shadow_control"
+	"angles" "80 26 0"
+	"color" "89 103 106"
+	"disableallshadows" "0"
+	"distance" "256"
+	"origin" "0 0 128"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "231"
+	"classname" "env_tonemap_controller"
+	"targetname" "tonemap_global"
+	"origin" "0 0 160"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "233"
+	"classname" "logic_auto"
+	"spawnflags" "1"
+	connections
+	{
+		"OnMapSpawn" "tonemap_global,SetAutoExposureMin,0,0,-1"
+		"OnMapSpawn" "tonemap_global,SetAutoExposureMax,0,0,-1"
+		"OnMapSpawn" "tonemap_global,SetBloomScale,0,0,-1"
+		"OnMapSpawn" "tonemap_global,SetTonemapRate,0,0,-1"
+	}
+	"origin" "0 0 192"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "250"
+	"classname" "light_environment"
+	"_ambient" "91 115 142 55"
+	"_ambientHDR" "-1 -1 -1 1"
+	"_AmbientScaleHDR" "1"
+	"_light" "175 230 239 70"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"angles" "0 12 0"
+	"pitch" "-45"
+	"SunSpreadAngle" "0.5"
+	"origin" "0 0 96"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "252"
+	"classname" "env_cubemap"
+	"cubemapsize" "7"
+	"origin" "0 0 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "495"
+	"classname" "npc_zombie"
+	"angles" "0 270 0"
+	"customspeedboost" "300"
+	"disableheadcrab" "0"
+	"model" "models/zombie/nazi_sprint.mdl"
+	"physdamagescale" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"rendermode" "0"
+	"skin" "0"
+	"spawnflags" "28416"
+	"squadname" "zom_zombie"
+	"targetname" "zom_zombie"
+	"wakeradius" "20000"
+	"wakesquad" "1"
+	connections
+	{
+		"OnDeath" "zom_round_zombie_counter,Add,1,0,-1"
+	}
+	"origin" "-928 864 16"
+	editor
+	{
+		"color" "0 200 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 14000]"
+	}
+}
+entity
+{
+	"id" "497"
+	"classname" "npc_template_maker"
+	"angles" "0 180 0"
+	"CriterionDistance" "2"
+	"CriterionVisibility" "2"
+	"MaxLiveChildren" "100"
+	"MaxNPCCount" "100000000"
+	"MinSpawnDistance" "0"
+	"Radius" "32"
+	"spawnflags" "272"
+	"SpawnFrequency" "100000000"
+	"StartDisabled" "0"
+	"targetname" "zom_spawner1"
+	"TemplateName" "zom_zombie"
+	connections
+	{
+		"OnSpawnNPC" "!activator,AddOutput,max_health 2147483647,0.01,-1"
+		"OnSpawnNPC" "zom_health_counter,GetValue,,0.02,-1"
+		"OnSpawnNPC" "zom_random_head,PickRandomShuffle,,0.01,-1"
+	}
+	"origin" "-896 896 55"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 14500]"
+	}
+}
+entity
+{
+	"id" "1085"
+	"classname" "npc_template_maker"
+	"angles" "0 180 0"
+	"CriterionDistance" "2"
+	"CriterionVisibility" "2"
+	"MaxLiveChildren" "100"
+	"MaxNPCCount" "100000000"
+	"MinSpawnDistance" "0"
+	"Radius" "32"
+	"spawnflags" "272"
+	"SpawnFrequency" "100000000"
+	"StartDisabled" "0"
+	"targetname" "zom_spawner2"
+	"TemplateName" "zom_zombie"
+	connections
+	{
+		"OnSpawnNPC" "zom_health_counter,GetValue,,0.02,-1"
+		"OnSpawnNPC" "!activator,AddOutput,max_health 2147483647,0.01,-1"
+		"OnSpawnNPC" "zom_random_head,PickRandomShuffle,,0.01,-1"
+	}
+	"origin" "-640 896 55"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 14500]"
+	}
+}
+entity
+{
+	"id" "1089"
+	"classname" "npc_template_maker"
+	"angles" "0 180 0"
+	"CriterionDistance" "2"
+	"CriterionVisibility" "2"
+	"MaxLiveChildren" "100"
+	"MaxNPCCount" "100000000"
+	"MinSpawnDistance" "0"
+	"Radius" "32"
+	"spawnflags" "272"
+	"SpawnFrequency" "100000000"
+	"StartDisabled" "0"
+	"targetname" "zom_spawner3"
+	"TemplateName" "zom_zombie"
+	connections
+	{
+		"OnSpawnNPC" "zom_health_counter,GetValue,,0.02,-1"
+		"OnSpawnNPC" "!activator,AddOutput,max_health 2147483647,0.01,-1"
+		"OnSpawnNPC" "zom_random_head,PickRandomShuffle,,0.01,-1"
+	}
+	"origin" "-384 896 55"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 14500]"
+	}
+}
+entity
+{
+	"id" "1093"
+	"classname" "npc_template_maker"
+	"angles" "0 180 0"
+	"CriterionDistance" "2"
+	"CriterionVisibility" "2"
+	"MaxLiveChildren" "100"
+	"MaxNPCCount" "100000000"
+	"MinSpawnDistance" "0"
+	"Radius" "32"
+	"spawnflags" "272"
+	"SpawnFrequency" "100000000"
+	"StartDisabled" "0"
+	"targetname" "zom_spawner4"
+	"TemplateName" "zom_zombie"
+	connections
+	{
+		"OnSpawnNPC" "zom_health_counter,GetValue,,0.02,-1"
+		"OnSpawnNPC" "!activator,AddOutput,max_health 2147483647,0.01,-1"
+		"OnSpawnNPC" "zom_random_head,PickRandomShuffle,,0.01,-1"
+	}
+	"origin" "-128 896 55"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 14500]"
+	}
+}
+entity
+{
+	"id" "1097"
+	"classname" "npc_template_maker"
+	"angles" "0 180 0"
+	"CriterionDistance" "2"
+	"CriterionVisibility" "2"
+	"MaxLiveChildren" "100"
+	"MaxNPCCount" "100000000"
+	"MinSpawnDistance" "0"
+	"Radius" "32"
+	"spawnflags" "272"
+	"SpawnFrequency" "100000000"
+	"StartDisabled" "0"
+	"targetname" "zom_spawner5"
+	"TemplateName" "zom_zombie"
+	connections
+	{
+		"OnSpawnNPC" "zom_health_counter,GetValue,,0.02,-1"
+		"OnSpawnNPC" "!activator,AddOutput,max_health 2147483647,0.01,-1"
+		"OnSpawnNPC" "zom_random_head,PickRandomShuffle,,0.01,-1"
+	}
+	"origin" "128 896 55"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 14500]"
+	}
+}
+entity
+{
+	"id" "1101"
+	"classname" "npc_template_maker"
+	"angles" "0 180 0"
+	"CriterionDistance" "2"
+	"CriterionVisibility" "2"
+	"MaxLiveChildren" "100"
+	"MaxNPCCount" "100000000"
+	"MinSpawnDistance" "0"
+	"Radius" "32"
+	"spawnflags" "272"
+	"SpawnFrequency" "100000000"
+	"StartDisabled" "0"
+	"targetname" "zom_spawner6"
+	"TemplateName" "zom_zombie"
+	connections
+	{
+		"OnSpawnNPC" "zom_health_counter,GetValue,,0.02,-1"
+		"OnSpawnNPC" "!activator,AddOutput,max_health 2147483647,0.01,-1"
+		"OnSpawnNPC" "zom_random_head,PickRandomShuffle,,0.01,-1"
+	}
+	"origin" "384 896 55"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 14500]"
+	}
+}
+entity
+{
+	"id" "1105"
+	"classname" "npc_template_maker"
+	"angles" "0 180 0"
+	"CriterionDistance" "2"
+	"CriterionVisibility" "2"
+	"MaxLiveChildren" "100"
+	"MaxNPCCount" "100000000"
+	"MinSpawnDistance" "0"
+	"Radius" "32"
+	"spawnflags" "272"
+	"SpawnFrequency" "100000000"
+	"StartDisabled" "0"
+	"targetname" "zom_spawner7"
+	"TemplateName" "zom_zombie"
+	connections
+	{
+		"OnSpawnNPC" "zom_health_counter,GetValue,,0.02,-1"
+		"OnSpawnNPC" "!activator,AddOutput,max_health 2147483647,0.01,-1"
+		"OnSpawnNPC" "zom_random_head,PickRandomShuffle,,0.01,-1"
+	}
+	"origin" "640 896 55"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 14500]"
+	}
+}
+entity
+{
+	"id" "1109"
+	"classname" "npc_template_maker"
+	"angles" "0 180 0"
+	"CriterionDistance" "2"
+	"CriterionVisibility" "2"
+	"MaxLiveChildren" "100"
+	"MaxNPCCount" "100000000"
+	"MinSpawnDistance" "0"
+	"Radius" "32"
+	"spawnflags" "272"
+	"SpawnFrequency" "100000000"
+	"StartDisabled" "0"
+	"targetname" "zom_spawner8"
+	"TemplateName" "zom_zombie"
+	connections
+	{
+		"OnSpawnNPC" "zom_health_counter,GetValue,,0.02,-1"
+		"OnSpawnNPC" "!activator,AddOutput,max_health 2147483647,0.01,-1"
+		"OnSpawnNPC" "zom_random_head,PickRandomShuffle,,0.01,-1"
+	}
+	"origin" "896 896 55"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 14500]"
+	}
+}
+entity
+{
+	"id" "1334"
+	"classname" "math_counter"
+	"max" "10"
+	"min" "0"
+	"StartDisabled" "0"
+	"startvalue" "0"
+	"targetname" "zom_round_zombie_counter"
+	connections
+	{
+		"OnHitMax" "zom_round_relay_round*,Trigger,,0,-1"
+	}
+	"origin" "16 64 352"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1363"
+	"classname" "logic_auto"
+	"spawnflags" "1"
+	connections
+	{
+		"OnMapSpawn" "npc_zombie,Kill,,0,-1"
+		"OnMapSpawn" "zom_servercommand,Command,sk_zombie_dmg_one_slash 75,0,-1"
+		"OnMapSpawn" "zom_servercommand,Command,sk_zombie_dmg_both_slash 100,0,-1"
+		"OnMapSpawn" "npc_zombie,Kill,,0.5,-1"
+		"OnMapSpawn" "npc_zombie,Kill,,1,-1"
+		"OnMapSpawn" "zom_servercommand,Command,mp_autoteambalance 0,0,-1"
+		"OnMapSpawn" "zom_servercommand,Command,mp_teams_unbalance_limit 0,0,-1"
+	}
+	"origin" "0 64 384"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1369"
+	"classname" "game_text"
+	"channel" "3"
+	"color" "255 0 0"
+	"color2" "255 168 168"
+	"effect" "0"
+	"fadein" "0.5"
+	"fadeout" "0.5"
+	"fxtime" "0.25"
+	"holdtime" "99999"
+	"message" "Round:"
+	"spawnflags" "1"
+	"targetname" "zom_round_text"
+	"x" "-1"
+	"y" "0.8"
+	"origin" "32 64 352"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1393"
+	"classname" "logic_case"
+	"targetname" "zom_spawn"
+	connections
+	{
+		"OnCase01" "zom_spawner1,Spawn,,0,-1"
+		"OnCase02" "zom_spawner2,Spawn,,0,-1"
+		"OnCase03" "zom_spawner3,Spawn,,0,-1"
+		"OnCase04" "zom_spawner4,Spawn,,0,-1"
+		"OnCase05" "zom_spawner5,Spawn,,0,-1"
+		"OnCase06" "zom_spawner6,Spawn,,0,-1"
+		"OnCase07" "zom_spawner7,Spawn,,0,-1"
+		"OnCase08" "zom_spawner8,Spawn,,0,-1"
+	}
+	"origin" "-16 64 352"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1420"
+	"classname" "logic_timer"
+	"LowerRandomBound" "0.5"
+	"RefireTime" "1"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_spawn_timer"
+	"UpperRandomBound" "2"
+	"UseRandomTime" "1"
+	connections
+	{
+		"OnTimer" "zom_spawn,PickRandom,,0,-1"
+		"OnTimer" "zom_spawn_stop,Add,1,0,-1"
+	}
+	"origin" "-16 64 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1478"
+	"classname" "math_counter"
+	"max" "10"
+	"min" "0"
+	"StartDisabled" "0"
+	"startvalue" "0"
+	"targetname" "zom_spawn_stop"
+	connections
+	{
+		"OnHitMax" "zom_spawn_timer,Disable,,0,-1"
+	}
+	"origin" "16 64 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1530"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "zom_round_relay_round1"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,8,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,8,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 1,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round2:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_relay_round2,Enable,,10,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_playerchecktimer,Enable,,10,1"
+		"OnTrigger" "zom_playercheck,Enable,,10.01,1"
+	}
+	"origin" "0 80 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1665"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "cod_bo1/mus/zombie/zombie_global/round_start.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "49"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "zom_round_snd_start"
+	"volstart" "0"
+	"origin" "16 80 352"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1736"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "cod_bo1/mus/zombie/zombie_global/round_end.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "49"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "zom_round_snd_end"
+	"volstart" "0"
+	"origin" "32 80 352"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1831"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round2"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,12,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,12,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 2,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round3:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,20,10,1"
+		"OnTrigger" "zom_round_relay_round3,Enable,,10,1"
+	}
+	"origin" "0 96 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1938"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round3"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,18,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,18,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 3,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round4:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,20,10,1"
+		"OnTrigger" "zom_round_relay_round4,Enable,,10,1"
+	}
+	"origin" "0 112 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "1994"
+	"classname" "info_node"
+	"nodeid" "1"
+	"origin" "-680.588 645.682 1.00003"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2025"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "12"
+	"origin" "-247.238 529.794 7.20024e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2027"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "13"
+	"origin" "80.8218 668.19 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2029"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "14"
+	"origin" "357.722 493.527 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2031"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "15"
+	"origin" "588.341 702.438 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2033"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "16"
+	"origin" "549.254 301.728 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2035"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "17"
+	"origin" "916.118 0.919067 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2037"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "18"
+	"origin" "598.815 -170.923 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2039"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "19"
+	"origin" "420.64 71.8336 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2041"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "20"
+	"origin" "129.014 259.432 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2043"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "21"
+	"origin" "-72.8914 313.652 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2045"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "22"
+	"origin" "-425.637 133.591 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2047"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "23"
+	"origin" "-752.054 326.589 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2049"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "24"
+	"origin" "-694.785 -94.963 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2053"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "26"
+	"origin" "-691.477 -415.77 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2055"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "27"
+	"origin" "-667.114 -680.88 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2057"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "28"
+	"origin" "-346.105 -410.038 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2059"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "29"
+	"origin" "-426.743 -190.125 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2061"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "30"
+	"origin" "200.841 -576.78 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2063"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "31"
+	"origin" "79.181 -194.17 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2065"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "32"
+	"origin" "592.857 -509.962 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2067"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "33"
+	"origin" "730.76 -782.372 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2069"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "34"
+	"origin" "-152.657 -698.994 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2071"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "35"
+	"origin" "-421.687 740.839 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2073"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "36"
+	"origin" "306.241 786.28 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2075"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "37"
+	"origin" "879.477 691.179 1.09673e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2077"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "38"
+	"origin" "910.681 -371.289 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2079"
+	"classname" "info_node"
+	"angles" "0 0 0"
+	"nodeid" "39"
+	"origin" "812.101 356.226 -1.95503e-005"
+	editor
+	{
+		"color" "232 219 8"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2313"
+	"classname" "math_counter"
+	"max" "2147483647"
+	"min" "0"
+	"StartDisabled" "0"
+	"startvalue" "40"
+	"targetname" "zom_health_counter"
+	connections
+	{
+		"OnGetValue" "!activator,SetHealth,,0,-1"
+	}
+	"origin" "16 64 384"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "2397"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round4"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,24,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,24,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 4,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round5:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,20,10,1"
+		"OnTrigger" "zom_round_relay_round5,Enable,,10,1"
+	}
+	"origin" "0 128 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "2468"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round5"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,30,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,30,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 5,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round6:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,20,10,1"
+		"OnTrigger" "zom_round_relay_round6,Enable,,10,1"
+	}
+	"origin" "0 144 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "2825"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round6"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,36,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,36,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 6,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round7:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,20,10,1"
+		"OnTrigger" "zom_round_relay_round7,Enable,,10,1"
+	}
+	"origin" "0 160 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "2827"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round7"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,42,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,42,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 7,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round8:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,20,10,1"
+		"OnTrigger" "zom_round_relay_round8,Enable,,10,1"
+	}
+	"origin" "0 176 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "2829"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round8"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,48,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,48,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 8,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round9:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,20,10,1"
+		"OnTrigger" "zom_round_relay_round9,Enable,,10,1"
+	}
+	"origin" "0 192 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "2831"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round9"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,54,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,54,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 9,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round10:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,20,10,1"
+		"OnTrigger" "zom_round_relay_round10,Enable,,10,1"
+	}
+	"origin" "0 208 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "2833"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round10"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,64,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,64,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 10,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round11:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,50,10,1"
+		"OnTrigger" "zom_round_relay_round11,Enable,,10,1"
+	}
+	"origin" "0 224 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "3053"
+	"classname" "logic_case"
+	"targetname" "zom_random_head"
+	connections
+	{
+		"OnCase01" "!activator,SetBodyGroup,0,0,-1"
+		"OnCase02" "!activator,SetBodyGroup,1,0,-1"
+		"OnCase03" "!activator,SetBodyGroup,2,0,-1"
+		"OnCase04" "!activator,SetBodyGroup,3,0,-1"
+	}
+	"origin" "-16 80 352"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3131"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3133"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3135"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3137"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3139"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3141"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3143"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3145"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3147"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3149"
+		"classname" "light_environment"
+		"_ambient" "101 139 182 550"
+		"_ambientHDR" "-1 -1 -1 1"
+		"_AmbientScaleHDR" "1"
+		"_light" "255 240 206 710"
+		"_lightHDR" "-1 -1 -1 1"
+		"_lightscaleHDR" "1"
+		"angles" "0 26 0"
+		"pitch" "-60"
+		"SunSpreadAngle" "0.5"
+		"origin" "0 0 96"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupid" "15"
+			"visgroupshown" "0"
+			"visgroupautoshown" "1"
+			"logicalpos" "[0 5500]"
+		}
+	}
+}
+entity
+{
+	"id" "3238"
+	"classname" "point_servercommand"
+	"targetname" "zom_servercommand"
+	"origin" "0 0 224"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "3103"
+	"classname" "trigger_multiple"
+	"origin" "0 0 576"
+	"spawnflags" "1"
+	"StartDisabled" "0"
+	"targetname" "zom_small_people"
+	"wait" "1"
+	connections
+	{
+		"OnStartTouch" "!activator,SetModelScale,0.85,0,-1"
+	}
+	solid
+	{
+		"id" "3101"
+		side
+		{
+			"id" "138"
+			"plane" "(-1280 1280 1280) (1280 1280 1280) (1280 -1280 1280)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "137"
+			"plane" "(-1280 -1280 -128) (1280 -1280 -128) (1280 1280 -128)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "136"
+			"plane" "(-1280 1280 1280) (-1280 -1280 1280) (-1280 -1280 -128)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "135"
+			"plane" "(1280 1280 -128) (1280 -1280 -128) (1280 -1280 1280)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "134"
+			"plane" "(1280 1280 1280) (-1280 1280 1280) (-1280 1280 -128)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "133"
+			"plane" "(1280 -1280 -128) (-1280 -1280 -128) (-1280 -1280 1280)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "3450"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_round_relay_round11"
+	connections
+	{
+		"OnTrigger" "zom_round_zombie_counter,SetHitMax,74,10,1"
+		"OnTrigger" "zom_spawn_stop,SetHitMax,74,10,1"
+		"OnTrigger" "zom_spawn_stop,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_zombie_counter,SetValueNoFire,0,10,1"
+		"OnTrigger" "zom_round_text,AddOutput,message Round 11,10,1"
+		"OnTrigger" "zom_round_text,Display,,10.01,1"
+		"OnTrigger" "!self,AddOutput,OnTrigger zom_round_relay_round12:Trigger::0:0,10,1"
+		"OnTrigger" "zom_round_snd_start,PlaySound,,7,1"
+		"OnTrigger" "zom_round_snd_end,PlaySound,,0,1"
+		"OnTrigger" "zom_spawn_timer,Enable,,10,1"
+		"OnTrigger" "zom_health_counter,Add,50,10,1"
+		"OnTrigger" "zom_round_relay_round12,Enable,,10,1"
+	}
+	"origin" "0 240 368"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "3535"
+	"classname" "logic_timer"
+	"LowerRandomBound" "0.5"
+	"RefireTime" "0.1"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "zom_headcrab_kill"
+	"UpperRandomBound" "2"
+	"UseRandomTime" "0"
+	connections
+	{
+		"OnTimer" "npc_headcrab,Kill,,0,-1"
+	}
+	"origin" "-16 64 384"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "3849"
+	"classname" "of_logic_dm"
+	"DontCountKills" "1"
+	"IsTeamplay" "1"
+	"origin" "-134.882 -48 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "3906"
+	"classname" "logic_timer"
+	"angles" "0 0 0"
+	"linedivider1" "----------------------------------------------------------------------------------------------------------"
+	"LowerRandomBound" "1"
+	"RefireTime" "1"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "zom_playercheck_bluetimer"
+	"UpperRandomBound" "1"
+	"UseRandomTime" "0"
+	connections
+	{
+		"OnTimer" "zom_playercheck_blue,Disable,,0,-1"
+		"OnTimer" "zom_playercheck_blue,Enable,,0.5,-1"
+	}
+	"origin" "17.6254 56.7146 432"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "3908"
+	"classname" "logic_timer"
+	"angles" "0 0 0"
+	"linedivider1" "----------------------------------------------------------------------------------------------------------"
+	"LowerRandomBound" "1"
+	"RefireTime" "1"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_playerchecktimer"
+	"UpperRandomBound" "1"
+	"UseRandomTime" "0"
+	connections
+	{
+		"OnTimer" "zom_lose,RoundWin,,0,1"
+	}
+	"origin" "16.6254 40.7146 432"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "3910"
+	"classname" "game_round_win"
+	"angles" "0 0 0"
+	"force_map_reset" "1"
+	"linedivider1" "----------------------------------------------------------------------------------------------------------"
+	"switch_teams" "0"
+	"targetname" "zom_lose"
+	"TeamNum" "3"
+	"win_reason" "You have survived 5 rounds!"
+	"origin" "16.6254 24.7146 432"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "3942"
+	"classname" "func_nobuild"
+	"AllowDispenser" "0"
+	"AllowSentry" "0"
+	"AllowTeleporters" "0"
+	"angles" "0 0 0"
+	"effects" "0"
+	"hammerid" "0"
+	"linedivider1" "----------------------------------------------------------------------------------------------------------"
+	"linedivider2" "----------------------------------------------------------------------------------------------------------"
+	"modelindex" "0"
+	"origin" "-8 0 592"
+	"solid" "1"
+	"spawnflags" "1"
+	"StartDisabled" "0"
+	solid
+	{
+		"id" "3943"
+		side
+		{
+			"id" "186"
+			"plane" "(-1424 -1408 1344) (-1424 1408 1344) (1408 1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "185"
+			"plane" "(-1424 1408 -160) (-1424 -1408 -160) (1408 -1408 -160)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "184"
+			"plane" "(-1424 -1408 -160) (-1424 1408 -160) (-1424 1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "183"
+			"plane" "(1408 1408 -160) (1408 -1408 -160) (1408 -1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "182"
+			"plane" "(-1424 1408 -160) (1408 1408 -160) (1408 1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "181"
+			"plane" "(1408 -1408 -160) (-1424 -1408 -160) (-1424 -1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "3945"
+	"classname" "trigger_multiple"
+	"angles" "0 0 0"
+	"effects" "0"
+	"filtername" "zom_filter_red"
+	"hammerid" "0"
+	"linedivider1" "----------------------------------------------------------------------------------------------------------"
+	"linedivider2" "----------------------------------------------------------------------------------------------------------"
+	"modelindex" "0"
+	"origin" "-8 0 592"
+	"solid" "1"
+	"spawnflags" "1"
+	"StartDisabled" "1"
+	"targetname" "zom_playercheck"
+	"wait" "1"
+	connections
+	{
+		"OnStartTouch" "zom_playercheck,Disable,,0,-1"
+		"OnStartTouch" "zom_playercheck,Enable,,0.1,-1"
+		"OnStartTouch" "zom_playerchecktimer,ResetTimer,,0,-1"
+	}
+	solid
+	{
+		"id" "3946"
+		side
+		{
+			"id" "192"
+			"plane" "(-1424 -1408 1344) (-1424 1408 1344) (1408 1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "191"
+			"plane" "(-1424 1408 -160) (-1424 -1408 -160) (1408 -1408 -160)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "190"
+			"plane" "(-1424 -1408 -160) (-1424 1408 -160) (-1424 1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "189"
+			"plane" "(1408 1408 -160) (1408 -1408 -160) (1408 -1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "188"
+			"plane" "(-1424 1408 -160) (1408 1408 -160) (1408 1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "187"
+			"plane" "(1408 -1408 -160) (-1424 -1408 -160) (-1424 -1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "3948"
+	"classname" "trigger_multiple"
+	"angles" "0 0 0"
+	"effects" "0"
+	"filtername" "zom_filter_blue"
+	"hammerid" "0"
+	"linedivider1" "----------------------------------------------------------------------------------------------------------"
+	"linedivider2" "----------------------------------------------------------------------------------------------------------"
+	"modelindex" "0"
+	"origin" "-8 0 592"
+	"solid" "1"
+	"spawnflags" "1"
+	"StartDisabled" "1"
+	"targetname" "zom_playercheck_blue"
+	"wait" "1"
+	connections
+	{
+		"OnStartTouch" "!activator,SetTeam,2,0,-1"
+	}
+	solid
+	{
+		"id" "3949"
+		side
+		{
+			"id" "198"
+			"plane" "(-1424 -1408 1344) (-1424 1408 1344) (1408 1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "197"
+			"plane" "(-1424 1408 -160) (-1424 -1408 -160) (1408 -1408 -160)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "196"
+			"plane" "(-1424 -1408 -160) (-1424 1408 -160) (-1424 1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "195"
+			"plane" "(1408 1408 -160) (1408 -1408 -160) (1408 -1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "194"
+			"plane" "(-1424 1408 -160) (1408 1408 -160) (1408 1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "193"
+			"plane" "(1408 -1408 -160) (-1424 -1408 -160) (-1424 -1408 1344)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "4036"
+	"classname" "filter_activator_team"
+	"angles" "0 0 0"
+	"filterteam" "3"
+	"linedivider1" "----------------------------------------------------------------------------------------------------------"
+	"Negated" "0"
+	"targetname" "zom_filter_blue"
+	"origin" "24 56 456"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "4038"
+	"classname" "filter_activator_team"
+	"angles" "0 0 0"
+	"filterteam" "2"
+	"linedivider1" "----------------------------------------------------------------------------------------------------------"
+	"Negated" "0"
+	"targetname" "zom_filter_red"
+	"origin" "24 40 456"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "4112"
+	"classname" "prop_dynamic"
+	"angles" "0 180 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "0"
+	"disableshadows" "0"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/cod_bo1/zombie_treasure_box.mdl"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "6"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "4221"
+	"classname" "light"
+	"_constant_attn" "0"
+	"_distance" "168"
+	"_hardfalloff" "1"
+	"_light" "198 162 79 100"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_linear_attn" "1"
+	"_quadratic_attn" "0"
+	"defaultstyle" "0"
+	"spawnflags" "0"
+	"style" "0"
+	"targetname" "zom_treasurebox_light"
+	"origin" "-1008 0 32"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "4364"
+	"classname" "func_button"
+	"disablereceiveshadows" "0"
+	"disableshadows" "0"
+	"effects" "0"
+	"health" "0"
+	"lip" "0"
+	"locked_sound" "0"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"movedir" "0 0 0"
+	"origin" "-1004 0 22"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"shadowcastdist" "0"
+	"sounds" "0"
+	"spawnflags" "1025"
+	"speed" "5"
+	"targetname" "zom_treasurebox_button"
+	"texframeindex" "0"
+	"unlocked_sound" "0"
+	"vrad_brush_cast_shadows" "0"
+	"wait" "0.1"
+	connections
+	{
+		"OnPressed" "zom_treasurebox_test,Test,,0,-1"
+	}
+	solid
+	{
+		"id" "4359"
+		side
+		{
+			"id" "228"
+			"plane" "(-1020 -48 32) (-1020 48 32) (-988 48 32)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[1 0 0 -4] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "227"
+			"plane" "(-1020 48 12) (-1020 -48 12) (-988 -48 12)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[1 0 0 -4] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "226"
+			"plane" "(-1020 -48 12) (-1020 48 12) (-1020 48 32)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 3] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "225"
+			"plane" "(-988 48 12) (-988 -48 12) (-988 -48 32)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 3] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "224"
+			"plane" "(-1020 48 12) (-988 48 12) (-988 48 32)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[1 0 0 -4] 8"
+			"vaxis" "[0 0 -1 3] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "223"
+			"plane" "(-988 -48 12) (-1020 -48 12) (-1020 -48 32)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[1 0 0 -4] 8"
+			"vaxis" "[0 0 -1 3] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 3000]"
+	}
+}
+entity
+{
+	"id" "4420"
+	"classname" "logic_case"
+	"targetname" "zom_treasurebox_decide"
+	connections
+	{
+		"OnCase01" "zom_treasurebox_decide1,PickRandom,,0.01,-1"
+		"OnCase02" "zom_treasurebox_decide2,PickRandom,,0.01,-1"
+	}
+	"origin" "-1004 32 64"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "4447"
+	"classname" "logic_case"
+	"targetname" "zom_treasurebox_decide1"
+	connections
+	{
+		"OnCase01" "zom_treasureboxgunp1,Enable,,0,-1"
+		"OnCase01" "zom_treasureboxbgunp1,SetValue,1,0,-1"
+		"OnCase02" "zom_treasureboxgunp2,Enable,,0,-1"
+		"OnCase02" "zom_treasureboxbgunp2,SetValue,1,0,-1"
+		"OnCase03" "zom_treasureboxgunp3,Enable,,0,-1"
+		"OnCase03" "zom_treasureboxbgunp3,SetValue,1,0,-1"
+		"OnCase04" "zom_treasureboxgunp4,Enable,,0,-1"
+		"OnCase04" "zom_treasureboxbgunp4,SetValue,1,0,-1"
+		"OnCase05" "zom_treasureboxgunp5,Enable,,0,-1"
+		"OnCase05" "zom_treasureboxbgunp5,SetValue,1,0,-1"
+		"OnCase06" "zom_treasureboxgunp6,Enable,,0,-1"
+		"OnCase06" "zom_treasureboxbgunp6,SetValue,1,0,-1"
+		"OnCase07" "zom_treasureboxgunp7,Enable,,0,-1"
+		"OnCase07" "zom_treasureboxbgunp7,SetValue,1,0,-1"
+		"OnCase08" "zom_treasureboxgunp8,Enable,,0,-1"
+		"OnCase08" "zom_treasureboxbgunp8,SetValue,1,0,-1"
+		"OnCase09" "zom_treasureboxgunp9,Enable,,0,-1"
+		"OnCase09" "zom_treasureboxbgunp9,SetValue,1,0,-1"
+		"OnCase10" "zom_treasureboxgunp10,Enable,,0,-1"
+		"OnCase10" "zom_treasureboxbgunp10,SetValue,1,0,-1"
+		"OnCase11" "zom_treasureboxgunp11,Enable,,0,-1"
+		"OnCase11" "zom_treasureboxbgunp11,SetValue,1,0,-1"
+		"OnCase12" "zom_treasureboxgunp12,Enable,,0,-1"
+		"OnCase12" "zom_treasureboxbgunp12,SetValue,1,0,-1"
+		"OnCase13" "zom_treasureboxgunp13,Enable,,0,-1"
+		"OnCase13" "zom_treasureboxbgunp13,SetValue,1,0,-1"
+		"OnCase14" "zom_treasureboxgunp14,Enable,,0,-1"
+		"OnCase14" "zom_treasureboxbgunp14,SetValue,1,0,-1"
+		"OnCase15" "zom_treasureboxgunp15,Enable,,0,-1"
+		"OnCase15" "zom_treasureboxbgunp15,SetValue,1,0,-1"
+		"OnCase16" "zom_treasureboxgunp16,Enable,,0,-1"
+		"OnCase16" "zom_treasureboxbgunp16,SetValue,1,0,-1"
+	}
+	"origin" "-1004 24 80"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "4451"
+	"classname" "logic_case"
+	"targetname" "zom_treasurebox_decide2"
+	connections
+	{
+		"OnCase01" "zom_treasureboxgunp17,Enable,,0,-1"
+		"OnCase01" "zom_treasureboxbgunp17,SetValue,1,0,-1"
+		"OnCase02" "zom_treasureboxgunp18,Enable,,0,-1"
+		"OnCase02" "zom_treasureboxbgunp18,SetValue,1,0,-1"
+		"OnCase03" "zom_treasureboxgunp19,Enable,,0,-1"
+		"OnCase03" "zom_treasureboxbgunp19,SetValue,1,0,-1"
+		"OnCase04" "zom_treasureboxgunp20,Enable,,0,-1"
+		"OnCase04" "zom_treasureboxbgunp20,SetValue,1,0,-1"
+		"OnCase05" "zom_treasureboxgunp21,Enable,,0,-1"
+		"OnCase05" "zom_treasureboxbgunp21,SetValue,1,0,-1"
+		"OnCase06" "zom_treasureboxgunp22,Enable,,0,-1"
+		"OnCase06" "zom_treasureboxbgunp22,SetValue,1,0,-1"
+		"OnCase07" "zom_treasureboxgunp23,Enable,,0,-1"
+		"OnCase07" "zom_treasureboxbgunp23,SetValue,1,0,-1"
+		"OnCase08" "zom_treasureboxbgunp24,SetValue,1,0,-1"
+		"OnCase08" "zom_treasureboxgunp24,Enable,,0,-1"
+	}
+	"origin" "-1004 40 80"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "4485"
+	"classname" "logic_timer"
+	"RefireTime" "0.25"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasurebox_decidetimer"
+	"UseRandomTime" "0"
+	connections
+	{
+		"OnTimer" "zom_treasurebox_decide,PickRandom,,0,-1"
+		"OnTimer" "zom_treasureboxgunp*,Disable,,0,-1"
+		"OnTimer" "zom_treasureboxbgunp*,SetValue,0,0,-1"
+	}
+	"origin" "-1004 32 48"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "4574"
+	"classname" "func_button"
+	"_minlight" "1.0"
+	"disablereceiveshadows" "0"
+	"disableshadows" "0"
+	"effects" "0"
+	"health" "0"
+	"lip" "0"
+	"locked_sound" "0"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"movedir" "0 0 0"
+	"origin" "-1020 228 60"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "1"
+	"shadowcastdist" "0"
+	"sounds" "0"
+	"spawnflags" "1025"
+	"speed" "5"
+	"texframeindex" "0"
+	"unlocked_sound" "0"
+	"vrad_brush_cast_shadows" "0"
+	"wait" "3"
+	connections
+	{
+		"OnPressed" "zom_round_relay_round1,Trigger,,1,-1"
+		"OnPressed" "!self,Alpha,0,0,-1"
+	}
+	solid
+	{
+		"id" "4562"
+		side
+		{
+			"id" "246"
+			"plane" "(-1024 216 72) (-1024 240 72) (-1016 240 72)"
+			"material" "DEV/DEV_MEASUREGENERIC01"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 9.49553] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "245"
+			"plane" "(-1024 240 48) (-1024 216 48) (-1016 216 48)"
+			"material" "DEV/DEV_MEASUREGENERIC01"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 -1 0 9.49553] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "244"
+			"plane" "(-1024 216 48) (-1024 240 48) (-1024 240 72)"
+			"material" "DEV/DEV_MEASUREGENERIC01"
+			"uaxis" "[0 1 0 -9.49553] 8"
+			"vaxis" "[0 0 -1 7] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "243"
+			"plane" "(-1016 240 48) (-1016 216 48) (-1016 216 72)"
+			"material" "DEV/DEV_MEASUREGENERIC01"
+			"uaxis" "[0 1 0 -9.49553] 8"
+			"vaxis" "[0 0 -1 7] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "242"
+			"plane" "(-1024 240 48) (-1016 240 48) (-1016 240 72)"
+			"material" "DEV/DEV_MEASUREGENERIC01"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 7] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "241"
+			"plane" "(-1016 216 48) (-1024 216 48) (-1024 216 72)"
+			"material" "DEV/DEV_MEASUREGENERIC01"
+			"uaxis" "[1 0 0 0] 8"
+			"vaxis" "[0 0 -1 7] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 4500]"
+	}
+}
+entity
+{
+	"id" "4733"
+	"classname" "logic_branch"
+	"InitialValue" "1"
+	"targetname" "zom_treasurebox_test"
+	connections
+	{
+		"OnTrue" "zom_treasurebox,SetAnimation,open,0,-1"
+		"OnTrue" "zom_treasurebox_light,TurnOn,,0,-1"
+		"OnTrue" "zom_treasurebox_decidetimer,Enable,,0,-1"
+		"OnTrue" "!self,SetValue,0,0,-1"
+		"OnTrue" "zom_treasurebox_button2s,ForceSpawn,,5.02,-1"
+		"OnTrue" "zom_treasurebox_decidetimer,Disable,,5.02,-1"
+		"OnTrue" "zom_treasureboxgun,SetAnimation,open,0,-1"
+		"OnTrue" "zom_treasureboxgun,SetAnimation,close,5.02,-1"
+		"OnTrue" "zom_treasurebox_fall,Trigger,,5.02,-1"
+		"OnTrue" "zom_treasurebox_sound_open,PlaySound,,0,-1"
+		"OnTrue" "zom_treasurebox_sound_music,PlaySound,,0.5,-1"
+		"OnTrue" "zom_treasurebox_fall,Enable,,5.01,-1"
+	}
+	"origin" "-1008 -24 49.0046"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "4807"
+	"classname" "prop_dynamic"
+	"angles" "0 180 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/cod_bo1/zombie_treasure_box_gun.mdl"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "10"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "6"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "zom_treasureboxgun"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "4960"
+	"classname" "logic_auto"
+	"spawnflags" "1"
+	connections
+	{
+		"OnMapSpawn" "zom_treasureboxgunp*,SetParentAttachmentMaintainOffset,dummy,0.05,-1"
+		"OnMapSpawn" "zom_treasurebox_light,TurnOff,,0.05,-1"
+	}
+	"origin" "-1008 -24 72"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5601"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_assault_rifle.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp1"
+	"texframeindex" "0"
+	"origin" "-1004 -8 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5712"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp1"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_1,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-1004 24 96"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5727"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp2"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_2,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-1004 24 112"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5733"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp3"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_3,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-1004 24 128"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5741"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp4"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_4,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-1004 24 144"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5751"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp5"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_5,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-988 24 96"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5759"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp6"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_6,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-988 24 112"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5765"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp7"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_7,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-988 24 128"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5771"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp8"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_8,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-988 24 144"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5777"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp9"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_9,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-972 24 96"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5783"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp10"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_10,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-972 24 112"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5789"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp11"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_11,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-972 24 128"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5795"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp12"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_12,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-972 24 144"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5801"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp13"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_13,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-956 24 96"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5809"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp14"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_14,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-956 24 112"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5815"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp15"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_15,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-956 24 128"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5821"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp16"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_16,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-956 24 144"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5849"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp17"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_17,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-1004 8 96"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5855"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp18"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_18,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-1004 8 112"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5863"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp19"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_19,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-1004 8 128"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5869"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp20"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_20,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-1004 8 144"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5875"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp21"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_21,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-988 8 96"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5881"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp22"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_22,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-988 8 112"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "5887"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp23"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_23,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-988 8 128"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6861"
+	"classname" "func_button"
+	"disablereceiveshadows" "0"
+	"disableshadows" "0"
+	"effects" "0"
+	"health" "0"
+	"lip" "0"
+	"locked_sound" "0"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"movedir" "0 0 0"
+	"origin" "-1004 0 22"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"shadowcastdist" "0"
+	"sounds" "0"
+	"spawnflags" "1025"
+	"speed" "5"
+	"targetname" "zom_treasurebox_button2"
+	"texframeindex" "0"
+	"unlocked_sound" "0"
+	"vrad_brush_cast_shadows" "0"
+	"wait" "0.1"
+	connections
+	{
+		"OnPressed" "zom_treasureboxbgunp*,Test,,0,1"
+		"OnPressed" "zom_treasurebox_take,Trigger,,0,-1"
+	}
+	solid
+	{
+		"id" "6862"
+		side
+		{
+			"id" "312"
+			"plane" "(-1024 -52 36) (-1024 52 36) (-984 52 36)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[1 0 0 -4] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "311"
+			"plane" "(-1024 52 8) (-1024 -52 8) (-984 -52 8)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[1 0 0 -4] 8"
+			"vaxis" "[0 -1 0 0] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "310"
+			"plane" "(-1024 -52 8) (-1024 52 8) (-1024 52 36)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 3] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "309"
+			"plane" "(-984 52 8) (-984 -52 8) (-984 -52 36)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[0 1 0 0] 8"
+			"vaxis" "[0 0 -1 3] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "308"
+			"plane" "(-1024 52 8) (-984 52 8) (-984 52 36)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[1 0 0 -4] 8"
+			"vaxis" "[0 0 -1 3] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "307"
+			"plane" "(-984 -52 8) (-1024 -52 8) (-1024 -52 36)"
+			"material" "TOOLS/TOOLSNPCCLIP"
+			"uaxis" "[1 0 0 -4] 8"
+			"vaxis" "[0 0 -1 3] 8"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 3000]"
+	}
+}
+entity
+{
+	"id" "6928"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "zom_treasurebox_button2s"
+	"Template01" "zom_treasurebox_button2"
+	"origin" "-980 4 24"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7000"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_take"
+	connections
+	{
+		"OnTrigger" "zom_treasurebox_test,SetValue,1,2,-1"
+		"OnTrigger" "zom_treasureboxgun,SetAnimation,idle,0,-1"
+		"OnTrigger" "zom_treasurebox_light,TurnOff,,0,-1"
+		"OnTrigger" "zom_treasurebox,SetAnimation,close,0,-1"
+		"OnTrigger" "zom_treasureboxbgunp*,SetValue,0,0.02,-1"
+		"OnTrigger" "zom_treasureboxgunp*,Disable,,0,-1"
+		"OnTrigger" "zom_treasurebox_button2,Kill,,0,-1"
+		"OnTrigger" "zom_treasurebox_weapongun_*,FireUser1,,0,-1"
+		"OnTrigger" "zom_treasurebox_fall,Disable,,0,-1"
+		"OnTrigger" "zom_treasurebox_fall,CancelPending,,0,-1"
+		"OnTrigger" "zom_treasurebox_sound_close,PlaySound,,0,-1"
+	}
+	"origin" "-1008 -8 49.0046"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7137"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "zom_treasurebox_fall"
+	connections
+	{
+		"OnTrigger" "zom_treasurebox_test,SetValue,1,12,-1"
+		"OnTrigger" "zom_treasureboxgun,SetAnimation,idle,10,-1"
+		"OnTrigger" "zom_treasurebox_light,TurnOff,,10,-1"
+		"OnTrigger" "zom_treasurebox,SetAnimation,close,10,-1"
+		"OnTrigger" "zom_treasureboxbgunp*,SetValue,0,10.02,-1"
+		"OnTrigger" "zom_treasureboxgunp*,Disable,,10,-1"
+		"OnTrigger" "zom_treasurebox_button2,Kill,,10,-1"
+		"OnTrigger" "zom_treasurebox_weapongun_*,FireUser1,,10,-1"
+		"OnTrigger" "zom_treasurebox_sound_close,PlaySound,,10,-1"
+	}
+	"origin" "-1008 8 49.0046"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7495"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_bottle.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp2"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7780"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "zom_treasureboxbgunp24"
+	connections
+	{
+		"OnTrue" "zom_treasurebox_wepspawn_24,ForceSpawnAtEntityOrigin,!activator,0,-1"
+	}
+	"origin" "-988 8 144"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7826"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_flamethrower.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp3"
+	"texframeindex" "0"
+	"origin" "-1004 -28 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7837"
+	"classname" "prop_dynamic_override"
+	"angles" "00 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_grenadelauncher_dm.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp4"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7846"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_knife.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp5"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7857"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_medigun.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp6"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7866"
+	"classname" "prop_dynamic_override"
+	"angles" "-90 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_minigun_dm.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp7"
+	"texframeindex" "0"
+	"origin" "-1008 -16 28"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7875"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_nailgun.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp8"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7884"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_pistol_dm.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp9"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7893"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_pistol_akimbo.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp10"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7902"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_railgun.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp11"
+	"texframeindex" "0"
+	"origin" "-1004 -12 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7914"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_revolver.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp12"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7923"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_revolver_dm.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp13"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7932"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_rocketlauncher.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp14"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7947"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_scattergun.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp15"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "7958"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_shotgun.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp16"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8014"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_smg.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp17"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8023"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_smg_dm.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp18"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8032"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_stickybomb_launcher.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp19"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8041"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_supershotgun.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp20"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8050"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_syringegun.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp21"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8059"
+	"classname" "prop_dynamic_override"
+	"angles" "-90 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_sword.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp22"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8068"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_tommygun.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp23"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8077"
+	"classname" "prop_dynamic_override"
+	"angles" "0 90 0"
+	"body" "0"
+	"DisableBoneFollowers" "1"
+	"disablereceiveshadows" "1"
+	"disableshadows" "1"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"maxdxlevel" "0"
+	"MinAnimTime" "5"
+	"mindxlevel" "0"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_sniperrifle.mdl"
+	"parentname" "zom_treasureboxgun"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "0"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "zom_treasureboxgunp24"
+	"texframeindex" "0"
+	"origin" "-1004 0 12"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8082"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "cod_bo1/evt/zombie_global/box/open/open_00.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"SourceEntityName" "zom_treasurebox"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "zom_treasurebox_sound_open"
+	"volstart" "0"
+	"origin" "-1012 0 37.0046"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8117"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "cod_bo1/evt/zombie_global/box/close/close_00.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"SourceEntityName" "zom_treasurebox"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "zom_treasurebox_sound_close"
+	"volstart" "0"
+	"origin" "-1012 0 37.0046"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8132"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "cod_bo1/evt/zombie_global/box/music_box/music_box_00.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"SourceEntityName" "zom_treasurebox"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "zom_treasurebox_sound_music"
+	"volstart" "0"
+	"origin" "-1012 0 37.0046"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8407"
+	"classname" "logic_auto"
+	"spawnflags" "1"
+	connections
+	{
+		"OnMapSpawn" "zom_treasureboxgunp*,SetParentAttachmentMaintainOffset,dummy,0.05,-1"
+		"OnMapSpawn" "zom_treasurebox_light,TurnOff,,0.05,-1"
+	}
+	"origin" "-1008 -24 88"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordon
+{
+	"mins" "(-1024 -1024 -1024)"
+	"maxs" "(1024 1024 1024)"
+	"active" "0"
+}
