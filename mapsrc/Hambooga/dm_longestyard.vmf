@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "150"
+	"mapversion" "156"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "150"
+	"mapversion" "156"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"detailmaterial" "detail/detailsprites"
@@ -10530,7 +10530,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "music/deathmatch/map01_loop.wav"
+	"message" "DeathmatchMusic.E1M1alt"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -24597,7 +24597,7 @@ entity
 	"defaultstyle" "0"
 	"spawnflags" "0"
 	"style" "0"
-	"origin" "43 -173 -228"
+	"origin" "40 -176 -228"
 	editor
 	{
 		"color" "220 30 220"
@@ -25046,33 +25046,6 @@ entity
 	"solid" "6"
 	"spawn_sound" "Item.Materialize"
 	"origin" "-352 -186 0.269348"
-	editor
-	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 -4268]"
-	}
-}
-entity
-{
-	"id" "16403"
-	"classname" "item_healthkit_full"
-	"angles" "0 0 0"
-	"AutoMaterialize" "1"
-	"fademaxdist" "0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"HiddenWhenRespawning" "1"
-	"model" "models/items/medkit_large.mdl"
-	"pickup_sound" "Healthkit.Touch"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"respawntime" "10"
-	"solid" "6"
-	"spawn_sound" "Item.Materialize"
-	"targetname" "Healthkit_MEGAHP"
-	"origin" "40 -165 101"
 	editor
 	{
 		"color" "0 0 200"
@@ -30101,6 +30074,32 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[9000 -4268]"
+	}
+}
+entity
+{
+	"id" "29384"
+	"classname" "item_healthkit_full"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"fademaxdist" "0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"HiddenWhenRespawning" "0"
+	"model" "models/items/medkit_large.mdl"
+	"pickup_sound" "items/q3_megahealth.wav"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "125"
+	"solid" "6"
+	"spawn_sound" "items/itembk2.wav"
+	"origin" "40 -176 104"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -4268]"
 	}
 }
 cameras
