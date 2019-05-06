@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "112"
+	"mapversion" "116"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,13 +14,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "8"
+	"nGridSpacing" "1"
 	"bShow3DGrid" "1"
 }
 world
 {
 	"id" "1"
-	"mapversion" "112"
+	"mapversion" "116"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"detailmaterial" "detail/detailsprites"
@@ -40494,32 +40494,6 @@ entity
 }
 entity
 {
-	"id" "21258"
-	"classname" "item_healthkit_full"
-	"angles" "0 0 0"
-	"AutoMaterialize" "1"
-	"fademaxdist" "0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"HiddenWhenRespawning" "1"
-	"model" "models/items/medkit_large.mdl"
-	"pickup_sound" "Healthkit.Touch"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"respawntime" "10"
-	"solid" "6"
-	"spawn_sound" "Item.Materialize"
-	"origin" "788.139 -1659.83 -424.569"
-	editor
-	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 -4268]"
-	}
-}
-entity
-{
 	"id" "21274"
 	"classname" "item_healthkit_small"
 	"angles" "0 0 0"
@@ -40698,32 +40672,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 -15268]"
-	}
-}
-entity
-{
-	"id" "21394"
-	"classname" "item_healthkit_full"
-	"angles" "0 0 0"
-	"AutoMaterialize" "1"
-	"fademaxdist" "0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"HiddenWhenRespawning" "1"
-	"model" "models/items/medkit_large.mdl"
-	"pickup_sound" "Healthkit.Touch"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"respawntime" "10"
-	"solid" "6"
-	"spawn_sound" "Item.Materialize"
-	"origin" "304.04 -1209.39 -195.099"
-	editor
-	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 -4268]"
 	}
 }
 entity
@@ -42956,7 +42904,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "music/deathmatch/dm_loop.wav"
+	"message" "DeathmatchMusic.Generic"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -43073,7 +43021,7 @@ entity
 {
 	"id" "38320"
 	"classname" "dm_weapon_spawner"
-	"angles" "0 0 0"
+	"angles" "-90 0 0"
 	"AutoMaterialize" "1"
 	"body" "0"
 	"disablereceiveshadows" "0"
@@ -43104,7 +43052,7 @@ entity
 		"OnPlayerTouch" "Emitter_Minigun,skin,1,15,-1"
 		"OnPlayerTouch" "RespawnSound_Minigun,PlaySound,,15,-1"
 	}
-	"origin" "421.857 -815.531 -173.702"
+	"origin" "448 -808 -173.702"
 	editor
 	{
 		"color" "220 30 220"
@@ -43772,6 +43720,65 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[9000 -4268]"
+	}
+}
+entity
+{
+	"id" "39432"
+	"classname" "item_healthkit_mega"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"fademaxdist" "0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"HiddenWhenRespawning" "0"
+	"model" "models/items/medkit_large.mdl"
+	"pickup_sound" "items/q3_megahealth.wav"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "125"
+	"skin" "0"
+	"solid" "6"
+	"spawn_sound" "items/itembk2.wav"
+	"origin" "784 -1664 -424"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -4268]"
+	}
+}
+entity
+{
+	"id" "39968"
+	"classname" "item_healthkit_medium"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disablereceiveshadows" "0"
+	"disableshadows" "0"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"model" "models/items/medkit_medium.mdl"
+	"pickup_sound" "Healthkit.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"respawndelay" "0"
+	"respawntime" "10"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"spawn_sound" "Item.Materialize"
+	"texframeindex" "0"
+	"origin" "293 -1203 -196.412"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
 	}
 }
 cameras

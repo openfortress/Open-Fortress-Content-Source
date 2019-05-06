@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "152"
+	"mapversion" "155"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "152"
+	"mapversion" "155"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -9560,7 +9560,7 @@ entity
 {
 	"id" "75"
 	"classname" "dm_weapon_spawner"
-	"angles" "0 0 0"
+	"angles" "-90 0 0"
 	"AutoMaterialize" "1"
 	"body" "0"
 	"disablereceiveshadows" "0"
@@ -9590,7 +9590,7 @@ entity
 		"OnPlayerTouch" "Emitter_MinigunDM,skin,0,0,-1"
 		"OnPlayerTouch" "Emitter_MinigunDM,skin,1,15,-1"
 	}
-	"origin" "-284 -256 188.801"
+	"origin" "-256.835 -253.079 188.801"
 	editor
 	{
 		"color" "220 30 220"
@@ -9761,7 +9761,7 @@ entity
 		"OnPlayerTouch" "Emitter_Rocket,skin,0,0,-1"
 		"OnPlayerTouch" "Emitter_Rocket,skin,1,15,-1"
 	}
-	"origin" "256 256 168"
+	"origin" "248.453 255.497 168"
 	editor
 	{
 		"color" "220 30 220"
@@ -11154,7 +11154,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "music/deathmatch/map01_waiting.wav"
+	"message" "DeathmatchMusic.Map01_Waiting"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -11186,7 +11186,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "music/deathmatch/map01_loop.wav"
+	"message" "DeathmatchMusic.Map01"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -11218,7 +11218,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "music/deathmatch/winpanel/dm_winpanel_top3.wav"
+	"message" "DeathmatchMusic.Intermission"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
