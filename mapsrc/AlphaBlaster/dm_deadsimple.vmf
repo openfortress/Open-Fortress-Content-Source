@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "157"
+	"mapversion" "158"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "157"
+	"mapversion" "158"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -12802,8 +12802,8 @@ entity
 	"rendercolor" "255 255 255"
 	"renderfx" "0"
 	"rendermode" "0"
-	"respawndelay" "120"
-	"respawntime" "120"
+	"respawndelay" "45"
+	"respawntime" "45"
 	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
 	"skin" "0"
@@ -12815,8 +12815,8 @@ entity
 	{
 		"OnPlayerTouch" "PowerSound_Berserk,PlaySound,,0,-1"
 		"OnPlayerTouch" "PowerupLight_Berserk,TurnOff,,0,-1"
-		"OnPlayerTouch" "PowerupLight_Berserk,TurnOn,,120,-1"
-		"OnPlayerTouch" "PowerupRespawn_Berserk,PlaySound,,120,-1"
+		"OnPlayerTouch" "PowerupLight_Berserk,TurnOn,,45,-1"
+		"OnPlayerTouch" "PowerupRespawn_Berserk,PlaySound,,45,-1"
 	}
 	"origin" "336 -0.00642395 80.7313"
 	editor
