@@ -1,0 +1,183 @@
+//=========================================================================================
+//
+// Weightlists
+//
+$Weightlist AllBones "bip_pelvis" 1.0
+
+$weightlist nobones "bip_pelvis" 0.0
+
+$Weightlist HeadandNeck {
+	"bip_pelvis" 0
+	"bip_neck" 0.7
+	"bip_head" 1.0 
+} 
+
+$Weightlist PelvisOnly {
+	"bip_pelvis" 1.0
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0 
+	"bip_spine_0" 0.0
+	
+} 
+
+$weightlist HipsUpperBody {
+	"bip_pelvis" 1.0 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0
+	} 
+
+$Weightlist UpperbodyBlend {
+	"bip_pelvis" 0.1 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0 
+	"bip_spine_0" 0.5 
+	"bip_spine_1" 0.6 
+	"bip_spine_2" 0.8
+	"bip_spine_3" 1.0
+	}
+
+$Weightlist UpperbodyBlendNoPelvis {
+	"bip_pelvis" 0.0 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0 
+	"bip_spine_0" 0.2 
+	"bip_spine_1" 0.4 
+	"bip_spine_2" 0.6 
+	"bip_spine_3" 1.0
+	}
+
+$Weightlist ArmsBlend {
+	"bip_pelvis" 0.0 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0 
+	"bip_spine_0" 0.0
+	"bip_collar_L" 0.4 
+	"bip_upperArm_L" 1.0 
+	"bip_lowerArm_L" 1.0 
+	"bip_collar_R" 0.4 
+	"bip_upperArm_R" 1.0 
+	"bip_lowerArm_R" 1.0 
+	}
+
+$weightlist HipsTorso {
+	"bip_pelvis" 1.0 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0
+	"bip_collar_L" 0.0 
+	"bip_collar_R" 0.0 
+	} 
+	
+$weightlist RWepGrip {
+	"bip_pelvis" 0.0 
+	"bip_thumb_0_R" 1.0
+	"bip_index_0_R" 1.0
+	"bip_middle_0_R" 1.0
+	"bip_ring_0_R" 1.0
+	"bip_pinky_0_R" 1.0
+	"weapon_bone" 1.0
+}
+
+$Weightlist RightArmBlend {
+	"bip_pelvis" 0.0 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0 
+	"bip_spine_0" 0.0
+	"bip_collar_R" 0.2 
+	"bip_upperArm_R" 1.0 
+	"bip_lowerArm_R" 1.0 
+	}
+
+
+$Weightlist meleeRightArmBlend {
+	"bip_pelvis" 0.6 
+	"bip_hip_R" 0.0
+	"bip_hip_L" 0.0 
+	"bip_spine_0" 0.7 
+	"bip_spine_1" 0.8 
+	"bip_spine_2" 0.9
+	"bip_spine_3" 1.0
+	"bip_collar_R" 1.0
+	"bip_collar_L" 1.0  
+	"bip_upperArm_R" 1.0 
+	"bip_lowerArm_R" 1.0 
+	"bip_upperArm_L" 1.0 
+	"bip_lowerArm_L" 1.0
+	"bip_head" 0.5  
+	}
+	
+$Weightlist LeftArmBlend {
+	"bip_pelvis" 0.0 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0 
+	"bip_spine_0" 0.0
+	"bip_collar_L" 0.2 
+	"bip_upperArm_L" 1.0 
+	"bip_lowerArm_L" 1.0 
+	}
+
+$weightlist Melee_HipsTorso {
+	"bip_pelvis" 0.75 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0
+	"bip_collar_L" 0.0 
+	"bip_collar_R" 0.0 
+	"bip_spine_0" 0.75
+	} 
+
+$Weightlist Melee_ArmsBlend {
+	"bip_pelvis" 0.0 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0
+	"bip_spine_1" 0.5
+	"bip_spine_2" 0.7
+	"bip_spine_3" 0.9
+	"bip_collar_L" 1.0 
+	"bip_upperArm_L" 1.0 
+	"bip_lowerArm_L" 1.0 
+	"bip_collar_R" 1.0 
+	"bip_upperArm_R" 1.0 
+	"bip_lowerArm_R" 1.0 
+  "bip_head" 0.3 
+  "bip_neck" 0.3 
+	}
+	
+$weightlist PDACrouch_HipsTorso {
+	"bip_pelvis" 0.0
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0
+	"bip_collar_L" 0.0 
+	"bip_collar_R" 0.0 
+	"bip_spine_0" 0.25
+	}
+	
+$Weightlist SPY_Melee_ArmsBlend {
+	"bip_pelvis" 0.0 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0
+	"bip_spine_1" 1.0
+	"bip_spine_2" 1.0
+	"bip_spine_3" 1.0
+	"bip_collar_L" 1.0 
+	"bip_upperArm_L" 1.0 
+	"bip_lowerArm_L" 1.0 
+	"bip_collar_R" 1.0 
+	"bip_upperArm_R" 1.0 
+	"bip_lowerArm_R" 1.0 
+  "bip_head" 1.0 
+  "bip_neck" 1.0 
+	}
+	
+$weightlist SPY_Melee_HipsTorso {
+	"bip_pelvis" 1.0
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0
+	"bip_collar_L" 0.0 
+	"bip_collar_R" 0.0 
+	"bip_spine_0" 1.0
+	}
+$weightlist SwimMelee_Hips {
+	"bip_pelvis" 0.0 
+	"bip_hip_R" 0.0 
+	"bip_hip_L" 0.0 
+	"bip_spine_0" 0.15
+	} 

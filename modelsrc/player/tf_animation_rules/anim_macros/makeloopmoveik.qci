@@ -1,0 +1,16 @@
+// Macro: MakeLoopMoveIK
+//  	Supports the movement (run, walk, etc.) macros below.
+//
+$definemacro MakeLoopMoveIK movename filename startframe angle basemove blendmove infoNode \\
+$animation a_$movename$ $filename$ blockname $infoNode$ { \\
+	LX LY \\
+	rotateto $angle$ \\
+	startloop $startframe$ \\
+	alignto $basemove$ \\
+	weightlist upperbodyblend \\
+	worldspaceblendloop $blendmove$ 0 \\
+	weightlist AllBones \\
+	noautoik \\
+	ikrule lhand touch "bip_hand_R" \\
+} \\
+$continue a_$movename$

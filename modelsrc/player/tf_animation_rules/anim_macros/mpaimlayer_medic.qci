@@ -1,0 +1,43 @@
+// Macro: MP Aim Layer leftHandIK
+//
+// Frames as viewed from the front camera in maya:
+//
+//                         9 = Straight Up
+//         6 = Up-right,   7 = Up-Center,   8 = Up-left,
+//         3 = Mid-right,  4 = Mid-Center,  5 = Mid-Left
+//         0 = Down-Right, 1 = Down-Center, 2 = Down-Left
+// IK-Rules: Feet are locked, the Left Hand is locked to the gun as authored in these poses
+// The aim-layer is additive.
+// 
+// Usage: MPAimLayer_leftHandIK <layername> <filename> <blockname>
+// 	- layername: the aim layer name
+//	- filename: the name of the layer's aim matrix animation file (see frames above for definition of file).
+//	- blockname: the name of the animation block in the dmx file that is passed in.
+//
+// Example: MPAimLayer_leftHandIK primary_aimmatrix_idle "primary_aimmatrix"
+//
+$definemacro MPAimLayer_medic layername filename infoNode \\
+$animation a_$layername$_neutral     $filename$ blockname $infoNode$ frame 4 4 weightlist upperBodyNoFingers \\
+$animation a_$layername$_down_right  $filename$ blockname $infoNode$ frame 0 0 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$animation a_$layername$_down_center $filename$ blockname $infoNode$ frame 1 1 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$animation a_$layername$_down_left   $filename$ blockname $infoNode$ frame 2 2 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$animation a_$layername$_mid_right   $filename$ blockname $infoNode$ frame 3 3 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$animation a_$layername$_mid_center  $filename$ blockname $infoNode$ frame 4 4 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$animation a_$layername$_mid_left    $filename$ blockname $infoNode$ frame 5 5 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$animation a_$layername$_up_right    $filename$ blockname $infoNode$ frame 6 6 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$animation a_$layername$_up_center   $filename$ blockname $infoNode$ frame 7 7 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$animation a_$layername$_up_left     $filename$ blockname $infoNode$ frame 8 8 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$animation a_$layername$_straight_up $filename$ blockname $infoNode$ frame 9 9 subtract a_$layername$_neutral 0 weightlist upperBodyNoFingers ikrule rhand touch "joint_lever" usesource ikrule medicHose touch "bip_spine_2" usesource \\
+$sequence $layername$ { \\
+	a_$layername$_straight_up	a_$layername$_straight_up	a_$layername$_straight_up \\
+	a_$layername$_up_right		a_$layername$_up_center		a_$layername$_up_left \\
+	a_$layername$_mid_right		a_$layername$_mid_center	a_$layername$_mid_left \\
+	a_$layername$_down_right	a_$layername$_down_center	a_$layername$_down_left \\
+	blendref a_$layername$_neutral \\
+	blendcenter a_$layername$_mid_center \\
+	blendwidth 3 blend body_yaw 45 -45 blend body_pitch 90 -45 \\
+	delta \\
+	iklock rfoot 1 0 iklock lfoot 1 0 \\
+	hidden \\
+	} \\
+$continue $layername$

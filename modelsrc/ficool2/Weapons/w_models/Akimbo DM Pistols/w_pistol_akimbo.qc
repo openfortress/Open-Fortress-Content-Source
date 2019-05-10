@@ -11,7 +11,8 @@ $illumposition 0 0 0
 $cdmaterials "models\weapons\v_pistol"
 $cdmaterials ""
 
-$attachment "muzzle" "weapon_bone" 0 4.96 16.42 rotate -90 0 0
+$attachment "muzzle" "weapon_bone" 0 5.96 12.5 rotate -90 0 0
+$attachment "eject_brass" "weapon_bone" 1.01 6.19 3.46 rotate 0 44.89 -180
 
 $sequence "ref" {
 	"w_walther_dual.smd"

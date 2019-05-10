@@ -1,0 +1,28 @@
+// Macro: MP Gesture Reload wiht IK rules put back in
+//
+// IK-Rules: Feet are locked and left hand to ik to right hand, waist, and back again.
+// The weapon gesture is additive on the spine, but overrides the arms.
+//
+// Usage: MPGestureReload_IK <gesturename> <filename> <inframe> <outframe> <lastframe> <activityname>
+//      - gesturename: the name of the gesture
+//	- filename: the file name of the gesture sequence
+//	- inframe: 0-to-inframe blend in time
+//	- outframe: inframe-to-outframe blend time
+//	- lastframe: animation length
+//	- activityname: the name of the associated activity
+//
+// Example: MPGestureReload gesture_reload_primary "primary_reload" 5 15 30 ACT_TF_GESTURE_RELOAD_PRIMARY
+//
+//
+$definemacro MPGestureReload_IK gesturename filename activityname blendlayername Fin Fpeak Ftail Fend \\
+$sequence $gesturename$ { \\
+	$filename$ \\
+	subtract $gesturename$ 0 \\
+	delta \\
+	ikrule lhand release \\
+	ikrule rhand release \\
+	iklock rfoot 1 0 iklock lfoot 1 0 \\
+ 	blendlayer $blendlayername$ $Fin$ $Fpeak$ $Ftail$ $Fend$ \\
+ 	activity $activityname$ 1 \\
+} \\
+$continue $gesturename$

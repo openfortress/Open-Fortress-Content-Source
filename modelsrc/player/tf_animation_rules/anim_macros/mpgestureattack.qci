@@ -1,0 +1,21 @@
+// Macro: MP Gesture Attack
+//
+// IK-Rules: Feet are locked.
+// The gesture is additive.
+//
+// Usage: MPGestureAttack <gesturename> <filename> <activityname>
+//      - gesturename: the name of the gesture
+//	- filename: the file name of the gesture sequence
+//	- activityname: the name of the associated activity
+//
+// Example: MPGestureAttack gesture_fire_primary "primary_fire" ACT_MP_PRIMARYATTACK_RIFLE
+//
+$definemacro MPGestureAttack gesturename filename activityname \\
+$sequence $gesturename$ { \\
+	$filename$ \\	
+	subtract $gesturename$ 0 \\
+	delta \\
+	iklock rfoot 1 0 iklock lfoot 1 0 \\
+ 	activity $activityname$ 1 \\
+} \\
+$continue $gesturename$

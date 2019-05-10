@@ -1,0 +1,8 @@
+//-----------------------------------------------------------------------------------
+// Weapon Aim Layer
+// 	name - unique identifier for the weapon (TF - PRIMARY, SECONDARY, MELEE, etc.)
+//-----------------------------------------------------------------------------------
+$definemacro MPWeaponAims_leftHandIK name infoNode \\
+$MPAimLayer_leftHandIK $name$_aimmatrix_idle        $name$_aimmatrix_idle        $infoNode$ \\
+$MPAimLayer_leftHandIK $name$_aimmatrix_run         $name$_aimmatrix_run         $infoNode$ \\
+$MPAimLayer_leftHandIK $name$_aimmatrix_crouch_idle $name$_aimmatrix_crouch_idle $infoNode$ \\

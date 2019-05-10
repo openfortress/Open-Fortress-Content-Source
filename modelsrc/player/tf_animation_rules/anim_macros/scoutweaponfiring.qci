@@ -1,0 +1,18 @@
+//-----------------------------------------------------------------------------------
+// Weapon Attack Firing
+// 	name - unique identifier for the weapon (TF - PRIMARY, SECONDARY etc.)
+//-----------------------------------------------------------------------------------
+$definemacro ScoutWeaponFiring name \\
+$MPGestureAttack AttackStand_$name$  $name$_fire          ACT_MP_ATTACK_STAND_$name$\\
+$MPGestureAttack AttackCrouch_$name$ $name$_crouch_fire   ACT_MP_ATTACK_CROUCH_$name$ \\
+$MPGestureAttackIKRelease AttackSwim_$name$   $name$_swim_fire     ACT_MP_ATTACK_SWIM_$name$ \\   
+// \\
+$sequence layer_reload_standing_arms_secondary "secondary_reload.dmx" weightlist ArmsBlend { \\
+	ikrule lhand touch "bip_pelvis" usesource range 3 9 13 19 \\
+	ikrule lhand touch "bip_hand_R" usesource range 19 22 23 28 \\
+	hidden \\
+} \\
+$MPGestureReload_IK ReloadStand_$name$  $name$_reload        ACT_MP_RELOAD_STAND_$name$ layer_reload_standing_arms_secondary 0 11 24 30 \\
+$MPGestureReload_IK ReloadCrouch_$name$ $name$_reload 		ACT_MP_RELOAD_CROUCH_$name$ layer_reload_standing_arms_secondary 0 11 24 30 \\ 
+$MPGestureReload_IK ReloadSwim_$name$   $name$_reload   ACT_MP_RELOAD_SWIM_$name$ layer_reload_standing_arms_secondary 0 11 24 30 \\ 
+$MPGestureReload_IK ReloadAirwalk_$name$   $name$_reload   ACT_MP_RELOAD_AIRWALK_$name$ layer_reload_standing_arms_secondary 0 11 24 30 \\ 

@@ -48,10 +48,10 @@ $bodygroup rocket
 	studio "../parts/dmx/mercenary_rocket.dmx"
 }
 
-$sequence  ref    $dmxFile$
-
 // include the standard boneset
 $include "mercenary_definebones.qci"
+
+$sequence  ref    $dmxFile$
 
 $surfaceprop "flesh"
 
@@ -68,9 +68,24 @@ $BoneMerge "bip_collar_L"
 $BoneMerge "bip_upperArm_L"
 $BoneMerge "bip_lowerArm_L"
 $BoneMerge "bip_hand_L"
-$BoneMerge "weapon_bone_L"
 $BoneMerge "weapon_bone"
 $BoneMerge "weapon_bone_1"
+$BoneMerge "weapon_bone_2"
+$BoneMerge "weapon_bone_3"
+$BoneMerge "weapon_bone_4"
+$BoneMerge "weapon_bone_5"
+$BoneMerge "weapon_bone_6"
+$BoneMerge "weapon_bone_7"
+$BoneMerge "weapon_bone_8"
+$BoneMerge "weapon_bone_L"
+$BoneMerge "weapon_bone_L_1"
+$BoneMerge "weapon_bone_L_2"
+$BoneMerge "weapon_bone_L_3"
+$BoneMerge "weapon_bone_L_4"
+$BoneMerge "weapon_bone_L_5"
+$BoneMerge "weapon_bone_L_6"
+$BoneMerge "weapon_bone_L_7"
+$BoneMerge "weapon_bone_L_8"
 
 // include the file that sets up the ikchains
 $include "ruleshierarchy.qci"

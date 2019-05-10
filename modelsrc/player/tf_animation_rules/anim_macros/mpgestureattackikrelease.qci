@@ -1,0 +1,16 @@
+
+// Melee
+
+$definemacro MPGestureAttackIKRelease gesturename filename activityname \\
+$sequence $gesturename$ { \\
+	$filename$ \\
+	weightlist HipsUpperBody \\
+	subtract $gesturename$ 0 \\
+	delta \\
+	ikrule lhand release \\
+	ikrule rhand release \\
+	iklock rfoot 1 0 iklock lfoot 1 0 \\
+ 	activity $activityname$ 1 \\
+} \\
+$continue $gesturename$
+
