@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "118"
+	"mapversion" "122"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "118"
+	"mapversion" "122"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -110,7 +110,7 @@ entity
 	"angles" "0 0 0"
 	"AutoMaterialize" "1"
 	"body" "0"
-	"condID" "5"
+	"condID" "15"
 	"disablereceiveshadows" "0"
 	"disableshadows" "0"
 	"duration" "30"
@@ -2067,6 +2067,143 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2375"
+	"classname" "dm_powerup_spawner"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"condID" "14"
+	"disablereceiveshadows" "0"
+	"disableshadows" "0"
+	"duration" "30"
+	"effects" "0"
+	"HiddenWhenRespawning" "0"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"model" "models/items/powerup_berserk.mdl"
+	"powerup_model" "models/class_menu/random_class_icon.mdl"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"respawndelay" "120"
+	"respawntime" "120"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "6"
+	"spawn_sound" "items/itembk2.wav"
+	"targetname" "Powerup_Berserk"
+	"texframeindex" "0"
+	connections
+	{
+		"OnPlayerTouch" "PowerSound_Berserk,PlaySound,,0,-1"
+		"OnPlayerTouch" "PowerupLight_Berserk,TurnOff,,0,-1"
+		"OnPlayerTouch" "PowerupLight_Berserk,TurnOn,,120,-1"
+		"OnPlayerTouch" "PowerupRespawn_Berserk,PlaySound,,120,-1"
+	}
+	"origin" "106 -80 -10"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2377"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "items/protect.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "2400"
+	"spawnflags" "33"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "PowerSound_Berserk"
+	"volstart" "0"
+	"origin" "106 -78 31"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "2380"
+	"classname" "light"
+	"_constant_attn" "0"
+	"_distance" "0"
+	"_fifty_percent_distance" "0"
+	"_hardfalloff" "0"
+	"_light" "255 0 0 200"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_linear_attn" "0"
+	"_quadratic_attn" "1"
+	"_zero_percent_distance" "0"
+	"angles" "0 0 0"
+	"spawnflags" "0"
+	"style" "0"
+	"targetname" "PowerupLight_Berserk"
+	"origin" "106 -78 40.355"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 1000]"
+	}
+}
+entity
+{
+	"id" "2386"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "items/q3_respawnpower.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "2400"
+	"spawnflags" "33"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "PowerupRespawn_Berserk"
+	"volstart" "0"
+	"origin" "106 -78 79"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
 	}
 }
 cameras
