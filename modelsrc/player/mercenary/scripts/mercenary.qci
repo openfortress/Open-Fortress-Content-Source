@@ -3,6 +3,8 @@ $upaxis Y
 
 $eyeposition 0 78.62 0
 
+$illumposition 0 0 0 "bip_pelvis"
+
 $attachment "eyes" "bip_head" 0 -3.42 -4.19 rotate 89.73 -90 0
 $attachment "righteye" "bip_head" -1.24 -3.42 -4.19 rotate 89.73 -90 0
 $attachment "lefteye" "bip_head" 1.24 -3.42 -4.19 rotate 89.73 -90 0
@@ -13,11 +15,11 @@ $attachment "partyhat" "bip_head" 1.3 -8.97 -1.49 rotate 84 90 161
 $attachment "head" "bip_head" 0 -8.97 -0.49 rotate 87.52 -90 0
 $attachment "eyeglow_L" "bip_head" 1.52 -2.34 -5.49 rotate 57.22 38.68 133.6
 $attachment "eyeglow_R" "bip_head" -1.52 -2.34 -5.49 rotate 57.22 141.32 -133.6
-//$attachment "weapon_bone_L" "weapon_bone_L" 0 0 0 rotate 0 0 0
+$attachment "weapon_bone_L" "weapon_bone_L" 0 0 0 rotate 0 0 0
 $attachment "effect_hand_L" "bip_hand_L" 0 0 0 rotate 0 0 0
-//$attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0
+$attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0
 $attachment "handle_bone" "weapon_bone" 0 0 0 rotate 0 0 0
-//$attachment "weapon_bone_1" "weapon_bone_1" 0 0 0 rotate 0 0 0
+$attachment "weapon_bone_1" "weapon_bone_1" 0 0 0 rotate 0 0 0
 $attachment "effect_hand_R" "bip_hand_R" 0 0 0 rotate 0 0 0
 $attachment "flag" "bip_spine_3" 1.42 5.01 8.82 rotate -3.7 10.88 -10.1
 $attachment "prop_bone" "bip_pelvis" 0 0 0 rotate 0 0 0
@@ -27,6 +29,14 @@ $attachment "prop_bone_3" "bip_pelvis" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_4" "bip_pelvis" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_5" "bip_pelvis" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_6" "bip_pelvis" 0 0 0 rotate 0 0 0
+
+// hl2 attachments for backwards compatibility
+$attachment "mouth" "bip_head" 1 -6.5 0 rotate 0 -80 -90
+$attachment "chest" "bip_spine_2" 5 4 0 rotate 0 90 90
+$attachment "forward" "bip_head" 0 0 0 rotate 0 0 0
+$attachment "anim_attachment_RH" "bip_hand_R" 0 0 0 rotate -90 -90 0
+$attachment "anim_attachment_LH" "bip_hand_L" 0 0 0 rotate -90 -90 0
+$attachment "anim_attachment_head" "bip_head" 0 0 0 rotate -90 -90 0
 
 $model mercenary $dmxFile$ {
 
