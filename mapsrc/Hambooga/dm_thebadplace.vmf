@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "405"
+	"mapversion" "409"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,13 +14,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "1"
+	"nGridSpacing" "4"
 	"bShow3DGrid" "0"
 }
 world
 {
 	"id" "1"
-	"mapversion" "405"
+	"mapversion" "409"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"detailmaterial" "detail/detailsprites_2fort"
@@ -36564,6 +36564,7 @@ entity
 		"OnMapSpawn" "tonemap_global,SetAutoExposureMin,.8,0,-1"
 		"OnMapSpawn" "tonemap_global,SetAutoExposureMax,1.1,0,-1"
 		"OnMapSpawn" "tonemap_global,SetBloomScale,.5,0,-1"
+		"OnMapSpawn" "Portalhum,ToggleSound,,0,-1"
 	}
 	"origin" "-444.297 116.442 -279"
 	editor
@@ -36613,6 +36614,7 @@ entity
 	connections
 	{
 		"OnEndTouch" "TopExitSound,PlaySound,,0,-1"
+		"OnEndTouch" "GrnArmorExitSound,PlaySound,,0,-1"
 	}
 	solid
 	{
@@ -37148,6 +37150,7 @@ entity
 	connections
 	{
 		"OnEndTouch" "GrnArmorExitSound,PlaySound,,0,-1"
+		"OnEndTouch" "TopExitSound,PlaySound,,0,-1"
 	}
 	solid
 	{
@@ -37708,6 +37711,7 @@ entity
 	connections
 	{
 		"OnEndTouch" "NailgunspotExitSound,PlaySound,,0,-1"
+		"OnEndTouch" "Tele_SlipTopLeftCorner_TouchSND,PlaySound,,0,-1"
 	}
 	solid
 	{
@@ -38376,7 +38380,7 @@ entity
 	"pitchstart" "100"
 	"preset" "0"
 	"radius" "1250"
-	"spawnflags" "16"
+	"spawnflags" "48"
 	"spindown" "0"
 	"spinup" "0"
 	"targetname" "GrnArmorExitSound"
@@ -38408,7 +38412,7 @@ entity
 	"pitchstart" "100"
 	"preset" "0"
 	"radius" "1250"
-	"spawnflags" "16"
+	"spawnflags" "48"
 	"spindown" "0"
 	"spinup" "0"
 	"targetname" "TopExitSound"
@@ -38440,7 +38444,7 @@ entity
 	"pitchstart" "100"
 	"preset" "0"
 	"radius" "1250"
-	"spawnflags" "16"
+	"spawnflags" "48"
 	"spindown" "0"
 	"spinup" "0"
 	"targetname" "NailgunspotExitSound"
@@ -38472,7 +38476,7 @@ entity
 	"pitchstart" "100"
 	"preset" "0"
 	"radius" "1250"
-	"spawnflags" "16"
+	"spawnflags" "48"
 	"spindown" "0"
 	"spinup" "0"
 	"targetname" "UpperExitSound"
@@ -38943,6 +38947,7 @@ entity
 	connections
 	{
 		"OnEndTouch" "UpperExitSound,PlaySound,,0,-1"
+		"OnEndTouch" "Tele_SlipCorner_TouchSND,PlaySound,,0,-1"
 	}
 	solid
 	{
@@ -39510,6 +39515,7 @@ entity
 	connections
 	{
 		"OnEndTouch" "LavaSpotExitSound,PlaySound,,0,-1"
+		"OnEndTouch" "Tele_SlipWeirdForgettableSpot_TouchSND,PlaySound,,0,-1"
 	}
 	solid
 	{
@@ -39613,7 +39619,7 @@ entity
 	"pitchstart" "100"
 	"preset" "0"
 	"radius" "1250"
-	"spawnflags" "16"
+	"spawnflags" "48"
 	"spindown" "0"
 	"spinup" "0"
 	"targetname" "LavaSpotExitSound"
@@ -39785,6 +39791,102 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 3500]"
+	}
+}
+entity
+{
+	"id" "30641"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "Teleport.Touch"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "Tele_SlipTopLeftCorner_TouchSND"
+	"volstart" "0"
+	"origin" "-1328 460 -22.9954"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "30691"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "Teleport.Touch"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "Tele_SlipCorner_TouchSND"
+	"volstart" "0"
+	"origin" "392 632 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "30727"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "Teleport.Touch"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "Tele_SlipWeirdForgettableSpot_TouchSND"
+	"volstart" "0"
+	"origin" "-848 816 -120"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
 	}
 }
 cameras
