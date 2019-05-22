@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "460"
+	"mapversion" "467"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "460"
+	"mapversion" "467"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"detailmaterial" "detail/detailsprites"
@@ -14275,7 +14275,7 @@ entity
 	"classname" "trigger_hurt"
 	"angles" "0 0 0"
 	"damage" "600"
-	"damagecap" "20"
+	"damagecap" "600"
 	"damagemodel" "0"
 	"damagetype" "64"
 	"nodmgforce" "0"
@@ -14373,7 +14373,7 @@ entity
 	"classname" "trigger_hurt"
 	"angles" "0 0 0"
 	"damage" "600"
-	"damagecap" "20"
+	"damagecap" "600"
 	"damagemodel" "0"
 	"damagetype" "64"
 	"nodmgforce" "0"
@@ -14667,7 +14667,7 @@ entity
 	"classname" "trigger_hurt"
 	"angles" "0 0 0"
 	"damage" "600"
-	"damagecap" "20"
+	"damagecap" "600"
 	"damagemodel" "0"
 	"damagetype" "64"
 	"nodmgforce" "0"
@@ -16845,42 +16845,6 @@ entity
 }
 entity
 {
-	"id" "3541"
-	"classname" "item_healthkit_full"
-	"angles" "0 0 0"
-	"AutoMaterialize" "1"
-	"body" "0"
-	"disablereceiveshadows" "0"
-	"disableshadows" "0"
-	"effects" "0"
-	"fadescale" "1"
-	"HiddenWhenRespawning" "1"
-	"maxdxlevel" "0"
-	"mindxlevel" "0"
-	"model" "models/items/medkit_large.mdl"
-	"pickup_sound" "Healthkit.Touch"
-	"renderamt" "0"
-	"rendercolor" "255 255 255"
-	"renderfx" "0"
-	"rendermode" "0"
-	"respawntime" "10"
-	"SetBodyGroup" "0"
-	"shadowcastdist" "0"
-	"skin" "0"
-	"solid" "6"
-	"spawn_sound" "Item.Materialize"
-	"texframeindex" "0"
-	"origin" "0 576 265"
-	editor
-	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[1000 3000]"
-	}
-}
-entity
-{
 	"id" "3548"
 	"classname" "item_healthkit_medium"
 	"angles" "0 0 0"
@@ -16991,153 +16955,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[1000 4500]"
-	}
-}
-entity
-{
-	"id" "3598"
-	"classname" "team_round_timer"
-	"angles" "0 0 0"
-	"auto_countdown" "1"
-	"max_length" "0"
-	"reset_time" "1"
-	"setup_length" "5"
-	"show_in_hud" "1"
-	"start_paused" "0"
-	"StartDisabled" "0"
-	"timer_length" "1200"
-	connections
-	{
-		"OnFinished" "Roundend,RoundWin,,0,-1"
-		"OnSetupFinished" "Music,PlaySound,,0,-1"
-		"OnSetupStart" "Music_Wait,PlaySound,,0,-1"
-		"OnFinished" "Music_Finish,PlaySound,,0,-1"
-		"OnSetupFinished" "Music_Wait,StopSound,,0,-1"
-		"OnSetupStart" "Music_Finish,StopSound,,0,-1"
-		"OnFinished" "Music,StopSound,,0,-1"
-	}
-	"origin" "136.58 -278.815 487.779"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 8000]"
-	}
-}
-entity
-{
-	"id" "3600"
-	"classname" "game_round_win"
-	"angles" "0 0 0"
-	"force_map_reset" "1"
-	"spawnflags" "0"
-	"switch_teams" "0"
-	"targetname" "Roundend"
-	"TeamNum" "4"
-	"origin" "232 -280 487.779"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 8500]"
-	}
-}
-entity
-{
-	"id" "3602"
-	"classname" "ambient_generic"
-	"angles" "0 0 0"
-	"cspinup" "0"
-	"fadeinsecs" "0"
-	"fadeoutsecs" "0"
-	"health" "10"
-	"lfomodpitch" "0"
-	"lfomodvol" "0"
-	"lforate" "0"
-	"lfotype" "0"
-	"message" "DeathmatchMusic.PersiaLibrary_Ending"
-	"pitch" "100"
-	"pitchstart" "100"
-	"preset" "0"
-	"radius" "999999"
-	"spawnflags" "17"
-	"spindown" "0"
-	"spinup" "0"
-	"targetname" "Music_Finish"
-	"volstart" "0"
-	"origin" "122.256 188.792 902.779"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[500 1500]"
-	}
-}
-entity
-{
-	"id" "3605"
-	"classname" "ambient_generic"
-	"angles" "0 0 0"
-	"cspinup" "0"
-	"fadeinsecs" "0"
-	"fadeoutsecs" "0"
-	"health" "10"
-	"lfomodpitch" "0"
-	"lfomodvol" "0"
-	"lforate" "0"
-	"lfotype" "0"
-	"message" "DeathmatchMusic.PersiaLibrary_Waiting"
-	"pitch" "100"
-	"pitchstart" "100"
-	"preset" "0"
-	"radius" "999999"
-	"spawnflags" "17"
-	"spindown" "0"
-	"spinup" "0"
-	"targetname" "Music_Wait"
-	"volstart" "0"
-	"origin" "88.58 156.933 908.502"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[500 1500]"
-	}
-}
-entity
-{
-	"id" "3608"
-	"classname" "ambient_generic"
-	"angles" "0 0 0"
-	"cspinup" "0"
-	"fadeinsecs" "0"
-	"fadeoutsecs" "0"
-	"health" "10"
-	"lfomodpitch" "0"
-	"lfomodvol" "0"
-	"lforate" "0"
-	"lfotype" "0"
-	"message" "DeathmatchMusic.PersiaLibrary"
-	"pitch" "100"
-	"pitchstart" "100"
-	"preset" "0"
-	"radius" "999999"
-	"spawnflags" "17"
-	"spindown" "0"
-	"spinup" "0"
-	"targetname" "Music"
-	"volstart" "0"
-	"origin" "72.58 161.185 903.779"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[500 1500]"
 	}
 }
 entity
@@ -21588,6 +21405,119 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "9193"
+	"classname" "item_healthkit_mega"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"fademaxdist" "0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"HiddenWhenRespawning" "0"
+	"model" "models/items/medkit_large.mdl"
+	"pickup_sound" "HealthKitMega.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "125"
+	"solid" "6"
+	"spawn_sound" "items/itembk2.wav"
+	connections
+	{
+		"OnPlayerTouch" "RespawnSound_Mega,PlaySound,,125,-1"
+	}
+	"origin" "-0.0126953 575.224 256.269"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -4268]"
+	}
+}
+entity
+{
+	"id" "9195"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "items/itembk2.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "RespawnSound_Mega"
+	"volstart" "0"
+	"origin" "0 576 291.633"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "9203"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "DeathmatchMusic.Facility"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "999999"
+	"spawnflags" "17"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "Music"
+	"volstart" "0"
+	"origin" "-116.849 -74.3094 245.736"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 1500]"
+	}
+}
+entity
+{
+	"id" "9206"
+	"classname" "logic_auto"
+	"spawnflags" "1"
+	"targetname" "musicstart"
+	connections
+	{
+		"OnMapSpawn" "Music,ToggleSound,,0,-1"
+	}
+	"origin" "-68.0315 -72.1794 233.828"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 15000]"
 	}
 }
 cameras

@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "648"
+	"mapversion" "651"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "648"
+	"mapversion" "651"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"detailmaterial" "detail/detailsprites"
@@ -18601,7 +18601,7 @@ world
 entity
 {
 	"id" "515"
-	"classname" "item_healthkit_full"
+	"classname" "item_healthkit_medium"
 	"angles" "0 0 0"
 	"AutoMaterialize" "1"
 	"body" "0"
@@ -18610,16 +18610,13 @@ entity
 	"effects" "0"
 	"fadescale" "1"
 	"HiddenWhenRespawning" "1"
-	"maxdxlevel" "0"
-	"mindxlevel" "0"
-	"model" "models/items/medkit_large.mdl"
+	"model" "models/items/medkit_medium.mdl"
 	"pickup_sound" "Healthkit.Touch"
 	"renderamt" "0"
 	"rendercolor" "255 255 255"
 	"renderfx" "0"
 	"rendermode" "0"
 	"respawntime" "10"
-	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
 	"skin" "0"
 	"solid" "6"
@@ -20562,42 +20559,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 -12768]"
-	}
-}
-entity
-{
-	"id" "3734"
-	"classname" "item_healthkit_full"
-	"angles" "0 0 0"
-	"AutoMaterialize" "1"
-	"body" "0"
-	"disablereceiveshadows" "0"
-	"disableshadows" "0"
-	"effects" "0"
-	"fadescale" "1"
-	"HiddenWhenRespawning" "1"
-	"maxdxlevel" "0"
-	"mindxlevel" "0"
-	"model" "models/items/medkit_large.mdl"
-	"pickup_sound" "Healthkit.Touch"
-	"renderamt" "0"
-	"rendercolor" "255 255 255"
-	"renderfx" "0"
-	"rendermode" "0"
-	"respawntime" "10"
-	"SetBodyGroup" "0"
-	"shadowcastdist" "0"
-	"skin" "0"
-	"solid" "6"
-	"spawn_sound" "Item.Materialize"
-	"texframeindex" "0"
-	"origin" "-152 832 201"
-	editor
-	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[500 -16268]"
 	}
 }
 entity
@@ -23219,7 +23180,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "DeathmatchMusic.PersiaGarden_Ending"
+	"message" "DeathmatchMusic.AtFortressGate_Ending"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -23251,7 +23212,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "DeathmatchMusic.PersiaGarden"
+	"message" "DeathmatchMusic.TF2Beat"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -23283,7 +23244,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "DeathmatchMusic.PersiaGarden_Waiting"
+	"message" "DeathmatchMusic.AtFortressGate_Waiting"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -24370,7 +24331,7 @@ entity
 		"OnPlayerTouch" "Emitter_Flamethrower,skin,0,0,-1"
 		"OnPlayerTouch" "Emitter_Flamethrower,skin,1,15,-1"
 	}
-	"origin" "-28 319.785 -128"
+	"origin" "0 320 -128"
 	editor
 	{
 		"color" "220 30 220"
@@ -24782,6 +24743,68 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "12964"
+	"classname" "item_healthkit_mega"
+	"angles" "0 0 0"
+	"AutoMaterialize" "1"
+	"fademaxdist" "0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"HiddenWhenRespawning" "0"
+	"model" "models/items/medkit_large.mdl"
+	"pickup_sound" "HealthKitMega.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "125"
+	"solid" "6"
+	"spawn_sound" "items/itembk2.wav"
+	connections
+	{
+		"OnPlayerTouch" "RespawnSound_Mega,PlaySound,,125,-1"
+	}
+	"origin" "-152 832 192.269"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -4268]"
+	}
+}
+entity
+{
+	"id" "12966"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "items/itembk2.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "RespawnSound_Mega"
+	"volstart" "0"
+	"origin" "-151.987 832.776 227.633"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
 	}
 }
 cameras
