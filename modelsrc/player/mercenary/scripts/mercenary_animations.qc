@@ -1764,10 +1764,25 @@ $sequence layer_reload_airwalk_arms_PISTOL_MERCENARY "PISTOL_MERCENARY_swim_relo
 }
 
 $MPGestureReload_IK ReloadStand_PISTOL_MERCENARY     PISTOL_MERCENARY_reload        				ACT_MERC_RELOAD_STAND_PISTOL_MERCENARY    layer_reload_standing_arms_PISTOL_MERCENARY 0 5 50 55
+{ 
+	event AE_CL_MAG_EJECT 16
+	event AE_CL_MAG_UNEJECT 30
+}
 $MPGestureReload_IK ReloadCrouch_PISTOL_MERCENARY    PISTOL_MERCENARY_crouch_reload 				ACT_MERC_RELOAD_CROUCH_PISTOL_MERCENARY   layer_reload_crouching_arms_PISTOL_MERCENARY 0 5 50 55
+{ 
+	event AE_CL_MAG_EJECT 16
+	event AE_CL_MAG_UNEJECT 30
+}
 $MPGestureReload_IK ReloadSwim_PISTOL_MERCENARY      PISTOL_MERCENARY_swim_reload           ACT_MERC_RELOAD_SWIM_PISTOL_MERCENARY     layer_reload_swimming_arms_PISTOL_MERCENARY 0 5 50 55
+{ 
+	event AE_CL_MAG_EJECT 16
+	event AE_CL_MAG_UNEJECT 30
+}
 $MPGestureReload_IK ReloadAirwalk_PISTOL_MERCENARY   PISTOL_MERCENARY_reload        ACT_MERC_RELOAD_AIRWALK_PISTOL_MERCENARY  layer_reload_airwalk_arms_PISTOL_MERCENARY 0 5 50 55
-
+{ 
+	event AE_CL_MAG_EJECT 16
+	event AE_CL_MAG_UNEJECT 30
+}
 $sequence Stand_PISTOL_MERCENARY  PISTOL_MERCENARY_idle loop alignto a_reference addlayer PISTOL_MERCENARY_aimmatrix_idle activity ACT_MERC_STAND_PISTOL_MERCENARY 1
 $sequence Crouch_PISTOL_MERCENARY PISTOL_MERCENARY_crouch_idle loop alignto a_reference addlayer PISTOL_MERCENARY_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_PISTOL_MERCENARY 1
 
