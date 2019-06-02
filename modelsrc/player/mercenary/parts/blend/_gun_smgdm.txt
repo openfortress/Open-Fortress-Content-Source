@@ -1,0 +1,17 @@
+_gun_smgdm.blend EXPORT notes
+
+IMPORTANT:
+I fucked up the weapon_bone position, so there is some constraint hackery in the .blend
+
+Renaming:
+secondary > smg_mercenary
+
+Animation conversions:
+secondary_aimmatrix_crouch_idle     <---
+secondary_aimmatrix_run             <---  secondary_aimmatrix_idle
+secondary_aimmatrix_swim            <---
+
+melee_ anims are not used
+
+secondary_swim_reload               <---  secondary_reload
+secondary_swim_fire                 <---  secondary_fire
