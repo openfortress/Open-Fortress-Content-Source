@@ -2,7 +2,7 @@ $modelname "weapons/c_models/c_merc_arms.mdl"
 
 $model "arms" "c_merc_arms.smd"
 
-$body "illumpos" "../illumpos.smd"
+$body "illumpos" "illumpos.smd"
 // makes lighting consistent between arms and weapons
 $illumposition 0 0 0 "illumpos"
 
