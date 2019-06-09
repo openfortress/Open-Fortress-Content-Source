@@ -1,0 +1,8 @@
+//-----------------------------------------------------------------------------------
+// Weapon Attack Firing
+// 	name - unique identifier for the weapon (TF - PRIMARY, SECONDARY etc.)
+//-----------------------------------------------------------------------------------
+$definemacro MPWeaponFiring name \\
+$MPGestureAttack AttackStand_$name$  $name$_fire          ACT_MP_ATTACK_STAND_$name$\\
+$MPGestureAttack AttackCrouch_$name$ $name$_crouch_fire   ACT_MP_ATTACK_CROUCH_$name$ \\
+$MPGestureAttack AttackSwim_$name$   $name$_swim_fire     ACT_MP_ATTACK_SWIM_$name$ \\   
