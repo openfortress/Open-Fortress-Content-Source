@@ -1,8 +1,6 @@
 $modelname "weapons\w_models\w_supershotgun.mdl"
 
-$upaxis Y
-
-$model "supershotgun" "c_double_barrel_reference.smd"
+$model "supershotgun" "w_super_shotgun.smd"
 
 $surfaceprop "metal"
 
@@ -14,7 +12,7 @@ $cdmaterials ""
 $attachment "muzzle" "weapon_bone" 0 4.96 16.42 rotate -90 0 0
 
 $sequence "ref" {
-	"c_double_barrel_reference.smd"
+	"w_super_shotgun.smd"
 	fps 30
 }
 
