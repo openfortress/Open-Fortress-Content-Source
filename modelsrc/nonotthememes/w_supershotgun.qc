@@ -4,7 +4,7 @@ $modelname "weapons\w_models\w_supershotgun.mdl"
 
 $bodygroup "supershotgun"
 {
-	studio "w_supershotgun_c_super_shotgun.smd"
+	studio "c_super_shotgun.smd"
 }
 
 
@@ -31,7 +31,7 @@ $definebone "weapon_bone_2" "weapon_bone" 0 6.776579 3.488801 0 0 0 0 0 0 0 0 0
 
 
 $sequence "ref" {
-	"w_supershotgun_anims\ref.smd"
+	"c_super_shotgun.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
