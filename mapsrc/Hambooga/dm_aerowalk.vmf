@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "119"
+	"mapversion" "128"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,19 +14,19 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "1"
+	"nGridSpacing" "8"
 	"bShow3DGrid" "1"
 }
 world
 {
 	"id" "1"
-	"mapversion" "119"
+	"mapversion" "128"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
 	"maxpropscreenwidth" "-1"
-	"skyname" "sky_borealis01"
+	"skyname" "sky_dusk_01"
 	solid
 	{
 		"id" "2"
@@ -40831,7 +40831,7 @@ entity
 	"SpawnMode" "0"
 	"StartDisabled" "0"
 	"TeamNum" "4"
-	"origin" "304.04 -1151.48 -188.146"
+	"origin" "296 -1152 -188.146"
 	editor
 	{
 		"color" "220 30 220"
@@ -40954,7 +40954,7 @@ entity
 	"solid" "1"
 	"spawnflags" "1"
 	"StartDisabled" "0"
-	"target" "gofuckyourself"
+	"target" "TopArea"
 	solid
 	{
 		"id" "21684"
@@ -41247,7 +41247,7 @@ entity
 	"id" "21835"
 	"classname" "info_teleport_destination"
 	"angles" "0 90 0"
-	"targetname" "gofuckyourself"
+	"targetname" "TopArea"
 	"origin" "1250.48 -1875.57 -164.967"
 	editor
 	{
@@ -41262,7 +41262,7 @@ entity
 	"id" "21865"
 	"classname" "info_teleport_destination"
 	"angles" "0 180 0"
-	"targetname" "fuckyourselfd222"
+	"targetname" "RLExit"
 	"origin" "374 -1471.66 -380"
 	editor
 	{
@@ -41390,7 +41390,7 @@ entity
 	"solid" "1"
 	"spawnflags" "1"
 	"StartDisabled" "0"
-	"target" "fuckyourselfd222"
+	"target" "RLExit"
 	connections
 	{
 		"OnTrigger" "teleport1,SparkOnce,,0,-1"
@@ -42523,7 +42523,7 @@ entity
 	"EndU" "0"
 	"EndV" "1"
 	"fademindist" "-1"
-	"material" "signs/cockandballtorturesign"
+	"material" "signs/deadend"
 	"sides" "3276"
 	"StartU" "1"
 	"StartV" "0"
@@ -42542,54 +42542,25 @@ entity
 }
 entity
 {
-	"id" "26220"
-	"classname" "info_overlay"
-	"angles" "0 0 0"
-	"BasisNormal" "-1 0 0"
-	"BasisOrigin" "1756.34 -1593.87 -68.7748"
-	"BasisU" "0 1 0"
-	"BasisV" "0 0 -1"
-	"EndU" "0"
-	"EndV" "1"
-	"fademindist" "-1"
-	"material" "signs/REDmerc"
-	"sides" "2476"
-	"StartU" "1"
-	"StartV" "0"
-	"uv0" "-178.23 -66.5619 0"
-	"uv1" "-178.23 66.5619 0"
-	"uv2" "178.23 66.5619 0"
-	"uv3" "178.23 -66.5619 0"
-	"origin" "1756.34 -1593.87 -68.7748"
-	editor
-	{
-		"color" "80 150 225"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 5000]"
-	}
-}
-entity
-{
 	"id" "26311"
 	"classname" "info_overlay"
 	"angles" "0 0 0"
 	"BasisNormal" "0.301892 -0.953342 0"
-	"BasisOrigin" "302.985 -385.594 -97.4774"
+	"BasisOrigin" "306 -408 -100"
 	"BasisU" "0.953342 0.301892 0"
 	"BasisV" "-0 0 1"
 	"EndU" "1"
 	"EndV" "0"
 	"fademindist" "-1"
-	"material" "signs/BluMerc"
+	"material" "signs/logo_tfc_blue"
 	"sides" "1778"
 	"StartU" "0"
 	"StartV" "1"
-	"uv0" "-125.798 -69.8072 0"
-	"uv1" "-125.798 69.8072 0"
-	"uv2" "125.798 69.8072 0"
-	"uv3" "125.798 -69.8072 0"
-	"origin" "302.985 -385.594 -97.4774"
+	"uv0" "-125.798 -116.165 0"
+	"uv1" "-125.798 116.165 0"
+	"uv2" "125.798 116.165 0"
+	"uv3" "125.798 -116.165 0"
+	"origin" "306 -408 -100"
 	editor
 	{
 		"color" "80 150 225"
@@ -42633,21 +42604,21 @@ entity
 	"classname" "info_overlay"
 	"angles" "0 0 0"
 	"BasisNormal" "0 1 -0"
-	"BasisOrigin" "824 -1756.35 -336"
+	"BasisOrigin" "880 -1756.35 -320"
 	"BasisU" "1 0 0"
 	"BasisV" "0 -0 -1"
 	"EndU" "0"
 	"EndV" "1"
 	"fademindist" "-1"
-	"material" "signs/purplemerc"
+	"material" "signs/logo_tfc_blue_purple"
 	"sides" "5385"
 	"StartU" "1"
 	"StartV" "0"
-	"uv0" "-137.988 -53.7352 0"
-	"uv1" "-137.988 53.7352 0"
-	"uv2" "137.988 53.7352 0"
-	"uv3" "137.988 -53.7352 0"
-	"origin" "824 -1756.35 -336"
+	"uv0" "-100.497 -86.8676 0"
+	"uv1" "-100.497 86.8676 0"
+	"uv2" "100.497 86.8676 0"
+	"uv3" "100.497 -86.8676 0"
+	"origin" "880 -1756.35 -320"
 	editor
 	{
 		"color" "80 150 225"
@@ -42762,21 +42733,21 @@ entity
 	"classname" "info_overlay"
 	"angles" "0 0 0"
 	"BasisNormal" "-1 0 0"
-	"BasisOrigin" "1756.34 -1585.83 -262.318"
+	"BasisOrigin" "1756.34 -1544.84 -262.318"
 	"BasisU" "0 1 0"
 	"BasisV" "0 0 -1"
 	"EndU" "0"
 	"EndV" "1"
 	"fademindist" "-1"
-	"material" "overlays/logo_red_white"
+	"material" "signs/logo_tfc_red"
 	"sides" "5116"
 	"StartU" "1"
 	"StartV" "0"
-	"uv0" "-160.146 -101.724 0"
-	"uv1" "-160.146 101.724 0"
-	"uv2" "160.146 101.724 0"
-	"uv3" "160.146 -101.724 0"
-	"origin" "1756.34 -1585.83 -262.318"
+	"uv0" "-119.158 -101.724 0"
+	"uv1" "-119.158 101.724 0"
+	"uv2" "119.158 101.724 0"
+	"uv3" "119.158 -101.724 0"
+	"origin" "1756.34 -1544.84 -262.318"
 	editor
 	{
 		"color" "80 150 225"
@@ -43170,7 +43141,7 @@ entity
 		"OnPlayerTouch" "Emitter_Rocket,skin,1,15,-1"
 		"OnPlayerTouch" "RespawnSound_Rocket,PlaySound,,15,-1"
 	}
-	"origin" "1112 -1056 -137"
+	"origin" "1104 -1056 -137"
 	editor
 	{
 		"color" "220 30 220"
@@ -43288,7 +43259,7 @@ entity
 		"OnPlayerTouch" "Emitter_Rocket1,skin,1,15,-1"
 		"OnPlayerTouch" "RespawnSound_Rocket1,PlaySound,,15,-1"
 	}
-	"origin" "312 -1664 -349"
+	"origin" "304 -1664 -349"
 	editor
 	{
 		"color" "220 30 220"
@@ -43406,7 +43377,7 @@ entity
 		"OnPlayerTouch" "Emitter_Shotgun,skin,1,15,-1"
 		"OnPlayerTouch" "RespawnSound_Shotgun,PlaySound,,15,-1"
 	}
-	"origin" "736 -1088 -494"
+	"origin" "752 -1088 -494"
 	editor
 	{
 		"color" "220 30 220"
@@ -43525,7 +43496,7 @@ entity
 		"OnPlayerTouch" "Emitter_GrenadeLauncher,skin,1,15,-1"
 		"OnPlayerTouch" "RespawnSound_GrenadeLauncher,PlaySound,,15,-1"
 	}
-	"origin" "1640 -1474 -338"
+	"origin" "1648 -1472 -338"
 	editor
 	{
 		"color" "220 30 220"
@@ -43643,7 +43614,7 @@ entity
 		"OnPlayerTouch" "Emitter_Railgun,skin,1,15,-1"
 		"OnPlayerTouch" "RespawnSound_Railgun,PlaySound,,15,-1"
 	}
-	"origin" "820 -1664 -136"
+	"origin" "816 -1664 -136"
 	editor
 	{
 		"color" "220 30 220"

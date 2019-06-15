@@ -1874,5 +1874,355 @@ $sequence Airwalk_PISTOL_MERCENARY "PISTOL_MERCENARY_airwalk.dmx" fps 30 loop {
 	activity ACT_MERC_AIRWALK_PISTOL_MERCENARY 1
 }
 
+//-----------------------------------------------------------------------------------
+// SMG Mercenary
+//-----------------------------------------------------------------------------------
+$Shotgun_WeaponAims_leftHandIK	SMG_MERCENARY	$infoNode$
+
+$MPGestureAttack AttackStand_SMG_MERCENARY  SMG_MERCENARY_fire          ACT_MERC_ATTACK_STAND_SMG_MERCENARY
+$MPGestureAttack AttackCrouch_SMG_MERCENARY SMG_MERCENARY_crouch_fire   ACT_MERC_ATTACK_CROUCH_SMG_MERCENARY
+$MPGestureAttack AttackSwim_SMG_MERCENARY   SMG_MERCENARY_swim_fire     ACT_MERC_ATTACK_SWIM_SMG_MERCENARY
+
+$sequence layer_reload_standing_arms_SMG_MERCENARY "SMG_MERCENARY_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone_1" usesource range 0 10 17 19
+	ikrule lhand touch "bip_pelvis" usesource range 23 27 29 32
+	ikrule lhand touch "weapon_bone_1" usesource range 32 34 46 50
+	hidden
+}
+
+$sequence layer_reload_crouching_arms_SMG_MERCENARY "SMG_MERCENARY_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone_1" usesource range 0 10 17 19
+	ikrule lhand touch "bip_pelvis" usesource range 23 27 29 32
+	ikrule lhand touch "weapon_bone_1" usesource range 32 34 46 50
+	hidden
+}
+
+$MPGestureReload_IK ReloadStand_SMG_MERCENARY  SMG_MERCENARY_reload ACT_MERC_RELOAD_STAND_SMG_MERCENARY 	layer_reload_standing_arms_SMG_MERCENARY 0 5 50 60
+$MPGestureReload_IK ReloadAirwalk_SMG_MERCENARY  SMG_MERCENARY_reload ACT_MERC_RELOAD_AIRWALK_SMG_MERCENARY 	layer_reload_standing_arms_SMG_MERCENARY 0 5 50 60
+$MPGestureReload_IK ReloadCrouch_SMG_MERCENARY SMG_MERCENARY_reload ACT_MERC_RELOAD_CROUCH_SMG_MERCENARY 	layer_reload_crouching_arms_SMG_MERCENARY 0 5 50 60
+$MPGestureReload_IK ReloadSwim_SMG_MERCENARY   SMG_MERCENARY_reload ACT_MERC_RELOAD_SWIM_SMG_MERCENARY 	layer_reload_standing_arms_SMG_MERCENARY 0 5 50 60
+
+$sequence Stand_SMG_MERCENARY  SMG_MERCENARY_idle loop addlayer SMG_MERCENARY_aimmatrix_idle activity ACT_MERC_STAND_SMG_MERCENARY 1
+$sequence Crouch_SMG_MERCENARY SMG_MERCENARY_crouch_idle loop addlayer SMG_MERCENARY_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_SMG_MERCENARY 1
+
+$MPAimLayer_lefthandIK_smg  SMG_MERCENARY_aimmatrix_swim        SMG_MERCENARY_aimmatrix_idle        $infoNode$
+$MPswimWithWeapon SMG_MERCENARY 0 0 0 0 0 0 0 0 SMG_MERCENARY_SwimN	SMG_MERCENARY_SwimCenter	SMG_MERCENARY_aimmatrix_swim	ACT_MERC_SWIM_SMG_MERCENARY $infonode$
+
+//SMG_MERCENARY Jump
+
+$sequence a_jumpStart_SMG_MERCENARY SMG_MERCENARY_jump frames 0 25 addlayer SMG_MERCENARY_aimmatrix_swim alignto a_reference Z activity ACT_MERC_JUMP_START_SMG_MERCENARY 1 LX LY
+$sequence a_jumpfloat_SMG_MERCENARY SMG_MERCENARY_jump frames 25 44 addlayer SMG_MERCENARY_aimmatrix_swim loop fps 30 alignto a_reference Z activity ACT_MERC_JUMP_FLOAT_SMG_MERCENARY 1 LX LY
+$sequence jumpLandPose_SMG_MERCENARY SMG_MERCENARY_jump frames 25 25 alignto a_reference Z numframes 30 loop
+$sequence jumpLand_SMG_MERCENARY { 
+	SMG_MERCENARY_jump_land 
+	subtract jumpland_SMG_MERCENARY 0 
+	delta 
+	iklock rfoot 1 0 iklock lfoot 1 0 
+
+	activity ACT_MERC_JUMP_LAND_SMG_MERCENARY 1 
+}
+
+// smg_mercenary run
+
+$animation a_runCenter_SMG_MERCENARY  SMG_MERCENARY_runCenter blockname $infoNode$ {
+	loop
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$animation a_runS_SMG_MERCENARY SMG_MERCENARY_runs blockname $infoNode$ {
+	LX LY
+	rotateto -180
+	startloop 12
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 2 .. contact 1
+}
+$animation a_runSE_SMG_MERCENARY SMG_MERCENARY_runse blockname $infoNode$ {
+	LX LY
+	rotateto -135
+	startloop 12
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 2 .. contact 1
+}
+$animation a_runE_SMG_MERCENARY SMG_MERCENARY_rune blockname $infoNode$ {
+	LX LY
+	rotateto -90
+	startloop 2
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 2 .. contact 1
+}
+$animation a_runNE_SMG_MERCENARY SMG_MERCENARY_runne blockname $infoNode$ {
+	LX LY
+	rotateto -45
+	startloop 3
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 2 .. contact 1
+}
+$animation a_runN_SMG_MERCENARY SMG_MERCENARY_runn blockname $infoNode$ {
+	LX LY
+	rotateto 0
+	startloop 3
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 2 .. contact 1
+}
+$animation a_runNW_SMG_MERCENARY SMG_MERCENARY_runnw blockname $infoNode$ {
+	LX LY
+	rotateto 45
+	startloop 4
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 2 .. contact 1
+}
+$animation a_runW_SMG_MERCENARY SMG_MERCENARY_runw blockname $infoNode$ {
+	LX LY
+	rotateto 90
+	startloop 3
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 2 .. contact 1
+}
+$animation a_runSW_SMG_MERCENARY SMG_MERCENARY_runsw blockname $infoNode$ {
+	LX LY
+	rotateto 135
+	startloop 12
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 2 .. contact 1
+}
+$sequence Run_SMG_MERCENARY {
+	a_runsw_SMG_MERCENARY	a_runS_SMG_MERCENARY		a_runSE_SMG_MERCENARY
+	a_runW_SMG_MERCENARY	a_runCenter_SMG_MERCENARY	a_runE_SMG_MERCENARY
+	a_runNW_SMG_MERCENARY	a_runN_SMG_MERCENARY		a_runNE_SMG_MERCENARY
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1
+	addlayer SMG_MERCENARY_aimmatrix_run
+	activity ACT_MERC_RUN_SMG_MERCENARY 1
+	{ event 7001 7 "right" }
+	{ event 7001 16 "left" }
+}
+
+// smg mercenary crouch walk
+$MPCrouchWalkWithWeapon Crouch_Walk_SMG_MERCENARY        0 0 0 0 0 0 0 0 SMG_MERCENARY_crouch_walkN        SMG_MERCENARY_Crouch_walkCenter        SMG_MERCENARY_aimmatrix_crouch_idle        ACT_MERC_CROUCHWALK_SMG_MERCENARY $infoNode$
+
+$sequence Airwalk_SMG_MERCENARY "SMG_MERCENARY_airwalk.dmx" fps 30 loop {
+    addlayer SMG_MERCENARY_aimmatrix_swim
+	activity ACT_MERC_AIRWALK_SMG_MERCENARY 1
+}
+
+//-----------------------------------------------------------------------------------
+// Flamethrower
+//-----------------------------------------------------------------------------------
+$MPAimLayer_leftHandIK FLAMETHROWER_aimmatrix_idle        FLAMETHROWER_aimmatrix_idle        $infoNode$
+$MPAimLayer_leftHandIK FLAMETHROWER_aimmatrix_run         FLAMETHROWER_aimmatrix_run         $infoNode$
+$MPAimLayer_leftHandIK FLAMETHROWER_aimmatrix_walk        FLAMETHROWER_aimmatrix_walk        $infoNode$
+$MPAimLayer_leftHandIK FLAMETHROWER_aimmatrix_crouch_idle FLAMETHROWER_aimmatrix_crouch_idle $infoNode$
+
+$sequence FLAMETHROWER_fire FLAMETHROWER_fire
+
+//crouch fire
+$sequence AttackCrouch_FLAMETHROWER {
+	FLAMETHROWER_fire
+	subtract FLAMETHROWER_fire 0
+	frames 6 51
+        loop
+	delta
+	weightlist UpperbodyBlend
+	activity ACT_MERC_ATTACK_CROUCH_FLAMETHROWER 1
+}
+
+$sequence AttackCrouch_FLAMETHROWER_spoolup {
+	FLAMETHROWER_fire
+	subtract FLAMETHROWER_fire 0
+	frames 0 6
+	delta
+	iklock rfoot 1 0 iklock lfoot 1 0
+	activity ACT_MERC_ATTACK_CROUCH_PREFIRE 1
+}
+
+$sequence AttackCrouch_FLAMETHROWER_spooldown {
+	FLAMETHROWER_fire
+	subtract FLAMETHROWER_fire 0
+	frames 51 61
+	delta
+	weightlist UpperbodyBlend
+	iklock rfoot 1 0 iklock lfoot 1 0
+	activity ACT_MERC_ATTACK_CROUCH_POSTFIRE 1
+}
+
+// uncomment when airblast is added
+//$sequence SECONDARYAttackCrouch_FLAMETHROWER {
+//	FLAMETHROWER_altFire
+//	subtract FLAMETHROWER_fire 0
+//	frames 0 30
+//	delta
+//	activity ACT_MERC_ATTACK_CROUCH_SECONDARYFIRE  1
+//}
+
+
+//stand fire
+$sequence AttackStand_FLAMETHROWER {
+	FLAMETHROWER_fire
+	subtract FLAMETHROWER_fire 0
+	frames 6 51
+	delta
+	weightlist UpperbodyBlend
+	activity ACT_MERC_ATTACK_STAND_FLAMETHROWER 1
+}
+
+$sequence AttackStand_FLAMETHROWER_spoolup {
+	FLAMETHROWER_fire
+	subtract FLAMETHROWER_fire 0
+	frames 0 6
+	delta
+	iklock rfoot 1 0 iklock lfoot 1 0
+	activity ACT_MERC_ATTACK_STAND_PREFIRE 1
+}
+
+$sequence AttackStand_FLAMETHROWER_spooldown {
+	FLAMETHROWER_fire
+	subtract FLAMETHROWER_fire 0
+	frames 51 61
+	delta
+	weightlist UpperbodyBlend
+	iklock rfoot 1 0 iklock lfoot 1 0
+	activity ACT_MERC_ATTACK_STAND_POSTFIRE 1
+}
+
+// uncomment when airblast is added
+//$sequence SECONDARYAttackStand_FLAMETHROWER {
+//	FLAMETHROWER_altFire
+//	subtract FLAMETHROWER_fire 0
+//	frames 0 30
+//	delta
+//	activity ACT_MERC_ATTACK_STAND_SECONDARYFIRE 1
+//}
+
+
+//swim fire
+$sequence AttackSwim_FLAMETHROWER {
+	FLAMETHROWER_fire
+	subtract FLAMETHROWER_fire 0
+	frames 2 47
+	delta
+	weightlist UpperbodyBlend
+	activity ACT_MERC_ATTACK_SWIM_FLAMETHROWER 1
+}
+
+$sequence AttackSwim_FLAMETHROWER_spoolup {
+	FLAMETHROWER_fire
+	subtract FLAMETHROWER_fire 0
+	frames 0 3
+	delta
+	activity ACT_MERC_ATTACK_SWIM_PREFIRE 1
+}
+
+$sequence AttackSwim_FLAMETHROWER_spooldown {
+	FLAMETHROWER_fire
+	subtract FLAMETHROWER_fire 0
+	frames 47 57
+	delta
+	weightlist UpperbodyBlend
+	activity ACT_MERC_ATTACK_SWIM_POSTFIRE 1
+}
+
+// uncomment when airblast is added
+//$sequence SECONDARYAttackSwim_FLAMETHROWER {
+//	FLAMETHROWER_altFire
+//	subtract FLAMETHROWER_fire 0
+//	frames 0 30
+//	delta
+//	weightlist UpperbodyBlend
+//	activity ACT_MERC_ATTACK_SWIM_SECONDARYFIRE 1
+//}
+
+$sequence Stand_FLAMETHROWER  FLAMETHROWER_idle loop alignto a_reference addlayer FLAMETHROWER_aimmatrix_idle activity ACT_MERC_STAND_FLAMETHROWER 1
+$sequence Crouch_FLAMETHROWER FLAMETHROWER_crouch_idle loop alignto a_reference addlayer FLAMETHROWER_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_FLAMETHROWER 1
+
+$MPAimLayer_leftHandIK  FLAMETHROWER_aimmatrix_swim         FLAMETHROWER_aimmatrix_idle              $infoNode$
+$MPswimWithWeapon FLAMETHROWER 0 0 0 0 0 0 0 0 FLAMETHROWER_SwimN	FLAMETHROWER_SwimCenter	FLAMETHROWER_aimmatrix_swim	ACT_MERC_SWIM_FLAMETHROWER $infonode$
+
+//FLAMETHROWER Jump
+
+$sequence a_jumpStart_FLAMETHROWER FLAMETHROWER_jump frames 0 25 addlayer FLAMETHROWER_aimmatrix_swim alignto a_reference Z activity ACT_MERC_JUMP_START_FLAMETHROWER 1 LX LY
+$sequence a_jumpfloat_FLAMETHROWER FLAMETHROWER_jump frames 25 44 addlayer FLAMETHROWER_aimmatrix_swim loop  fps 30 alignto a_reference Z activity ACT_MERC_JUMP_FLOAT_FLAMETHROWER 1 LX LY
+$sequence jumpLandPose_FLAMETHROWER FLAMETHROWER_jump frames 25 25 alignto a_reference Z numframes 30 loop
+$sequence jumpLand_FLAMETHROWER { 
+	FLAMETHROWER_jump_land 
+  ikrule lhand touch "weapon_bone" usesource
+	subtract jumpland_FLAMETHROWER 0 
+	delta 
+	iklock rfoot 1 0 iklock lfoot 1 0 
+
+	activity ACT_MERC_JUMP_LAND_FLAMETHROWER 1 
+}
+
+$animation a_runCenter_FLAMETHROWER  FLAMETHROWER_runCenter blockname $infoNode$ {
+	loop
+	alignto a_reference
+}
+$animation a_runS_FLAMETHROWER FLAMETHROWER_runs blockname $infoNode$ {
+	LX LY
+	rotateto -180
+	startloop 12
+	alignto a_reference
+}
+$animation a_runSE_FLAMETHROWER FLAMETHROWER_runse blockname $infoNode$ {
+	LX LY
+	rotateto -135
+	startloop 12
+	alignto a_reference
+}
+$animation a_runE_FLAMETHROWER FLAMETHROWER_rune blockname $infoNode$ {
+	LX LY
+	rotateto -90
+	startloop 2
+	alignto a_reference
+}
+$animation a_runNE_FLAMETHROWER FLAMETHROWER_runne blockname $infoNode$ {
+	LX LY
+	rotateto -45
+	startloop 3
+	alignto a_reference
+}
+$animation a_runN_FLAMETHROWER FLAMETHROWER_runn blockname $infoNode$ {
+	LX LY
+	rotateto 0
+	startloop 3
+	alignto a_reference
+}
+$animation a_runNW_FLAMETHROWER FLAMETHROWER_runnw blockname $infoNode$ {
+	LX LY
+	rotateto 45
+	startloop 4
+	alignto a_reference
+}
+$animation a_runW_FLAMETHROWER FLAMETHROWER_runw blockname $infoNode$ {
+	LX LY
+	rotateto 90
+	startloop 3
+	alignto a_reference
+}
+$animation a_runSW_FLAMETHROWER FLAMETHROWER_runsw blockname $infoNode$ {
+	LX LY
+	rotateto 135
+	startloop 12
+	alignto a_reference
+}
+$sequence Run_FLAMETHROWER {
+	a_runsw_FLAMETHROWER	a_runS_FLAMETHROWER		a_runSE_FLAMETHROWER
+	a_runW_FLAMETHROWER	a_runCenter_FLAMETHROWER	a_runE_FLAMETHROWER
+	a_runNW_FLAMETHROWER	a_runN_FLAMETHROWER		a_runNE_FLAMETHROWER
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1
+	addlayer FLAMETHROWER_aimmatrix_run
+	activity ACT_MERC_RUN_FLAMETHROWER 1
+	{ event 7001 7 "right" }
+	{ event 7001 17 "left" }
+}
+
+// flamethrower crouch walk
+$MPCrouchWalkWithWeapon Crouch_Walk_FLAMETHROWER        0 0 0 0 0 0 0 0 FLAMETHROWER_crouch_walkN        FLAMETHROWER_Crouch_walkCenter        FLAMETHROWER_aimmatrix_crouch_idle        ACT_MERC_CROUCHWALK_FLAMETHROWER $infoNode$
+
+// airwalk
+$sequence Airwalk_FLAMETHROWER "FLAMETHROWER_airwalk.dmx" fps 30 loop {
+	addlayer FLAMETHROWER_aimmatrix_swim 
+	activity ACT_MERC_AIRWALK_FLAMETHROWER 1
+}
+
 // must be at the end of file
 $popd
