@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "128"
+	"mapversion" "130"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,13 +14,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "8"
+	"nGridSpacing" "2"
 	"bShow3DGrid" "1"
 }
 world
 {
 	"id" "1"
-	"mapversion" "128"
+	"mapversion" "130"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"detailmaterial" "detail/detailsprites"
@@ -42992,7 +42992,7 @@ entity
 {
 	"id" "38320"
 	"classname" "dm_weapon_spawner"
-	"angles" "-90 0 0"
+	"angles" "0 0 0"
 	"AutoMaterialize" "1"
 	"body" "0"
 	"disablereceiveshadows" "0"
@@ -43001,7 +43001,7 @@ entity
 	"HiddenWhenRespawning" "0"
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
-	"model" "models/weapons/w_models/w_minigun_dm.mdl"
+	"model" "models/weapons/w_models/w_lightning_gun.mdl"
 	"pickup_sound" "AmmoPack.Touch"
 	"powerup_model" "models/weapons/w_models/w_minigun_dm.mdl"
 	"renderamt" "255"
@@ -43016,14 +43016,14 @@ entity
 	"spawn_sound" "Item.Materialize"
 	"targetname" "Weapon_Minigun"
 	"texframeindex" "0"
-	"weaponname" "tf_weapon_gatlinggun"
+	"weaponname" "tf_weapon_lightning_gun"
 	connections
 	{
 		"OnPlayerTouch" "Emitter_Minigun,skin,0,0,-1"
 		"OnPlayerTouch" "Emitter_Minigun,skin,1,15,-1"
 		"OnPlayerTouch" "RespawnSound_Minigun,PlaySound,,15,-1"
 	}
-	"origin" "448 -808 -173.702"
+	"origin" "450 -816 -190"
 	editor
 	{
 		"color" "220 30 220"
