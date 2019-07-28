@@ -2,7 +2,7 @@ $modelname "weapons/w_models/w_revolver_dm.mdl"
 
 $upaxis Y
 
-$model "body" "w_revolver_dm_w_revolver_reference.smd"
+$model "body" "c_revolver_reference_dm.smd"
 
 $surfaceprop "metal"
 
@@ -15,11 +15,11 @@ $attachment "muzzle" "weapon_bone" 0 2.72 14.78 rotate -90 0 0
 $attachment "eject_brass" "weapon_bone" 0 1.92 1.59 rotate 90 0 0
 
 $sequence "idle" {
-	"w_revolver_dm_w_revolver_reference.smd"
+	"c_revolver_reference_dm.smd"
 	fps 30
 }
 
-$collisionmodel "w_revolver_physics.smd"
+$collisionmodel "c_revolver_physics.smd"
 {
 	$mass 1
 	$inertia 1
