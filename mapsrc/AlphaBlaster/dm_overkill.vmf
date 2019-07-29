@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "886"
+	"mapversion" "892"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,13 +14,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "16"
+	"nGridSpacing" "4"
 	"bShow3DGrid" "1"
 }
 world
 {
 	"id" "1"
-	"mapversion" "886"
+	"mapversion" "892"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -40071,7 +40071,7 @@ entity
 {
 	"id" "18388"
 	"classname" "dm_weapon_spawner"
-	"angles" "-90 0 0"
+	"angles" "0 0 0"
 	"AutoMaterialize" "1"
 	"body" "0"
 	"disablereceiveshadows" "0"
@@ -40080,7 +40080,7 @@ entity
 	"HiddenWhenRespawning" "0"
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
-	"model" "models/weapons/w_models/w_minigun_dm.mdl"
+	"model" "models/weapons/w_models/w_lightning_gun.mdl"
 	"pickup_sound" "AmmoPack.Touch"
 	"powerup_model" "models/weapons/w_models/w_minigun_dm.mdl"
 	"renderamt" "255"
@@ -40095,13 +40095,13 @@ entity
 	"spawn_sound" "items/itembk2.wav"
 	"targetname" "Weapon_MinigunDM"
 	"texframeindex" "0"
-	"weaponname" "tf_weapon_gatlinggun"
+	"weaponname" "tf_weapon_lightning_gun"
 	connections
 	{
 		"OnPlayerTouch" "Emitter_MinigunDM,skin,0,0,-1"
 		"OnPlayerTouch" "Emitter_MinigunDM,skin,1,15,-1"
 	}
-	"origin" "1028 544 127.801"
+	"origin" "1028 544 116"
 	editor
 	{
 		"color" "220 30 220"
@@ -40681,11 +40681,12 @@ entity
 	"fademindist" "-1"
 	"fadescale" "1"
 	"HiddenWhenRespawning" "0"
-	"model" "models/items/medkit_large.mdl"
+	"model" "models/pickups/megahealth.mdl"
 	"pickup_sound" "HealthKitMega.Touch"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
 	"respawntime" "125"
+	"skin" "0"
 	"solid" "6"
 	"spawn_sound" "items/itembk2.wav"
 	connections
@@ -40746,7 +40747,7 @@ entity
 	"HiddenWhenRespawning" "0"
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
-	"model" "models/weapons/c_models/c_bet_rocketlauncher/c_bet_rocketlauncher.mdl"
+	"model" "models/weapons/w_models/w_rocketlauncher.mdl"
 	"pickup_sound" "AmmoPack.Touch"
 	"powerup_model" "models/weapons/w_models/w_rocketlauncher.mdl"
 	"renderamt" "255"

@@ -947,13 +947,80 @@ $sequence Stand_SECONDARY  SECONDARY_idle loop alignto a_reference addlayer SECO
 $sequence Stand_MELEE  MELEE_idle loop alignto a_reference addlayer MELEE_aimmatrix_idle activity ACT_MP_STAND_MELEE 1
 $sequence Stand_LOSER  LOSER_idle loop alignto a_reference activity ACT_MP_STAND_LOSERSTATE 1
 
-// Currently Crouch is not available in the game
 $sequence Crouch_PRIMARY PRIMARY_crouch_idle loop alignto a_reference addlayer PRIMARY_aimmatrix_crouch_idle  activity ACT_MP_CROUCH_PRIMARY 1
 $sequence Crouch_SECONDARY SECONDARY_crouch_idle loop alignto a_reference addlayer SECONDARY_aimmatrix_crouch_idle  activity ACT_MP_CROUCH_SECONDARY 1
 $sequence Crouch_MELEE MELEE_crouch_idle loop alignto a_reference addlayer MELEE_aimmatrix_crouch_idle  activity ACT_MP_CROUCH_MELEE 1
 $sequence Crouch_LOSER LOSER_crouch_idle loop alignto a_reference activity ACT_MP_CROUCH_LOSERSTATE 1
 
 
+//================================================================================================
+//
+// JUMP LOSER
+//
+//================================================================================================
+
+$sequence a_jumpStart_loser loser_jump frames 0 25 alignto a_reference Z activity ACT_MP_JUMP_START_LOSERSTATE 1 LX LY
+$sequence a_jumpfloat_loser loser_jump frames 26 103	loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_LOSERSTATE 1 LX LY
+$sequence jumpLandPose_loser loser_jump frames 25 25 numframes 30 loop
+$sequence jumpLand_loser { 
+	loser_jump_land 
+	subtract jumpLand_loser 0 
+	delta 
+	iklock rfoot 1 0 iklock lfoot 1 0 
+	
+	activity ACT_MP_JUMP_LAND_LOSERSTATE 1 
+}
+
+//================================================================================================
+//
+// SWIMS
+//
+//================================================================================================
+
+$MPAimLayer primary_aimmatrix_swim        primary_aimmatrix_swim        $infoNode$
+$MPswimWithWeapon Primary 0 0 0 0 0 0 0 0 primary_swimN	primary_swimCenter	primary_aimmatrix_swim	ACT_MP_SWIM_Primary $infonode$
+
+$MPAimLayer secondary_aimmatrix_swim        secondary_aimmatrix_swim        $infoNode$
+
+$animation a_swimCenter_secondary  secondary_swimCenter blockname "mercenaryInfo" loop
+$sequence s_swimAlign_secondary a_swimCenter_secondary
+$animation a_swimS_secondary  secondary_swimS     startloop 0  rotateto -180 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimSE_secondary  secondary_swimSE   startloop 0 rotateto -135 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimE_secondary   secondary_swimE    startloop 0   rotateto -90 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo"  
+$animation a_swimNE_secondary  secondary_swimNE   startloop 0  rotateto -45 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimN_secondary   secondary_swimN    startloop 0     rotateto 0 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimNW_secondary  secondary_swimNW   startloop 0   rotateto 45 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo"
+$animation a_swimW_secondary   secondary_swimW    startloop 0   rotateto 90 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimSW_secondary  secondary_swimSW   startloop 0  rotateto 135 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$sequence Swim_secondary  { 
+	a_swimsw_secondary	a_swimS_secondary 		a_swimSE_secondary  
+	a_swimW_secondary	a_swimCenter_secondary 	a_swimE_secondary  
+	a_swimNW_secondary 	a_swimN_secondary 		a_swimNE_secondary  
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1 
+	addlayer secondary_aimmatrix_swim 
+	activity ACT_MP_SWIM_Secondary 1 
+} 
+
+$MPAimLayer melee_aimmatrix_swim        melee_aimmatrix_swim        $infoNode$
+$MPswimWithWeapon Melee 0 0 0 0 0 0 0 0 melee_swimN	 melee_swimCenter	melee_aimmatrix_swim	ACT_MP_SWIM_Melee $infonode$
+
+$animation a_swimCenter_loser  loser_swimCenter blockname "mercenaryInfo" loop
+$sequence s_swimAlign_loser a_swimCenter_loser
+$animation a_swimS_loser  loser_swimS     startloop 0  rotateto -180 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimSE_loser  loser_swimSE   startloop 0 rotateto -135 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimE_loser   loser_swimE    startloop 0   rotateto -90 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo"  
+$animation a_swimNE_loser  loser_swimNE   startloop 0  rotateto -45 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimN_loser   loser_swimN    startloop 0     rotateto 0 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimNW_loser  loser_swimNW   startloop 0   rotateto 45 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo"
+$animation a_swimW_loser   loser_swimW    startloop 0   rotateto 90 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$animation a_swimSW_loser  loser_swimSW   startloop 0  rotateto 135 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
+$sequence Swim_loser  { 
+	a_swimsw_loser	a_swimS_loser 		a_swimSE_loser  
+	a_swimW_loser	a_swimCenter_loser 	a_swimE_loser  
+	a_swimNW_loser 	a_swimN_loser 		a_swimNE_loser  
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1 
+	activity ACT_MP_SWIM_LOSERSTATE 1 
+} 
 
 //================================================================================================
 //
@@ -1035,8 +1102,8 @@ $sequence jumpLand_secondary {
 //
 //================================================================================================
 //melee jump
-$sequence a_jumpStart_melee melee_jump frames 0 25 alignto a_reference Z activity ACT_MP_JUMP_START_melee 1 LX LY
-$sequence a_jumpfloat_melee melee_jump frames 26 103	loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_melee 1 LX LY
+$sequence a_jumpStart_melee melee_jump addlayer melee_aimmatrix_swim frames 0 25 alignto a_reference Z activity ACT_MP_JUMP_START_melee 1 LX LY
+$sequence a_jumpfloat_melee melee_jump addlayer melee_aimmatrix_swim frames 26 103	loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_melee 1 LX LY
 $sequence jumpLandPose_melee melee_jump frames 25 25 numframes 30 loop
 $sequence jumpLand_melee { 
 	melee_jump_land 
@@ -1046,76 +1113,6 @@ $sequence jumpLand_melee {
 	
 	activity ACT_MP_JUMP_LAND_melee 1 
 }
-
-
-//================================================================================================
-//
-// JUMP LOSER
-//
-//================================================================================================
-
-$sequence a_jumpStart_loser loser_jump frames 0 25 alignto a_reference Z activity ACT_MP_JUMP_START_LOSERSTATE 1 LX LY
-$sequence a_jumpfloat_loser loser_jump frames 26 103	loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_LOSERSTATE 1 LX LY
-$sequence jumpLandPose_loser loser_jump frames 25 25 numframes 30 loop
-$sequence jumpLand_loser { 
-	loser_jump_land 
-	subtract jumpLand_loser 0 
-	delta 
-	iklock rfoot 1 0 iklock lfoot 1 0 
-	
-	activity ACT_MP_JUMP_LAND_LOSERSTATE 1 
-}
-
-//================================================================================================
-//
-// SWIMS
-//
-//================================================================================================
-
-$MPAimLayer primary_aimmatrix_swim        primary_aimmatrix_swim        $infoNode$
-$MPswimWithWeapon Primary 0 0 0 0 0 0 0 0 primary_swimN	primary_swimCenter	primary_aimmatrix_swim	ACT_MP_SWIM_Primary $infonode$
-
-$MPAimLayer secondary_aimmatrix_swim        secondary_aimmatrix_swim        $infoNode$
-
-$animation a_swimCenter_secondary  secondary_swimCenter blockname "mercenaryInfo" loop
-$sequence s_swimAlign_secondary a_swimCenter_secondary
-$animation a_swimS_secondary  secondary_swimS     startloop 0  rotateto -180 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimSE_secondary  secondary_swimSE   startloop 0 rotateto -135 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimE_secondary   secondary_swimE    startloop 0   rotateto -90 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo"  
-$animation a_swimNE_secondary  secondary_swimNE   startloop 0  rotateto -45 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimN_secondary   secondary_swimN    startloop 0     rotateto 0 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimNW_secondary  secondary_swimNW   startloop 0   rotateto 45 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo"
-$animation a_swimW_secondary   secondary_swimW    startloop 0   rotateto 90 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimSW_secondary  secondary_swimSW   startloop 0  rotateto 135 align s_swimAlign_secondary X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$sequence Swim_secondary  { 
-	a_swimsw_secondary	a_swimS_secondary 		a_swimSE_secondary  
-	a_swimW_secondary	a_swimCenter_secondary 	a_swimE_secondary  
-	a_swimNW_secondary 	a_swimN_secondary 		a_swimNE_secondary  
-	blendwidth 3 blend move_y -1 1 blend move_x -1 1 
-	addlayer secondary_aimmatrix_swim 
-	activity ACT_MP_SWIM_Secondary 1 
-} 
-
-$MPAimLayer melee_aimmatrix_swim        melee_aimmatrix_swim        $infoNode$
-$MPswimWithWeapon Melee 0 0 0 0 0 0 0 0 melee_swimN	 melee_swimCenter	melee_aimmatrix_swim	ACT_MP_SWIM_Melee $infonode$
-
-$animation a_swimCenter_loser  loser_swimCenter blockname "mercenaryInfo" loop
-$sequence s_swimAlign_loser a_swimCenter_loser
-$animation a_swimS_loser  loser_swimS     startloop 0  rotateto -180 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimSE_loser  loser_swimSE   startloop 0 rotateto -135 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimE_loser   loser_swimE    startloop 0   rotateto -90 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo"  
-$animation a_swimNE_loser  loser_swimNE   startloop 0  rotateto -45 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimN_loser   loser_swimN    startloop 0     rotateto 0 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimNW_loser  loser_swimNW   startloop 0   rotateto 45 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo"
-$animation a_swimW_loser   loser_swimW    startloop 0   rotateto 90 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$animation a_swimSW_loser  loser_swimSW   startloop 0  rotateto 135 align s_swimAlign_loser X Y Z 0 0 LX LY loop blockname "mercenaryInfo" 
-$sequence Swim_loser  { 
-	a_swimsw_loser	a_swimS_loser 		a_swimSE_loser  
-	a_swimW_loser	a_swimCenter_loser 	a_swimE_loser  
-	a_swimNW_loser 	a_swimN_loser 		a_swimNE_loser  
-	blendwidth 3 blend move_y -1 1 blend move_x -1 1 
-	activity ACT_MP_SWIM_LOSERSTATE 1 
-} 
 
 //================================================================================================
 //
@@ -1556,6 +1553,19 @@ $Weightlist PistolMercenarySwimReloadArmsBlend {
 	"bip_lowerArm_R" 1.0
 	}
 	
+$Weightlist RevolverMercenarySwimReloadArmsBlend {
+	"bip_pelvis" 0.0
+	"bip_hip_R" 0.0
+	"bip_hip_L" 0.0
+	"bip_spine_0" 0.0
+	"bip_collar_L" 1.0
+	"bip_upperArm_L" 1.0
+	"bip_lowerArm_L" 1.0
+	"bip_collar_R" 1.0
+	"bip_upperArm_R" 1.0
+	"bip_lowerArm_R" 1.0
+	}
+	
 //-----------------------------------------------------------------------------------
 // Akimbo Pistols
 //-----------------------------------------------------------------------------------
@@ -1766,22 +1776,30 @@ $sequence layer_reload_airwalk_arms_PISTOL_MERCENARY "PISTOL_MERCENARY_swim_relo
 $MPGestureReload_IK ReloadStand_PISTOL_MERCENARY     PISTOL_MERCENARY_reload        				ACT_MERC_RELOAD_STAND_PISTOL_MERCENARY    layer_reload_standing_arms_PISTOL_MERCENARY 0 5 50 55
 { 
 	event AE_CL_MAG_EJECT 16
+	event AE_CL_ENABLE_BODYGROUP 16 "magazine"
 	event AE_CL_MAG_UNEJECT 30
+	event AE_CL_DISABLE_BODYGROUP 30 "magazine"
 }
 $MPGestureReload_IK ReloadCrouch_PISTOL_MERCENARY    PISTOL_MERCENARY_crouch_reload 				ACT_MERC_RELOAD_CROUCH_PISTOL_MERCENARY   layer_reload_crouching_arms_PISTOL_MERCENARY 0 5 50 55
 { 
 	event AE_CL_MAG_EJECT 16
+	event AE_CL_BODYGROUP_SET_VALUE 16 "magazine 1"
 	event AE_CL_MAG_UNEJECT 30
+	event AE_CL_BODYGROUP_SET_VALUE 30 "magazine 0"
 }
 $MPGestureReload_IK ReloadSwim_PISTOL_MERCENARY      PISTOL_MERCENARY_swim_reload           ACT_MERC_RELOAD_SWIM_PISTOL_MERCENARY     layer_reload_swimming_arms_PISTOL_MERCENARY 0 5 50 55
 { 
 	event AE_CL_MAG_EJECT 16
+	event AE_CL_BODYGROUP_SET_VALUE 16 "magazine 1"
 	event AE_CL_MAG_UNEJECT 30
+	event AE_CL_BODYGROUP_SET_VALUE 30 "magazine 0"
 }
 $MPGestureReload_IK ReloadAirwalk_PISTOL_MERCENARY   PISTOL_MERCENARY_reload        ACT_MERC_RELOAD_AIRWALK_PISTOL_MERCENARY  layer_reload_airwalk_arms_PISTOL_MERCENARY 0 5 50 55
 { 
 	event AE_CL_MAG_EJECT 16
+	event AE_CL_BODYGROUP_SET_VALUE 16 "magazine 1"
 	event AE_CL_MAG_UNEJECT 30
+	event AE_CL_BODYGROUP_SET_VALUE 30 "magazine 0"
 }
 $sequence Stand_PISTOL_MERCENARY  PISTOL_MERCENARY_idle loop alignto a_reference addlayer PISTOL_MERCENARY_aimmatrix_idle activity ACT_MERC_STAND_PISTOL_MERCENARY 1
 $sequence Crouch_PISTOL_MERCENARY PISTOL_MERCENARY_crouch_idle loop alignto a_reference addlayer PISTOL_MERCENARY_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_PISTOL_MERCENARY 1
@@ -2222,6 +2240,475 @@ $MPCrouchWalkWithWeapon Crouch_Walk_FLAMETHROWER        0 0 0 0 0 0 0 0 FLAMETHR
 $sequence Airwalk_FLAMETHROWER "FLAMETHROWER_airwalk.dmx" fps 30 loop {
 	addlayer FLAMETHROWER_aimmatrix_swim 
 	activity ACT_MERC_AIRWALK_FLAMETHROWER 1
+}
+
+//-----------------------------------------------------------------------------------
+// Revolver Mercenary
+//-----------------------------------------------------------------------------------
+
+$MPWeaponAims		REVOLVER_MERCENARY	$infoNode$
+
+$MPGestureAttack AttackStand_REVOLVER_MERCENARY  REVOLVER_MERCENARY_fire          ACT_MERC_ATTACK_STAND_REVOLVER_MERCENARY
+$MPGestureAttack AttackCrouch_REVOLVER_MERCENARY REVOLVER_MERCENARY_crouch_fire   ACT_MERC_ATTACK_CROUCH_REVOLVER_MERCENARY
+$MPGestureAttack AttackSwim_REVOLVER_MERCENARY   REVOLVER_MERCENARY_swim_fire     ACT_MERC_ATTACK_SWIM_REVOLVER_MERCENARY
+
+$sequence layer_reload_standing_arms_REVOLVER_MERCENARY "REVOLVER_MERCENARY_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 6 50 60
+	hidden
+
+}
+$sequence layer_reload_crouching_arms_REVOLVER_MERCENARY "REVOLVER_MERCENARY_crouch_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 6 50 60
+	hidden
+}
+
+$sequence layer_reload_swimming_arms_REVOLVER_MERCENARY "REVOLVER_MERCENARY_swim_reload.dmx" weightlist RevolverMercenarySwimReloadArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 6 50 60
+	hidden
+}
+
+$sequence layer_reload_airwalk_arms_REVOLVER_MERCENARY "REVOLVER_MERCENARY_swim_reload.dmx" weightlist RevolverMercenarySwimReloadArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 6 50 60
+	hidden
+}
+
+$MPGestureReload_IK ReloadStand_REVOLVER_MERCENARY     REVOLVER_MERCENARY_reload        				ACT_MERC_RELOAD_STAND_REVOLVER_MERCENARY    layer_reload_standing_arms_REVOLVER_MERCENARY 0 6 50 60
+$MPGestureReload_IK ReloadCrouch_REVOLVER_MERCENARY    REVOLVER_MERCENARY_crouch_reload 				ACT_MERC_RELOAD_CROUCH_REVOLVER_MERCENARY   layer_reload_crouching_arms_REVOLVER_MERCENARY 0 6 50 60
+$MPGestureReload_IK ReloadSwim_REVOLVER_MERCENARY      REVOLVER_MERCENARY_swim_reload           ACT_MERC_RELOAD_SWIM_REVOLVER_MERCENARY     layer_reload_swimming_arms_REVOLVER_MERCENARY 0 6 50 60
+$MPGestureReload_IK ReloadAirwalk_REVOLVER_MERCENARY   REVOLVER_MERCENARY_reload        ACT_MERC_RELOAD_AIRWALK_REVOLVER_MERCENARY  layer_reload_airwalk_arms_REVOLVER_MERCENARY 0 6 50 60
+
+$sequence Stand_REVOLVER_MERCENARY  REVOLVER_MERCENARY_idle loop alignto a_reference addlayer REVOLVER_MERCENARY_aimmatrix_idle activity ACT_MERC_STAND_REVOLVER_MERCENARY 1
+$sequence Crouch_REVOLVER_MERCENARY REVOLVER_MERCENARY_crouch_idle loop alignto a_reference addlayer REVOLVER_MERCENARY_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_REVOLVER_MERCENARY 1
+
+// swim
+$MPAimLayer REVOLVER_MERCENARY_aimmatrix_swim        REVOLVER_MERCENARY_aimmatrix_idle        $infoNode$
+$MPswimWithWeapon REVOLVER_MERCENARY 0 0 0 0 0 0 0 0 REVOLVER_MERCENARY_SwimN	REVOLVER_MERCENARY_SwimCenter	REVOLVER_MERCENARY_aimmatrix_swim	ACT_MERC_SWIM_REVOLVER_MERCENARY $infonode$
+
+//REVOLVER_MERCENARY jump
+$sequence a_jumpStart_REVOLVER_MERCENARY REVOLVER_MERCENARY_jump frames 0 25 addlayer REVOLVER_MERCENARY_aimmatrix_swim alignto a_reference Z activity ACT_MERC_JUMP_START_REVOLVER_MERCENARY 1 LX LY
+$sequence a_jumpfloat_REVOLVER_MERCENARY REVOLVER_MERCENARY_jump frames 26 189 addlayer REVOLVER_MERCENARY_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MERC_JUMP_FLOAT_REVOLVER_MERCENARY 1 LX LY
+$sequence jumpLandPose_REVOLVER_MERCENARY REVOLVER_MERCENARY_jump frames 25 25 numframes 30 loop
+$sequence jumpLand_REVOLVER_MERCENARY { 
+	REVOLVER_MERCENARY_jump_land 
+	subtract jumpLand_REVOLVER_MERCENARY 0 
+	delta 
+	iklock rfoot 1 0 iklock lfoot 1 0 
+
+	activity ACT_MERC_JUMP_LAND_REVOLVER_MERCENARY 1 
+}
+
+// run
+$animation a_runCenter_REVOLVER_MERCENARY  REVOLVER_MERCENARY_runCenter blockname $infoNode$ {
+	loop
+	alignto a_reference
+}
+$animation a_runS_REVOLVER_MERCENARY REVOLVER_MERCENARY_runs blockname $infoNode$ {
+	LX LY
+	rotateto -180
+	startloop 12
+	alignto a_reference
+}
+$animation a_runSE_REVOLVER_MERCENARY REVOLVER_MERCENARY_runse blockname $infoNode$ {
+	LX LY
+	rotateto -135
+	startloop 12
+	alignto a_reference
+}
+$animation a_runE_REVOLVER_MERCENARY REVOLVER_MERCENARY_rune blockname $infoNode$ {
+	LX LY
+	rotateto -90
+	startloop 2
+	alignto a_reference
+}
+$animation a_runNE_REVOLVER_MERCENARY REVOLVER_MERCENARY_runne blockname $infoNode$ {
+	LX LY
+	rotateto -45
+	startloop 3
+	alignto a_reference
+}
+$animation a_runN_REVOLVER_MERCENARY REVOLVER_MERCENARY_runn blockname $infoNode$ {
+	LX LY
+	rotateto 0
+	startloop 3
+	alignto a_reference
+}
+$animation a_runNW_REVOLVER_MERCENARY REVOLVER_MERCENARY_runnw blockname $infoNode$ {
+	LX LY
+	rotateto 45
+	startloop 4
+	alignto a_reference
+}
+$animation a_runW_REVOLVER_MERCENARY REVOLVER_MERCENARY_runw blockname $infoNode$ {
+	LX LY
+	rotateto 90
+	startloop 3
+	alignto a_reference
+}
+$animation a_runSW_REVOLVER_MERCENARY REVOLVER_MERCENARY_runsw blockname $infoNode$ {
+	LX LY
+	rotateto 135
+	startloop 12
+	alignto a_reference
+}
+$sequence Run_REVOLVER_MERCENARY {
+	a_runsw_REVOLVER_MERCENARY	a_runS_REVOLVER_MERCENARY		a_runSE_REVOLVER_MERCENARY
+	a_runW_REVOLVER_MERCENARY	a_runCenter_REVOLVER_MERCENARY	a_runE_REVOLVER_MERCENARY
+	a_runNW_REVOLVER_MERCENARY	a_runN_REVOLVER_MERCENARY		a_runNE_REVOLVER_MERCENARY
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1
+	addlayer REVOLVER_MERCENARY_aimmatrix_run
+	activity ACT_MERC_RUN_REVOLVER_MERCENARY 1
+	  { event 7001 7 "right" }
+	  { event 7001 16 "left" }
+}
+
+$MPCrouchWalkWithWeapon Crouch_Walk_REVOLVER_MERCENARY 0 0 0 0 0 0 0 0 REVOLVER_MERCENARY_crouch_walkN REVOLVER_MERCENARY_crouch_walkCenter REVOLVER_MERCENARY_aimmatrix_crouch_idle ACT_MERC_CROUCHWALK_REVOLVER_MERCENARY $infoNode$
+
+// airwalk
+$sequence Airwalk_REVOLVER_MERCENARY "REVOLVER_MERCENARY_airwalk.dmx" fps 30 loop {
+	addlayer REVOLVER_MERCENARY_aimmatrix_idle 
+	activity ACT_MERC_AIRWALK_REVOLVER_MERCENARY 1
+}
+
+//-----------------------------------------------------------------------------------
+// Supershotgun
+//-----------------------------------------------------------------------------------
+
+$MPWeaponAims_leftHandIK		SUPERSHOTGUN	$infoNode$
+
+$MPGestureAttack AttackStand_SUPERSHOTGUN  SUPERSHOTGUN_fire          ACT_MERC_ATTACK_STAND_SUPERSHOTGUN
+$MPGestureAttack AttackCrouch_SUPERSHOTGUN SUPERSHOTGUN_crouch_fire   ACT_MERC_ATTACK_CROUCH_SUPERSHOTGUN
+$MPGestureAttack AttackSwim_SUPERSHOTGUN   SUPERSHOTGUN_swim_fire     ACT_MERC_ATTACK_SWIM_SUPERSHOTGUN
+
+$sequence layer_reload_standing_arms_SUPERSHOTGUN "SUPERSHOTGUN_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 6 55 67
+	hidden
+
+}
+$sequence layer_reload_crouching_arms_SUPERSHOTGUN "SUPERSHOTGUN_crouch_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 6 55 67
+	hidden
+}
+
+$sequence layer_reload_swimming_arms_SUPERSHOTGUN "SUPERSHOTGUN_swim_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 6 55 67
+	hidden
+}
+
+$sequence layer_reload_airwalk_arms_SUPERSHOTGUN "SUPERSHOTGUN_swim_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 6 55 67
+	hidden
+}
+
+$MPGestureReload_IK ReloadStand_SUPERSHOTGUN     SUPERSHOTGUN_reload        				ACT_MERC_RELOAD_STAND_SUPERSHOTGUN    layer_reload_standing_arms_SUPERSHOTGUN 0 4 55 67
+$MPGestureReload_IK ReloadCrouch_SUPERSHOTGUN    SUPERSHOTGUN_crouch_reload 				ACT_MERC_RELOAD_CROUCH_SUPERSHOTGUN   layer_reload_crouching_arms_SUPERSHOTGUN 0 4 55 67
+$MPGestureReload_IK ReloadSwim_SUPERSHOTGUN      SUPERSHOTGUN_swim_reload           ACT_MERC_RELOAD_SWIM_SUPERSHOTGUN     layer_reload_swimming_arms_SUPERSHOTGUN 0 4 55 67
+$MPGestureReload_IK ReloadAirwalk_SUPERSHOTGUN   SUPERSHOTGUN_reload        ACT_MERC_RELOAD_AIRWALK_SUPERSHOTGUN  layer_reload_airwalk_arms_SUPERSHOTGUN 0 4 55 67
+
+$sequence Stand_SUPERSHOTGUN  SUPERSHOTGUN_idle loop alignto a_reference addlayer SUPERSHOTGUN_aimmatrix_idle activity ACT_MERC_STAND_SUPERSHOTGUN 1
+$sequence Crouch_SUPERSHOTGUN SUPERSHOTGUN_crouch_idle loop alignto a_reference addlayer SUPERSHOTGUN_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_SUPERSHOTGUN 1
+
+// swim
+$MPAimLayer_lefthandIK SUPERSHOTGUN_aimmatrix_swim        SUPERSHOTGUN_aimmatrix_idle        $infoNode$
+$MPswimWithWeapon SUPERSHOTGUN 0 0 0 0 0 0 0 0 SUPERSHOTGUN_SwimN	SUPERSHOTGUN_SwimCenter	SUPERSHOTGUN_aimmatrix_swim	ACT_MERC_SWIM_SUPERSHOTGUN $infonode$
+
+//SUPERSHOTGUN jump
+$sequence a_jumpStart_SUPERSHOTGUN SUPERSHOTGUN_jump frames 0 25 addlayer SUPERSHOTGUN_aimmatrix_swim alignto a_reference Z activity ACT_MERC_JUMP_START_SUPERSHOTGUN 1 LX LY
+$sequence a_jumpfloat_SUPERSHOTGUN SUPERSHOTGUN_jump frames 26 189 addlayer SUPERSHOTGUN_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MERC_JUMP_FLOAT_SUPERSHOTGUN 1 LX LY
+$sequence jumpLandPose_SUPERSHOTGUN SUPERSHOTGUN_jump frames 25 25 numframes 30 loop
+$sequence jumpLand_SUPERSHOTGUN { 
+	SUPERSHOTGUN_jump_land 
+	subtract jumpLand_SUPERSHOTGUN 0 
+	delta 
+	iklock rfoot 1 0 iklock lfoot 1 0 
+
+	activity ACT_MERC_JUMP_LAND_SUPERSHOTGUN 1 
+}
+
+// run
+$animation a_runCenter_SUPERSHOTGUN  SUPERSHOTGUN_runCenter blockname $infoNode$ {
+	loop
+	alignto a_reference
+}
+$animation a_runS_SUPERSHOTGUN SUPERSHOTGUN_runs blockname $infoNode$ {
+	LX LY
+	rotateto -180
+	startloop 12
+	alignto a_reference
+}
+$animation a_runSE_SUPERSHOTGUN SUPERSHOTGUN_runse blockname $infoNode$ {
+	LX LY
+	rotateto -135
+	startloop 12
+	alignto a_reference
+}
+$animation a_runE_SUPERSHOTGUN SUPERSHOTGUN_rune blockname $infoNode$ {
+	LX LY
+	rotateto -90
+	startloop 2
+	alignto a_reference
+}
+$animation a_runNE_SUPERSHOTGUN SUPERSHOTGUN_runne blockname $infoNode$ {
+	LX LY
+	rotateto -45
+	startloop 3
+	alignto a_reference
+}
+$animation a_runN_SUPERSHOTGUN SUPERSHOTGUN_runn blockname $infoNode$ {
+	LX LY
+	rotateto 0
+	startloop 3
+	alignto a_reference
+}
+$animation a_runNW_SUPERSHOTGUN SUPERSHOTGUN_runnw blockname $infoNode$ {
+	LX LY
+	rotateto 45
+	startloop 4
+	alignto a_reference
+}
+$animation a_runW_SUPERSHOTGUN SUPERSHOTGUN_runw blockname $infoNode$ {
+	LX LY
+	rotateto 90
+	startloop 3
+	alignto a_reference
+}
+$animation a_runSW_SUPERSHOTGUN SUPERSHOTGUN_runsw blockname $infoNode$ {
+	LX LY
+	rotateto 135
+	startloop 12
+	alignto a_reference
+}
+$sequence Run_SUPERSHOTGUN {
+	a_runsw_SUPERSHOTGUN	a_runS_SUPERSHOTGUN		a_runSE_SUPERSHOTGUN
+	a_runW_SUPERSHOTGUN	a_runCenter_SUPERSHOTGUN	a_runE_SUPERSHOTGUN
+	a_runNW_SUPERSHOTGUN	a_runN_SUPERSHOTGUN		a_runNE_SUPERSHOTGUN
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1
+	addlayer SUPERSHOTGUN_aimmatrix_run
+	activity ACT_MERC_RUN_SUPERSHOTGUN 1
+	  { event 7001 7 "right" }
+	  { event 7001 16 "left" }
+}
+
+$MPCrouchWalkWithWeapon Crouch_Walk_SUPERSHOTGUN 0 0 0 0 0 0 0 0 SUPERSHOTGUN_crouch_walkN SUPERSHOTGUN_crouch_walkCenter SUPERSHOTGUN_aimmatrix_crouch_idle ACT_MERC_CROUCHWALK_SUPERSHOTGUN $infoNode$
+
+// airwalk
+$sequence Airwalk_SUPERSHOTGUN "SUPERSHOTGUN_airwalk.dmx" fps 30 loop {
+	addlayer SUPERSHOTGUN_aimmatrix_idle 
+	activity ACT_MERC_AIRWALK_SUPERSHOTGUN 1
+}
+
+//-----------------------------------------------------------------------------------
+// Railgun (also re-used for sniper rifle)
+//-----------------------------------------------------------------------------------
+
+$MPWeaponAims_leftHandIK	RAILGUN	$infoNode$
+$MPAimLayer_leftHandIK  RAILGUN_aimmatrix_deployed        	RAILGUN_aimmatrix_deployed      $infoNode$
+$MPAimLayer_leftHandIK  RAILGUN_crouch_aimmatrix_deployed	  RAILGUN_crouch_aimmatrix_deployed	$infoNode$
+$MPGestureAttack AttackStand_RAILGUN   RAILGUN_fire         ACT_MERC_ATTACK_STAND_RAILGUN  IKrule lhand touch "weapon_bone" usesource
+$MPGestureAttack AttackCrouch_RAILGUN  RAILGUN_crouch_fire  ACT_MERC_ATTACK_CROUCH_RAILGUN IKrule lhand touch "weapon_bone" usesource
+$MPGestureAttack AttackSwim_RAILGUN    RAILGUN_fire         ACT_MERC_ATTACK_SWIM_RAILGUN   IKrule lhand touch "weapon_bone" usesource
+
+$MPGestureAttack AttackCrouch_RAILGUN_DEPLOYED  RAILGUN_DEPLOYED_crouch_fire   ACT_MERC_ATTACK_CROUCH_RAILGUN_DEPLOYED
+$MPGestureAttack AttackSwim_RAILGUN_DEPLOYED    RAILGUN_DEPLOYED_fire          ACT_MERC_ATTACK_SWIM_RAILGUN_DEPLOYED
+$MPGestureReload ReloadStand_RAILGUN_DEPLOYED   RAILGUN_idle_deployed          ACT_MERC_RELOAD_STAND_RAILGUN_DEPLOYED IKrule lhand touch "weapon_bone" usesource frames 0 0
+$MPGestureReload ReloadCrouch_RAILGUN_DEPLOYED  RAILGUN_idle_deployed          ACT_MERC_RELOAD_CROUCH_RAILGUN_DEPLOYED IKrule lhand touch "weapon_bone" usesource frames 0 0
+$MPGestureReload ReloadSwim_RAILGUN_DEPLOYED    RAILGUN_idle_deployed          ACT_MERC_RELOAD_SWIM_RAILGUN_DEPLOYED IKrule lhand touch "weapon_bone" usesource frames 0 0
+
+$MPGestureReload ReloadStand_RAILGUN  RAILGUN_idle        ACT_MERC_RELOAD_STAND_RAILGUN IKrule lhand touch "weapon_bone" usesource frames 0 0
+$MPGestureReload ReloadCrouch_RAILGUN  RAILGUN_idle ACT_MERC_RELOAD_CROUCH_RAILGUN IKrule lhand touch "weapon_bone" usesource frames 0 0
+$MPGestureReload ReloadSwim_RAILGUN   RAILGUN_idle   ACT_MERC_RELOAD_SWIM_RAILGUN IKrule lhand touch "weapon_bone" usesource frames 0 0
+
+$sequence attackstand_RAILGUN_deployed_fire {
+	RAILGUN_deployed_fire
+	subtract attackstand_RAILGUN_deployed_fire 0
+	delta
+	ikrule lhand touch "weapon_bone" usesource
+	ikrule rhand release
+	iklock rfoot 1 0 iklock lfoot 1 0
+ 	activity ACT_MERC_ATTACK_STAND_RAILGUN_DEPLOYED 1 
+}
+
+$sequence Stand_RAILGUN  RAILGUN_idle loop addlayer RAILGUN_aimmatrix_idle activity ACT_MERC_STAND_RAILGUN 1
+$sequence Crouch_RAILGUN RAILGUN_crouch_idle loop addlayer RAILGUN_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_RAILGUN 1
+
+//RAILGUN Jump
+
+$sequence a_jumpStart_RAILGUN RAILGUN_jump addlayer RAILGUN_aimmatrix_idle frames 0 25 alignto a_reference Z activity ACT_MERC_JUMP_START_RAILGUN 1 LX LY
+$sequence a_jumpfloat_RAILGUN RAILGUN_jump addlayer RAILGUN_aimmatrix_idle frames 26 66 loop  fps 30 alignto a_reference Z activity ACT_MERC_JUMP_FLOAT_RAILGUN 1 LX LY
+$sequence jumpLandPose_RAILGUN RAILGUN_jump frames 25 25 alignto a_reference Z numframes 30 loop
+$sequence jumpLand_RAILGUN { 
+	RAILGUN_jump_land 
+	subtract jumpland_RAILGUN 0 
+	delta 
+	iklock rfoot 1 0 iklock lfoot 1 0 
+
+	activity ACT_MERC_JUMP_LAND_RAILGUN 1 
+}
+
+
+$MPAimLayer_lefthandIK  RAILGUN_aimmatrix_swim        RAILGUN_aimmatrix_idle        $infoNode$
+$MPswimWithWeapon RAILGUN 0 0 0 0 0 0 0 0 RAILGUN_SwimN	RAILGUN_SwimCenter	RAILGUN_aimmatrix_swim	ACT_MERC_SWIM_RAILGUN $infonode$
+$MPswimWithWeapon RAILGUN_deployed 0 0 0 0 0 0 0 0 RAILGUN_deployed_SwimN RAILGUN_deployed_SwimCenter	RAILGUN_aimmatrix_deployed	ACT_MERC_RAILGUN_SWIM_DEPLOYED $infonode$
+
+// deployed
+
+$sequence Crouch_Deployed_RAILGUN  RAILGUN_crouch_idle_deployed {
+	loop
+	addlayer RAILGUN_crouch_aimmatrix_deployed
+	activity ACT_MERC_CROUCH_RAILGUN_DEPLOYED_IDLE 1
+}
+
+$sequence Stand_Deployed_RAILGUN  RAILGUN_idle_deployed {
+	loop
+	addlayer RAILGUN_aimmatrix_deployed
+	activity ACT_MERC_RAILGUN_DEPLOYED_IDLE 1
+}
+$animation a_DeployedCenter_RAILGUN  RAILGUN_DeployedCenter blockname $infoNode$ {
+	loop
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$animation a_DeployedS_RAILGUN RAILGUN_DeployedS blockname $infoNode$ {
+	LX LY
+	rotateto -180
+	startloop 25
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$animation a_DeployedSE_RAILGUN RAILGUN_DeployedSE blockname $infoNode$ {
+	LX LY
+	rotateto -135
+	startloop 18
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$animation a_DeployedE_RAILGUN RAILGUN_DeployedE blockname $infoNode$ {
+	LX LY
+	rotateto -90
+	startloop 2
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$animation a_DeployedNE_RAILGUN RAILGUN_DeployedNE blockname $infoNode$ {
+	LX LY
+	rotateto -45
+	startloop 1
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$animation a_DeployedN_RAILGUN RAILGUN_DeployedN blockname $infoNode$ {
+	LX LY
+	rotateto 0
+	startloop 8
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$animation a_DeployedNW_RAILGUN RAILGUN_DeployedNW blockname $infoNode$ {
+	LX LY
+	rotateto 45
+	startloop 0
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$animation a_DeployedW_RAILGUN RAILGUN_DeployedW blockname $infoNode$ {
+	LX LY
+	rotateto 90
+	startloop 15
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$animation a_DeployedSW_RAILGUN RAILGUN_DeployedSW blockname $infoNode$ {
+	LX LY
+	rotateto 135
+	startloop 0
+	alignto a_reference
+	ikrule lfoot footstep range .. 0 2 .. contact 1
+	ikrule rfoot footstep range .. 0 0 .. contact 0
+}
+$sequence RAILGUN_Deployed_Movement {
+	a_Deployedsw_RAILGUN	a_DeployedS_RAILGUN		a_DeployedSE_RAILGUN
+	a_DeployedW_RAILGUN	a_DeployedCenter_RAILGUN		a_DeployedE_RAILGUN
+	a_DeployedNW_RAILGUN	a_DeployedN_RAILGUN		a_DeployedNE_RAILGUN
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1
+	addlayer RAILGUN_aimmatrix_deployed
+	activity ACT_MERC_RAILGUN_DEPLOYED 1
+}
+
+$MPCrouchWalkWithWeapon Deployed_Crouch_Walk_RAILGUN        0 0 0 0 0 0 0 0 RAILGUN_deployed_crouch_walkN        RAILGUN_deployed_Crouch_walkCenter        RAILGUN_crouch_aimmatrix_deployed        ACT_MERC_CROUCHWALK_RAILGUN_DEPLOYED $infoNode$
+
+// run
+
+$animation a_runCenter_RAILGUN  RAILGUN_runCenter blockname $infoNode$ {
+	loop
+	alignto a_reference
+}
+$animation a_runS_RAILGUN RAILGUN_runs blockname $infoNode$ {
+	LX LY
+	rotateto -180
+	startloop 13
+}
+$animation a_runSE_RAILGUN RAILGUN_runse blockname $infoNode$ {
+	LX LY
+	rotateto -135
+	startloop 12
+}
+$animation a_runE_RAILGUN RAILGUN_rune blockname $infoNode$ {
+	LX LY
+	rotateto -90
+	startloop 2
+}
+$animation a_runNE_RAILGUN RAILGUN_runne blockname $infoNode$ {
+	LX LY
+	rotateto -45
+	startloop 3
+}
+$animation a_runN_RAILGUN RAILGUN_runn blockname $infoNode$ {
+	LX LY
+	rotateto 0
+	startloop 3
+}
+$animation a_runNW_RAILGUN RAILGUN_runnw blockname $infoNode$ {
+	LX LY
+	rotateto 45
+	startloop 4
+}
+$animation a_runW_RAILGUN RAILGUN_runw blockname $infoNode$ {
+	LX LY
+	rotateto 90
+	startloop 3
+}
+$animation a_runSW_RAILGUN RAILGUN_runsw blockname $infoNode$ {
+	LX LY
+	rotateto 135
+	startloop 13
+}
+$sequence Run_RAILGUN {
+	a_runsw_RAILGUN	a_runS_RAILGUN		a_runSE_RAILGUN
+	a_runW_RAILGUN	a_runCenter_RAILGUN	a_runE_RAILGUN
+	a_runNW_RAILGUN	a_runN_RAILGUN		a_runNE_RAILGUN
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1
+	addlayer RAILGUN_aimmatrix_run
+	activity ACT_MERC_RUN_RAILGUN 1
+	{ event 7001 6 "right" }
+	{ event 7001 15 "left" }
+}
+
+// crouch walk
+
+$MPCrouchWalkWithWeapon Crouch_Walk_RAILGUN 0 0 0 0 0 0 0 0 RAILGUN_crouch_walkN RAILGUN_crouch_walkCenter RAILGUN_aimmatrix_crouch_idle ACT_MERC_CROUCHWALK_RAILGUN $infoNode$
+
+// airwalk
+
+$sequence Airwalk_RAILGUN "RAILGUN_airwalk.dmx" fps 30 loop {
+    addlayer RAILGUN_aimmatrix_idle 
+	activity ACT_MERC_AIRWALK_RAILGUN 1
 }
 
 // must be at the end of file
