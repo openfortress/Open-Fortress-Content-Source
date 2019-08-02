@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "192"
+	"mapversion" "202"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,18 +14,18 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "1"
+	"nGridSpacing" "8"
 	"bShow3DGrid" "0"
 }
 world
 {
 	"id" "1"
-	"mapversion" "192"
+	"mapversion" "202"
 	"classname" "worldspawn"
-	"skyname" "sky_tf2_04"
-	"maxpropscreenwidth" "-1"
-	"detailvbsp" "detail.vbsp"
 	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxpropscreenwidth" "-1"
+	"skyname" "sky_nightfall_01"
 	solid
 	{
 		"id" "3"
@@ -12036,7 +12036,7 @@ entity
 	"damage" "1000"
 	"damagecap" "20"
 	"damagemodel" "0"
-	"damagetype" "32"
+	"damagetype" "64"
 	"nodmgforce" "0"
 	"origin" "57.5 -14.5 -1701.5"
 	"solid" "1"
@@ -13166,6 +13166,10 @@ entity
 	"origin" "2784 64 927.5"
 	"spawnflags" "1"
 	"TeamNum" "2"
+	connections
+	{
+		"OnCapture" "FlagCapSound,PlaySound,,0,-1"
+	}
 	solid
 	{
 		"id" "1899"
@@ -13287,6 +13291,10 @@ entity
 	"origin" "1888 64 1071.5"
 	"spawnflags" "1"
 	"TeamNum" "2"
+	connections
+	{
+		"OnCapture" "FlagCapSound,PlaySound,,0,-1"
+	}
 	solid
 	{
 		"id" "1946"
@@ -14748,6 +14756,10 @@ entity
 	"origin" "-2656 64 927.5"
 	"spawnflags" "1"
 	"TeamNum" "3"
+	connections
+	{
+		"OnCapture" "FlagCapSound,PlaySound,,0,-1"
+	}
 	solid
 	{
 		"id" "3523"
@@ -14869,6 +14881,10 @@ entity
 	"origin" "-1760 64 1071.5"
 	"spawnflags" "1"
 	"TeamNum" "3"
+	connections
+	{
+		"OnCapture" "FlagCapSound,PlaySound,,0,-1"
+	}
 	solid
 	{
 		"id" "3533"
@@ -14957,11 +14973,11 @@ entity
 {
 	"id" "3535"
 	"classname" "info_overlay"
-	"angles" "0 270 0"
+	"angles" "0 90 0"
 	"BasisNormal" "0 0 1"
 	"BasisOrigin" "-1760 64 1032"
-	"BasisU" "1.31134e-007 1 0"
-	"BasisV" "-1 1.31134e-007 0"
+	"BasisU" "-2.18557e-007 -1 0"
+	"BasisV" "1 -2.18557e-007 0"
 	"EndU" "1"
 	"EndV" "0"
 	"fademindist" "-1"
@@ -16407,7 +16423,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "DeathmatchMusic.Generic"
+	"message" "DeathmatchMusic.OpenHazards"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -16454,7 +16470,7 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "Ambient.QWind"
+	"message" "ambient/wind2.wav"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
@@ -16481,7 +16497,7 @@ entity
 	"max_length" "0"
 	"reset_time" "1"
 	"setup_length" "3"
-	"show_in_hud" "0"
+	"show_in_hud" "1"
 	"start_paused" "0"
 	"StartDisabled" "0"
 	"timer_length" "1200"
@@ -16546,7 +16562,7 @@ entity
 	"angles" "15 90 0"
 	"defaultwelcome" "0"
 	"fov" "0"
-	"origin" "64 -2944 1760"
+	"origin" "64 -2697 1673"
 	editor
 	{
 		"color" "220 30 220"
@@ -17082,6 +17098,38 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[2000 1000]"
+	}
+}
+entity
+{
+	"id" "5865"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "tfc/misc/endgame.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "49"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "FlagCapSound"
+	"volstart" "0"
+	"origin" "2702 93.0515 929"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
 	}
 }
 cameras
