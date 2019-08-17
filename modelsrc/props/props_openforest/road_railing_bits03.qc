@@ -1,12 +1,12 @@
 // Created by Crowbar 0.56
 
-$modelname "props_openforest\road_railing01.mdl"
+$modelname "props_openforest\road_railing_bits03.mdl"
 
 $staticprop
 
 $bodygroup "Body"
 {
-	studio "road_railing01.smd"
+	studio "road_railing_bits03.smd"
 }
 $surfaceprop "metal"
 
