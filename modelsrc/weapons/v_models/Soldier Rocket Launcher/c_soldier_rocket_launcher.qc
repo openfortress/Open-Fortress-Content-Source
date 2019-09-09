@@ -38,7 +38,7 @@ $sequence "dh_reload_start" "reload_start.smd" {
 	activity "ACT_RELOAD_START" 1
 }
 
-$sequence "dh_reload_loop" "reload_loop.smd" {
+$sequence "dh_reload_loop" "fixed_loop\reload_loop.smd" {
 	fps 30
 	activity "ACT_VM_RELOAD" 1
 	snap
