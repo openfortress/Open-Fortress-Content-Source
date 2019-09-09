@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "811"
+	"mapversion" "813"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -38,13 +38,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "32"
+	"nGridSpacing" "4"
 	"bShow3DGrid" "1"
 }
 world
 {
 	"id" "1"
-	"mapversion" "811"
+	"mapversion" "813"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -67029,7 +67029,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "16 -448 384"
 	editor
@@ -67057,7 +67057,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-144 -448 384"
 	editor
@@ -67085,7 +67085,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "16 -448 192"
 	editor
@@ -67113,7 +67113,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-144 -448 192"
 	editor
@@ -67141,7 +67141,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-368 -192 384"
 	editor
@@ -70567,7 +70567,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-1280 -736 400"
 	editor
@@ -70595,7 +70595,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-1280 -576 400"
 	editor
@@ -72180,7 +72180,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-368 -192 192"
 	editor
@@ -80137,7 +80137,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "384 -800 192"
 	editor
@@ -80165,7 +80165,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "384 -800 384"
 	editor
@@ -80251,7 +80251,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-912 -192 384"
 	editor
@@ -80279,7 +80279,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-912 -192 192"
 	editor
@@ -81024,7 +81024,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-896 -1088 624"
 	editor
@@ -81052,7 +81052,7 @@ entity
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
 	"model" "models/props_barnblitz/window009_ext.mdl"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"origin" "-896 -1296 624"
 	editor
@@ -117042,7 +117042,7 @@ entity
 	"rendercolor" "255 255 255"
 	"respawntime" "10"
 	"spawn_sound" "Item.Materialize"
-	"origin" "-192 -1520 224"
+	"origin" "-128 -1472 224"
 	editor
 	{
 		"color" "0 0 200"
@@ -123856,13 +123856,481 @@ entity
 		"logicalpos" "[0 3000]"
 	}
 }
+entity
+{
+	"id" "198771"
+	"classname" "item_healthkit_tiny"
+	"angles" "0 225 0"
+	"AutoMaterialize" "1"
+	"HiddenWhenRespawning" "1"
+	"model" "models/items/medkit_overheal.mdl"
+	"pickup_sound" "HealthKitTiny.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "10"
+	"spawn_sound" "Item.Materialize"
+	"origin" "-512 224 30.8184"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -6268]"
+	}
+}
+entity
+{
+	"id" "198773"
+	"classname" "item_healthkit_tiny"
+	"angles" "0 225 0"
+	"AutoMaterialize" "1"
+	"HiddenWhenRespawning" "1"
+	"model" "models/items/medkit_overheal.mdl"
+	"pickup_sound" "HealthKitTiny.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "10"
+	"spawn_sound" "Item.Materialize"
+	"origin" "-576 224 30.8184"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -6268]"
+	}
+}
+entity
+{
+	"id" "198775"
+	"classname" "item_healthkit_tiny"
+	"angles" "0 225 0"
+	"AutoMaterialize" "1"
+	"HiddenWhenRespawning" "1"
+	"model" "models/items/medkit_overheal.mdl"
+	"pickup_sound" "HealthKitTiny.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "10"
+	"spawn_sound" "Item.Materialize"
+	"origin" "-640 224 30.8184"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -6268]"
+	}
+}
+entity
+{
+	"id" "198777"
+	"classname" "item_healthkit_tiny"
+	"angles" "0 225 0"
+	"AutoMaterialize" "1"
+	"HiddenWhenRespawning" "1"
+	"model" "models/items/medkit_overheal.mdl"
+	"pickup_sound" "HealthKitTiny.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "10"
+	"spawn_sound" "Item.Materialize"
+	"origin" "-704 224 30.8184"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -6268]"
+	}
+}
+entity
+{
+	"id" "198779"
+	"classname" "item_healthkit_tiny"
+	"angles" "0 225 0"
+	"AutoMaterialize" "1"
+	"HiddenWhenRespawning" "1"
+	"model" "models/items/medkit_overheal.mdl"
+	"pickup_sound" "HealthKitTiny.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "10"
+	"spawn_sound" "Item.Materialize"
+	"origin" "-768 224 30.8184"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -6268]"
+	}
+}
+entity
+{
+	"id" "198839"
+	"classname" "item_healthkit_tiny"
+	"angles" "0 270 0"
+	"AutoMaterialize" "1"
+	"HiddenWhenRespawning" "1"
+	"model" "models/items/medkit_overheal.mdl"
+	"pickup_sound" "HealthKitTiny.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"respawntime" "10"
+	"spawn_sound" "Item.Materialize"
+	"origin" "-176 -1520 224"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -6268]"
+	}
+}
+entity
+{
+	"id" "198857"
+	"classname" "item_ammopack_medium"
+	"angles" "0 180 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disablereceiveshadows" "0"
+	"disableshadows" "0"
+	"effects" "0"
+	"fademindist" "-1"
+	"HiddenWhenRespawning" "1"
+	"model" "models/items/ammopack_medium.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"respawndelay" "0"
+	"respawntime" "10"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"spawn_sound" "Item.Materialize"
+	"texframeindex" "0"
+	"origin" "-160 255.947 20"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6500]"
+	}
+}
+entity
+{
+	"id" "198859"
+	"classname" "item_healthkit_medium"
+	"angles" "0 180 0"
+	"AutoMaterialize" "1"
+	"body" "0"
+	"disablereceiveshadows" "0"
+	"disableshadows" "0"
+	"effects" "0"
+	"fademindist" "-1"
+	"HiddenWhenRespawning" "1"
+	"model" "models/items/medkit_medium.mdl"
+	"pickup_sound" "AmmoPack.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"respawndelay" "0"
+	"respawntime" "10"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"spawn_sound" "Item.Materialize"
+	"texframeindex" "0"
+	"origin" "-160 209.332 20"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6000]"
+	}
+}
+entity
+{
+	"id" "198877"
+	"classname" "info_observer_point"
+	"angles" "22 222 0"
+	"targetname" "observer_blue_spawn1"
+	"TeamNum" "3"
+	"origin" "828 1660 447.792"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[7500 7000]"
+	}
+}
+entity
+{
+	"id" "198893"
+	"classname" "info_observer_point"
+	"angles" "22 42 0"
+	"targetname" "observer_blue_spawn1"
+	"TeamNum" "3"
+	"origin" "-856 -1560 400.446"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[7500 7000]"
+	}
+}
+entity
+{
+	"id" "198969"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "448 -800 384"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199005"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "448 -800 192"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199017"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-144 -384 192"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199023"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-144 -384 384"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199029"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "16 -384 192"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199035"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "16 -384 384"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199041"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-368 -128 192"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199047"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-368 -128 384"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199053"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-916 -128 192"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199059"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-916 -128 384"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199071"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-1344 -576 400"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199083"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-1344 -736 400"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199089"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-984 -1088 624"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
+entity
+{
+	"id" "199101"
+	"classname" "light"
+	"_light" "217 163 102 50"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" ".8"
+	"_quadratic_attn" "1"
+	"origin" "-984 -1296 624"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 4000]"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[584.305 -403.682 224.804]"
-		"look" "[137.817 -38.5738 172.317]"
+		"position" "[794.248 -555.978 170.13]"
+		"look" "[356.347 -176.96 170.13]"
 	}
 }
 cordon
