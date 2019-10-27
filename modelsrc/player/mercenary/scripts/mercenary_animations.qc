@@ -1775,29 +1775,29 @@ $sequence layer_reload_airwalk_arms_PISTOL_MERCENARY "PISTOL_MERCENARY_swim_relo
 
 $MPGestureReload_IK ReloadStand_PISTOL_MERCENARY     PISTOL_MERCENARY_reload        				ACT_MERC_RELOAD_STAND_PISTOL_MERCENARY    layer_reload_standing_arms_PISTOL_MERCENARY 0 5 50 55
 { 
-	event AE_CL_MAG_EJECT 16
-	event AE_CL_ENABLE_BODYGROUP 16 "magazine"
+	event AE_CL_MAG_EJECT 14
+	event AE_CL_BODYGROUP_SET_VALUE 14 "magazine 1"
 	event AE_CL_MAG_UNEJECT 30
-	event AE_CL_DISABLE_BODYGROUP 30 "magazine"
+	event AE_CL_BODYGROUP_SET_VALUE 30 "magazine 0"
 }
 $MPGestureReload_IK ReloadCrouch_PISTOL_MERCENARY    PISTOL_MERCENARY_crouch_reload 				ACT_MERC_RELOAD_CROUCH_PISTOL_MERCENARY   layer_reload_crouching_arms_PISTOL_MERCENARY 0 5 50 55
 { 
-	event AE_CL_MAG_EJECT 16
-	event AE_CL_BODYGROUP_SET_VALUE 16 "magazine 1"
+	event AE_CL_MAG_EJECT 14
+	event AE_CL_BODYGROUP_SET_VALUE 14 "magazine 1"
 	event AE_CL_MAG_UNEJECT 30
 	event AE_CL_BODYGROUP_SET_VALUE 30 "magazine 0"
 }
 $MPGestureReload_IK ReloadSwim_PISTOL_MERCENARY      PISTOL_MERCENARY_swim_reload           ACT_MERC_RELOAD_SWIM_PISTOL_MERCENARY     layer_reload_swimming_arms_PISTOL_MERCENARY 0 5 50 55
 { 
-	event AE_CL_MAG_EJECT 16
-	event AE_CL_BODYGROUP_SET_VALUE 16 "magazine 1"
+	event AE_CL_MAG_EJECT 14
+	event AE_CL_BODYGROUP_SET_VALUE 14 "magazine 1"
 	event AE_CL_MAG_UNEJECT 30
 	event AE_CL_BODYGROUP_SET_VALUE 30 "magazine 0"
 }
 $MPGestureReload_IK ReloadAirwalk_PISTOL_MERCENARY   PISTOL_MERCENARY_reload        ACT_MERC_RELOAD_AIRWALK_PISTOL_MERCENARY  layer_reload_airwalk_arms_PISTOL_MERCENARY 0 5 50 55
 { 
-	event AE_CL_MAG_EJECT 16
-	event AE_CL_BODYGROUP_SET_VALUE 16 "magazine 1"
+	event AE_CL_MAG_EJECT 14
+	event AE_CL_BODYGROUP_SET_VALUE 14 "magazine 1"
 	event AE_CL_MAG_UNEJECT 30
 	event AE_CL_BODYGROUP_SET_VALUE 30 "magazine 0"
 }
@@ -2641,7 +2641,7 @@ $sequence RAILGUN_Deployed_Movement {
 	activity ACT_MERC_RAILGUN_DEPLOYED 1
 }
 
-$MPCrouchWalkWithWeapon Deployed_Crouch_Walk_RAILGUN        0 0 0 0 0 0 0 0 RAILGUN_deployed_crouch_walkN        RAILGUN_deployed_Crouch_walkCenter        RAILGUN_crouch_aimmatrix_deployed        ACT_MERC_CROUCHWALK_RAILGUN_DEPLOYED $infoNode$
+$MPCrouchWalkWithWeapon Deployed_Crouch_Walk_RAILGUN        0 0 0 0 0 0 0 0 RAILGUN_deployed_crouch_walkN        RAILGUN_deployed_Crouch_walkCenter        RAILGUN_crouch_aimmatrix_deployed        ACT_MP_CROUCHWALK_DEPLOYED $infoNode$
 
 // run
 

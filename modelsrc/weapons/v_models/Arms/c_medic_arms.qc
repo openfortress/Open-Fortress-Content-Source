@@ -11,9 +11,9 @@ $cdmaterials ""
 
 $texturegroup "skinfamilies"
 {
-	{ "models\player\medic\medic_red" "models\player\medic\medic_hands_red" }
-	{ "medic_blue"                    "medic_hands_blue"                    }
-	{ "medic_custom"                    "medic_hands_custom"                    }
+	{ "medic_red"    "medic_hands_red"    }
+	{ "medic_blue"   "medic_hands_blue"   }
+	{ "medic_custom" "medic_hands_custom" }
 }
 
 $attachment "weapon_bone_L" "weapon_bone_L" 0 0 0 rotate 0 0 0

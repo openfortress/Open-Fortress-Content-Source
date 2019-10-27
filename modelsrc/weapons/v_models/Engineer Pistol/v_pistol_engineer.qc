@@ -44,6 +44,7 @@ $sequence "fire" {
 $sequence "reload" {
 	"reload.smd"
 	activity "ACT_VM_RELOAD" 1
+	{ event 5004 0 "Weapon_Pistol.ClipOut" }
 	{ event 5004 12 "Weapon_Pistol.ClipIn" }
 	fps 30
 	snap

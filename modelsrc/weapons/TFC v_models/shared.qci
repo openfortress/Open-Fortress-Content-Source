@@ -1,0 +1,10 @@
+// needed for bonemerging to work correctly
+$attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0
+
+$body "illumpos" "../illumpos.smd"
+// makes lighting consistent between arms and weapons
+$illumposition 0 0 0 "illumpos"
+
+// this is used for crit particles to show up correctly
+$hboxset "default"
+$hbox 0 "weapon_bone" -10 -10 -10 10 10 10

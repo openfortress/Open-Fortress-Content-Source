@@ -1,0 +1,118 @@
+// Macro: MP Gesture Attack
+//
+// IK-Rules: Feet are locked.
+// The gesture is additive.
+//
+// Usage: MPGestureAttack <gesturename> <filename> <activityname>
+//      - gesturename: the name of the gesture
+//	- filename: the file name of the gesture sequence
+//	- activityname: the name of the associated activity
+//
+// Example: MPGestureAttack gesture_fire_primary "primary_fire" ACT_MP_PRIMARYATTACK_RIFLE
+//
+//Local Weightlists
+//-------------------------
+
+$weightlist Crouch_Melee_HipsTorso {
+	"bip_pelvis" 0.75 
+	"bip_hip_R" 0.5 
+	"bip_hip_L" 0.5
+	"bip_spine_0" 0.5
+	"bip_spine_1" 0.5
+	"bip_spine_2" 0.7
+	"bip_spine_3" 0.9
+
+	} 
+
+$Weightlist Crouch_Melee_ArmsBlend {
+
+	"bip_collar_L" 1.0 
+	"bip_upperArm_L" 1.0 
+	"bip_lowerArm_L" 1.0 
+	"bip_collar_R" 0.5 
+	"bip_upperArm_R" 0.6 
+	"bip_lowerArm_R" 0.7 
+  "bip_head" 0.5 
+  "bip_neck" 0.5 
+	}
+//END	
+$definemacro SPYMelee \\
+$animation a_Melee_Swing Melee_Swing.dmx frames 0 0 \\
+$sequence armslayer_melee_swing Melee_Swing.dmx { \\
+ weightlist Melee_Armsblend  \\
+ hidden \\
+} \\
+\\
+$sequence bodylayer_Melee_Swing Melee_Swing.dmx subtract a_Melee_Swing 0 { \\
+ weightlist Melee_HipsTorso \\
+ delta \\
+ hidden \\
+} \\
+\\
+$sequence Melee_Swing Melee_Swing.dmx noanimation numframes 24 { \\
+ addlayer bodylayer_Melee_Swing \\
+ blendlayer armslayer_Melee_Swing 0 1 20 24\\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release \\
+ activity ACT_MP_ATTACK_STAND_MELEE 1 \\
+} \\
+\\
+$animation a_Melee_Crouch_Swing Melee_Crouch_Swing.dmx frames 0 0 \\
+$sequence armslayer_melee_Crouch_swing Melee_Crouch_Swing.dmx { \\
+ weightlist Crouch_Melee_Armsblend  \\
+ hidden \\
+} \\
+\\
+$sequence bodylayer_Melee_Crouch_Swing Melee_Crouch_Swing.dmx subtract a_Melee_Crouch_Swing 0 { \\
+ weightlist Crouch_Melee_HipsTorso \\
+ delta \\
+ hidden \\
+} \\
+\\
+$sequence Melee_Crouch_Swing Melee_Crouch_Swing.dmx noanimation numframes 25 { \\
+ blendlayer bodylayer_Melee_Crouch_Swing 0 3 16 24\\
+ blendlayer armslayer_Melee_Crouch_Swing 0 3 16 24\\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release \\
+ activity ACT_MP_ATTACK_CROUCH_MELEE 1 \\
+} \\
+\\
+$animation a_Melee_Overhand_Swing Melee_Overhand_Swing.dmx frames 0 0 \\
+$sequence armslayer_melee_Overhand_swing Melee_Overhand_Swing.dmx { \\
+ weightlist SPY_Melee_Armsblend  \\
+ hidden \\
+} \\
+\\
+$sequence bodylayer_Melee_Overhand_Swing Melee_Overhand_Swing.dmx subtract a_Melee_Overhand_Swing 0 { \\
+ weightlist SPY_Melee_HipsTorso \\
+ delta \\
+ hidden \\
+} \\
+\\
+$sequence Melee_Overhand_Swing Melee_Overhand_Swing.dmx noanimation numframes 27 { \\
+ addlayer bodylayer_Melee_Overhand_Swing \\
+ blendlayer armslayer_Melee_Overhand_Swing 0 2 25 27\\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release \\
+ activity ACT_MP_ATTACK_STAND_MELEE_SECONDARY 1 \\
+} \\
+\\
+$animation a_Melee_Swim_Swing Melee_Swing.dmx frames 0 0 \\
+$sequence armslayer_melee_Swim_swing Melee_Swing.dmx { \\
+ weightlist SpyMeleeSwim  \\
+ hidden \\
+} \\
+\\
+$sequence bodylayer_Melee_Swim_Swing Melee_Swing.dmx subtract a_Melee_Swim_Swing 0 { \\
+ weightlist SwimMelee_Hips \\
+ delta \\
+ hidden \\
+} \\
+\\
+$sequence Melee_Swim_Swing Melee_Swing.dmx noanimation numframes 18 { \\
+ addlayer bodylayer_Melee_Swim_Swing \\
+ addlayer armslayer_Melee_Swim_Swing \\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release \\
+ activity ACT_MP_ATTACK_SWIM_MELEE 1 \\
+}

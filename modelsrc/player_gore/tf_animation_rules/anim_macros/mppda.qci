@@ -1,0 +1,73 @@
+// Macro: MP Gesture Attack
+//
+// IK-Rules: Feet are locked.
+// The gesture is additive.
+//
+// Usage: MPGestureAttack <gesturename> <filename> <activityname>
+//      - gesturename: the name of the gesture
+//	- filename: the file name of the gesture sequence
+//	- activityname: the name of the associated activity
+//
+// Example: MPGestureAttack gesture_fire_primary "primary_fire" ACT_MP_PRIMARYATTACK_RIFLE
+//
+
+$definemacro MPPDA \\
+$animation a_PDA_fire PDA_fire.dmx frames 0 0 \\
+$sequence armslayer_PDA_fire PDA_fire.dmx { \\
+ weightlist Melee_Armsblend  \\
+ hidden \\
+} \\
+\\
+$sequence bodylayer_PDA_fire PDA_fire.dmx subtract a_PDA_fire 0 { \\
+ weightlist Melee_HipsTorso \\
+ delta \\
+ hidden \\
+} \\
+\\
+$sequence PDA_fire PDA_fire.dmx noanimation numframes 19 { \\
+ addlayer bodylayer_PDA_fire \\
+ blendlayer armslayer_PDA_fire 0 5 9 18\\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release \\
+ activity ACT_MP_ATTACK_STAND_PDA 1 \\
+} \\
+\\
+$animation a_PDA_run_fire PDA_run_fire.dmx frames 0 0 \\
+$sequence armslayer_PDA_run_fire PDA_run_fire.dmx { \\
+ weightlist Melee_Armsblend  \\
+ hidden \\
+} \\
+\\
+$sequence bodylayer_PDA_run_fire PDA_run_fire.dmx subtract a_PDA_run_fire 0 { \\
+ weightlist Melee_HipsTorso \\
+ delta \\
+ hidden \\
+} \\
+\\
+$sequence PDA_run_fire PDA_run_fire.dmx noanimation numframes 19 { \\
+ addlayer bodylayer_PDA_run_fire \\
+ blendlayer armslayer_PDA_run_fire 0 5 9 18\\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release \\
+ activity ACT_MP_ATTACK_RUN_PDA 1 \\
+} \\
+\\
+$animation a_PDA_Crouch_fire PDA_Crouch_fire.dmx frames 0 0 \\
+$sequence armslayer_PDA_Crouch_fire PDA_Crouch_fire.dmx { \\
+ weightlist Melee_Armsblend  \\
+ hidden \\
+} \\
+\\
+$sequence bodylayer_PDA_Crouch_fire PDA_Crouch_fire.dmx subtract a_PDA_fire 0 { \\
+ weightlist PDACrouch_HipsTorso \\
+ delta \\
+ hidden \\
+} \\
+\\
+$sequence PDA_Crouch_fire PDA_Crouch_fire.dmx noanimation numframes 27 { \\
+ addlayer bodylayer_PDA_Crouch_fire \\
+ blendlayer armslayer_PDA_crouch_fire 0 9 16 26\\
+ iklock rfoot 1 0 iklock lfoot 1 0 \\
+ ikrule lhand release \\
+ activity ACT_MP_ATTACK_CROUCH_PDA 1 \\
+} 

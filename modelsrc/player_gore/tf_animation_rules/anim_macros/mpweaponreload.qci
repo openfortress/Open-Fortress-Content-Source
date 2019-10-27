@@ -1,0 +1,8 @@
+//-----------------------------------------------------------------------------------
+// Weapon Reload
+// 	name - unique identifier for the weapon (TF - PRIMARY, SECONDARY etc.)
+//-----------------------------------------------------------------------------------
+$definemacro MPWeaponReload name \\
+$MPGestureReload ReloadStand_$name$  $name$_reload        ACT_MP_RELOAD_STAND_$name$ \\
+$MPGestureReload ReloadCrouch_$name$ $name$_crouch_reload ACT_MP_RELOAD_CROUCH_$name$ \\ 
+$MPGestureReload ReloadSwim_$name$   $name$_swim_reload   ACT_MP_RELOAD_SWIM_$name$ \\ 

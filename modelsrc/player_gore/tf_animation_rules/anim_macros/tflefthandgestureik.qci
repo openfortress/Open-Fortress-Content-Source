@@ -1,0 +1,35 @@
+// Macro: MP Left Hand Gesture, for vocalization accents etc.
+//
+// IK-Rules: Feet are locked and left hand is released over the range $f1$ thru $f4$.
+// The gesture is additive on the hips up, but overrides whatever is specified in the weightlist "ArmLGestureBlend".
+//	also, adds an IK touch rule to the lhand to the bone specified <iktouchbone>
+//
+// Usage: TFLeftHandGesture <gesturename> <filename> <f1> <f2> <f3> <f4> <activityname>
+//  - gesturename: the name of the gesture
+//	- filename: the file name of the dmx to use
+//	- f1-f4: the range to release the left hand IK 
+//	- activityname: the name of the associated activity
+//
+// Example: TFLeftHandGesture gesture_primary_go "gesture_primary_go.dmx" 0 4 26 30 ACT_TF_GESTURE_BLAH 
+//
+
+
+$definemacro TFLeftHandGestureIK gesturename filename f1 f2 f3 f4 activityname iktouchbone ik1 ik2 ik3 ik4 \\
+$sequence layer_$gesturename$_armL { \\
+	$filename$ \\
+	weightlist ArmLGestureBlend \\
+	ikrule lhand release range $f1$ $f2$ $f3$ $f4$ \\
+	ikrule lhand touch $iktouchbone$ range $ik1$ $ik2$ $ik3$ $ik4$ \\
+	hidden \\
+} \\
+$sequence $gesturename$ { \\
+	$filename$ \\
+	subtract $gesturename$ 0 \\
+	delta \\
+	weightlist hipsUpperBody \\
+	iklock rfoot 1 0 iklock lfoot 1 0 \\
+	addlayer layer_$gesturename$_armL \\
+ 	activity $activityname$ 1 \\
+} \\
+$continue $gesturename$
+

@@ -11,9 +11,9 @@ $cdmaterials ""
 
 $texturegroup "skinfamilies"
 {
-	{ "models\player\spy\spy_hands_red" }
-	{ "spy_hands_blue"                  }
-	{ "spy_hands_custom"                }
+	{ "spy_hands_red"    }
+	{ "spy_hands_blue"   }
+	{ "spy_hands_custom" }
 }
 
 $attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0

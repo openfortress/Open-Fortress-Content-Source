@@ -11,9 +11,9 @@ $cdmaterials ""
 
 $texturegroup "skinfamilies"
 {
-	{ "models\player\demo\demoman_red" }
-	{ "demoman_blue"                   }
-	{ "demoman_custom"                   }
+	{ "demoman_red"    }
+	{ "demoman_blue"   }
+	{ "demoman_custom" }
 }
 
 $attachment "weapon_bone_L" "weapon_bone_L" 0 0 0 rotate 0 0 0

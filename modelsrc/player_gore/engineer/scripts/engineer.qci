@@ -1,0 +1,375 @@
+// defining the upaxis is needed for maya exports
+$upaxis Y
+
+$body      engineer $dmxFile$
+$sequence  ref      $dmxFile$
+
+$attachment "back_lower" "bip_spine_0" 0 0 0 rotate 0 0 0
+$attachment "foot_L" "bip_foot_L" 0 0 0 rotate 0 0 0
+$attachment "foot_R" "bip_foot_R" 0 0 0 rotate 0 0 0
+$attachment "partyhat" "bip_head" 0 -9.26 -2.23 rotate 75 90 180
+$attachment "head" "bip_head" 0 -10.66 1.23 rotate 74.7 -90 0
+$attachment "eyeglow_R" "bip_head" -1.81 -4.01 -5.32 rotate 69.7 -152.97 -61.46
+$attachment "eyeglow_L" "bip_head" 1.81 -4.01 -5.32 rotate 69.7 -27.03 61.46
+$attachment "effect_hand_L" "effect_hand_L" 0 0 0 rotate 0 0 0
+$attachment "exhaust" "bip_hand_R" -2.86 -0.54 2.68 rotate -37.72 -175.85 -11.65
+$attachment "effect_hand_R" "effect_hand_R" 0 0 0 rotate 0 0 0
+$attachment "flag" "bip_spine_2" 0.12 1.92 9.64 rotate 0.95 -6.92 -1.52
+$attachment "prop_bone" "prop_bone" 0 0 0 rotate 0 0 0
+$attachment "taunt_effect" "taunt_effect" 0 0 0 rotate 0 0 0
+
+$illumposition 0 0 0 bip_pelvis
+
+$surfaceprop "flesh"
+
+$bonemerge "bip_pelvis"
+$bonemerge "bip_spine_0"
+$bonemerge "bip_spine_1"
+$bonemerge "bip_spine_2"
+$bonemerge "bip_spine_3"
+$bonemerge "bip_neck"
+$bonemerge "bip_head"
+$bonemerge "bip_collar_L"
+$bonemerge "bip_upperArm_L"
+$bonemerge "bip_lowerArm_L"
+$bonemerge "bip_collar_R"
+$bonemerge "bip_upperArm_R"
+$bonemerge "bip_lowerArm_R"
+$bonemerge "bip_hand_R"
+$bonemerge "bip_hand_L"
+$bonemerge "weapon_bone_L"
+$bonemerge "prp_legPouch"
+$bonemerge "weapon_bone_1"
+$bonemerge "weapon_bone"
+$bonemerge "prp_helmet"
+$bonemerge "medal_bone"
+$bonemerge "mvm"
+$bonemerge "prop_bone"
+$bonemerge "prop_bone_1"
+$bonemerge "prop_bone_2"
+$bonemerge "prop_bone_3"
+$bonemerge "prop_bone_4"
+$bonemerge "prop_bone_5"
+$bonemerge "prop_bone_6"
+$bonemerge "taunt_effect"
+
+
+$bodygroup hat
+{
+	studio "../parts/dmx/hat_bodygroup.dmx"
+	blank
+}
+$bodygroup "rightarm"
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+	
+	// sigh
+	//studio "../parts/dmx/glove_bodygroup.dmx"	
+	//studio "../parts/dmx/robotarm_bodygroup.dmx"
+	//blank
+}
+
+$bodygroup head
+{
+	blank // flexes cannot be put into a bodygroup, the head will be scaled down instead to hide it
+	blank
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
+}
+
+// include the file that sets up the ikchains
+$include "../../TF_animation_rules/ruleshierarchy.qci"
+
+// define bones
+$include "engineer_definebones.qci"
+
+// include the animations.mdl
+$includemodel "player/engineer_user_animations.mdl"
+$includemodel "player/engineer_animations.mdl"
+$includemodel "workshop/player/animations/engineer_workshop_animations.mdl"
+
+// include the ragdoll
+$include "engineer_ragdoll.qci"
+
+// include the hitboxes
+$include "engineer_hitbox.qci"
+
+$cdmaterials "models/player/engineer/hwm"
+$cdmaterials "models/player/engineer/"
+
+$texturegroup "engineer_Skins"
+{
+	{ "engineer_red"                   "engineer_head_red"               "engineer_mech_hand"        "engineer_sfm_hands_red"          "engineer_goggles"       "engineer_gibs_red"     "engineer_gibs_head"    	   }
+	{ "engineer_blue"                  "engineer_head_blue"              "engineer_mech_hand_blue"   "engineer_sfm_hands_blue"         "engineer_goggles"       "engineer_gibs_blue"    "engineer_gibs_head"    	   }
+	{ "engineer_red_invun"             "engineer_head_red_invun"         "engineer_red_invun"        "engineer_sfm_hands_red_invun"    "engineer_goggles_invun" "engineer_red_invun"    "engineer_head_red_invun"    }
+	{ "engineer_blue_invun"            "engineer_head_blue_invun"        "engineer_blue_invun"       "engineer_sfm_hands_blue_invun"   "engineer_goggles_invun" "engineer_blue_invun"   "engineer_head_blue_invun"   }
+	{ "engineer_custom"                "engineer_head_custom"            "engineer_mech_hand_custom" "engineer_sfm_hands_custom"       "engineer_goggles"       "engineer_gibs_custom"  "engineer_gibs_head" 		   }
+	{ "engineer_custom_invun"          "engineer_head_custom_invun"      "engineer_custom_invun"     "engineer_sfm_hands_custom_invun" "engineer_goggles_invun" "engineer_custom_invun" "engineer_head_custom_invun" }
+	{ "engineer_custom"                "engineer_head_custom"            "engineer_mech_hand_custom" "engineer_sfm_hands_custom"       "engineer_goggles"       "engineer_gibs_custom"  "engineer_gibs_head" 		   }
+	{ "engineer_custom_invun"          "engineer_head_custom_invun"      "engineer_custom_invun"     "engineer_sfm_hands_custom_invun" "engineer_goggles_invun" "engineer_custom_invun" "engineer_head_custom_invun" }
+}
+
+$lod 11
+{
+	// blank to not mess up lod order
+}
+
+$lod 22
+{
+	// blank to not mess up lod order
+}
+
+$lod 33
+{
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 44
+{
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 55
+{
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+
+$shadowlod
+{
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+/*
+$lod 11
+{
+	replacemodel $dmxFile$ $01_lod$
+}
+
+$lod 22
+{
+	replacemodel $dmxFile$ $02_lod$
+	replacemodel "../parts/dmx/hat_bodygroup.dmx" "../parts/dmx/hat_lod_01.dmx"
+	replacemodel "../parts/dmx/glove_bodygroup.dmx" "../parts/dmx/glove_bodygroup_lod_02.dmx"
+	replacemodel "../parts/dmx/robotarm_bodygroup.dmx" "../parts/dmx/robotarm_lod.dmx"
+}
+
+$lod 33
+{
+	replacemodel $dmxFile$ $03_lod$
+	replacemodel "../parts/dmx/hat_bodygroup.dmx" "../parts/dmx/hat_lod_02.dmx"
+	replacemodel "../parts/dmx/glove_bodygroup.dmx" "../parts/dmx/glove_bodygroup_lod_03.dmx"
+	replacemodel "../parts/dmx/robotarm_bodygroup.dmx" "../parts/dmx/robotarm_lod.dmx"
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 44
+{
+	replacemodel $dmxFile$ $04_lod$
+	replacemodel "../parts/dmx/hat_bodygroup.dmx" "../parts/dmx/hat_lod_02.dmx"
+	replacemodel "../parts/dmx/glove_bodygroup.dmx" "../parts/dmx/glove_bodygroup_lod_04.dmx"
+	replacemodel "../parts/dmx/robotarm_bodygroup.dmx" "../parts/dmx/robotarm_lod.dmx"
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 55
+{
+	replacemodel $dmxFile$ $05_lod$
+	replacemodel "../parts/dmx/hat_bodygroup.dmx" "../parts/dmx/hat_lod_02.dmx"
+	replacemodel "../parts/dmx/glove_bodygroup.dmx" "../parts/dmx/glove_bodygroup_lod_05.dmx"
+	replacemodel "../parts/dmx/robotarm_bodygroup.dmx" "../parts/dmx/robotarm_lod.dmx"
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+
+$shadowlod
+{
+	replacemodel $dmxFile$ $04_lod$
+	replacemodel "../parts/dmx/hat_bodygroup.dmx" "../parts/dmx/hat_lod_02.dmx"
+	replacemodel "../parts/dmx/glove_bodygroup.dmx" "../parts/dmx/glove_bodygroup_lod_04.dmx"
+	replacemodel "../parts/dmx/robotarm_bodygroup.dmx" "../parts/dmx/robotarm_lod.dmx"
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+*/
+
+// Gibs.
+$collisiontext {
+	"break"
+	{
+		"model" "player\gibs\engineergib006"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\engineergib001"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\engineergib003"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\engineergib005"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\random_organ"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\engineergib002"
+		"health" "0"
+		"fadetime" "10"
+	}
+
+	"break"
+	{
+		"model" "player\gibs\engineergib004"
+		"health" "0"
+		"fadetime" "10"
+	}
+
+
+	"break"
+	{
+		"model" "player\gibs\engineergib007"
+		"health" "0"
+		"fadetime" "10"
+	}
+}

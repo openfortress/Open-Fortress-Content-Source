@@ -11,9 +11,9 @@ $cdmaterials ""
 
 $texturegroup "skinfamilies"
 {
-	{ "models\player\engineer\engineer_red" "engineer_mech_hand"      }
-	{ "engineer_blue"                       "engineer_mech_hand_blue" }
-	{ "engineer_custom"                       "engineer_mech_hand_custom" }
+	{ "engineer_red" 	"engineer_handr_red"  "engineer_mech_hand"        }
+	{ "engineer_blue"   "engineer_handr_blue" "engineer_mech_hand_blue"   }
+	{ "engineer_custom" "engineer_handr_red"  "engineer_mech_hand_custom" }
 }
 
 $attachment "weapon_bone_L" "weapon_bone_L" 0 0 0 rotate 0 0 0

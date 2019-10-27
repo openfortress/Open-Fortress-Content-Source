@@ -1,0 +1,375 @@
+// defining the upaxis is needed for maya exports
+$upaxis Y
+
+$eyeposition 0 78.915 0
+
+$attachment "eyes" "bip_head" 0 -2.42 -4.4 rotate 90 -90 0
+$attachment "righteye" "bip_head" -0.98 -2.42 -4.4 rotate 90 -90 0
+$attachment "lefteye" "bip_head" 0.98 -2.42 -4.4 rotate 90 -90 0
+$attachment "back_lower" "bip_spine_0" 0 0 0 rotate 0 0 0
+$attachment "foot_L" "bip_foot_L" 0 0 0 rotate 0 0 0
+$attachment "foot_R" "bip_foot_R" 0 0 0 rotate 0 0 0
+$attachment "partyhat" "bip_head" -0.1 -6.71 -1.26 rotate 88 90 -180
+$attachment "head" "bip_head" -0.1 -7.81 -1.26 rotate 88.3 89.9 179.8
+$attachment "eyeglow_L" "bip_head" 1.08 -1.77 -6.14 rotate 64.81 6.74 97.44
+$attachment "eyeglow_R" "bip_head" -1.08 -1.77 -6.14 rotate 64.81 173.26 -97.44
+$attachment "effect_hand_L" "effect_hand_L" 0 0 0 rotate 0 0 0
+$attachment "effect_hand_R" "effect_hand_R" 0 0 0 rotate 0 0 0
+$attachment "flag" "bip_spine_2" 1.02 3.24 7.93 rotate 1.53 -4.33 -4.18
+$attachment "prop_bone" "prop_bone" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_1" "prop_bone_1" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_2" "prop_bone_2" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_3" "prop_bone_3" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_4" "prop_bone_4" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
+
+$illumposition 0 0 0 bip_pelvis
+
+$model "medic" $dmxFile$ {
+
+	eyeball righteye "bip_head" -1.04  78.958721  3.83643  "eyeball_r" 1.2   3  "pupil_r" 0.5
+	eyeball lefteye  "bip_head"  1.04  78.958721  3.83643  "eyeball_l" 1.2  -3  "pupil_l" 0.5
+
+    // remove this once you have actual eyelids that the eyeballs can drive, or they'll by default be 
+    // overwriting your first flex
+	localvar %dummy_eyelid_flex 
+
+	flexcontroller eyes range -45 45 eyes_updown
+	flexcontroller eyes range -45 45 eyes_rightleft
+}
+
+$bodygroup "medic_backpack"
+{
+	studio "../parts/dmx/backpack_bodygroup.dmx"
+	blank
+}
+
+$bodygroup head
+{
+	blank // flexes cannot be put into a bodygroup, the head will be scaled down instead to hide it
+	blank
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup rightarm
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
+}
+
+$sequence ref $dmxFile$
+
+$surfaceprop "flesh"
+
+$bonemerge "bip_pelvis"
+$bonemerge "bip_spine_0"
+$bonemerge "bip_spine_1"
+$bonemerge "bip_spine_2"
+$bonemerge "bip_spine_3"
+$bonemerge "bip_neck"
+$bonemerge "bip_head"
+$bonemerge "bip_collar_L"
+$bonemerge "bip_collar_R"
+$bonemerge "bip_upperArm_L"
+$bonemerge "bip_upperArm_R"
+$bonemerge "bip_lowerArm_L"
+$bonemerge "bip_lowerArm_R"
+$bonemerge "bip_hand_L"
+$bonemerge "bip_hand_R"
+$bonemerge "weapon_bone"
+$bonemerge "weapon_bone_1"
+$bonemerge "weapon_bone_L"
+$bonemerge "joint_lever"
+$bonemerge "joint_hose01"
+$bonemerge "joint_hose02"
+$bonemerge "joint_hose03"
+$bonemerge "joint_hose04"
+$bonemerge "joint_hose05"
+$bonemerge "medal_bone"
+$bonemerge "prp_backpack"
+$bonemerge "mvm"
+$bonemerge "prop_bone"
+$bonemerge "prop_bone_1"
+$bonemerge "prop_bone_2"
+$bonemerge "prop_bone_3"
+$bonemerge "prop_bone_4"
+$bonemerge "prop_bone_5"
+$bonemerge "prop_bone_6"
+
+$include "medic_definebones.qci"
+
+// include the file that sets up the ikchains
+$include "../../TF_animation_rules/ruleshierarchy.qci"
+$ikchain medicHose "joint_hose05"
+
+// include the animations.mdl
+$includemodel "player/medic_user_animations.mdl"
+$includemodel "player/medic_animations.mdl"
+$includemodel "workshop/player/animations/medic_workshop_animations.mdl"
+
+// include the ragdoll
+$include "medic_ragdoll.qci"
+
+// include the hitboxes
+$include "medic_hitbox.qci"
+
+$cdmaterials "models/player/medic/hwm/"
+$cdmaterials "models/player/medic/"
+
+// 32 material limit, medic_specs use backpack invun texture on purpose
+$texturegroup "medic_Skins"
+{
+	{ "medic_red"          "medic_head_red"          "eyeball_r"     "eyeball_l"     "medic_backpack_red"          "medic_sfm_hands_red"          "medic_specs"                 "medic_gibs_red"     "medic_gibs_head"    	   }
+	{ "medic_blue"         "medic_head_blue"         "eyeball_r"     "eyeball_l"     "medic_backpack_blue"         "medic_sfm_hands_blue"         "medic_specs"                 "medic_gibs_blue"    "medic_gibs_head"    	   }
+	{ "medic_red_invun"    "medic_head_red_invun"    "eyeball_invun" "eyeball_invun" "medic_backpack_red_invun"    "medic_sfm_hands_red_invun"    "medic_backpack_red_invun"    "medic_red_invun"    "medic_head_red_invun"    }
+	{ "medic_blue_invun"   "medic_head_blue_invun"   "eyeball_invun" "eyeball_invun" "medic_backpack_blue_invun"   "medic_sfm_hands_blue_invun"   "medic_backpack_blue_invun"   "medic_blue_invun"   "medic_head_blue_invun"   }
+	{ "medic_custom"       "medic_head_custom"       "eyeball_r"     "eyeball_l"     "medic_backpack_custom"       "medic_sfm_hands_custom"       "medic_specs"                 "medic_gibs_custom"  "medic_gibs_head" 		   }
+	{ "medic_custom_invun" "medic_head_custom_invun" "eyeball_invun" "eyeball_invun" "medic_backpack_custom_invun" "medic_sfm_hands_custom_invun" "medic_backpack_custom_invun" "medic_custom_invun" "medic_head_custom_invun" }
+	{ "medic_custom"       "medic_head_custom"       "eyeball_r"     "eyeball_l"     "medic_backpack_custom"       "medic_sfm_hands_custom"       "medic_specs"                 "medic_gibs_custom"  "medic_gibs_head" 		   }
+	{ "medic_custom_invun" "medic_head_custom_invun" "eyeball_invun" "eyeball_invun" "medic_backpack_custom_invun" "medic_sfm_hands_custom_invun" "medic_backpack_custom_invun" "medic_custom_invun" "medic_head_custom_invun" }
+}
+
+$lod 11 
+{
+	// blank to not mess up lod order
+} 
+
+$lod 22 
+{
+	// blank to not mess up lod order
+}
+
+$lod 33 
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+$lod 44 
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+$lod 55 
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+$shadowlod
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_knee_L"
+	bonetreecollapse "bip_knee_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+/*
+$lod 11 
+{
+	replacemodel $dmxFile$ $01_lod$
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_01.dmx"
+} 
+
+$lod 22 
+{
+	replacemodel $dmxFile$ $02_lod$
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_02.dmx"
+}
+
+$lod 33 
+{
+	nofacial
+	replacemodel $dmxFile$ $03_lod$
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_03.dmx"
+	bonetreecollapse "bip_head"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+$lod 44 
+{
+	nofacial
+	replacemodel $dmxFile$ $04_lod$
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_04.dmx"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+$lod 55 
+{
+	nofacial
+	replacemodel $dmxFile$ $05_lod$
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_05.dmx"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+$shadowlod
+{
+	nofacial
+	replacemodel $dmxFile$ $03_lod$
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_knee_L"
+	bonetreecollapse "bip_knee_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+*/
+
+// Gibs.
+$collisiontext {
+	"break"
+	{
+		"model" "player\gibs\medicgib007"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\medicgib001"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\medicgib005"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\medicgib006"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\random_organ"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\medicgib002"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\medicgib003"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\medicgib004"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\medicgib008"
+		"health" "0"
+		"fadetime" "10"
+	}
+}

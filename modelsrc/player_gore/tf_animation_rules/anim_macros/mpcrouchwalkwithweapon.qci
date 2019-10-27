@@ -1,0 +1,30 @@
+// Macro: MPCrouchWalkWithWeapon
+//
+// Usage: MPCrouchWalkWithWeapon name fS fSE fE fNE fN fNW fW fSW filename aimmatrix activityname
+// 	- name: unique id
+//	- fS, fSE, fE, fNE, fN, fNW, fW, fSW: startloop numbers for S, SE, etc.
+//	- filename: name of the moveN filename
+//	- aimmatrix: the name of the aimmatrix for the movement type
+//	- activity: the name of the movement activity
+//
+//
+$definemacro MPCrouchWalkWithWeapon name fS fSE fE fNE fN fNW fW fSW filename filename2 aimmatrix activityname infoNode \\
+$animation a_blend_crouchN_$name$ $filename$ lx ly \\
+$animation a_crouch_walkCenter_$name$ $filename2$ loop noautoik ikrule lhand touch "bip_hand_R" \\
+$MakeLoopMoveIK crouch_walkS_$name$  primary_crouch_walks    $fS$  -180 a_reference a_blend_crouchN_$name$ $infoNode$ \\
+$MakeLoopMoveIK crouch_walkSE_$name$ primary_crouch_walkse   $fSE$ -135 a_reference a_blend_crouchN_$name$ $infoNode$ \\
+$MakeLoopMoveIK crouch_walkE_$name$  primary_crouch_walke    $fE$   -90 a_reference a_blend_crouchN_$name$ $infoNode$ \\ 
+$MakeLoopMoveIK crouch_walkNE_$name$ primary_crouch_walkne   $fNE$  -45 a_reference a_blend_crouchN_$name$ $infoNode$ \\
+$MakeLoopMoveIK crouch_walkN_$name$  primary_crouch_walkn    $fN$     0 a_reference a_blend_crouchN_$name$ $infoNode$ \\
+$MakeLoopMoveIK crouch_walkNW_$name$ primary_crouch_walknw   $fNW$   45 a_reference a_blend_crouchN_$name$ $infoNode$ \\
+$MakeLoopMoveIK crouch_walkW_$name$  primary_crouch_walkw    $fW$    90 a_reference a_blend_crouchN_$name$ $infoNode$ \\
+$MakeLoopMoveIK crouch_walkSW_$name$ primary_crouch_walksw   $fSW$  135 a_reference a_blend_crouchN_$name$ $infoNode$ \\
+$sequence $name$ { \\
+	a_crouch_walkSW_$name$	a_crouch_walkS_$name$		a_crouch_walkSE_$name$ \\
+	a_crouch_walkW_$name$	a_crouch_walkCenter_$name$	a_crouch_walkE_$name$ \\
+	a_crouch_walkNW_$name$	a_crouch_walkN_$name$		a_crouch_walkNE_$name$ \\
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1 \\
+	addlayer $aimmatrix$ \\
+	activity $activityname$ 1 \\
+	noautoik \\
+} \\

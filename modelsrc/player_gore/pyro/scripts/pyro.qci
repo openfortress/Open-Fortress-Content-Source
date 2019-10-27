@@ -1,0 +1,388 @@
+// defining the upaxis is needed for maya exports
+$upaxis Y
+
+$eyeposition 0 78.915 0
+
+$attachment "head" "bip_head" 0 -9.18 1.47 rotate 68.17 -90 0
+$attachment "eyeglow_L" "bip_head" 2.06 -6.25 -3.71 rotate 47.21 -53.42 32.99
+$attachment "eyeglow_R" "bip_head" -2.06 -6.25 -3.71 rotate 47.21 -126.58 -32.99
+$attachment "weapon_bone_L" "weapon_bone_L" 0 0 0 rotate 0 0 0
+$attachment "effect_hand_L" "effect_hand_L" 0 0 0 rotate 0 0 0
+$attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0
+$attachment "weapon_bone_1" "weapon_bone_1" 0 0 0 rotate 0 0 0
+$attachment "weapon_bone_2" "weapon_bone_2" 0 0 0 rotate 0 0 0
+$attachment "weapon_bone_3" "weapon_bone_3" 0 0 0 rotate 0 0 0
+$attachment "weapon_bone_4" "weapon_bone_4" 0 0 0 rotate 0 0 0
+$attachment "effect_hand_R" "effect_hand_R" 0 0 0 rotate 0 0 0
+$attachment "flag" "bip_spine_2" -0.65 6.91 9.17 rotate -2.51 -2.14 -14.44
+$attachment "prop_bone" "prop_bone" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_1" "prop_bone_1" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_2" "prop_bone_2" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_3" "prop_bone_3" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_4" "prop_bone_4" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
+$attachment "taunt_effect" "taunt_effect" 0 0 0 rotate 0 0 0
+$attachment "back_lower" "bip_spine_0" 0 0 0 rotate 0 0 0
+$attachment "foot_L" "bip_foot_L" 0 0 0 rotate 0 0 0
+$attachment "foot_R" "bip_foot_R" 0 0 0 rotate 0 0 0
+$attachment "partyhat" "bip_head" 0 -7.68 1.47 rotate 68 -90 0
+
+
+
+$model     pyro  "../parts/dmx/pyro_reference.dmx"
+
+$bodygroup "head"
+{
+	studio "../parts/dmx/body_head.dmx"
+	blank
+	// sigh... this messes up bodygroup index order but whatever 
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup rightarm
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
+}
+
+$bodygroup "grenades"
+{
+	studio "../parts/dmx/grenades_bodygroup.dmx"
+	blank
+}
+$bodygroup "backpack"
+{
+	studio "../parts/dmx/backpack_bodygroup.dmx"
+	blank
+}
+
+$bodygroup "righthand"
+{
+	// not supported!
+	//studio "../parts/dmx/righthand_bodygroup.dmx"
+	blank
+	blank
+}
+
+$sequence  ref   "../parts/dmx/pyro_reference.dmx"
+
+$surfaceprop "flesh"
+
+$bonemerge "bip_pelvis"
+$bonemerge "bip_spine_0"
+$bonemerge "bip_spine_1"
+$bonemerge "bip_spine_2"
+$bonemerge "bip_spine_3"
+$bonemerge "bip_neck"
+$bonemerge "bip_head"
+$bonemerge "bip_collar_L"
+$bonemerge "bip_upperArm_L"
+$bonemerge "bip_lowerArm_L"
+$bonemerge "bip_hand_L"
+$bonemerge "bip_collar_R"
+$bonemerge "bip_upperArm_R"
+$bonemerge "bip_lowerArm_R"
+$bonemerge "bip_hand_R"
+$bonemerge "weapon_bone_L"
+$bonemerge "weapon_bone"
+$bonemerge "weapon_bone_1"
+$bonemerge "weapon_bone_2"
+$bonemerge "weapon_bone_3"
+$bonemerge "weapon_bone_4"
+$bonemerge "medal_bone"
+$bonemerge "mvm"
+$bonemerge "prop_bone"
+$bonemerge "prop_bone_1"
+$bonemerge "prop_bone_2"
+$bonemerge "prop_bone_3"
+$bonemerge "prop_bone_4"
+$bonemerge "prop_bone_5"
+$bonemerge "prop_bone_6"
+$bonemerge "taunt_effect"
+
+// include the standard boneset
+$include "pyro_definebones.qci"
+
+// include the file that sets up the ikchains
+$include "../../TF_animation_rules/ruleshierarchy.qci"
+
+// include the animations.mdl
+$includemodel "player/pyro_user_animations.mdl"
+$includemodel "player/pyro_animations.mdl"
+$includemodel "workshop/player/animations/pyro_workshop_animations.mdl"
+
+// include the ragdoll
+$include "pyro_ragdoll.qci"
+
+// include the hitboxes
+$include "pyro_hitbox.qci"
+
+$cdmaterials "models/player/pyro/hwm"
+$cdmaterials "models/player/pyro/"
+
+$texturegroup "pyro_Skins"
+{
+	{ "pyro_red"          "pyro_head"               "pyro_goggles"       "pyro_gibs_red"     "pyro_gibs_head"    	  }
+	{ "pyro_blue"         "pyro_head"               "pyro_goggles"       "pyro_gibs_blue"    "pyro_gibs_head"    	  }
+	{ "pyro_red_invun"    "pyro_head_red_invun"     "pyro_goggles_invun" "pyro_red_invun"    "pyro_head_red_invun"    }
+	{ "pyro_blue_invun"   "pyro_head_blue_invun"    "pyro_goggles_invun" "pyro_blue_invun"   "pyro_head_blue_invun"   }
+	{ "pyro_custom"       "pyro_head"               "pyro_goggles"       "pyro_gibs_custom"  "pyro_gibs_head" 		  }
+	{ "pyro_custom_invun" "pyro_head_custom_invun"  "pyro_goggles_invun" "pyro_custom_invun" "pyro_head_custom_invun" }
+	{ "pyro_custom"       "pyro_head"               "pyro_goggles"       "pyro_gibs_custom"  "pyro_gibs_head" 		  }
+	{ "pyro_custom_invun" "pyro_head_custom_invun"  "pyro_goggles_invun" "pyro_custom_invun" "pyro_head_custom_invun" }
+}
+
+$lod 11
+{
+	// blank to not mess up lod order
+}
+
+$lod 22
+{
+	// blank to not mess up lod order
+}
+
+$lod 33
+{
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+}
+
+$lod 44
+{
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+	bonetreecollapse "prp_cannister1"
+	bonetreecollapse "prp_cannister2"
+	bonetreecollapse "prp_cannister3"
+}
+
+$lod 55
+{
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+	bonetreecollapse "prp_cannister1"
+	bonetreecollapse "prp_cannister2"
+	bonetreecollapse "prp_cannister3"
+}
+
+$shadowlod
+{
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+	bonetreecollapse "prp_cannister1"
+	bonetreecollapse "prp_cannister2"
+	bonetreecollapse "prp_cannister3"
+}
+
+/*
+$lod 11
+{
+	replacemodel "../parts/dmx/pyro_reference.dmx" "../parts/dmx/pyro_lod_01.dmx"
+	replacemodel "../parts/dmx/head_bodygroup.dmx" "../parts/dmx/head_lod_01.dmx"
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_01.dmx"
+	replacemodel "../parts/dmx/grenades_bodygroup.dmx" "../parts/dmx/grenades_lod_01.dmx"
+	replacemodel "../parts/dmx/righthand_bodygroup.dmx" "../parts/dmx/righthand_lod_01.dmx"
+}
+
+$lod 22
+{
+	replacemodel "../parts/dmx/pyro_reference.dmx" "../parts/dmx/pyro_lod_02.dmx"
+	replacemodel "../parts/dmx/head_bodygroup.dmx" "../parts/dmx/head_lod_02.dmx"
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_02.dmx"
+	replacemodel "../parts/dmx/grenades_bodygroup.dmx" "../parts/dmx/grenades_lod_02.dmx"
+	replacemodel "../parts/dmx/righthand_bodygroup.dmx" "../parts/dmx/righthand_lod_02.dmx"
+}
+
+$lod 33
+{
+	replacemodel "../parts/dmx/pyro_reference.dmx" "../parts/dmx/pyro_lod_03.dmx"
+	replacemodel "../parts/dmx/head_bodygroup.dmx" "../parts/dmx/head_lod_03.dmx"
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_03.dmx"
+	replacemodel "../parts/dmx/grenades_bodygroup.dmx" "../parts/dmx/grenades_lod_03.dmx"
+	replacemodel "../parts/dmx/righthand_bodygroup.dmx" "../parts/dmx/righthand_lod_03.dmx"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacematerial "pyro_head" "pyro_red"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+}
+
+$lod 44
+{
+	replacemodel "../parts/dmx/pyro_reference.dmx" "../parts/dmx/pyro_lod_04.dmx"
+	replacemodel "../parts/dmx/head_bodygroup.dmx" "../parts/dmx/head_lod_04.dmx"
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_04.dmx"
+	replacemodel "../parts/dmx/grenades_bodygroup.dmx" "../parts/dmx/grenades_lod_04.dmx"
+	replacemodel "../parts/dmx/righthand_bodygroup.dmx" "../parts/dmx/righthand_lod_04.dmx"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacematerial "pyro_head" "pyro_red"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+	bonetreecollapse "prp_cannister1"
+	bonetreecollapse "prp_cannister2"
+	bonetreecollapse "prp_cannister3"
+}
+
+$lod 55
+{
+	replacemodel "../parts/dmx/pyro_reference.dmx" "../parts/dmx/pyro_lod_05.dmx"
+	replacemodel "../parts/dmx/head_bodygroup.dmx" "../parts/dmx/head_lod_05.dmx"
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_05.dmx"
+	replacemodel "../parts/dmx/grenades_bodygroup.dmx" "../parts/dmx/grenades_lod_05.dmx"
+	replacemodel "../parts/dmx/righthand_bodygroup.dmx" "../parts/dmx/righthand_lod_05.dmx"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacematerial "pyro_head" "pyro_red"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+	bonetreecollapse "prp_cannister1"
+	bonetreecollapse "prp_cannister2"
+	bonetreecollapse "prp_cannister3"
+}
+
+$shadowlod
+{
+	replacemodel "../parts/dmx/pyro_reference.dmx" "../parts/dmx/pyro_lod_04.dmx"
+	replacemodel "../parts/dmx/head_bodygroup.dmx" "../parts/dmx/head_lod_04.dmx"
+	replacemodel "../parts/dmx/backpack_bodygroup.dmx" "../parts/dmx/backpack_lod_04.dmx"
+	replacemodel "../parts/dmx/grenades_bodygroup.dmx" "../parts/dmx/grenades_lod_04.dmx"
+	replacemodel "../parts/dmx/righthand_bodygroup.dmx" "../parts/dmx/righthand_lod_04.dmx"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacematerial "pyro_head" "pyro_red"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+	bonetreecollapse "prp_cannister1"
+	bonetreecollapse "prp_cannister2"
+	bonetreecollapse "prp_cannister3"
+}
+*/
+
+// Gibs.
+$collisiontext {
+	"break"
+	{
+		"model" "player\gibs\pyrogib008"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\pyrogib001"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\pyrogib004"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\pyrogib006"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\random_organ"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\pyrogib002"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\pyrogib005"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\pyrogib003"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\pyrogib007"
+		"health" "0"
+		"fadetime" "10"
+	}
+}
+

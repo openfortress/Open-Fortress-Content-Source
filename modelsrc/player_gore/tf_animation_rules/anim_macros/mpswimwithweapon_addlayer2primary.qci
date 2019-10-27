@@ -1,0 +1,34 @@
+// Macro: MPSwimWithWeapon
+//
+// Usage: MPRunWithWeapon name fS fSE fE fNE fN fNW fW fSW filename aimmatrix activityname
+//	- name: unique id
+//	- fS, fSE, fE, fNE, fN, fNW, fW, fSW: startloop frame numbers for S, SE, etc.
+//	- filename1: name of the moveN filename
+//	- filename2: name of the idle pose filename
+//	- aimmatrix: the name of the aimmatrix for the movement type
+//	- activity: the name of the movement activity
+//
+// 	- All of these anims are aligned to the swimCenter anim (X,Y,Z)
+//
+// Example: MPswimWithWeapon PRIMARY 0 0 0 0 0 0 0 0 primary_RunN primary_idle primary_aim_run ACT_MP_RUN_PRIMARY
+//
+$definemacro MPswimWithWeapon_AddLayer2Primary name fS fSE fE fNE fN fNW fW fSW filename1 filename2 aimmatrix activityname addthislayer infoNode \\
+$animation a_swimCenter_$name$  $filename2$ blockname $infoNode$ loop \\
+$sequence s_swimAlign_$name$ a_swimCenter_$name$ \\
+$animation a_swimS_$name$  PRIMARY_swimS    startloop $fS$  rotateto -180 align s_swimAlign_$name$ X Y Z 0 0 LX LY loop blockname $infoNode$ \\
+$animation a_swimSE_$name$ PRIMARY_swimSE   startloop $fSE$ rotateto -135 align s_swimAlign_$name$ X Y Z 0 0 LX LY loop blockname $infoNode$ \\
+$animation a_swimE_$name$  PRIMARY_swimE    startloop $fE$   rotateto -90 align s_swimAlign_$name$ X Y Z 0 0 LX LY loop blockname $infoNode$ \\ 
+$animation a_swimNE_$name$ PRIMARY_swimNE   startloop $fNE$  rotateto -45 align s_swimAlign_$name$ X Y Z 0 0 LX LY loop blockname $infoNode$ \\
+$animation a_swimN_$name$  PRIMARY_swimN    startloop $fN$     rotateto 0 align s_swimAlign_$name$ X Y Z 0 0 LX LY loop blockname $infoNode$ \\
+$animation a_swimNW_$name$ PRIMARY_swimNW   startloop $fNW$   rotateto 45 align s_swimAlign_$name$ X Y Z 0 0 LX LY loop blockname $infoNode$ \\
+$animation a_swimW_$name$  PRIMARY_swimW    startloop $fW$    rotateto 90 align s_swimAlign_$name$ X Y Z 0 0 LX LY loop blockname $infoNode$ \\
+$animation a_swimSW_$name$ PRIMARY_swimSW   startloop $fSW$  rotateto 135 align s_swimAlign_$name$ X Y Z 0 0 LX LY loop blockname $infoNode$ \\
+$sequence Swim_$name$ { \\
+	a_swimsw_$name$	a_swimS_$name$		a_swimSE_$name$ \\
+	a_swimW_$name$	a_swimCenter_$name$	a_swimE_$name$ \\
+	a_swimNW_$name$	a_swimN_$name$		a_swimNE_$name$ \\
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1 \\
+	addlayer $aimmatrix$ \\
+	addlayer $addthislayer$ \\
+	activity $activityname$ 1 \\
+} \\

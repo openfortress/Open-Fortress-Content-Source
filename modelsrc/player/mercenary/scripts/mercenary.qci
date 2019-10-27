@@ -3,8 +3,6 @@ $upaxis Y
 
 $eyeposition 0 78.62 0
 
-$illumposition 0 0 0 "bip_pelvis"
-
 $attachment "eyes" "bip_head" 0 -3.42 -4.19 rotate 89.73 -90 0
 $attachment "righteye" "bip_head" -1.24 -3.42 -4.19 rotate 89.73 -90 0
 $attachment "lefteye" "bip_head" 1.24 -3.42 -4.19 rotate 89.73 -90 0
@@ -30,13 +28,7 @@ $attachment "prop_bone_4" "bip_pelvis" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_5" "bip_pelvis" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_6" "bip_pelvis" 0 0 0 rotate 0 0 0
 
-// hl2 attachments for backwards compatibility
-$attachment "mouth" "bip_head" 1 -6.5 0 rotate 0 -80 -90
-$attachment "chest" "bip_spine_2" 5 4 0 rotate 0 90 90
-$attachment "forward" "bip_head" 0 0 0 rotate 0 0 0
-$attachment "anim_attachment_RH" "bip_hand_R" 0 0 0 rotate -90 -90 0
-$attachment "anim_attachment_LH" "bip_hand_L" 0 0 0 rotate -90 -90 0
-$attachment "anim_attachment_head" "bip_head" 0 0 0 rotate -90 -90 0
+$illumposition 0 0 0 "bip_pelvis"
 
 $model mercenary $dmxFile$ {
 
@@ -109,6 +101,7 @@ $include "ruleshierarchy.qci"
 
 // include the animations.mdl
 $includemodel "player/mercenary_animations.mdl"
+$includemodel "player/soldier_user_animations.mdl"
 $includemodel "player/soldier_animations.mdl"
 
 // include the ragdoll
@@ -118,6 +111,7 @@ $include "mercenary_ragdoll.qci"
 $include "mercenary_hitbox.qci"
 
 // Materials and texturegroups
+$CDMaterials "models\player\mercenary\hwm"
 $CDMaterials "models\player\mercenary\"
 $CDMaterials "models\player\soldier\"
 $CDMaterials "models\weapons\w_rocketlauncher\"
@@ -127,12 +121,12 @@ $TextureGroup "skinfamilies"
 {
 	{ "mercenary_red" 					 "mercenary_head_red" 				"mercenary_glove"					"eyeball_r" 	"eyeball_l"		}
 	{ "mercenary_blue" 					 "mercenary_head_blue" 				"mercenary_glove"					"eyeball_r" 	"eyeball_l" 	}
-	{ "..\..\effects\invulnfx_red" 		 "..\..\effects\invulnfx_red" 		"..\..\effects\invulnfx_red"			"eyeball_invun" "eyeball_invun" }
-	{ "..\..\effects\invulnfx_blue" 	 "..\..\effects\invulnfx_blue" 		"..\..\effects\invulnfx_blue"		"eyeball_invun" "eyeball_invun" }
+	{ "mercenary_red_invun" 	       	 "mercenary_head_red_invun" 		"mercenary_glove_red_invun"			"eyeball_invun" "eyeball_invun" }
+	{ "mercenary_blue_invun" 	         "mercenary_head_blue_invun" 		"mercenary_glove_blue_invun"		"eyeball_invun" "eyeball_invun" }
 	{ "mercenary_custom" 				 "mercenary_head_custom" 			"mercenary_glove"					"eyeball_r" 	"eyeball_l" 	}
-	{ "..\..\effects\invulnfx_mercenary" "..\..\effects\invulnfx_mercenary" "..\..\effects\invulnfx_mercenary"	"eyeball_invun" "eyeball_invun" }
-	{ "mercenary_sport" 				 "mercenary_head_sport" 			"mercenary_glove_sport"					"eyeball_r"		"eyeball_l" 	}
-	{ "..\..\effects\invulnfx_sport" 	 "..\..\effects\invulnfx_sport" 	"..\..\effects\invulnfx_sport"		"eyeball_invun" "eyeball_invun" }
+	{ "mercenary_custom_invun"           "mercenary_head_custom_invun"      "mercenary_glove_custom_invun"   	"eyeball_invun" "eyeball_invun" }
+	{ "mercenary_sport" 				 "mercenary_head_sport" 			"mercenary_glove_sport"				"eyeball_r"		"eyeball_l" 	}
+	{ "mercenary_sport_invun" 	         "mercenary_head_sport_invun"    	"mercenary_glove_sport_invun"		"eyeball_invun" "eyeball_invun" }
 }
 
 $collisiontext

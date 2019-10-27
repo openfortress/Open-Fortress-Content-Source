@@ -52,14 +52,14 @@ $collisionjoints "../parts/dmx/mercenary_ragdoll.dmx" {
 	$jointmassbias "bip_upperarm_l" 0.80
 	$jointrotdamping "bip_upperarm_l" 16
 	$jointconstrain "bip_upperarm_l" x limit -40.00 50.00 0.00
-	$jointconstrain "bip_upperarm_l" y limit -55.00 32.00 0.00
-	$jointconstrain "bip_upperarm_l" z limit -80.00 25.00 0.00
+	$jointconstrain "bip_upperarm_l" y limit -32.00 55.00 0.00
+	$jointconstrain "bip_upperarm_l" z limit -25.00 80.00 0.00
 
 	$jointmassbias "bip_lowerArm_l" 1.80
 	$jointrotdamping "bip_lowerArm_l" 4
 	$jointconstrain "bip_lowerArm_l" x limit 0.00 0.00 0.00
-	$jointconstrain "bip_lowerArm_l" y limit 0.00 0.00 0.00
-	$jointconstrain "bip_lowerArm_l" z limit -120.00 -6.00 0.00
+	$jointconstrain "bip_lowerArm_l" y limit -120.00 -6.00 0.00
+	$jointconstrain "bip_lowerArm_l" z limit 0.00 0.00 0.00
 
 	$jointmassbias "bip_hand_l" 0.60
 	$jointrotdamping "bip_hand_l" 8
@@ -100,8 +100,8 @@ $collisionjoints "../parts/dmx/mercenary_ragdoll.dmx" {
 	$jointmassbias "bip_hip_l" 0.80
 	$jointrotdamping "bip_hip_l" 4
 	$jointconstrain "bip_hip_l" x limit -12.00 12.00 0.00
-	$jointconstrain "bip_hip_l" y limit -12.00 30.00 0.00
-	$jointconstrain "bip_hip_l" z limit -24.00 50.00 0.00
+	$jointconstrain "bip_hip_l" y limit -50.00 24.00 0.00
+	$jointconstrain "bip_hip_l" z limit -12.00 30.00 0.00
 
 	$jointmassbias "bip_knee_l" 1.20
 	$jointrotdamping "bip_knee_l" 9

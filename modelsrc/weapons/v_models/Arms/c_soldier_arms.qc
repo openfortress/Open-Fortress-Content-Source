@@ -11,9 +11,9 @@ $cdmaterials ""
 
 $texturegroup "skinfamilies"
 {
-	{ "models\player\soldier\soldier_sleeves_red" }
-	{ "soldier_sleeves_blue"                      }
-	{ "soldier_sleeves_custom"                    }
+	{ "soldier_red"    }
+	{ "soldier_blue"   }
+	{ "soldier_custom" }
 }
 
 $attachment "weapon_bone_L" "weapon_bone_L" 0 0 0 rotate 0 0 0

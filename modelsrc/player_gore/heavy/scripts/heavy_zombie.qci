@@ -1,0 +1,477 @@
+// Defining the upaxis to be Y is needed for maya exports.
+$upaxis Y
+
+// Set up the eye positions and attachments.
+$eyeposition 0 83.275 0
+
+$attachment "eyes" "bip_head" 0 -3.71 -5.15 rotate 90 -90 0
+$attachment "righteye" "bip_head" -1.43 -3.71 -5.15 rotate 90 -90 0
+$attachment "lefteye" "bip_head" 1.43 -3.71 -5.15 rotate 90 -90 0
+$attachment "back_lower" "bip_spine_0" 0 0 0 rotate 0 0 0
+$attachment "foot_L" "bip_foot_L" 0 0 0 rotate 0 0 0
+$attachment "foot_R" "bip_foot_R" 0 0 0 rotate 0 0 0
+$attachment "partyhat" "bip_head" -0.6 -7.8 -1.69 rotate 85 85 180
+$attachment "head" "bip_head" 0 -8.99 -1.69 rotate 85.19 -90 0
+$attachment "eyeglow_L" "bip_head" 1.42 -3.72 -6.61 rotate 65 0 90
+$attachment "eyeglow_R" "bip_head" -1.42 -3.72 -6.61 rotate 65 -180 -90
+$attachment "effect_hand_L" "effect_hand_L" 0 0 0 rotate 0 0 0
+$attachment "effect_hand_R" "effect_hand_R" 0 0 0 rotate 0 0 0
+$attachment "flag" "bip_spine_2" 0 -4.99 9.58 rotate 0.59 2.56 11.46
+$attachment "prop_bone" "prop_bone" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_1" "prop_bone_1" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_2" "prop_bone_2" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_3" "prop_bone_3" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_4" "prop_bone_4" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
+
+$model heavy $dmxFile$ {
+	eyeball righteye "bip_head" -1.425952 83.274592 1.8 "eyeball_r" 1.80356  0 "eyeball_invun" 0.6
+	eyeball lefteye  "bip_head"  1.425952 83.274592 1.8 "eyeball_l" 1.80356  0 "eyeball_invun" 0.6
+  
+	localvar %dummy_eyelid_flex 
+
+	flexcontroller eyes range -45 45 eyes_updown
+	flexcontroller eyes range -45 45 eyes_rightleft
+}
+
+//hands bodygroup for boxing gloves
+$bodygroup hands
+{
+	// sigh...
+	//studio "../parts/dmx/heavy_hands_bodygroup.dmx"
+	blank
+	blank
+	// sigh!!!!!!!
+	//studio "../parts/dmx/heavy_hands_bodygroup.dmx"
+	blank
+}
+
+$bodygroup head
+{
+	blank // flexes cannot be put into a bodygroup, the head will be scaled down instead to hide it
+	blank
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup rightarm
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
+}
+
+// Make the reference sequence from the dmxFile variable.
+$sequence ref $dmxFile$
+
+// include the standard boneset
+$include "heavy_definebones.qci"
+
+// Include the animations .mdl.
+$includemodel "player/heavy_user_animations.mdl"
+$includemodel "player/heavy_animations.mdl"
+$includemodel "workshop/player/animations/heavy_workshop_animations.mdl"
+
+// Include the helper bones.
+$proceduralbones "heavy.vrd"
+
+$surfaceprop "flesh"
+
+$bonemerge "bip_pelvis"
+$bonemerge "bip_spine_0"
+$bonemerge "bip_spine_1"
+$bonemerge "bip_spine_2"
+$bonemerge "bip_spine_3"
+$bonemerge "bip_neck"
+$bonemerge "bip_head"
+$bonemerge "bip_collar_L"
+$bonemerge "bip_collar_R"
+$bonemerge "bip_upperArm_L"
+$bonemerge "bip_upperArm_R"
+$bonemerge "bip_lowerArm_L"
+$bonemerge "bip_lowerArm_R"
+$bonemerge "bip_hand_L"
+$bonemerge "bip_hand_R"
+$bonemerge "weapon_bone"
+$bonemerge "weapon_bone_L"
+$bonemerge "weapon_bone_1"
+$bonemerge "weapon_bone_2"
+$bonemerge "weapon_bone_3"
+$bonemerge "weapon_bone_4"
+$bonemerge "medal_bone"
+$bonemerge "mvm"
+$bonemerge "prop_bone"
+$bonemerge "prop_bone_1"
+$bonemerge "prop_bone_2"
+$bonemerge "prop_bone_3"
+$bonemerge "prop_bone_4"
+$bonemerge "prop_bone_5"
+$bonemerge "prop_bone_6"
+
+// include the file that sets up the ikchains
+$include "../../TF_animation_rules/ruleshierarchy.qci"
+
+// Include the ragdoll and hitboxes.
+$include "heavy_ragdoll.qci"
+$include "heavy_hitbox.qci"
+
+$cdmaterials "models/player/hvyweapon/hwm/"
+$cdmaterials "models/player/hvyweapon/"
+$cdmaterials "models/player/shared/"
+
+$texturegroup "skinfamilies"
+{
+	{ "heavy_head_red"          "eyeball_r"     "eyeball_l"     "hvyweapon_red"          "heavy_sfm_fingers"              "hvyweapon_gibs_red"     "heavy_gibs_head"         }
+	{ "heavy_head_blue"         "eyeball_r"     "eyeball_l"     "hvyweapon_blue"         "heavy_sfm_fingers"              "hvyweapon_gibs_blue"    "heavy_gibs_head"         }
+	{ "heavy_head_red_invun"    "eyeball_invun" "eyeball_invun" "hvyweapon_red_invun"    "heavy_sfm_fingers_red_invun"    "hvyweapon_red_invun"    "heavy_head_red_invun"    }
+	{ "heavy_head_blue_invun"   "eyeball_invun" "eyeball_invun" "hvyweapon_blue_invun"   "heavy_sfm_fingers_blue_invun"   "hvyweapon_blue_invun"   "heavy_head_blue_invun"   }
+	{ "heavy_head_custom"       "eyeball_r"     "eyeball_l"     "hvyweapon_custom"       "heavy_sfm_fingers"              "hvyweapon_gibs_custom"  "heavy_gibs_head" 	     }
+	{ "heavy_head_custom_invun" "eyeball_invun" "eyeball_invun" "hvyweapon_custom_invun" "heavy_sfm_fingers_custom_invun" "hvyweapon_custom_invun" "heavy_head_custom_invun" }
+	{ "heavy_head_custom"       "eyeball_r"     "eyeball_l"     "hvyweapon_custom"       "heavy_sfm_fingers"              "hvyweapon_gibs_custom"  "heavy_gibs_head"         }
+	{ "heavy_head_custom_invun" "eyeball_invun" "eyeball_invun" "hvyweapon_custom_invun" "heavy_sfm_fingers_custom_invun" "hvyweapon_custom_invun" "heavy_head_custom_invun" }
+}
+
+$renamematerial hvyweapon_red heavy_red_zombie
+$renamematerial hvyweapon_blue heavy_blue_zombie
+$renamematerial hvyweapon_custom heavy_blue_zombie
+$renamematerial hvyweapon_red_invun heavy_red_zombie_invun
+$renamematerial hvyweapon_blue_invun heavy_blue_zombie_invun
+$renamematerial hvyweapon_custom_invun heavy_blue_zombie_invun
+$renamematerial heavy_head_red heavy_head_zombie
+$renamematerial heavy_head_blue heavy_head_zombie
+$renamematerial heavy_head_custom heavy_head_zombie
+$renamematerial heavy_head_red_invun heavy_head_zombie_red_invun
+$renamematerial heavy_head_blue_invun	heavy_head_zombie_blue_invun
+$renamematerial heavy_head_custom_invun heavy_head_zombie_blue_invun
+$renamematerial heavy_sfm_fingers heavy_sfm_fingers_zombie
+$renamematerial heavy_sfm_fingers_red_invun heavy_sfm_fingers_zombie_red_invun
+$renamematerial heavy_sfm_fingers_blue_invun heavy_sfm_fingers_zombie_blue_invun
+$renamematerial heavy_sfm_fingers_custom_invun heavy_sfm_fingers_zombie_blue_invun
+$renamematerial hvyweapon_gibs_red hvyweapon_gibs_red_zombie
+$renamematerial hvyweapon_gibs_blue hvyweapon_gibs_blue_zombie
+$renamematerial hvyweapon_gibs_custom hvyweapon_gibs_blue_zombie
+$renamematerial heavy_gibs_head heavy_gibs_head_zombie
+
+$lod 11
+{
+	// blank to not mess up lod order
+}
+
+$lod 22
+{
+	// blank to not mess up lod order
+}
+
+$lod 33 
+{
+	nofacial
+
+	bonetreecollapse "bip_head"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 44 
+{
+	nofacial
+
+	bonetreecollapse "bip_head"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 55 
+{
+	nofacial
+
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_knee_L"
+	bonetreecollapse "bip_knee_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$shadowlod
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+/*
+$lod 11
+{
+	replacemodel $dmxFile$ $01_lod$
+	replacemodel "../parts/dmx/heavy_hands_bodygroup.dmx" "../parts/dmx/hands_lod_01.dmx"
+}
+
+$lod 22
+{
+	replacemodel $dmxFile$ $02_lod$
+	replacemodel "../parts/dmx/heavy_hands_bodygroup.dmx" "../parts/dmx/hands_lod_02.dmx"
+}
+
+$lod 33 
+{
+	nofacial
+	replacemodel $dmxFile$ $03_lod$
+	replacemodel "../parts/dmx/heavy_hands_bodygroup.dmx" "../parts/dmx/hands_lod_03.dmx"
+
+	removemesh "models/player/hvyweapon/eyeball_r"
+	removemesh "models/player/hvyweapon/eyeball_l"
+
+	bonetreecollapse "bip_head"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 44 
+{
+	nofacial
+	replacemodel $dmxFile$ $04_lod$
+	replacemodel "../parts/dmx/heavy_hands_bodygroup.dmx" "../parts/dmx/hands_lod_04.dmx"
+
+	removemesh "models/player/hvyweapon/eyeball_r"
+	removemesh "models/player/hvyweapon/eyeball_l"
+
+	bonetreecollapse "bip_head"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 55 
+{
+	nofacial
+	replacemodel $dmxFile$ $05_lod$
+	replacemodel "../parts/dmx/heavy_hands_bodygroup.dmx" "../parts/dmx/hands_lod_05.dmx"
+
+	removemesh "models/player/hvyweapon/eyeball_r"
+	removemesh "models/player/hvyweapon/eyeball_l"
+
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_knee_L"
+	bonetreecollapse "bip_knee_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$shadowlod
+{
+	nofacial
+	replacemodel $dmxFile$ $03_lod$
+	replacemodel "../parts/dmx/heavy_hands_bodygroup.dmx" "../parts/dmx/hands_lod_03.dmx"
+	bonetreecollapse "bip_head"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	removemesh "models/player/hvyweapon/eyeball_r"
+	removemesh "models/player/hvyweapon/eyeball_l"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+*/
+
+// Gibs.
+$collisiontext {
+	"break"
+	{
+		"model" "player\gibs\heavygib007"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib002"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib005"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib006"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\random_organ"
+		"health" "0"
+		"fadetime" "10"
+	}	
+	"break"
+	{
+		"model" "player\gibs\heavygib001"
+		"health" "0"
+		"fadetime" "10"
+	}
+
+	"break"
+	{
+		"model" "player\gibs\heavygib003"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib003"
+		"health" "0"
+		"fadetime" "7"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib003"
+		"health" "0"
+		"fadetime" "8"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib003"
+		"health" "0"
+		"fadetime" "7"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib003"
+		"health" "0"
+		"fadetime" "8"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib003"
+		"health" "0"
+		"fadetime" "7"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib003"
+		"health" "0"
+		"fadetime" "8"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib003"
+		"health" "0"
+		"fadetime" "7"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib003"
+		"health" "0"
+		"fadetime" "8"
+	}
+	"break"
+	{
+		"model" "player\gibs\heavygib004"
+		"health" "0"
+		"fadetime" "10"
+	}
+
+
+
+
+}

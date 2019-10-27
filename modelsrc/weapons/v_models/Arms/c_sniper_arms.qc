@@ -11,9 +11,9 @@ $cdmaterials ""
 
 $texturegroup "skinfamilies"
 {
-	{ "sniper_red"      }
-	{ "sniper_blue"     }
-	{ "sniper_custom"   }
+	{ "sniper_red"    }
+	{ "sniper_blue"   }
+	{ "sniper_custom" }
 }
 
 $attachment "weapon_bone_L" "weapon_bone_L" 0 0 0 rotate 0 0 0

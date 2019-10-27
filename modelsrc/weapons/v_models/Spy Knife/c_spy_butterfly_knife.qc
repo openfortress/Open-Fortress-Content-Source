@@ -1,6 +1,10 @@
 $modelname "weapons\v_models\v_knife_spy.mdl"
 
-$model "knife" "c_knife.smd"
+$bodygroup "spyknife"
+{
+	studio "c_knife.smd"
+	studio "c_knife_blood.smd"
+}
 
 $cdmaterials ""
 
@@ -28,7 +32,7 @@ $sequence "knife_idle" "knife_idle.smd" {
 
 $sequence "knife_stab_a" "knife_stab_a.smd" {
 	fps 30
-	activity "ACT_VM_HITCENTER" 2
+	activity "ACT_VM_HITCENTER" 1
 	snap
 }
 
