@@ -27,10 +27,6 @@ $attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
 $illumposition 0 0 0 bip_pelvis
 
 $model "medic" $dmxFile$ {
-
-	eyeball righteye "bip_head" -1.04  78.958721  3.83643  "eyeball_r" 1.2   3  "eyeball_invun" 0.5
-	eyeball lefteye  "bip_head"  1.04  78.958721  3.83643  "eyeball_l" 1.2  -3  "eyeball_invun" 0.5
-
     // remove this once you have actual eyelids that the eyeballs can drive, or they'll by default be 
     // overwriting your first flex
 	localvar %dummy_eyelid_flex 

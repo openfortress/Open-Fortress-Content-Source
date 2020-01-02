@@ -26,9 +26,6 @@ $attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
 
 $model heavy $dmxFile$ {
-	eyeball righteye "bip_head" -1.425952 83.274592 1.8 "eyeball_r" 1.80356  0 "eyeball_invun" 0.6
-	eyeball lefteye  "bip_head"  1.425952 83.274592 1.8 "eyeball_l" 1.80356  0 "eyeball_invun" 0.6
-  
 	localvar %dummy_eyelid_flex 
 
 	flexcontroller eyes range -45 45 eyes_updown
@@ -177,6 +174,8 @@ $renamematerial hvyweapon_gibs_red hvyweapon_gibs_red_zombie
 $renamematerial hvyweapon_gibs_blue hvyweapon_gibs_blue_zombie
 $renamematerial hvyweapon_gibs_custom hvyweapon_gibs_blue_zombie
 $renamematerial heavy_gibs_head heavy_gibs_head_zombie
+$renamematerial eyeball_r eyeball_invun
+$renamematerial eyeball_l eyeball_invun
 
 $lod 11
 {

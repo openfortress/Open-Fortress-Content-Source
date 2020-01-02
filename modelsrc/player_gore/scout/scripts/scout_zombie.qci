@@ -35,10 +35,6 @@ $attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
 
 // model command - $dmxFile$ is specified in the high and low qc files.
 $model scout $dmxFile$ {
-
-	eyeball righteye "bip_head" -1.251646  75.814264 2.141014  "eyeball_r" 1.4   4  "eyeball_invun" 0.6
-	eyeball lefteye  "bip_head"  1.251646  75.814264 2.141014  "eyeball_l" 1.4  -4  "eyeball_invun" 0.6
-
     // remove this once you have actual eyelids that the eyeballs can drive, or they'll by default be 
     // overwriting your first flex
     localvar %dummy_eyelid_flex 
