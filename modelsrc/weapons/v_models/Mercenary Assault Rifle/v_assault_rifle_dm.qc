@@ -22,8 +22,13 @@ $cdmaterials "models\weapons\w_assault_rifle\"
 $attachment "muzzle" "v_weapon.flash" -16 0 -1 rotate 0 0 0
 $attachment "eject_brass" "v_weapon.shelleject" 0 0 0 rotate 0 0 0
 
+$surfaceprop "default"
+$jointsurfaceprop "illumpos"	 "default"
+
 $hboxset "default"
-$hbox 0 "weapon_bone" -5 -5 -5 5 5 5 ""
+
+$hbox 0 "weapon_bone"	    -2.50    2.00   -4.00     2.50   12.00   16.00
+$hbox 0 "weapon_bone"	    -2.50    5.50   13.00     2.50   11.50   33.00
 
 $definebone "root" "" 0 3.788857 96.738922 0 0 89.999983 0 0 0 0 0 0
 $definebone "bip_upperArm_L" "root" 20.828754 -2.282578 2.656232 -1.157833 51.711967 -4.878966 0 0 0 0 0 0

@@ -27,8 +27,14 @@ $cbox 0 0 0 0 0 0
 
 $bbox -25.178 -22.246 -33.891 73.584 16.079 0.021
 
+$surfaceprop "default"
+$jointsurfaceprop "weapon_ik"	 "default"
+
 $hboxset "default"
-$hbox 0 "weapon_bone" -10 -10 -10 10 10 10 ""
+
+$hbox 0 "weapon_bone"	    -5.00   -5.00   -5.00     5.00   10.00   15.00
+$hbox 0 "weapon_bone"	   -10.00    0.00   10.50    10.00   10.00   25.50
+$hbox 0 "weapon_bone_1"	    -8.00   -1.00  -18.00     8.00   11.00   -2.00
 
 $bonemerge "root"
 $bonemerge "weapon_ik"
@@ -110,7 +116,7 @@ $sequence "fire" {
 	fadein 0.2
 	fadeout 0.2
 	node "raised"
-	fps 30
+	fps 60
 }
 
 $sequence "chargeup" {
@@ -120,5 +126,5 @@ $sequence "chargeup" {
 	fadein 0.2
 	fadeout 0.2
 	node "raised"
-	fps 30
+	fps 60
 }
