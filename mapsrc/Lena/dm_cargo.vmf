@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "311"
+	"mapversion" "313"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -56,7 +56,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "311"
+	"mapversion" "313"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.3.24 from dm_cargo"
 	"detailmaterial" "detail/detailsprites_2fort"
@@ -157905,7 +157905,7 @@ entity
 	"disableshadows" "0"
 	"effects" "0"
 	"HiddenWhenRespawning" "0"
-	"model" "models/weapons/w_models/w_smg_dm.mdl"
+	"model" "models/weapons/w_models/w_tommygun.mdl"
 	"pickup_sound" "AmmoPack.Touch"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
@@ -157917,7 +157917,7 @@ entity
 	"spawn_sound" "items/itembk2.wav"
 	"targetname" "Weapon_CombatSMG"
 	"texframeindex" "0"
-	"weaponname" "tf_weapon_smg_mercenary"
+	"weaponname" "tf_weapon_tommygun"
 	"origin" "660 -756 112.801"
 	editor
 	{
@@ -159399,7 +159399,7 @@ entity
 	"HiddenWhenRespawning" "0"
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
-	"model" "models/items/powerup_berserk.mdl"
+	"model" "models/pickups/pickup_powerup_knockout.mdl"
 	"powerup_model" "models/class_menu/random_class_icon.mdl"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
@@ -159409,7 +159409,7 @@ entity
 	"respawntime" "45"
 	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
-	"skin" "0"
+	"skin" "1"
 	"solid" "6"
 	"spawn_sound" "items/itembk2.wav"
 	"targetname" "Powerup_Berserk"
@@ -159421,7 +159421,7 @@ entity
 		"OnPlayerTouch" "PowerupLight_Berserk,TurnOn,,45,-1"
 		"OnPlayerTouch" "PowerupRespawn_Berserk,PlaySound,,45,-1"
 	}
-	"origin" "4.77324 -5.00321 58.645"
+	"origin" "4.77324 -5.00321 3.99999"
 	editor
 	{
 		"color" "0 0 200"
@@ -160126,8 +160126,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[106.207 -1129.66 184.248]"
-		"look" "[89.7542 -866.378 147.173]"
+		"position" "[90.7068 -820.718 385.244]"
+		"look" "[-27.8323 -593.738 311.816]"
 	}
 	camera
 	{

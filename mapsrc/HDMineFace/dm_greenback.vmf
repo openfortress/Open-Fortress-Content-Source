@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "42"
+	"mapversion" "47"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "42"
+	"mapversion" "47"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -15328,7 +15328,7 @@ entity
 	"HiddenWhenRespawning" "0"
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
-	"model" "models/weapons/w_models/w_smg_dm.mdl"
+	"model" "models/weapons/w_models/w_tommygun.mdl"
 	"pickup_sound" "AmmoPack.Touch"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
@@ -15337,11 +15337,11 @@ entity
 	"respawntime" "10"
 	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
-	"skin" "2"
+	"skin" "0"
 	"spawn_sound" "Item.Materialize"
 	"StartDisabled" "0"
 	"texframeindex" "0"
-	"weaponname" "tf_weapon_smg_mercenary"
+	"weaponname" "tf_weapon_tommygun"
 	"origin" "-792 -200 -88"
 	editor
 	{
@@ -15999,26 +15999,12 @@ entity
 entity
 {
 	"id" "1309"
-	"classname" "ambient_generic"
-	"angles" "0 0 0"
-	"cspinup" "0"
-	"fadeinsecs" "0"
-	"fadeoutsecs" "0"
-	"health" "10"
-	"lfomodpitch" "0"
-	"lfomodvol" "0"
-	"lforate" "0"
-	"lfotype" "0"
-	"message" "music/deathmatch/dmstuff_loop.wav"
-	"pitch" "100"
-	"pitchstart" "100"
-	"preset" "0"
-	"radius" "999999"
-	"spawnflags" "17"
-	"spindown" "0"
-	"spinup" "0"
+	"classname" "of_music_player"
+	"Index" "0"
+	"LoopingSongName" "DeathmatchMusic.NewSpeed"
+	"StartDisabled" "0"
 	"targetname" "Music"
-	"volstart" "0"
+	"WaitingForPlayers" "0"
 	"origin" "-80 80 80"
 	editor
 	{
@@ -20088,6 +20074,20 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 -13768]"
+	}
+}
+entity
+{
+	"id" "17385"
+	"classname" "env_cubemap"
+	"cubemapsize" "0"
+	"origin" "544 -416 -65.5975"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
 	}
 }
 cameras

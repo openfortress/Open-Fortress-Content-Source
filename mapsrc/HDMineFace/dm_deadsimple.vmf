@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "6"
+	"mapversion" "10"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "6"
+	"mapversion" "10"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.3.23 from dm_deadsimple"
 	"detailmaterial" "detail/detailsprites"
@@ -126170,7 +126170,7 @@ entity
 	"disableshadows" "0"
 	"effects" "0"
 	"HiddenWhenRespawning" "0"
-	"model" "models/weapons/w_models/w_smg_dm.mdl"
+	"model" "models/weapons/w_models/w_tommygun.mdl"
 	"pickup_sound" "AmmoPack.Touch"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
@@ -126183,7 +126183,7 @@ entity
 	"spawn_sound" "items/itembk2.wav"
 	"targetname" "Weapon_SMG"
 	"texframeindex" "0"
-	"weaponname" "tf_weapon_smg_mercenary"
+	"weaponname" "tf_weapon_tommygun"
 	connections
 	{
 		"OnPlayerTouch" "Emitter_SMG,skin,0,0,-1"
@@ -127477,7 +127477,7 @@ entity
 		"OnPlayerTouch" "PowerupLight_Berserk,TurnOn,,45,-1"
 		"OnPlayerTouch" "PowerupRespawn_Berserk,PlaySound,,45,-1"
 	}
-	"origin" "0 2 144.731"
+	"origin" "0 2 136"
 	editor
 	{
 		"color" "0 0 200"
@@ -128334,37 +128334,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[500 -13268]"
-	}
-}
-entity
-{
-	"id" "84745"
-	"classname" "item_healthkit_full"
-	"angles" "0 0 0"
-	"AutoMaterialize" "1"
-	"body" "0"
-	"disablereceiveshadows" "0"
-	"disableshadows" "0"
-	"effects" "0"
-	"HiddenWhenRespawning" "1"
-	"model" "models/items/medkit_large.mdl"
-	"pickup_sound" "Healthkit.Touch"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"renderfx" "0"
-	"rendermode" "0"
-	"respawntime" "10"
-	"shadowcastdist" "0"
-	"skin" "0"
-	"spawn_sound" "Item.Materialize"
-	"texframeindex" "0"
-	"origin" "0 832 352.269"
-	editor
-	{
-		"color" "0 0 200"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[500 -12768]"
 	}
 }
 entity
@@ -132316,23 +132285,6 @@ entity
 }
 entity
 {
-	"id" "111654"
-	"classname" "of_music_player"
-	"Index" "0"
-	"LoopingSongName" "DeathmatchMusic.Map01_Waiting"
-	"StartDisabled" "0"
-	"WaitingForPlayers" "1"
-	"origin" "-8 232 114"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 1500]"
-	}
-}
-entity
-{
 	"id" "111722"
 	"classname" "env_soundscape"
 	"angles" "0 0 0"
@@ -132349,13 +132301,45 @@ entity
 		"logicalpos" "[0 1000]"
 	}
 }
+entity
+{
+	"id" "112433"
+	"classname" "item_healthkit_mega"
+	"angles" "0 180 0"
+	"AutoMaterialize" "1"
+	"disablereceiveshadows" "0"
+	"disableshadows" "0"
+	"effects" "0"
+	"HiddenWhenRespawning" "1"
+	"model" "models/pickups/megahealth.mdl"
+	"pickup_sound" "HealthkitMega.Touch"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"respawndelay" "0"
+	"respawntime" "300"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"spawn_sound" "Item.Materialize"
+	"texframeindex" "0"
+	"origin" "0 832 353.005"
+	editor
+	{
+		"color" "0 0 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-1036.51 -214.932 201.939]"
-		"look" "[-773.875 -170.519 205.659]"
+		"position" "[109.814 194.391 190.63]"
+		"look" "[-95.1717 169.957 22.2645]"
 	}
 	camera
 	{
