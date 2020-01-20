@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "1292"
+	"mapversion" "1295"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -32,7 +32,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "1292"
+	"mapversion" "1295"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"detailmaterial" "detail/detailsprites"
@@ -83312,7 +83312,7 @@ entity
 	"HiddenWhenRespawning" "0"
 	"maxdxlevel" "0"
 	"mindxlevel" "0"
-	"model" "models/weapons/w_models/w_smg_dm.mdl"
+	"model" "models/weapons/w_models/w_tommygun.mdl"
 	"pickup_sound" "AmmoPack.Touch"
 	"powerup_model" "models/weapons/w_models/w_smg_dm.mdl"
 	"renderamt" "255"
@@ -83326,7 +83326,7 @@ entity
 	"spawn_sound" "Item.Materialize"
 	"targetname" "Weapon_SMG"
 	"texframeindex" "0"
-	"weaponname" "tf_weapon_smg_mercenary"
+	"weaponname" "tf_weapon_tommygun"
 	connections
 	{
 		"OnPlayerTouch" "Emitter_SMG,skin,0,0,-1"
@@ -87464,8 +87464,6 @@ entity
 	connections
 	{
 		"OnMapSpawn" "Music,ToggleSound,,0,-1"
-		"OnMapSpawn" "servercommands,Command,of_falldamage 0,0,-1"
-		"OnMapSpawn" "servercommands,Command,mp_maxrounds 10,0,-1"
 		"OnMapSpawn" "Portalhum,ToggleSound,,0,-1"
 	}
 	"origin" "-242.339 42.161 98.709"
