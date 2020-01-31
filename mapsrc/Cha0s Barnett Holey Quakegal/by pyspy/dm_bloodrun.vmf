@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "251"
+	"mapversion" "264"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "251"
+	"mapversion" "264"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -52572,6 +52572,8 @@ entity
 	connections
 	{
 		"OnTrigger" "temp_telefade,Fade,,0,-1"
+		"OnEndTouch" "Tele_SlipCorner_TouchSND2,PlaySound,,0,-1"
+		"OnEndTouch" "TeleExitSND_Quicklime,PlaySound,,0,-1"
 	}
 	solid
 	{
@@ -56991,6 +56993,8 @@ entity
 	connections
 	{
 		"OnTrigger" "temp_telefade,Fade,,0,-1"
+		"OnEndTouch" "TeleExitSND_Grate,PlaySound,,0,-1"
+		"OnEndTouch" "TeleExitSND_Spytech,PlaySound,,0,-1"
 	}
 	solid
 	{
@@ -59479,8 +59483,8 @@ entity
 	"rendercolor" "255 255 255"
 	"renderfx" "0"
 	"rendermode" "0"
-	"respawndelay" "120"
-	"respawntime" "120"
+	"respawndelay" "60"
+	"respawntime" "60"
 	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
 	"skin" "2"
@@ -67397,7 +67401,7 @@ entity
 {
 	"id" "25218"
 	"classname" "item_healthkit_mega"
-	"angles" "0 0 0"
+	"angles" "0 270 0"
 	"AutoMaterialize" "1"
 	"body" "0"
 	"disablereceiveshadows" "0"
@@ -67416,7 +67420,7 @@ entity
 	"skin" "0"
 	"spawn_sound" "Item.Materialize"
 	"texframeindex" "0"
-	"origin" "-32 336 -288"
+	"origin" "-32 338 -288"
 	editor
 	{
 		"color" "0 0 200"
@@ -67500,6 +67504,7 @@ entity
 		"OnMapSpawn" "tonemap_global,SetAutoExposureMin,.8,0,-1"
 		"OnMapSpawn" "tonemap_global,SetAutoExposureMax,1.1,0,-1"
 		"OnMapSpawn" "tonemap_global,SetBloomScale,.5,0,-1"
+		"OnMapSpawn" "Portalhum,ToggleSound,,0,-1"
 	}
 	"origin" "300.07 -251.739 36.7576"
 	editor
@@ -71579,13 +71584,503 @@ entity
 		"logicalpos" "[2000 13500]"
 	}
 }
+entity
+{
+	"id" "53155"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "Teleport.Touch"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "Tele_SlipCorner_TouchSND2"
+	"volstart" "0"
+	"origin" "98 1362.14 -237.677"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "53158"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "Ambient.Hum"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "16"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "Portalhum"
+	"volstart" "0"
+	"origin" "97.709 1394 -293.677"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "53185"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "Teleport.Touch"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "TeleExitSND_Grate"
+	"volstart" "0"
+	"origin" "-24 208 98.6583"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "53188"
+	"classname" "info_overlay"
+	"angles" "0 0 0"
+	"BasisNormal" "-0 0 1"
+	"BasisOrigin" "-24 208.53 48"
+	"BasisU" "1 0 0"
+	"BasisV" "0 1 -0"
+	"EndU" "1"
+	"EndV" "0"
+	"fademindist" "-1"
+	"material" "overlays/drain001"
+	"sides" "1905"
+	"StartU" "0"
+	"StartV" "1"
+	"uv0" "-19.4818 -20 0"
+	"uv1" "-19.4818 20 0"
+	"uv2" "19.4818 20 0"
+	"uv3" "19.4818 -20 0"
+	"origin" "-24 208.53 48"
+	editor
+	{
+		"color" "80 150 225"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "53293"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "Teleport.Touch"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "TeleExitSND_Quicklime"
+	"volstart" "0"
+	"origin" "1184 -254 116.512"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "53296"
+	"classname" "info_overlay"
+	"angles" "0 0 0"
+	"BasisNormal" "-0 0 1"
+	"BasisOrigin" "1184 -256 48"
+	"BasisU" "1 0 0"
+	"BasisV" "0 1 -0"
+	"EndU" "1"
+	"EndV" "0"
+	"fademindist" "-1"
+	"material" "overlays/drain001"
+	"sides" "318"
+	"StartU" "0"
+	"StartV" "1"
+	"uv0" "-19.3142 -20.947 0"
+	"uv1" "-19.3142 20.947 0"
+	"uv2" "19.3142 20.947 0"
+	"uv3" "19.3142 -20.947 0"
+	"origin" "1184 -256 48"
+	editor
+	{
+		"color" "80 150 225"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "53329"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "Teleport.Touch"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "TeleExitSND_Spytech"
+	"volstart" "0"
+	"origin" "988 -160 -232"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "53344"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "Ambient.Hum"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "1250"
+	"spawnflags" "16"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "Portalhum"
+	"volstart" "0"
+	"origin" "956 -154.747 -251.9"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "53359"
+	"classname" "info_particle_system"
+	"angles" "0 0 0"
+	"cpoint1_parent" "0"
+	"cpoint2_parent" "0"
+	"cpoint3_parent" "0"
+	"cpoint4_parent" "0"
+	"cpoint5_parent" "0"
+	"cpoint6_parent" "0"
+	"cpoint7_parent" "0"
+	"effect_name" "teleporter_red_entrance"
+	"flag_as_weather" "0"
+	"start_active" "1"
+	"origin" "-272 -260 -286.972"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[3000 -6768]"
+	}
+}
+entity
+{
+	"id" "53619"
+	"classname" "info_particle_system"
+	"angles" "0 0 0"
+	"cpoint1_parent" "0"
+	"cpoint2_parent" "0"
+	"cpoint3_parent" "0"
+	"cpoint4_parent" "0"
+	"cpoint5_parent" "0"
+	"cpoint6_parent" "0"
+	"cpoint7_parent" "0"
+	"effect_name" "teleporter_red_entrance"
+	"flag_as_weather" "0"
+	"start_active" "1"
+	"origin" "1184 800 -292"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[3000 -6768]"
+	}
+}
+entity
+{
+	"id" "54010"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "red_beam4"
+	"origin" "984 -127.508 -235.303"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 3500]"
+	}
+}
+entity
+{
+	"id" "54012"
+	"classname" "env_beam"
+	"BoltWidth" "2"
+	"decalname" "Bigshot"
+	"dissolvetype" "-1"
+	"HDRColorScale" "1.0"
+	"life" "0"
+	"LightningEnd" "red_beam4"
+	"LightningStart" "red_beam3"
+	"NoiseAmplitude" "5"
+	"Radius" "256"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"StrikeTime" "1"
+	"texture" "effects/flagtrail_red.vmt"
+	"TextureScroll" "0"
+	"origin" "984 -156.055 -235.303"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 2500]"
+	}
+}
+entity
+{
+	"id" "54016"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "red_beam3"
+	"origin" "984 -184.601 -235.303"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 3000]"
+	}
+}
+entity
+{
+	"id" "54066"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "red_beam2"
+	"origin" "126.111 1374 -239.665"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 2000]"
+	}
+}
+entity
+{
+	"id" "54068"
+	"classname" "env_beam"
+	"BoltWidth" "2"
+	"decalname" "Bigshot"
+	"dissolvetype" "-1"
+	"HDRColorScale" "1.0"
+	"life" "0"
+	"LightningEnd" "red_beam2"
+	"LightningStart" "red_beam1"
+	"NoiseAmplitude" "5"
+	"Radius" "256"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"StrikeTime" "1"
+	"texture" "effects/flagtrail_red.vmt"
+	"TextureScroll" "0"
+	"origin" "95 1374 -239.665"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 1500]"
+	}
+}
+entity
+{
+	"id" "54072"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"targetname" "red_beam1"
+	"origin" "63.8889 1374 -239.665"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 1000]"
+	}
+}
+entity
+{
+	"id" "54097"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"health" "10"
+	"message" "ambient/energy/force_field_loop1.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "512"
+	"spawnflags" "16"
+	"targetname" "laser_ambient"
+	"origin" "969.799 -154 -250"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 -9268]"
+	}
+}
+entity
+{
+	"id" "54100"
+	"classname" "light"
+	"_light" "166 130 130 200"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_quadratic_attn" "1"
+	"spawnflags" "0"
+	"origin" "969.799 -154 -242"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 5000]"
+	}
+}
+entity
+{
+	"id" "54124"
+	"classname" "ambient_generic"
+	"angles" "0 0 0"
+	"health" "10"
+	"message" "ambient/energy/force_field_loop1.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "512"
+	"spawnflags" "16"
+	"targetname" "laser_ambient"
+	"origin" "96 1382 -258.68"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 -9268]"
+	}
+}
+entity
+{
+	"id" "54127"
+	"classname" "light"
+	"_light" "166 130 130 200"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_quadratic_attn" "1"
+	"spawnflags" "0"
+	"origin" "96 1382 -250.68"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[500 5000]"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[52.4745 -0.37995 374.461]"
-		"look" "[196.831 -205.717 114.54]"
+		"position" "[1142.55 -114.672 -168.858]"
+		"look" "[1478.1 -3.65309 -243.983]"
 	}
 }
 cordon
