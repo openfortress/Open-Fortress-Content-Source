@@ -930,6 +930,9 @@ $sequence taunt03 "taunt03.dmx" noanimation {
 
 $sequence selectionMenu_all "selectionMenu_Anim01.dmx" fps 30 event AE_CL_PLAYSOUND 20 "Selection.mercenaryLauncherGrab" event AE_CL_PLAYSOUND 24 "Selection.mercenaryEquipment" event AE_CL_PLAYSOUND 36 "Selection.mercenaryClothesRustle" event AE_CL_PLAYSOUND 47 "Selection.mercenaryLauncherGrab" event AE_CL_PLAYSOUND 64 "Selection.mercenaryClothesRustle" event AE_CL_PLAYSOUND 73 "Selection.mercenaryLauncherGrab" event AE_CL_PLAYSOUND 94 "Selection.mercenaryLauncherSetStart" event AE_CL_PLAYSOUND 103 "Selection.mercenaryLauncherSetStop" event AE_CL_PLAYSOUND 103 "Selection.mercenaryLauncherHitGround" //hidden localhierarchy "weapon_bone" "bip_foot_R"
 
+// HEADSHOT ANIM
+
+$sequence primary_death_headshot "primary_death_headshot.dmx" ikrule lhand release ikrule rhand release ikrule lfoot release ikrule rfoot release
 
 // --------------------------
 // MOVEMENT MOVEMENT MOVEMENT
