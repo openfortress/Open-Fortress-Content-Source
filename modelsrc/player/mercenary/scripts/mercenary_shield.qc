@@ -1,7 +1,7 @@
 $modelname "player/attachments/mercenary_shield.mdl"
 
 // Define the variable that mercenary.qci will use to load the dmx files for high and low end models.
-$definevariable dmxFile "../parts/dmx/mercenary_shield.dmx"
+$definevariable dmxFile "../parts/dmx/ref.smd"
 
 $alwayscollapse "prp_helmet"
 $alwayscollapse "rt_helmet_strap_base"
