@@ -1,0 +1,16 @@
+$ikchain rhand "bip_hand_R"
+$ikchain lhand "bip_hand_L"
+$ikchain rfoot "bip_foot_R"
+$ikchain lfoot "bip_foot_L"
+                          
+$cmdlist lockfeet {
+	ikrule lfoot footstep height 20 floor 0
+	ikrule rfoot footstep height 20 floor 0
+}
+
+
+
+$poseparameter "body_pitch" -45 45 loop 360
+$poseparameter "body_yaw" 	-45 45 loop 360
+
+$motionrollback 0
