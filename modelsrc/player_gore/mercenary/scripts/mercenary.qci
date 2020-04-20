@@ -42,7 +42,11 @@ $model mercenary $dmxFile$ {
 	flexcontroller eyes range -45 45 eyes_rightleft
 }
 
-$model "torso" "../parts/dmx/body_torso.dmx"
+$bodygroup torso
+{
+	studio "../parts/dmx/body_torso.dmx"
+	blank
+}
 
 $bodygroup head
 {
@@ -52,22 +56,37 @@ $bodygroup head
 	studio "../parts/dmx/body_head_low.dmx"
 }
 
+
+$bodygroup lefthand
+{
+	studio "../parts/dmx/body_hand_left_gloves.dmx"
+	blank
+	studio "../parts/dmx/body_hand_left_gloves_fingerless.dmx" 
+	studio "../parts/dmx/body_hand_left_bare.dmx"
+}
+
+$bodygroup righthand
+{
+	studio "../parts/dmx/body_hand_right_gloves.dmx"
+	blank
+	studio "../parts/dmx/body_hand_right_gloves_fingerless.dmx"
+	studio "../parts/dmx/body_hand_right_bare.dmx"
+}
+
 $bodygroup leftarm
 {
-	studio "../parts/dmx/body_arm_left_gloves.dmx"
-	studio "../parts/dmx/body_arm_left_gloves_fingerless.dmx"
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
 	studio "../parts/dmx/body_arm_left_low.dmx" // gore
 	studio "../parts/dmx/body_arm_left_high.dmx" // gore
-	studio "../parts/dmx/body_arm_left_bare.dmx"
 }
 
 $bodygroup rightarm
 {
-	studio "../parts/dmx/body_arm_right_gloves.dmx"
-	studio "../parts/dmx/body_arm_right_gloves_fingerless.dmx"
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
 	studio "../parts/dmx/body_arm_right_low.dmx" // gore
 	studio "../parts/dmx/body_arm_right_high.dmx" // gore
-	studio "../parts/dmx/body_arm_right_bare.dmx"
 }
 
 $bodygroup leftleg
