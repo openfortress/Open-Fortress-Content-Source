@@ -7,7 +7,6 @@ $bodygroup "v_bfg"
 	studio "v_bfg.smd"
 }
 
-
 $surfaceprop "default"
 
 $contents "solid"
@@ -20,8 +19,15 @@ $cdmaterials "models\weapons\v_bfg\"
 $cdmaterials ""
 
 $attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0
-$attachment "muzzle" "muzzle" 0 0 0 rotate -90 0 0
+$attachment "muzzle" "weapon_bone_1" 0 5 0 rotate -90 0 0
 $attachment "pilotlight" "weapon_bone" 4.38 -3.2 68.11 rotate -28.35 118.88 -132.36
+
+$attachment "pipe1" "weapon_bone" 9.00 -1.00 15.00 rotate 90 -20 0
+$attachment "pipe2" "weapon_bone" 9.00 -1.00 18.80 rotate 90 -20 0
+$attachment "pipe3" "weapon_bone" 9.00 -1.00 22.50 rotate 90 -20 0
+$attachment "pipe4" "weapon_bone" -9.00 -1.00 15.00 rotate 90 200 0
+$attachment "pipe5" "weapon_bone" -9.00 -1.00 18.80 rotate 90 200 0
+$attachment "pipe6" "weapon_bone" -9.00 -1.00 22.50 rotate 90 200 0
 
 $cbox 0 0 0 0 0 0
 
@@ -123,6 +129,14 @@ $sequence "chargeup" {
 	"v_bfg_anims\chargeup.smd"
 	activity "ACT_VM_CHARGEUP" 1
 	{ event 5004 1 "Weapon_MLG.Charge" }
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "mlg_chargeup_dm follow_attachment muzzle" }
+	
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "gib_exhaust follow_attachment pipe1" }
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "gib_exhaust follow_attachment pipe2" }
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "gib_exhaust follow_attachment pipe3" }
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "gib_exhaust follow_attachment pipe4" }
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "gib_exhaust follow_attachment pipe5" }
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "gib_exhaust follow_attachment pipe6" }
 	fadein 0.2
 	fadeout 0.2
 	node "raised"
