@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "313"
+	"mapversion" "314"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -56,7 +56,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "313"
+	"mapversion" "314"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.3.24 from dm_cargo"
 	"detailmaterial" "detail/detailsprites_2fort"
@@ -40231,7 +40231,7 @@ entity
 	"fadescale" "1"
 	"MaxAnimTime" "10"
 	"MinAnimTime" "5"
-	"model" "models/weapons/w_models/medic_crowbar.mdl"
+	"model" "models/weapons/w_models/w_crowbar.mdl"
 	"modelscale" "1.0"
 	"PerformanceMode" "0"
 	"physdamagescale" "1.0"
@@ -41172,52 +41172,22 @@ entity
 entity
 {
 	"id" "305583"
-	"classname" "logic_auto"
-	"spawnflags" "1"
+	"classname" "dm_music_manager"
+	"Index" "0"
+	"RoundMusic" "DeathmatchMusic.Healer"
 	"targetname" "Music_LogicAuto"
+	"WaitingForPlayerMusic" "DeathmatchMusic.AtFortressGate_Waiting"
 	connections
 	{
 		"OnMapSpawn" "LevelMusic,ToggleSound,,0,-1"
 	}
-	"origin" "12 -4 144"
+	"origin" "8 -4 144"
 	editor
 	{
 		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[500 -9768]"
-	}
-}
-entity
-{
-	"id" "305585"
-	"classname" "ambient_generic"
-	"angles" "0 0 0"
-	"cspinup" "0"
-	"fadeinsecs" "0"
-	"fadeoutsecs" "0"
-	"health" "10"
-	"lfomodpitch" "0"
-	"lfomodvol" "0"
-	"lforate" "0"
-	"lfotype" "0"
-	"message" "DeathmatchMusic.Healer"
-	"pitch" "100"
-	"pitchstart" "100"
-	"preset" "0"
-	"radius" "999999"
-	"spawnflags" "17"
-	"spindown" "0"
-	"spinup" "0"
-	"targetname" "LevelMusic"
-	"volstart" "0"
-	"origin" "-4 -4 145.01"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[500 -9268]"
 	}
 }
 entity
@@ -160126,8 +160096,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[90.7068 -820.718 385.244]"
-		"look" "[-27.8323 -593.738 311.816]"
+		"position" "[-99.1102 -612.178 145.823]"
+		"look" "[-104.573 -346.007 136.525]"
 	}
 	camera
 	{
