@@ -1026,28 +1026,46 @@ $sequence PRIMARY_stun_end {
 //-----------------------------------------------------------------------------------
 //TAUNTS
 //-----------------------------------------------------------------------------------
-$sequence layer_taunt01 "taunt01.dmx" fps 30 hidden
-$sequence taunt01 "taunt01.dmx" noanimation {
-	numframes 85
-	blendlayer layer_taunt01  0 5 79 84
-	event AE_WPN_HIDE 1
-	event AE_WPN_UNHIDE 84
-	} { event 5004 17 "Taunt.mercenary01ClothesSwipe" } { event 5004 17 "Taunt.mercenary01HeelClick" } { event 5004 47 "Taunt.mercenary01ClothesRustle" } { event 5004 59 "Taunt.mercenary01HelmetJostle" }
-
-$sequence layer_taunt02 "taunt02.dmx" fps 30 hidden
-$sequence taunt02 "taunt02.dmx" noanimation {
-	numframes 130
-	blendlayer layer_taunt02  0 5 124 129
+$sequence layer_taunt01 "taunt_knuckles.dmx" fps 30 hidden
+$sequence taunt01 "taunt_knuckles.dmx" noanimation {
+	numframes 109
+	blendlayer layer_taunt01  0 5 95 108
  	event AE_CL_BODYGROUP_SET_VALUE 18 "rocket 1"
- 	event AE_CL_BODYGROUP_SET_VALUE 126 "rocket 0"
+ 	event AE_CL_BODYGROUP_SET_VALUE 108 "rocket 0"
 	event AE_WPN_HIDE 1
-	event AE_WPN_UNHIDE 129
-	} { event 5004 71 "Taunt.mercenary02GrenadeCatch" } { event 5004 85 "Taunt.mercenary02GrenadeCatch" } { event 5004 101 "Taunt.mercenary02GrenadeCatch" } { event 5004 108 "Taunt.mercenary02GrenadeCatch" }  { event 5004 64 "Taunt.mercenary02ShovelCatch" }  { event 5004 92 "Taunt.mercenary02ShovelCatch" } { event 5004 11 "Taunt.mercenary02ClothesRustle" }
+	event AE_WPN_UNHIDE 108
+	}{ event 5004 18 "Weapon_Fist.HitHand" }{ event 5004 29 "Taunt.SoldierKnuckleCrack" }{ event 5004 55 "Weapon_Fist.HitHand" }{ event 5004 63 "Taunt.SoldierKnuckleCrack" }
 
-$sequence layer_taunt03 "taunt03.dmx" fps 30 hidden
-$sequence taunt03 "taunt03.dmx" noanimation {
-	numframes 120
-	blendlayer layer_taunt03  0 5 114 119
+$sequence layer_taunt02 "taunt_soclose.dmx" fps 30 hidden
+$sequence taunt02 "taunt_soclose.dmx" noanimation {
+	numframes 104
+	blendlayer layer_taunt02  0 5 89 104
+	event AE_WPN_HIDE 1
+	event AE_WPN_UNHIDE 100
+	} { event 5004 13 "Taunt.mercenary01ClothesSwipe" } { event 5004 24 "Taunt.mercenary01HeelClick" } { event 5004 80 "Taunt.mercenary01ClothesRustle" }
+	
+	
+$sequence layer_taunt03 "taunt_groovy.dmx" fps 30 hidden
+$sequence taunt03 "taunt_groovy.dmx" noanimation {
+	numframes 61
+	blendlayer layer_taunt03 0 5 52 60
+	event AE_WPN_HIDE 1
+	event AE_WPN_UNHIDE 60
+	}{ event 5004 17 "Taunt.mercenary01ClothesSwipe" }{ event 5004 17 "Taunt.mercenary01HeelClick" }{ event 5004 47 "Taunt.mercenary01ClothesRustle" }{ event 5004 59 "Taunt.mercenary01HelmetJostle" }
+
+$sequence layer_taunt04 "taunt_threat.dmx" fps 30 hidden
+$sequence taunt04 "taunt_threat.dmx" noanimation {
+	numframes 71
+	blendlayer layer_taunt04  0 5 65 70
+	event AE_WPN_HIDE 1
+	event AE_WPN_UNHIDE 70
+	} { event 5004 12 "Taunt.mercenary01ClothesSwipe" } { event 5004 19 "Taunt.mercenary01HeelClick" } { event 5004 35 "Taunt.mercenary01ClothesRustle" } { event 5004 65 "Taunt.mercenary01HeelClick" }
+	
+
+$sequence layer_taunt05 "taunt_bombscare.dmx" fps 30 hidden
+$sequence taunt05 "taunt_bombscare.dmx" noanimation {
+	numframes 246
+	blendlayer layer_taunt05  0 5 240 246
 	} { event 5004 27 "Taunt.mercenary03FootStomp" } { event 5004 79 "Taunt.mercenary03HelmetHit" } { event 5004 89 "Taunt.mercenary03HelmetHit" } { event 5004 99 "Taunt.mercenary03HelmetHit" } { event 5004 27 "Taunt.mercenary03ClothesRustle" } { event 5004 60 "Taunt.mercenary03ClothesSwipe" } { event 5004 40 "Taunt.mercenary03HelmetJostle" }
 
 //CHARACTER SELECTION
