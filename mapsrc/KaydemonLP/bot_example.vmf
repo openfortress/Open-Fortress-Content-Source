@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8163"
-	"mapversion" "261"
+	"mapversion" "262"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "261"
+	"mapversion" "262"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -21420,6 +21420,158 @@ world
 	}
 	solid
 	{
+		"id" "68656"
+		side
+		{
+			"id" "10170"
+			"plane" "(1408 1840 -224) (1408 336 -224) (1088 336 -64)"
+			"material" "WATER/WATER_WELL"
+			"uaxis" "[0.894427 0 -0.447214 351.351] 0.25"
+			"vaxis" "[0 -1 0 -192] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10169"
+			"plane" "(1408 336 -1024) (1408 1840 -1024) (1088 1840 -1024)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10168"
+			"plane" "(1088 1840 -64) (1088 336 -64) (1088 336 -1024)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 -1 0 0] 0.25"
+			"vaxis" "[0 0 -1 -18.2857] 0.21875"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10167"
+			"plane" "(1408 336 -224) (1408 1840 -224) (1408 1840 -1024)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 -18.2857] 0.21875"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10166"
+			"plane" "(1408 1840 -224) (1088 1840 -64) (1088 1840 -1024)"
+			"material" "WATER/WATER_WELL"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 1 -256] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10165"
+			"plane" "(1088 336 -64) (1408 336 -224) (1408 336 -1024)"
+			"material" "WATER/WATER_WELL"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 -128] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 174 147"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
+		"id" "68679"
+		side
+		{
+			"id" "10182"
+			"plane" "(1824 336 -864) (1408 336 -224) (1408 1840 -224)"
+			"material" "WATER/WATER_WELL"
+			"uaxis" "[0.544988 0 -0.838444 432.848] 0.25"
+			"vaxis" "[0 -1 0 -192] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10181"
+			"plane" "(1824 1840 -1024) (1408 1840 -1024) (1408 336 -1024)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[-1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10180"
+			"plane" "(1408 336 -224) (1408 336 -1024) (1408 1840 -1024)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 -1 0 0] 0.25"
+			"vaxis" "[0 0 -1 -45.7143] 0.21875"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10179"
+			"plane" "(1824 1840 -864) (1824 1840 -1024) (1824 336 -1024)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 -45.7143] 0.21875"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10178"
+			"plane" "(1408 1840 -224) (1408 1840 -1024) (1824 1840 -1024)"
+			"material" "WATER/WATER_WELL"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 1 -256] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "10177"
+			"plane" "(1824 336 -864) (1824 336 -1024) (1408 336 -1024)"
+			"material" "WATER/WATER_WELL"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 -128] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 174 147"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
 		"id" "238"
 		side
 		{
@@ -34823,158 +34975,6 @@ world
 			"visgroupautoshown" "1"
 		}
 	}
-	solid
-	{
-		"id" "68656"
-		side
-		{
-			"id" "10170"
-			"plane" "(1408 1840 -224) (1408 336 -224) (1088 336 -64)"
-			"material" "WATER/WATER_WELL"
-			"uaxis" "[0.894427 0 -0.447214 351.351] 0.25"
-			"vaxis" "[0 -1 0 -192] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10169"
-			"plane" "(1408 336 -1024) (1408 1840 -1024) (1088 1840 -1024)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[-1 0 0 0] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10168"
-			"plane" "(1088 1840 -64) (1088 336 -64) (1088 336 -1024)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0 -1 0 0] 0.25"
-			"vaxis" "[0 0 -1 -18.2857] 0.21875"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10167"
-			"plane" "(1408 336 -224) (1408 1840 -224) (1408 1840 -1024)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[0 0 -1 -18.2857] 0.21875"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10166"
-			"plane" "(1408 1840 -224) (1088 1840 -64) (1088 1840 -1024)"
-			"material" "WATER/WATER_WELL"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 0 1 -256] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10165"
-			"plane" "(1088 336 -64) (1408 336 -224) (1408 336 -1024)"
-			"material" "WATER/WATER_WELL"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 0 -1 -128] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "0 174 147"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
-	solid
-	{
-		"id" "68679"
-		side
-		{
-			"id" "10182"
-			"plane" "(1824 336 -864) (1408 336 -224) (1408 1840 -224)"
-			"material" "WATER/WATER_WELL"
-			"uaxis" "[0.544988 0 -0.838444 432.848] 0.25"
-			"vaxis" "[0 -1 0 -192] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10181"
-			"plane" "(1824 1840 -1024) (1408 1840 -1024) (1408 336 -1024)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[-1 0 0 0] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10180"
-			"plane" "(1408 336 -224) (1408 336 -1024) (1408 1840 -1024)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0 -1 0 0] 0.25"
-			"vaxis" "[0 0 -1 -45.7143] 0.21875"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10179"
-			"plane" "(1824 1840 -864) (1824 1840 -1024) (1824 336 -1024)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[0 0 -1 -45.7143] 0.21875"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10178"
-			"plane" "(1408 1840 -224) (1408 1840 -1024) (1824 1840 -1024)"
-			"material" "WATER/WATER_WELL"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 0 1 -256] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "10177"
-			"plane" "(1824 336 -864) (1824 336 -1024) (1408 336 -1024)"
-			"material" "WATER/WATER_WELL"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 0 -1 -128] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "0 174 147"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
 	group
 	{
 		"id" "250"
@@ -38215,6 +38215,90 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[500 5500]"
+	}
+}
+entity
+{
+	"id" "69064"
+	"classname" "prop_dynamic"
+	"angles" "0 301 -90"
+	"DisableBoneFollowers" "0"
+	"disablereceiveshadows" "0"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_bat.mdl"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "6"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"texframeindex" "0"
+	"origin" "-663.998 2061.59 -397.371"
+	editor
+	{
+		"color" "177 194 0"
+		"groupid" "69218"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 3500]"
+	}
+}
+entity
+{
+	"id" "69060"
+	"classname" "prop_dynamic"
+	"angles" "0 301 -90"
+	"DisableBoneFollowers" "0"
+	"disablereceiveshadows" "0"
+	"effects" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"health" "0"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
+	"minhealthdmg" "0"
+	"model" "models/weapons/w_models/w_classic_knife.mdl"
+	"PerformanceMode" "0"
+	"physdamagescale" "1.0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
+	"shadowcastdist" "0"
+	"skin" "0"
+	"solid" "6"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"texframeindex" "0"
+	"origin" "-646.667 2072.12 -395.307"
+	editor
+	{
+		"color" "177 194 0"
+		"groupid" "69218"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 3500]"
 	}
 }
 entity
@@ -46001,7 +46085,7 @@ entity
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
 	"renderfx" "0"
-	"rendermode" "10"
+	"rendermode" "0"
 	"SetBodyGroup" "0"
 	"shadowcastdist" "0"
 	"skin" "0"
@@ -46047,7 +46131,7 @@ entity
 	"wait" "0"
 	connections
 	{
-		"OnStartTouchAll" "the_diamond,Alpha,0,0,-1"
+		"OnStartTouchAll" "the_diamond,SetRenderMode,10,0,-1"
 		"OnStartTouchAll" "OF_ANNOUNCER,AnnounceTeam,ALL Laugh,0,-1"
 		"OnStartTouchAll" "alarm,PlaySound,,0,-1"
 		"OnStartTouchAll" "guard_spawne*,SetTarget,!activator,0,-1"
@@ -49429,6 +49513,7 @@ entity
 		"OnTrigger" "guard_spawner_inside_3,SetTarget,facility_3,0,-1"
 		"OnTrigger" "guard_spawner_inside_2,SetTarget,facility_2,0,-1"
 		"OnTrigger" "guard_spawner_inside_1,SetTarget,facility_1,0,-1"
+		"OnTrigger" "the_diamond,SetRenderMode,0,0,-1"
 	}
 	"origin" "-640 2368 -504"
 	editor
@@ -51976,90 +52061,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 3000]"
-	}
-}
-entity
-{
-	"id" "69064"
-	"classname" "prop_dynamic"
-	"angles" "0 301 -90"
-	"DisableBoneFollowers" "0"
-	"disablereceiveshadows" "0"
-	"effects" "0"
-	"ExplodeDamage" "0"
-	"ExplodeRadius" "0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"health" "0"
-	"MaxAnimTime" "10"
-	"MinAnimTime" "5"
-	"minhealthdmg" "0"
-	"model" "models/weapons/w_models/w_bat.mdl"
-	"PerformanceMode" "0"
-	"physdamagescale" "1.0"
-	"pressuredelay" "0"
-	"RandomAnimation" "0"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"renderfx" "0"
-	"rendermode" "0"
-	"SetBodyGroup" "0"
-	"shadowcastdist" "0"
-	"skin" "0"
-	"solid" "6"
-	"spawnflags" "0"
-	"StartDisabled" "0"
-	"texframeindex" "0"
-	"origin" "-663.998 2061.59 -397.371"
-	editor
-	{
-		"color" "177 194 0"
-		"groupid" "69218"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 3500]"
-	}
-}
-entity
-{
-	"id" "69060"
-	"classname" "prop_dynamic"
-	"angles" "0 301 -90"
-	"DisableBoneFollowers" "0"
-	"disablereceiveshadows" "0"
-	"effects" "0"
-	"ExplodeDamage" "0"
-	"ExplodeRadius" "0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"health" "0"
-	"MaxAnimTime" "10"
-	"MinAnimTime" "5"
-	"minhealthdmg" "0"
-	"model" "models/weapons/w_models/w_classic_knife.mdl"
-	"PerformanceMode" "0"
-	"physdamagescale" "1.0"
-	"pressuredelay" "0"
-	"RandomAnimation" "0"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"renderfx" "0"
-	"rendermode" "0"
-	"SetBodyGroup" "0"
-	"shadowcastdist" "0"
-	"skin" "0"
-	"solid" "6"
-	"spawnflags" "0"
-	"StartDisabled" "0"
-	"texframeindex" "0"
-	"origin" "-646.667 2072.12 -395.307"
-	editor
-	{
-		"color" "177 194 0"
-		"groupid" "69218"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 3500]"
 	}
 }
 cameras
