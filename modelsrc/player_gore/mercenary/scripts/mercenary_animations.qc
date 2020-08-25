@@ -83,7 +83,7 @@ $sequence loadout_pistol_alt 		"loadout_pistol_alt.dmx" 	 loop fps 24 snap activ
 $sequence loadout_shotgun 			"loadout_shotgun.dmx" 		 loop fps 24 snap activity ACT_MERC_LOADOUT_SHOTGUN 1
 $sequence loadout_tommygun 			"loadout_tommygun.dmx" 		 loop fps 24 snap activity ACT_MERC_LOADOUT_TOMMYGUN 1
 $sequence loadout_rocketlauncher 	"loadout_rocketlauncher.dmx" loop fps 24 snap activity ACT_MERC_LOADOUT_ROCKETLAUNCHER 1
-
+$sequence loadout_chainsaw 			"loadout_chainsaw.dmx" 		 loop fps 24 snap activity ACT_MERC_LOADOUT_CHAINSAW 1
 
 //-----------------------------------------------------------------------------------
 // Winscreen anims
