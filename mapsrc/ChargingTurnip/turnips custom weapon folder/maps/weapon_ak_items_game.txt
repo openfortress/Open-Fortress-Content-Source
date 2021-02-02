@@ -1,0 +1,144 @@
+"items_game"
+{
+	"Weapons"
+	{
+	
+	"tf_weapon_ak"
+		{
+			"weapon_class"		"tf_weapon_assaultrifle"
+			//This tells the game what to base the weapon off of
+			//This affects third person animations, damage fall off, and how the projectile works
+			
+			"WeaponData"
+			{
+				// Attributes Base.
+				"printname"		"AK-47"
+				"BuiltRightHanded"	"0"
+				"weight"		"2"
+				"WeaponType"		"secondary"
+				"ITEM_FLAG_NOITEMPICKUP" 	"1"
+					
+				// Attributes TF. //
+				
+				"Damage"		"22"
+				"InstagibDamage"	"999" // Even though you can't get other weapons in instagib, they still have damage numbers for it
+				
+				"Range"			"8192"
+				
+				"BulletsPerShot"	"1" 
+				
+				"Spread"		"0.001"
+				
+				
+				"TimeFireDelay"			"0.175"
+				"TimeIdle"			"1.0"
+				
+				"TimeIdleEmpty"			"0.25"
+				"TimeReload"	"1.2"
+				
+				"ProjectileType"	"projectile_bullet"
+				"BrassModel"		"models/weapons/shells/shell_minigun.mdl"
+				
+				"UseRapidFireCrits"	"1"
+				
+				"HasTeamSkins_Viewmodel"			"1"
+				"HasTeamSkins_Worldmodel"			"1"
+				
+				"CanHeadshot"	"1"
+
+				// Ammo & Clip.
+				"primary_ammo"		"WEAPON_AMMO"
+				"secondary_ammo"	"None"
+				clip_size		"25"
+				default_clip		"25"
+				"MaxAmmo"	"50"
+
+				// 3-Wep System's Weapon Placement	
+				"bucket"			"0"
+				"bucket_position"		"0"
+				
+				// DM System's Weapon Placement	
+				"bucket_dm"		"4"
+				"bucket_dm_position"	"3"
+				"TracerEffect"		"bullet_pistol_tracer01"
+
+
+				// Muzzleflash
+				"MuzzleFlashModel"	"models/effects/sentry1_muzzle/sentry1_muzzle.mdl"
+				"MuzzleFlashModelDuration"	"0.11"
+				
+				"MuzzleFlashParticleEffect" "muzzle_smg"
+
+				// Animation.
+				"viewmodel"		"models/weapons/v_models/v_ak47.mdl"
+				"playermodel"	"models/weapons/w_models/w_ak47.mdl"
+				"anim_prefix"	"ac"
+				
+				"CenteredViewmodelOffset_Y" "-9.5"
+				"CenteredViewmodelOffset_Z" "-0.5"
+				"CenteredViewmodelAngle_Z" "-0.3"
+				
+				
+				"MinViewmodelOffset_X" "10"
+				"MinViewmodelOffset_Y" "0"
+				"MinViewmodelOffset_Z" "-7"
+
+				// Sounds.
+				// Max of 16 per category (ie. max 16 "single_shot" sounds).
+				SoundData
+				{
+					"reload"		"Weapon_AK47.WorldReload"
+					"empty"			"Weapon_AK47.ClipEmpty"	
+					"single_shot"		"Weapon_AK47.Single"
+					"burst"			"Weapon_AK47.SingleCrit"
+				}
+
+				// Weapon Sprite data is loaded by the Client DLL.
+				TextureData
+				{
+					"weapon"
+					{
+							"file"		"sprites/bucket_ak47"
+							"x"		"0"
+							"y"		"0"
+							"width"		"200"
+							"height"		"128"
+					}
+					"weapon_s"
+					{	
+							"file"		"sprites/bucket_ak47"
+							"x"		"0"
+							"y"		"0"
+							"width"		"200"
+							"height"		"128"
+					}
+					"ammo"
+					{
+							"file"		"sprites/a_icons1"
+							"x"			"55"
+							"y"			"60"
+							"width"		"73"
+							"height"	"15"
+					}
+					"crosshair"
+					{
+							"file"		"sprites/crosshairs"
+							"x"			"0"
+							"y"			"0"
+							"width"		"32"
+							"height"	"32"
+					}
+					"autoaim"
+					{
+							"file"		"sprites/crosshairs"
+							"x"			"0"
+							"y"			"48"
+							"width"		"24"
+							"height"	"24"
+					}
+				}
+			}
+		}
+		
+	}
+}
