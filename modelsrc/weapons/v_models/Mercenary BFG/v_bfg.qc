@@ -110,6 +110,7 @@ $sequence "draw" {
 	{ event 5004 0 "Weapon_MLG.Draw" }
 	{ event 5004 15 "Building_Dispenser.Build1b" }
 	{ event 5004 34 "Building_Sentrygun.BuildSteam3" }
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 40 "mlg_idle_dm follow_attachment muzzle" }
 	fadein 0.2
 	fadeout 0.2
 	node "raised"
@@ -119,6 +120,7 @@ $sequence "draw" {
 $sequence "fire" {
 	"v_bfg_anims\fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_CL_CREATE_PARTICLE_EFFECT 66 "mlg_idle_dm follow_attachment muzzle" }
 	fadein 0.2
 	fadeout 0.2
 	node "raised"
@@ -129,6 +131,7 @@ $sequence "chargeup" {
 	"v_bfg_anims\chargeup.smd"
 	activity "ACT_VM_CHARGEUP" 1
 	{ event 5004 1 "Weapon_MLG.Charge" }
+	{ event AE_CL_STOP_PARTICLE_EFFECT 	 1 "mlg_idle_dm" }
 	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "mlg_chargeup_dm follow_attachment muzzle" }
 	
 	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "gib_exhaust follow_attachment pipe1" }
