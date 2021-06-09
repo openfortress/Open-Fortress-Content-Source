@@ -1070,10 +1070,13 @@ $sequence taunt05 "taunt_bombscare.dmx" noanimation {
 	blendlayer layer_taunt05  0 5 240 246
 	} { event 5004 27 "Taunt.mercenary03FootStomp" } { event 5004 79 "Taunt.mercenary03HelmetHit" } { event 5004 89 "Taunt.mercenary03HelmetHit" } { event 5004 99 "Taunt.mercenary03HelmetHit" } { event 5004 27 "Taunt.mercenary03ClothesRustle" } { event 5004 60 "Taunt.mercenary03ClothesSwipe" } { event 5004 40 "Taunt.mercenary03HelmetJostle" }
 
-$sequence layer_taunt06 "taunt_bond.dmx" fps 30 hidden
-$sequence taunt06 "taunt_bond.dmx" noanimation {
+// We don't put numbered taunts beyond this
+// Because its shared stuff like the thriller dance
+
+$sequence layer_taunt_bond "taunt_bond.dmx" fps 30 hidden
+$sequence taunt_bond "taunt_bond.dmx" noanimation {
 	numframes 90
-	blendlayer layer_taunt06  0 6 70 90
+	blendlayer layer_taunt_bond  0 6 70 90
 	event AE_WPN_HIDE 1
 	event AE_WPN_UNHIDE 89
 	} { event 5004 2 "Taunt.Soldier01ClothesRustle" } { event 5004 10 "Taunt.Soldier03FootStomp" } { event 5004 17 "Taunt.Soldier01HeelClick" } { event 5004 43 "Taunt.Soldier03FootStomp" } { event 5004 47 "Taunt.BondGunFire" }
