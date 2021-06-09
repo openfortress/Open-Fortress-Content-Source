@@ -2,7 +2,7 @@
 
 $modelname "weapons\v_models\v_gravity_gauntlets.mdl"
 
-$bodygroup "DMCA"
+$bodygroup "YMCA"
 {
 	studio "v_grav_gaunt_ex.smd"
 }
