@@ -33,8 +33,6 @@ $attachment "prop_bone_4" "prop_bone_4" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
 
-$illumposition 0 0 0 bip_pelvis
-
 // model command - $dmxFile$ is specified in the high and low qc files.
 $model scout $dmxFile$ {
 
@@ -66,7 +64,8 @@ $bodygroup headphones
 
 $bodygroup shoes_socks
 {
-	studio "../parts/dmx/shoes_socks_bodygroup.dmx"
+	//studio "../parts/dmx/shoes_socks_bodygroup.dmx"
+	blank // sigh...
 	blank
 }
 
@@ -74,6 +73,46 @@ $bodygroup dogtags
 {
 	studio "../parts/dmx/dogtags_bodygroup.dmx"
 	blank
+}
+
+$bodygroup head
+{
+	blank // flexes cannot be put into a bodygroup, the head will be scaled down instead to hide it
+	blank
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup rightarm
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
 }
 
 $include "scout_definebones.qci"
@@ -140,17 +179,172 @@ $include "scout_hitbox.qci"
 // Materials and texturegroups.
 $cdmaterials "models/player/scout/hwm/"
 $cdmaterials "models/player/scout/"
+$cdmaterials "models/player/demo/"
 
 $texturegroup "scout_Skins"
 {
-	{ "scout_red"          "scout_head_red"          "scout_sfm_fingers"			  "eyeball_l"     "eyeball_r"     }
-	{ "scout_blue"         "scout_head_blue"         "scout_sfm_fingers"			  "eyeball_l"     "eyeball_r"     }
-	{ "scout_red_invun"    "scout_head_red_invun"    "scout_sfm_fingers_red_invun"    "eyeball_invun" "eyeball_invun" }
-	{ "scout_blue_invun"   "scout_head_blue_invun"   "scout_sfm_fingers_blue_invun"   "eyeball_invun" "eyeball_invun" }
-	{ "scout_custom"       "scout_head_custom"       "scout_sfm_fingers"			  "eyeball_l"     "eyeball_r"     }
-	{ "scout_custom_invun" "scout_head_custom_invun" "scout_sfm_fingers_custom_invun" "eyeball_invun" "eyeball_invun" }
+	{ "scout_red"          "scout_head_red"          "scout_sfm_fingers"			  "eyeball_l"     "eyeball_r"     "scout_gibs_red"     "scout_gibs_head"    	 "demoman_gibs_red"        }
+	{ "scout_blue"         "scout_head_blue"         "scout_sfm_fingers"			  "eyeball_l"     "eyeball_r"     "scout_gibs_blue"    "scout_gibs_head"    	 "demoman_gibs_red"        }
+	{ "scout_red_invun"    "scout_head_red_invun"    "scout_sfm_fingers_red_invun"    "eyeball_invun" "eyeball_invun" "scout_red_invun"    "scout_head_red_invun"    "scout_head_red_invun"    }
+	{ "scout_blue_invun"   "scout_head_blue_invun"   "scout_sfm_fingers_blue_invun"   "eyeball_invun" "eyeball_invun" "scout_blue_invun"   "scout_head_blue_invun"   "scout_head_blue_invun"   }
+	{ "scout_custom"       "scout_head_custom"       "scout_sfm_fingers"			  "eyeball_l"     "eyeball_r"     "scout_gibs_custom"  "scout_gibs_head" 		 "demoman_gibs_red"        }
+	{ "scout_custom_invun" "scout_head_custom_invun" "scout_sfm_fingers_custom_invun" "eyeball_invun" "eyeball_invun" "scout_custom_invun" "scout_head_custom_invun" "scout_head_custom_invun" }
+	{ "scout_custom"       "scout_head_custom"       "scout_sfm_fingers"			  "eyeball_l"     "eyeball_r"     "scout_gibs_custom"  "scout_gibs_head" 		 "demoman_gibs_red"        }
+	{ "scout_custom_invun" "scout_head_custom_invun" "scout_sfm_fingers_custom_invun" "eyeball_invun" "eyeball_invun" "scout_custom_invun" "scout_head_custom_invun" "scout_head_custom_invun" }
 }
 
+$lod 11
+{
+	// blank to not mess up lod order
+} 
+
+$lod 22
+{
+	// blank to not mess up lod order
+} 
+
+$lod 33
+{
+	nofacial
+	removemesh "models/player/scout/eyeball_l"
+	removemesh "models/player/scout/eyeball_r"
+
+	// Don't collapse bip_hand because it has an attachment.
+	bonetreecollapse "bip_thumb_0_R"
+	bonetreecollapse "bip_index_0_R"
+	bonetreecollapse "bip_middle_0_R"
+	bonetreecollapse "bip_ring_0_R"
+	bonetreecollapse "bip_pinky_0_R"
+	replacebone "bip_thumb_0_R" "bip_hand_R"
+	replacebone "bip_index_0_R" "bip_hand_R"
+	replacebone "bip_middle_0_R" "bip_hand_R"
+	replacebone "bip_ring_0_R" "bip_hand_R"
+	replacebone "bip_pinky_0_R" "bip_hand_R"
+	
+	bonetreecollapse "bip_thumb_0_L"
+	bonetreecollapse "bip_index_0_L"
+	bonetreecollapse "bip_middle_0_L"
+	bonetreecollapse "bip_ring_0_L"
+	bonetreecollapse "bip_pinky_0_L"
+	replacebone "bip_thumb_0_L" "bip_hand_L"
+	replacebone "bip_index_0_L" "bip_hand_L"
+	replacebone "bip_middle_0_L" "bip_hand_L"
+	replacebone "bip_ring_0_L" "bip_hand_L"
+	replacebone "bip_pinky_0_L" "bip_hand_L"
+
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "bip_packmiddle"
+	replacebone "bip_dogtag_0" "bip_neck"
+}
+
+$lod 44
+{
+	nofacial
+	removemesh "models/player/scout/eyeball_l"
+	removemesh "models/player/scout/eyeball_r"
+
+	// Don't collapse bip_hand because it has an attachment.
+	bonetreecollapse "bip_thumb_0_R"
+	bonetreecollapse "bip_index_0_R"
+	bonetreecollapse "bip_middle_0_R"
+	bonetreecollapse "bip_ring_0_R"
+	bonetreecollapse "bip_pinky_0_R"
+	replacebone "bip_thumb_0_R" "bip_hand_R"
+	replacebone "bip_index_0_R" "bip_hand_R"
+	replacebone "bip_middle_0_R" "bip_hand_R"
+	replacebone "bip_ring_0_R" "bip_hand_R"
+	replacebone "bip_pinky_0_R" "bip_hand_R"
+	
+	bonetreecollapse "bip_thumb_0_L"
+	bonetreecollapse "bip_index_0_L"
+	bonetreecollapse "bip_middle_0_L"
+	bonetreecollapse "bip_ring_0_L"
+	bonetreecollapse "bip_pinky_0_L"
+	replacebone "bip_thumb_0_L" "bip_hand_L"
+	replacebone "bip_index_0_L" "bip_hand_L"
+	replacebone "bip_middle_0_L" "bip_hand_L"
+	replacebone "bip_ring_0_L" "bip_hand_L"
+	replacebone "bip_pinky_0_L" "bip_hand_L"
+
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "bip_packmiddle"
+	replacebone "bip_dogtag_0" "bip_neck"
+}
+
+$lod 55
+{
+	nofacial
+	removemesh "models/player/scout/eyeball_l"
+	removemesh "models/player/scout/eyeball_r"
+
+	// Don't collapse bip_hand because it has an attachment.
+	bonetreecollapse "bip_thumb_0_R"
+	bonetreecollapse "bip_index_0_R"
+	bonetreecollapse "bip_middle_0_R"
+	bonetreecollapse "bip_ring_0_R"
+	bonetreecollapse "bip_pinky_0_R"
+	replacebone "bip_thumb_0_R" "bip_hand_R"
+	replacebone "bip_index_0_R" "bip_hand_R"
+	replacebone "bip_middle_0_R" "bip_hand_R"
+	replacebone "bip_ring_0_R" "bip_hand_R"
+	replacebone "bip_pinky_0_R" "bip_hand_R"
+	
+	bonetreecollapse "bip_thumb_0_L"
+	bonetreecollapse "bip_index_0_L"
+	bonetreecollapse "bip_middle_0_L"
+	bonetreecollapse "bip_ring_0_L"
+	bonetreecollapse "bip_pinky_0_L"
+	replacebone "bip_thumb_0_L" "bip_hand_L"
+	replacebone "bip_index_0_L" "bip_hand_L"
+	replacebone "bip_middle_0_L" "bip_hand_L"
+	replacebone "bip_ring_0_L" "bip_hand_L"
+	replacebone "bip_pinky_0_L" "bip_hand_L"
+
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "bip_packmiddle"
+	replacebone "bip_dogtag_0" "bip_neck"
+}
+
+$shadowlod
+{
+	nofacial
+	removemesh "models/player/scout/eyeball_l"
+	removemesh "models/player/scout/eyeball_r"
+
+	// Don't collapse bip_hand because it has an attachment.
+	bonetreecollapse "bip_thumb_0_R"
+	bonetreecollapse "bip_index_0_R"
+	bonetreecollapse "bip_middle_0_R"
+	bonetreecollapse "bip_ring_0_R"
+	bonetreecollapse "bip_pinky_0_R"
+	replacebone "bip_thumb_0_R" "bip_hand_R"
+	replacebone "bip_index_0_R" "bip_hand_R"
+	replacebone "bip_middle_0_R" "bip_hand_R"
+	replacebone "bip_ring_0_R" "bip_hand_R"
+	replacebone "bip_pinky_0_R" "bip_hand_R"
+	
+	bonetreecollapse "bip_thumb_0_L"
+	bonetreecollapse "bip_index_0_L"
+	bonetreecollapse "bip_middle_0_L"
+	bonetreecollapse "bip_ring_0_L"
+	bonetreecollapse "bip_pinky_0_L"
+	replacebone "bip_thumb_0_L" "bip_hand_L"
+	replacebone "bip_index_0_L" "bip_hand_L"
+	replacebone "bip_middle_0_L" "bip_hand_L"
+	replacebone "bip_ring_0_L" "bip_hand_L"
+	replacebone "bip_pinky_0_L" "bip_hand_L"
+
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "bip_packmiddle"
+	bonetreecollapse "bip_dogtag_0"
+	replacebone "bip_dogtag_0" "bip_neck"
+}
+
+/*
 $lod 11
 {
 	replacemodel $dmxFile$ $01_lod$
@@ -327,6 +521,7 @@ $shadowlod
 	bonetreecollapse "bip_dogtag_0"
 	replacebone "bip_dogtag_0" "bip_neck"
 }
+*/
 
 // Gibs.
 $collisiontext {

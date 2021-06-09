@@ -28,15 +28,51 @@ $attachment "foot_L" "bip_foot_L" 0 0 0 rotate 0 0 0
 $attachment "foot_R" "bip_foot_R" 0 0 0 rotate 0 0 0
 $attachment "partyhat" "bip_head" 0 -7.68 1.47 rotate 68 -90 0
 
-$illumposition 0 0 0 bip_pelvis
+
 
 $model     pyro  "../parts/dmx/pyro_reference.dmx"
 
 $bodygroup "head"
 {
-	studio "../parts/dmx/head_bodygroup.dmx"
+	studio "../parts/dmx/body_head.dmx"
 	blank
+	// sigh... this messes up bodygroup index order but whatever 
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
 }
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup rightarm
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
+}
+
 $bodygroup "grenades"
 {
 	studio "../parts/dmx/grenades_bodygroup.dmx"
@@ -47,9 +83,12 @@ $bodygroup "backpack"
 	studio "../parts/dmx/backpack_bodygroup.dmx"
 	blank
 }
+
 $bodygroup "righthand"
 {
-	studio "../parts/dmx/righthand_bodygroup.dmx"
+	// not supported!
+	//studio "../parts/dmx/righthand_bodygroup.dmx"
+	blank
 	blank
 }
 
@@ -111,14 +150,84 @@ $cdmaterials "models/player/pyro/"
 
 $texturegroup "pyro_Skins"
 {
-	{ "pyro_red"          "pyro_head"               "pyro_goggles"       }
-	{ "pyro_blue"         "pyro_head"               "pyro_goggles"       }
-	{ "pyro_red_invun"    "pyro_head_red_invun"     "pyro_goggles_invun" }
-	{ "pyro_blue_invun"   "pyro_head_blue_invun"    "pyro_goggles_invun" }
-	{ "pyro_custom"       "pyro_head"               "pyro_goggles"       }
-	{ "pyro_custom_invun" "pyro_head_custom_invun"  "pyro_goggles_invun" }
+	{ "pyro_red"          "pyro_head"               "pyro_goggles"       "pyro_gibs_red"     "pyro_gibs_head"    	  }
+	{ "pyro_blue"         "pyro_head"               "pyro_goggles"       "pyro_gibs_blue"    "pyro_gibs_head"    	  }
+	{ "pyro_red_invun"    "pyro_head_red_invun"     "pyro_goggles_invun" "pyro_red_invun"    "pyro_head_red_invun"    }
+	{ "pyro_blue_invun"   "pyro_head_blue_invun"    "pyro_goggles_invun" "pyro_blue_invun"   "pyro_head_blue_invun"   }
+	{ "pyro_custom"       "pyro_head"               "pyro_goggles"       "pyro_gibs_custom"  "pyro_gibs_head" 		  }
+	{ "pyro_custom_invun" "pyro_head_custom_invun"  "pyro_goggles_invun" "pyro_custom_invun" "pyro_head_custom_invun" }
+	{ "pyro_custom"       "pyro_head"               "pyro_goggles"       "pyro_gibs_custom"  "pyro_gibs_head" 		  }
+	{ "pyro_custom_invun" "pyro_head_custom_invun"  "pyro_goggles_invun" "pyro_custom_invun" "pyro_head_custom_invun" }
 }
 
+$lod 11
+{
+	// blank to not mess up lod order
+}
+
+$lod 22
+{
+	// blank to not mess up lod order
+}
+
+$lod 33
+{
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+}
+
+$lod 44
+{
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+	bonetreecollapse "prp_cannister1"
+	bonetreecollapse "prp_cannister2"
+	bonetreecollapse "prp_cannister3"
+}
+
+$lod 55
+{
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+	bonetreecollapse "prp_cannister1"
+	bonetreecollapse "prp_cannister2"
+	bonetreecollapse "prp_cannister3"
+}
+
+$shadowlod
+{
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_pouch"
+	bonetreecollapse "prp_cannister1"
+	bonetreecollapse "prp_cannister2"
+	bonetreecollapse "prp_cannister3"
+}
+
+/*
 $lod 11
 {
 	replacemodel "../parts/dmx/pyro_reference.dmx" "../parts/dmx/pyro_lod_01.dmx"
@@ -217,6 +326,7 @@ $shadowlod
 	bonetreecollapse "prp_cannister2"
 	bonetreecollapse "prp_cannister3"
 }
+*/
 
 // Gibs.
 $collisiontext {
@@ -274,8 +384,5 @@ $collisiontext {
 		"health" "0"
 		"fadetime" "10"
 	}
-
-
-
 }
 

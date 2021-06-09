@@ -28,7 +28,7 @@ $attachment "prop_bone_4" "prop_bone_4" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
 
-$illumposition 0 0 0 "bip_pelvis"
+
 
 $model soldier $dmxFile$ {
 
@@ -68,6 +68,47 @@ $bodygroup "grenades"
 	studio "../parts/dmx/grenades_bodygroup.dmx"
 	blank
 }
+
+$bodygroup head
+{
+	blank // flexes cannot be put into a bodygroup, the head will be scaled down instead to hide it
+	blank
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup rightarm
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
+}
+
 
 $sequence  ref    $dmxFile$
 
@@ -136,14 +177,129 @@ $cdmaterials "models/weapons/w_rocketlauncher/"
 
 $texturegroup "soldier_Skins"
 {
-	{ "soldier_red"          "eyeball_l"     "soldier_head_red"          "eyeball_r"     "soldier_sfm_hands"              }
-	{ "soldier_blue"         "eyeball_l"     "soldier_head_blue"         "eyeball_r"     "soldier_sfm_hands"              }
-	{ "soldier_red_invun"    "eyeball_invun" "soldier_head_red_invun"    "eyeball_invun" "soldier_sfm_hands_red_invun"    }
-	{ "soldier_blue_invun"   "eyeball_invun" "soldier_head_blue_invun"   "eyeball_invun" "soldier_sfm_hands_blue_invun"   }
-	{ "soldier_custom"       "eyeball_l"     "soldier_head_custom"       "eyeball_r"     "soldier_sfm_hands"              }
-	{ "soldier_custom_invun" "eyeball_invun" "soldier_head_custom_invun" "eyeball_invun" "soldier_sfm_hands_custom_invun" }
+	{ "soldier_red"          "eyeball_l"     "soldier_head_red"          "eyeball_r"     "soldier_sfm_hands"              "soldier_gibs_red"     "soldier_gibs_head"    	 }
+	{ "soldier_blue"         "eyeball_l"     "soldier_head_blue"         "eyeball_r"     "soldier_sfm_hands"              "soldier_gibs_blue"    "soldier_gibs_head"    	 }
+	{ "soldier_red_invun"    "eyeball_invun" "soldier_head_red_invun"    "eyeball_invun" "soldier_sfm_hands_red_invun"    "soldier_red_invun"    "soldier_head_red_invun"    }
+	{ "soldier_blue_invun"   "eyeball_invun" "soldier_head_blue_invun"   "eyeball_invun" "soldier_sfm_hands_blue_invun"   "soldier_blue_invun"   "soldier_head_blue_invun"   }
+	{ "soldier_custom"       "eyeball_l"     "soldier_head_custom"       "eyeball_r"     "soldier_sfm_hands"              "soldier_gibs_custom"  "soldier_gibs_head" 		 }
+	{ "soldier_custom_invun" "eyeball_invun" "soldier_head_custom_invun" "eyeball_invun" "soldier_sfm_hands_custom_invun" "soldier_custom_invun" "soldier_head_custom_invun" }
+	{ "soldier_custom"       "eyeball_l"     "soldier_head_custom"       "eyeball_r"     "soldier_sfm_hands"              "soldier_gibs_custom"  "soldier_gibs_head" 		 }
+	{ "soldier_custom_invun" "eyeball_invun" "soldier_head_custom_invun" "eyeball_invun" "soldier_sfm_hands_custom_invun" "soldier_custom_invun" "soldier_head_custom_invun" }
+} 
+
+$lod 11
+{
+	// blank to not mess up lod order
 }
 
+$lod 22
+{
+	// blank to not mess up lod order
+}
+
+$lod 33
+{
+	nofacial
+	removemesh "models/player/soldier/eyeball_l"
+	removemesh "models/player/soldier/eyeball_r"
+	bonetreecollapse "bip_head"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "handle_bone" "weapon_bone"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 44
+{
+	nofacial
+	removemesh "models/player/soldier/eyeball_l"
+	removemesh "models/player/soldier/eyeball_r"
+	bonetreecollapse "bip_head"
+	replacebone "prp_coatCollar_L" "bip_spine_3"
+	replacebone "prp_coatCollar_R" "bip_spine_3"
+	replacebone "prp_coatCollar_back" "bip_spine_3"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_coat_front_L"
+	bonetreecollapse "prp_coat_back_L"
+	bonetreecollapse "prp_coat_front_R"
+	bonetreecollapse "prp_coat_back_R"
+	replacebone "prp_grenade_top" "bip_spine_2"
+	replacebone "prp_grenade_bottom" "bip_spine_1"
+	replacebone "prp_coat_front_L" "bip_pelvis"
+	replacebone "prp_coat_back_L" "bip_pelvis"
+	replacebone "prp_coat_front_R" "bip_pelvis"
+	replacebone "prp_coat_back_R" "bip_pelvis"
+	replacebone "prp_pack_L" "bip_pelvis"
+	replacebone "prp_pack_R" "bip_pelvis"
+	replacebone "prp_pack_back" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "handle_bone" "weapon_bone"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 55
+{
+	nofacial
+	removemesh "models/player/soldier/eyeball_l"
+	removemesh "models/player/soldier/eyeball_r"
+	bonetreecollapse "bip_head"
+	replacebone "prp_coatCollar_L" "bip_spine_3"
+	replacebone "prp_coatCollar_R" "bip_spine_3"
+	replacebone "prp_coatCollar_back" "bip_spine_3"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	bonetreecollapse "prp_coat_front_L"
+	bonetreecollapse "prp_coat_back_L"
+	bonetreecollapse "prp_coat_front_R"
+	bonetreecollapse "prp_coat_back_R"
+	replacebone "prp_grenade_top" "bip_spine_2"
+	replacebone "prp_grenade_bottom" "bip_spine_1"
+	replacebone "prp_coat_front_L" "bip_pelvis"
+	replacebone "prp_coat_back_L" "bip_pelvis"
+	replacebone "prp_coat_front_R" "bip_pelvis"
+	replacebone "prp_coat_back_R" "bip_pelvis"
+	replacebone "prp_pack_L" "bip_pelvis"
+	replacebone "prp_pack_R" "bip_pelvis"
+	replacebone "prp_pack_back" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "handle_bone" "weapon_bone"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$shadowlod
+{
+	nofacial
+	removemesh "models/player/soldier/eyeball_l"
+	removemesh "models/player/soldier/eyeball_r"
+	bonetreecollapse "bip_head"
+	replacebone "prp_coatCollar_L" "bip_spine_3"
+	replacebone "prp_coatCollar_R" "bip_spine_3"
+	replacebone "prp_coatCollar_back" "bip_spine_3"
+	bonetreecollapse "prp_coat_front_L"
+	bonetreecollapse "prp_coat_back_L"
+	bonetreecollapse "prp_coat_front_R"
+	bonetreecollapse "prp_coat_back_R"
+	replacebone "prp_grenade_top" "bip_spine_2"
+	replacebone "prp_grenade_bottom" "bip_spine_1"
+	replacebone "prp_coat_front_L" "bip_pelvis"
+	replacebone "prp_coat_back_L" "bip_pelvis"
+	replacebone "prp_coat_front_R" "bip_pelvis"
+	replacebone "prp_coat_back_R" "bip_pelvis"
+	replacebone "prp_pack_L" "bip_pelvis"
+	replacebone "prp_pack_R" "bip_pelvis"
+	replacebone "prp_pack_back" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "handle_bone" "weapon_bone"
+	replacebone "mvm" "bip_pelvis"
+}
+
+/*
 $lod 11
 {
 	replacemodel $dmxFile$ $01_lod$
@@ -277,6 +433,7 @@ $shadowlod
 	replacebone "handle_bone" "weapon_bone"
 	replacebone "mvm" "bip_pelvis"
 }
+*/
 
 // Gibs.
 $collisiontext {

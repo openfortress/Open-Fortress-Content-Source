@@ -25,8 +25,6 @@ $attachment "prop_bone_4" "prop_bone_4" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
 
-$illumposition 0 0 0 bip_pelvis
-
 $model heavy $dmxFile$ {
 	eyeball righteye "bip_head" -1.425952 83.274592 1.8 "eyeball_r" 1.80356  0 "pupil_r" 0.6
 	eyeball lefteye  "bip_head"  1.425952 83.274592 1.8 "eyeball_l" 1.80356  0 "pupil_l" 0.6
@@ -40,9 +38,53 @@ $model heavy $dmxFile$ {
 //hands bodygroup for boxing gloves
 $bodygroup hands
 {
-	studio "../parts/dmx/heavy_hands_bodygroup.dmx"
+	// sigh...
+	//studio "../parts/dmx/heavy_hands_bodygroup.dmx"
 	blank
-	studio "../parts/dmx/heavy_hands_bodygroup.dmx"
+	blank
+	// sigh!!!!!!!
+	//studio "../parts/dmx/heavy_hands_bodygroup.dmx"
+	blank
+}
+
+$bodygroup head
+{
+	blank // flexes cannot be put into a bodygroup, the head will be scaled down instead to hide it
+	blank
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup rightarm
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
 }
 
 // Make the reference sequence from the dmxFile variable.
@@ -104,14 +146,113 @@ $cdmaterials "models/player/hvyweapon/"
 
 $texturegroup "skinfamilies"
 {
-	{ "heavy_head_red"          "eyeball_r"     "eyeball_l"     "hvyweapon_red"          "hvyweapon_red_sheen"    "heavy_sfm_fingers"              }
-	{ "heavy_head_blue"         "eyeball_r"     "eyeball_l"     "hvyweapon_blue"         "hvyweapon_blue_sheen"   "heavy_sfm_fingers"              }
-	{ "heavy_head_red_invun"    "eyeball_invun" "eyeball_invun" "hvyweapon_red_invun"    "hvyweapon_red_invun"    "heavy_sfm_fingers_red_invun"    }
-	{ "heavy_head_blue_invun"   "eyeball_invun" "eyeball_invun" "hvyweapon_blue_invun"   "hvyweapon_blue_invun"   "heavy_sfm_fingers_blue_invun"   }
-	{ "heavy_head_custom"       "eyeball_r"     "eyeball_l"     "hvyweapon_custom"       "hvyweapon_custom_sheen" "heavy_sfm_fingers"              }
-	{ "heavy_head_custom_invun" "eyeball_invun" "eyeball_invun" "hvyweapon_custom_invun" "hvyweapon_custom_invun" "heavy_sfm_fingers_custom_invun" }
+	{ "heavy_head_red"          "eyeball_r"     "eyeball_l"     "hvyweapon_red"          "heavy_sfm_fingers"              "hvyweapon_gibs_red"     "heavy_gibs_head"         }
+	{ "heavy_head_blue"         "eyeball_r"     "eyeball_l"     "hvyweapon_blue"         "heavy_sfm_fingers"              "hvyweapon_gibs_blue"    "heavy_gibs_head"         }
+	{ "heavy_head_red_invun"    "eyeball_invun" "eyeball_invun" "hvyweapon_red_invun"    "heavy_sfm_fingers_red_invun"    "hvyweapon_red_invun"    "heavy_head_red_invun"    }
+	{ "heavy_head_blue_invun"   "eyeball_invun" "eyeball_invun" "hvyweapon_blue_invun"   "heavy_sfm_fingers_blue_invun"   "hvyweapon_blue_invun"   "heavy_head_blue_invun"   }
+	{ "heavy_head_custom"       "eyeball_r"     "eyeball_l"     "hvyweapon_custom"       "heavy_sfm_fingers"              "hvyweapon_gibs_custom"  "heavy_gibs_head" 	     }
+	{ "heavy_head_custom_invun" "eyeball_invun" "eyeball_invun" "hvyweapon_custom_invun" "heavy_sfm_fingers_custom_invun" "hvyweapon_custom_invun" "heavy_head_custom_invun" }
+	{ "heavy_head_custom"       "eyeball_r"     "eyeball_l"     "hvyweapon_custom"       "heavy_sfm_fingers"              "hvyweapon_gibs_custom"  "heavy_gibs_head"         }
+	{ "heavy_head_custom_invun" "eyeball_invun" "eyeball_invun" "hvyweapon_custom_invun" "heavy_sfm_fingers_custom_invun" "hvyweapon_custom_invun" "heavy_head_custom_invun" }
 }
 
+$lod 11
+{
+	// blank to not mess up lod order
+}
+
+$lod 22
+{
+	// blank to not mess up lod order
+}
+
+$lod 33 
+{
+	nofacial
+
+	removemesh "models/player/hvyweapon/eyeball_r"
+	removemesh "models/player/hvyweapon/eyeball_l"
+
+	bonetreecollapse "bip_head"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 44 
+{
+	nofacial
+
+	removemesh "models/player/hvyweapon/eyeball_r"
+	removemesh "models/player/hvyweapon/eyeball_l"
+
+	bonetreecollapse "bip_head"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 55 
+{
+	nofacial
+
+	removemesh "models/player/hvyweapon/eyeball_r"
+	removemesh "models/player/hvyweapon/eyeball_l"
+
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_knee_L"
+	bonetreecollapse "bip_knee_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$shadowlod
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "prp_bullet_shoulder" "bip_collar_R"
+	replacebone "prp_bullet_backUpper" "bip_spine_2"
+	replacebone "prp_bullet_backLower" "bip_spine_1"
+	replacebone "prp_bullet_chestUpper" "bip_spine_1"
+	replacebone "prp_bullet_side" "bip_spine_0"
+	replacebone "prp_bullet_chestLower" "bip_spine_0"
+	replacebone "prp_pack" "bip_pelvis"
+	removemesh "models/player/hvyweapon/eyeball_r"
+	removemesh "models/player/hvyweapon/eyeball_l"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+/*
 $lod 11
 {
 	replacemodel $dmxFile$ $01_lod$
@@ -217,7 +358,7 @@ $shadowlod
 	replacebone "medal_bone" "bip_spine_2"
 	replacebone "mvm" "bip_pelvis"
 }
-
+*/
 
 // Gibs.
 $collisiontext {

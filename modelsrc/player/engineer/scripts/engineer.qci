@@ -61,9 +61,47 @@ $bodygroup hat
 }
 $bodygroup "rightarm"
 {
-	studio "../parts/dmx/glove_bodygroup.dmx"
-	studio "../parts/dmx/robotarm_bodygroup.dmx"
+	studio "../parts/dmx/body_arm_right.dmx"
 	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+	
+	// sigh
+	//studio "../parts/dmx/glove_bodygroup.dmx"	
+	//studio "../parts/dmx/robotarm_bodygroup.dmx"
+	//blank
+}
+
+$bodygroup head
+{
+	blank // flexes cannot be put into a bodygroup, the head will be scaled down instead to hide it
+	blank
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
 }
 
 // include the file that sets up the ikchains
@@ -88,14 +126,98 @@ $cdmaterials "models/player/engineer/"
 
 $texturegroup "engineer_Skins"
 {
-	{ "engineer_red"                   "engineer_head_red"               "engineer_mech_hand"        "engineer_sfm_hands_red"          "engineer_goggles"       }
-	{ "engineer_blue"                  "engineer_head_blue"              "engineer_mech_hand_blue"   "engineer_sfm_hands_blue"         "engineer_goggles"       }
-	{ "engineer_red_invun"             "engineer_head_red_invun"         "engineer_red_invun"        "engineer_sfm_hands_red_invun"    "engineer_goggles_invun" }
-	{ "engineer_blue_invun"            "engineer_head_blue_invun"        "engineer_blue_invun"       "engineer_sfm_hands_blue_invun"   "engineer_goggles_invun" }
-	{ "engineer_custom"                "engineer_head_custom"            "engineer_mech_hand_custom" "engineer_sfm_hands_custom"       "engineer_goggles"       }
-	{ "engineer_custom_invun"          "engineer_head_custom_invun"      "engineer_custom_invun"     "engineer_sfm_hands_custom_invun" "engineer_goggles_invun" }
+	{ "engineer_red"                   "engineer_head_red"               "engineer_mech_hand"        "engineer_sfm_hands_red"          "engineer_goggles"       "engineer_gibs_red"     "engineer_gibs_head"    	   }
+	{ "engineer_blue"                  "engineer_head_blue"              "engineer_mech_hand_blue"   "engineer_sfm_hands_blue"         "engineer_goggles"       "engineer_gibs_blue"    "engineer_gibs_head"    	   }
+	{ "engineer_red_invun"             "engineer_head_red_invun"         "engineer_red_invun"        "engineer_sfm_hands_red_invun"    "engineer_goggles_invun" "engineer_red_invun"    "engineer_head_red_invun"    }
+	{ "engineer_blue_invun"            "engineer_head_blue_invun"        "engineer_blue_invun"       "engineer_sfm_hands_blue_invun"   "engineer_goggles_invun" "engineer_blue_invun"   "engineer_head_blue_invun"   }
+	{ "engineer_custom"                "engineer_head_custom"            "engineer_mech_hand_custom" "engineer_sfm_hands_custom"       "engineer_goggles"       "engineer_gibs_custom"  "engineer_gibs_head" 		   }
+	{ "engineer_custom_invun"          "engineer_head_custom_invun"      "engineer_custom_invun"     "engineer_sfm_hands_custom_invun" "engineer_goggles_invun" "engineer_custom_invun" "engineer_head_custom_invun" }
+	{ "engineer_custom"                "engineer_head_custom"            "engineer_mech_hand_custom" "engineer_sfm_hands_custom"       "engineer_goggles"       "engineer_gibs_custom"  "engineer_gibs_head" 		   }
+	{ "engineer_custom_invun"          "engineer_head_custom_invun"      "engineer_custom_invun"     "engineer_sfm_hands_custom_invun" "engineer_goggles_invun" "engineer_custom_invun" "engineer_head_custom_invun" }
 }
 
+$lod 11
+{
+	// blank to not mess up lod order
+}
+
+$lod 22
+{
+	// blank to not mess up lod order
+}
+
+$lod 33
+{
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 44
+{
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+$lod 55
+{
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+
+$shadowlod
+{
+	nofacial
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "prp_helmet" "bip_head"
+	replacebone "prp_cord" "bip_pelvis"
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_legPouch" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+}
+
+/*
 $lod 11
 {
 	replacemodel $dmxFile$ $01_lod$
@@ -195,7 +317,7 @@ $shadowlod
 	replacebone "medal_bone" "bip_spine_2"
 	replacebone "mvm" "bip_pelvis"
 }
-
+*/
 
 // Gibs.
 $collisiontext {

@@ -1,0 +1,278 @@
+// defining the upaxis is needed for maya exports
+$upaxis Y
+
+$eyeposition 0 79.791497 0
+
+$attachment "eyes" "bip_head" 0 -4.22 -2.73 rotate 82.72 -90 0
+$attachment "righteye" "bip_head" -1.29 -4.22 -2.73 rotate 82.72 -90 0
+$attachment "lefteye" "bip_head" 1.29 -4.22 -2.73 rotate 82.72 -90 0
+$attachment "back_lower" "bip_spine_0" 0 0 0 rotate 0 0 0
+$attachment "foot_L" "bip_foot_L" 0 0 0 rotate 0 0 0
+$attachment "foot_R" "bip_foot_R" 0 0 0 rotate 0 0 0
+$attachment "partyhat" "bip_head" -1 -9.8 1.3 rotate 87 -96 0
+$attachment "head" "bip_head" 0 -11.29 1.3 rotate 83.77 -90 0
+$attachment "eyeglow_L" "bip_head" 1.71 -4.17 -5.04 rotate 64.03 -15.2 73.18
+$attachment "eyeglow_R" "bip_head" -1.71 -4.17 -5.04 rotate 64.03 -164.8 -73.18
+$attachment "effect_hand_L" "effect_hand_L" 0 0 0 rotate 0 0 0
+$attachment "effect_hand_R" "effect_hand_R" 0 0 0 rotate 0 0 0
+$attachment "flag" "bip_spine_2" 0.03 0.12 10.38 rotate -1.01 3.2 1.5
+$attachment "prop_bone" "prop_bone" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_1" "prop_bone_1" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_2" "prop_bone_2" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_3" "prop_bone_3" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_4" "prop_bone_4" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
+$attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
+
+$illumposition 0 0 0 "bip_pelvis"
+
+$model sniper $dmxFile$ {
+
+	eyeball righteye "bip_head" -1.289406  79.838841 -0.612206  "eyeball_r" 1.4   4  "pupil_r" 0.6
+	eyeball lefteye  "bip_head"  1.289406  79.838841 -0.612206  "eyeball_l" 1.4  -4  "pupil_l" 0.6
+
+    // remove this once you have actual eyelids that the eyeballs can drive, or they'll
+    // by default be overwriting your first flex
+    localvar %dummy_eyelid_flex 
+
+	flexcontroller eyes range -45 45 eyes_updown
+	flexcontroller eyes range -45 45 eyes_rightleft
+ 
+}
+
+$sequence ref $dmxFile$
+
+$bodygroup arrows
+{
+	blank
+	studio "../parts/dmx/arrows_bodygroup.dmx"
+}
+
+$bodygroup hat
+{
+	studio "../parts/dmx/hat_bodygroup.dmx"
+	blank
+}
+
+$bodygroup bullets
+{
+	studio "../parts/dmx/bullets_bodygroup.dmx"
+	studio "../parts/dmx/darts_bodygroup.dmx"
+}
+
+$surfaceprop "flesh"
+$mostlyopaque
+
+$bonemerge "bip_pelvis"
+$bonemerge "bip_spine_0"
+$bonemerge "bip_spine_1"
+$bonemerge "bip_spine_2"
+$bonemerge "bip_spine_3"
+$bonemerge "bip_neck"
+$bonemerge "bip_head"
+$bonemerge "bip_collar_L"
+$bonemerge "bip_collar_R"
+$bonemerge "bip_upperArm_L"
+$bonemerge "bip_upperArm_R"
+$bonemerge "bip_lowerArm_L"
+$bonemerge "bip_lowerArm_R"
+$bonemerge "bip_hand_L"
+$bonemerge "bip_hand_R"
+$bonemerge "prp_hat"
+$bonemerge "weapon_bone"
+$bonemerge "weapon_bone_1"
+$bonemerge "weapon_bone_2"
+$bonemerge "weapon_bone_3"
+$bonemerge "weapon_bone_4"
+$bonemerge "weapon_bone_L"
+$bonemerge "medal_bone"
+$bonemerge "mvm"
+
+// include the standard boneset
+$include "sniper_definebones.qci"
+
+// include the file that sets up the ikchains
+$include "../../TF_animation_rules/ruleshierarchy.qci"
+
+// include the animations.mdl
+$includemodel "player/sniper_user_animations.mdl"
+$includemodel "player/sniper_animations.mdl"
+$includemodel "workshop/player/animations/sniper_workshop_animations.mdl"
+
+// include the ragdoll
+$include "sniper_ragdoll.qci"
+
+// include the hitboxes
+$include "sniper_hitbox.qci"
+
+$cdmaterials "models\weapons\c_items"
+$cdmaterials "models/player/sniper/hwm/"
+$cdmaterials "models/player/sniper/"
+
+$texturegroup "sniper_Skins"
+{
+	{ "sniper_red"          "sniper_glove"              "sniper_lens"        "eyeball_l"     "sniper_head"              "eyeball_r"     "sfm_sniper_skin"              "sniperrifle_shell"              }
+	{ "sniper_blue"         "sniper_glove"              "sniper_lens"        "eyeball_l"     "sniper_head"              "eyeball_r"     "sfm_sniper_skin"              "sniperrifle_shell"              }
+	{ "sniper_red_invun"    "sniper_glove_red_invun"    "sniper_lens_invuln" "eyeball_invun" "sniper_head_red_invun"    "eyeball_invun" "sfm_sniper_skin_red_invun"    "sniperrifle_shell_red_invun"    }
+	{ "sniper_blue_invun"   "sniper_glove_blue_invun"   "sniper_lens_invuln" "eyeball_invun" "sniper_head_blue_invun"   "eyeball_invun" "sfm_sniper_skin_blue_invun"   "sniperrifle_shell_blue_invun"   }
+	{ "sniper_custom"       "sniper_glove"              "sniper_lens"        "eyeball_l"     "sniper_head"              "eyeball_r"     "sfm_sniper_skin"              "sniperrifle_shell"              }
+	{ "sniper_custom_invun" "sniper_glove_custom_invun" "sniper_lens_invuln" "eyeball_invun" "sniper_head_custom_invun" "eyeball_invun" "sfm_sniper_skin_custom_invun" "sniperrifle_shell_custom_invun" }
+}
+
+$lod 11
+{
+	replacemodel $dmxFile$ $01_lod$
+	replacemodel "../parts/dmx/hat_bodygroup.dmx" "../parts/dmx/hat_lod_01.dmx"
+	replacemodel "../parts/dmx/bullets_bodygroup.dmx" "../parts/dmx/bullets_lod_01.dmx"
+	replacemodel "../parts/dmx/darts_bodygroup.dmx" "../parts/dmx/darts_lod_01.dmx"
+} 
+
+$lod 22 
+{
+	replacemodel $dmxFile$ $02_lod$
+	replacemodel "../parts/dmx/hat_bodygroup.dmx" "../parts/dmx/hat_lod_01.dmx"
+	replacemodel "../parts/dmx/bullets_bodygroup.dmx" "../parts/dmx/bullets_lod_01.dmx"
+	replacemodel "../parts/dmx/darts_bodygroup.dmx" "../parts/dmx/darts_lod_02.dmx"
+}
+
+$lod 33 
+{
+	nofacial
+	replacemodel $dmxFile$ $03_lod$
+	replacemodel "../parts/dmx/bullets_bodygroup.dmx" "../parts/dmx/bullets_lod_02.dmx"
+	replacemodel "../parts/dmx/darts_bodygroup.dmx" "../parts/dmx/darts_lod_03.dmx"
+	
+	removemesh "models/player/sniper/eyeball_l"
+	removemesh "models/player/sniper/eyeball_r"
+
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_gunPack" "bip_spine_2"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+}
+
+$lod 44 
+{
+	nofacial
+	replacemodel $dmxFile$ $04_lod$
+	replacemodel "../parts/dmx/bullets_bodygroup.dmx" "../parts/dmx/bullets_lod_04.dmx"
+	replacemodel "../parts/dmx/darts_bodygroup.dmx" "../parts/dmx/darts_lod_03.dmx"
+
+	removemesh "models/player/sniper/eyeball_l"
+	removemesh "models/player/sniper/eyeball_r"
+
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_gunPack" "bip_spine_2"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+}
+
+$lod 55
+{
+	nofacial
+	replacemodel $dmxFile$ $05_lod$
+	replacemodel "../parts/dmx/hat_bodygroup.dmx" "../parts/dmx/hat_lod_02.dmx"
+	replacemodel "../parts/dmx/bullets_bodygroup.dmx" "../parts/dmx/bullets_lod_05.dmx"
+	replacemodel "../parts/dmx/darts_bodygroup.dmx" "../parts/dmx/darts_lod_03.dmx"
+
+	removemesh "models/player/sniper/eyeball_l"
+	removemesh "models/player/sniper/eyeball_r"
+
+	replacebone "prp_pouch" "bip_pelvis"
+	replacebone "prp_gunPack" "bip_spine_2"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+}
+
+$shadowlod
+{
+	nofacial
+	replacemodel $dmxFile$ $04_lod$
+	replacemodel "../parts/dmx/hat_bodygroup.dmx" "../parts/dmx/hat_lod_02.dmx"
+	replacemodel "../parts/dmx/bullets_bodygroup.dmx" "../parts/dmx/bullets_lod_04.dmx"
+	replacemodel "../parts/dmx/darts_bodygroup.dmx" "../parts/dmx/darts_lod_03.dmx"
+
+	removemesh "models/player/sniper/eyeball_l"
+	removemesh "models/player/sniper/eyeball_r"
+
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+
+	bonetreecollapse "bip_hand_L"
+	bonetreecollapse "bip_hand_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+}
+
+// Gibs.
+$collisiontext {
+	"break"
+	{
+		"model" "player\gibs\snipergib005"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\snipergib002"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\snipergib003"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\snipergib004"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\random_organ"
+		"health" "0"
+		"fadetime" "10"
+	}	"break"
+	{
+		"model" "player\gibs\snipergib001"
+		"health" "0"
+		"fadetime" "10"
+	}
+
+
+	"break"
+	{
+		"model" "player\gibs\snipergib006"
+		"health" "0"
+		"fadetime" "10"
+	}
+	"break"
+	{
+		"model" "player\gibs\snipergib007"
+		"health" "0"
+		"fadetime" "10"
+	}
+}

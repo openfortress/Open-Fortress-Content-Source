@@ -45,6 +45,46 @@ $bodygroup "medic_backpack"
 	blank
 }
 
+$bodygroup head
+{
+	blank // flexes cannot be put into a bodygroup, the head will be scaled down instead to hide it
+	blank
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup rightarm
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
+}
+
 $sequence ref $dmxFile$
 
 $surfaceprop "flesh"
@@ -104,16 +144,94 @@ $include "medic_hitbox.qci"
 $cdmaterials "models/player/medic/hwm/"
 $cdmaterials "models/player/medic/"
 
+// 32 material limit, medic_specs use backpack invun texture on purpose
 $texturegroup "medic_Skins"
 {
-	{ "medic_red"          "medic_head_red"          "eyeball_r"     "eyeball_l"     "medic_backpack_red"          "medic_sfm_hands_red"          "medic_specs"              }
-	{ "medic_blue"         "medic_head_blue"         "eyeball_r"     "eyeball_l"     "medic_backpack_blue"         "medic_sfm_hands_blue"         "medic_specs"              }
-	{ "medic_red_invun"    "medic_head_red_invun"    "eyeball_invun" "eyeball_invun" "medic_backpack_red_invun"    "medic_sfm_hands_red_invun"    "medic_specs_red_invun"    }
-	{ "medic_blue_invun"   "medic_head_blue_invun"   "eyeball_invun" "eyeball_invun" "medic_backpack_blue_invun"   "medic_sfm_hands_blue_invun"   "medic_specs_blue_invun"   }
-	{ "medic_custom"       "medic_head_custom"       "eyeball_r"     "eyeball_l"     "medic_backpack_custom"       "medic_sfm_hands_custom"       "medic_specs"              }
-	{ "medic_custom_invun" "medic_head_custom_invun" "eyeball_invun" "eyeball_invun" "medic_backpack_custom_invun" "medic_sfm_hands_custom_invun" "medic_specs_custom_invun" }
+	{ "medic_red"          "medic_head_red"          "eyeball_r"     "eyeball_l"     "medic_backpack_red"          "medic_sfm_hands_red"          "medic_specs"                 "medic_gibs_red"     "medic_gibs_head"    	   }
+	{ "medic_blue"         "medic_head_blue"         "eyeball_r"     "eyeball_l"     "medic_backpack_blue"         "medic_sfm_hands_blue"         "medic_specs"                 "medic_gibs_blue"    "medic_gibs_head"    	   }
+	{ "medic_red_invun"    "medic_head_red_invun"    "eyeball_invun" "eyeball_invun" "medic_backpack_red_invun"    "medic_sfm_hands_red_invun"    "medic_backpack_red_invun"    "medic_red_invun"    "medic_head_red_invun"    }
+	{ "medic_blue_invun"   "medic_head_blue_invun"   "eyeball_invun" "eyeball_invun" "medic_backpack_blue_invun"   "medic_sfm_hands_blue_invun"   "medic_backpack_blue_invun"   "medic_blue_invun"   "medic_head_blue_invun"   }
+	{ "medic_custom"       "medic_head_custom"       "eyeball_r"     "eyeball_l"     "medic_backpack_custom"       "medic_sfm_hands_custom"       "medic_specs"                 "medic_gibs_custom"  "medic_gibs_head" 		   }
+	{ "medic_custom_invun" "medic_head_custom_invun" "eyeball_invun" "eyeball_invun" "medic_backpack_custom_invun" "medic_sfm_hands_custom_invun" "medic_backpack_custom_invun" "medic_custom_invun" "medic_head_custom_invun" }
+	{ "medic_custom"       "medic_head_custom"       "eyeball_r"     "eyeball_l"     "medic_backpack_custom"       "medic_sfm_hands_custom"       "medic_specs"                 "medic_gibs_custom"  "medic_gibs_head" 		   }
+	{ "medic_custom_invun" "medic_head_custom_invun" "eyeball_invun" "eyeball_invun" "medic_backpack_custom_invun" "medic_sfm_hands_custom_invun" "medic_backpack_custom_invun" "medic_custom_invun" "medic_head_custom_invun" }
 }
 
+$lod 11 
+{
+	// blank to not mess up lod order
+} 
+
+$lod 22 
+{
+	// blank to not mess up lod order
+}
+
+$lod 33 
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+$lod 44 
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+$lod 55 
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+$shadowlod
+{
+	nofacial
+	bonetreecollapse "bip_head"
+	bonetreecollapse "bip_lowerarm_L"
+	bonetreecollapse "bip_lowerarm_R"
+	bonetreecollapse "bip_knee_L"
+	bonetreecollapse "bip_knee_R"
+	replacebone "bip_collar_L" "bip_spine_3"
+	replacebone "bip_collar_R" "bip_spine_3"
+	replacebone "bip_spine_1" "bip_spine_2"
+	replacebone "bip_spine_0" "bip_pelvis"
+	replacebone "medal_bone" "bip_spine_2"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "effect_hand_L" "bip_hand_L"
+	replacebone "effect_hand_R" "bip_hand_R"
+}
+
+/*
 $lod 11 
 {
 	replacemodel $dmxFile$ $01_lod$
@@ -196,6 +314,7 @@ $shadowlod
 	replacebone "effect_hand_L" "bip_hand_L"
 	replacebone "effect_hand_R" "bip_hand_R"
 }
+*/
 
 // Gibs.
 $collisiontext {

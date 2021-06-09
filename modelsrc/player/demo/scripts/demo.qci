@@ -29,8 +29,6 @@ $attachment "prop_bone_4" "prop_bone_4" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
 
-$illumposition 0 0 0 bip_pelvis
-
 // model command - $dmxFile$ is specified in the high and low qc files.
 $model demo $dmxFile$ {
 
@@ -52,13 +50,55 @@ $bodygroup "smile"
 }
 $bodygroup "shoes"
 {
-	studio "../parts/dmx/demo_shoes.dmx"
+	//studio "../parts/dmx/demo_shoes.dmx"
+	// sigh!!!
+	blank
 	blank
 }
 $bodygroup "grenades"
 {
 	studio "../parts/dmx/demo_grenades.dmx"
 	blank
+}
+
+$bodygroup head
+{
+	blank // flexes cannot be put into a bodygroup, the head will be scaled down instead to hide it
+	blank
+	studio "../parts/dmx/body_head_low.dmx"
+	studio "../parts/dmx/body_head_low.dmx"
+}
+
+$bodygroup leftarm
+{
+	studio "../parts/dmx/body_arm_left.dmx"
+	blank
+	studio "../parts/dmx/body_arm_left_low.dmx"
+	studio "../parts/dmx/body_arm_left_high.dmx"
+}
+
+$bodygroup rightarm
+{
+	studio "../parts/dmx/body_arm_right.dmx"
+	blank
+	studio "../parts/dmx/body_arm_right_low.dmx"
+	studio "../parts/dmx/body_arm_right_high.dmx"
+}
+
+$bodygroup leftleg
+{
+	studio "../parts/dmx/body_leg_left.dmx"
+	blank
+	studio "../parts/dmx/body_leg_left_low.dmx"
+	studio "../parts/dmx/body_leg_left_high.dmx"
+}
+
+$bodygroup rightleg
+{
+	studio "../parts/dmx/body_leg_right.dmx"
+	blank
+	studio "../parts/dmx/body_leg_right_low.dmx"
+	studio "../parts/dmx/body_leg_right_high.dmx"
 }
 
 // reference sequence
@@ -132,17 +172,218 @@ $cdmaterials "models\effects"
 
 $texturegroup "demo_Skins"
 {
-	{ "demoman_red"                   "demoman_head_red"               "eyeball_r"      "demo_sfm_hands"                   "smiley"               }
-	{ "demoman_blue"                  "demoman_head_blue"              "eyeball_r"      "demo_sfm_hands"                   "smiley"               }
-	{ "demoman_red_invun"             "demoman_head_red_invun"         "eyeball_invun"  "demo_sfm_hands_red_invun"         "smiley_red_invun"     }
-	{ "demoman_blue_invun"            "demoman_head_blue_invun"        "eyeball_invun"  "demo_sfm_hands_blue_invun"        "smiley_blue_invun"    }
-	{ "demoman_custom"                "demoman_head_custom"            "eyeball_r"      "demo_sfm_hands"                   "smiley"               }
-	{ "demoman_custom_invun"          "demoman_head_custom_invun"      "eyeball_invun"  "demo_sfm_hands_custom_invun"      "smiley_custom_invun"  }
-}
+	{ "demoman_red"                   "demoman_head_red"               "eyeball_r"      "demo_sfm_hands"                   "smiley"              "demoman_gibs_red"     "demoman_gibs_head"    	    }
+	{ "demoman_blue"                  "demoman_head_blue"              "eyeball_r"      "demo_sfm_hands"                   "smiley"              "demoman_gibs_blue"    "demoman_gibs_head"    	    }
+	{ "demoman_red_invun"             "demoman_head_red_invun"         "eyeball_invun"  "demo_sfm_hands_red_invun"         "smiley_red_invun"    "demoman_red_invun"    "demoman_head_red_invun"    }
+	{ "demoman_blue_invun"            "demoman_head_blue_invun"        "eyeball_invun"  "demo_sfm_hands_blue_invun"        "smiley_blue_invun"   "demoman_blue_invun"   "demoman_head_blue_invun"   }
+	{ "demoman_custom"                "demoman_head_custom"            "eyeball_r"      "demo_sfm_hands"                   "smiley"              "demoman_gibs_custom"  "demoman_gibs_head" 	    }
+	{ "demoman_custom_invun"          "demoman_head_custom_invun"      "eyeball_invun"  "demo_sfm_hands_custom_invun"      "smiley_custom_invun" "demoman_custom_invun" "demoman_head_custom_invun" }
+	{ "demoman_custom"                "demoman_head_custom"            "eyeball_r"      "demo_sfm_hands"                   "smiley"              "demoman_gibs_custom"  "demoman_gibs_head" 	    }
+	{ "demoman_custom_invun"          "demoman_head_custom_invun"      "eyeball_invun"  "demo_sfm_hands_custom_invun"      "smiley_custom_invun" "demoman_custom_invun" "demoman_head_custom_invun" }
+} 
 
 // level of detail
 // make sure nofacial is on to turn off the flex targets.
 
+
+$lod 10
+{
+	// blank to not mess up lod order
+} 
+
+$lod 20
+{
+	// blank to not mess up lod order
+	
+	replacebone "bip_grenade_2_R_0" "bip_spine_3"
+	replacebone "bip_grenade_2_L_0" "bip_spine_3"
+	replacebone "bip_grenade_1_R_0" "bip_spine_2"
+	replacebone "bip_grenade_1_L_0" "bip_spine_2"
+	replacebone "bip_grenade_0_R_0" "bip_spine_1"
+	replacebone "bip_grenade_0_L_0" "bip_spine_1"
+}
+
+$lod 30 
+{
+	nofacial
+	
+	bonetreecollapse "bip_thumb_0_L"
+	bonetreecollapse "bip_index_0_L"
+	bonetreecollapse "bip_middle_0_L"
+	bonetreecollapse "bip_ring_0_L"
+	bonetreecollapse "bip_pinky_0_L"
+	bonetreecollapse "bip_thumb_0_R"
+	bonetreecollapse "bip_index_0_R"
+	bonetreecollapse "bip_middle_0_R"
+	bonetreecollapse "bip_ring_0_R"
+	bonetreecollapse "bip_pinky_0_R"
+	replacebone "bip_thumb_0_L"  "bip_hand_L"
+	replacebone "bip_index_0_L"  "bip_hand_L"
+	replacebone "bip_middle_0_L" "bip_hand_L"
+	replacebone "bip_ring_0_L"   "bip_hand_L"
+	replacebone "bip_pinky_0_L"  "bip_hand_L"
+	replacebone "bip_thumb_0_R"  "bip_hand_R"
+	replacebone "bip_index_0_R"  "bip_hand_R"
+	replacebone "bip_middle_0_R" "bip_hand_R"
+	replacebone "bip_ring_0_R"   "bip_hand_R"
+	replacebone "bip_pinky_0_R"  "bip_hand_R"
+
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_grenade_2_R_0" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_R" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_L" "bip_spine_3"
+	replacebone "bip_grenade_2_L_0" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_B" "bip_spine_3"
+	replacebone "bip_grenade_1_R_0" "bip_spine_2"
+	replacebone "bip_grenade_1_L_0" "bip_spine_2"
+	replacebone "bip_grenade_0_R_0" "bip_spine_1"
+	replacebone "bip_grenade_0_L_0" "bip_spine_1"
+	replacebone "bip_hippouch_0" "bip_pelvis"
+	replacebone "bip_crotchflap_0" "bip_pelvis"
+	replacebone "bip_stomachpouch_0" "bip_spine_0"
+	
+	replacebone "medal_bone" "bip_spine_3"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "prop_bone" "bip_pelvis"
+	replacebone "prop_bone_1" "bip_pelvis"
+	replacebone "prop_bone_2" "bip_pelvis"
+	replacebone "prop_bone_3" "bip_pelvis"
+	replacebone "prop_bone_4" "bip_pelvis"
+	replacebone "prop_bone_5" "bip_pelvis"
+	replacebone "prop_bone_6" "bip_pelvis"
+}
+
+$lod 40 
+{
+	nofacial
+	
+	bonetreecollapse "bip_thumb_0_L"
+	bonetreecollapse "bip_index_0_L"
+	bonetreecollapse "bip_middle_0_L"
+	bonetreecollapse "bip_ring_0_L"
+	bonetreecollapse "bip_pinky_0_L"
+	bonetreecollapse "bip_thumb_0_R"
+	bonetreecollapse "bip_index_0_R"
+	bonetreecollapse "bip_middle_0_R"
+	bonetreecollapse "bip_ring_0_R"
+	bonetreecollapse "bip_pinky_0_R"
+	replacebone "bip_thumb_0_L"  "bip_hand_L"
+	replacebone "bip_index_0_L"  "bip_hand_L"
+	replacebone "bip_middle_0_L" "bip_hand_L"
+	replacebone "bip_ring_0_L"   "bip_hand_L"
+	replacebone "bip_pinky_0_L"  "bip_hand_L"
+	replacebone "bip_thumb_0_R"  "bip_hand_R"
+	replacebone "bip_index_0_R"  "bip_hand_R"
+	replacebone "bip_middle_0_R" "bip_hand_R"
+	replacebone "bip_ring_0_R"   "bip_hand_R"
+	replacebone "bip_pinky_0_R"  "bip_hand_R"
+
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_grenade_2_R_0" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_R" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_L" "bip_spine_3"
+	replacebone "bip_grenade_2_L_0" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_B" "bip_spine_3"
+	replacebone "bip_grenade_1_R_0" "bip_spine_2"
+	replacebone "bip_grenade_1_L_0" "bip_spine_2"
+	replacebone "bip_grenade_0_R_0" "bip_spine_1"
+	replacebone "bip_grenade_0_L_0" "bip_spine_1"
+	replacebone "bip_hippouch_0" "bip_pelvis"
+	replacebone "bip_crotchflap_0" "bip_pelvis"
+	replacebone "bip_stomachpouch_0" "bip_spine_0"
+	
+	replacebone "medal_bone" "bip_spine_3"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "prop_bone" "bip_pelvis"
+	replacebone "prop_bone_1" "bip_pelvis"
+	replacebone "prop_bone_2" "bip_pelvis"
+	replacebone "prop_bone_3" "bip_pelvis"
+	replacebone "prop_bone_4" "bip_pelvis"
+	replacebone "prop_bone_5" "bip_pelvis"
+	replacebone "prop_bone_6" "bip_pelvis"
+}
+
+$lod 50
+{
+	nofacial
+
+	bonetreecollapse "bip_thumb_0_L"
+	bonetreecollapse "bip_index_0_L"
+	bonetreecollapse "bip_middle_0_L"
+	bonetreecollapse "bip_ring_0_L"
+	bonetreecollapse "bip_pinky_0_L"
+	bonetreecollapse "bip_thumb_0_R"
+	bonetreecollapse "bip_index_0_R"
+	bonetreecollapse "bip_middle_0_R"
+	bonetreecollapse "bip_ring_0_R"
+	bonetreecollapse "bip_pinky_0_R"
+	replacebone "bip_thumb_0_L"  "bip_hand_L"
+	replacebone "bip_index_0_L"  "bip_hand_L"
+	replacebone "bip_middle_0_L" "bip_hand_L"
+	replacebone "bip_ring_0_L"   "bip_hand_L"
+	replacebone "bip_pinky_0_L"  "bip_hand_L"
+	replacebone "bip_thumb_0_R"  "bip_hand_R"
+	replacebone "bip_index_0_R"  "bip_hand_R"
+	replacebone "bip_middle_0_R" "bip_hand_R"
+	replacebone "bip_ring_0_R"   "bip_hand_R"
+	replacebone "bip_pinky_0_R"  "bip_hand_R"
+
+	bonetreecollapse "bip_foot_L"
+	bonetreecollapse "bip_foot_R"
+	replacebone "bip_grenade_2_R_0" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_R" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_L" "bip_spine_3"
+	replacebone "bip_grenade_2_L_0" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_B" "bip_spine_3"
+	replacebone "bip_grenade_1_R_0" "bip_spine_2"
+	replacebone "bip_grenade_1_L_0" "bip_spine_2"
+	replacebone "bip_grenade_0_R_0" "bip_spine_1"
+	replacebone "bip_grenade_0_L_0" "bip_spine_1"
+	replacebone "bip_hippouch_0" "bip_pelvis"
+	replacebone "bip_crotchflap_0" "bip_pelvis"
+	replacebone "bip_stomachpouch_0" "bip_spine_0"
+	
+	replacebone "medal_bone" "bip_spine_3"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "prop_bone" "bip_pelvis"
+	replacebone "prop_bone_1" "bip_pelvis"
+	replacebone "prop_bone_2" "bip_pelvis"
+	replacebone "prop_bone_3" "bip_pelvis"
+	replacebone "prop_bone_4" "bip_pelvis"
+	replacebone "prop_bone_5" "bip_pelvis"
+	replacebone "prop_bone_6" "bip_pelvis"
+}
+
+$shadowlod
+{
+	nofacial
+	replacebone "bip_grenade_2_R_0" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_R" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_L" "bip_spine_3"
+	replacebone "bip_grenade_2_L_0" "bip_spine_3"
+	replacebone "bip_jacketcollar_0_B" "bip_spine_3"
+	replacebone "bip_grenade_1_R_0" "bip_spine_2"
+	replacebone "bip_grenade_1_L_0" "bip_spine_2"
+	replacebone "bip_grenade_0_R_0" "bip_spine_1"
+	replacebone "bip_grenade_0_L_0" "bip_spine_1"
+	replacebone "bip_hippouch_0" "bip_pelvis"
+	replacebone "bip_crotchflap_0" "bip_pelvis"
+	replacebone "bip_stomachpouch_0" "bip_spine_0"
+	
+	replacebone "medal_bone" "bip_spine_3"
+	replacebone "mvm" "bip_pelvis"
+	replacebone "prop_bone" "bip_pelvis"
+	replacebone "prop_bone_1" "bip_pelvis"
+	replacebone "prop_bone_2" "bip_pelvis"
+	replacebone "prop_bone_3" "bip_pelvis"
+	replacebone "prop_bone_4" "bip_pelvis"
+	replacebone "prop_bone_5" "bip_pelvis"
+	replacebone "prop_bone_6" "bip_pelvis"
+}
+
+/*
 $lod 10
 {
 	replacemodel $dmxFile$ $01_lod$
@@ -361,7 +602,7 @@ $shadowlod
 	replacebone "prop_bone_5" "bip_pelvis"
 	replacebone "prop_bone_6" "bip_pelvis"
 }
-
+*/
 
 // Gibs.
 $collisiontext {
