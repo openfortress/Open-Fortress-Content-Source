@@ -76,15 +76,26 @@ $sequence ragdollspawn "primary_idle.dmx" lx ly
 //-----------------------------------------------------------------------------------
 // Loadout Poses
 //-----------------------------------------------------------------------------------
-$sequence loadout_idle 				"loadout_idle.dmx" 			 loop fps 24 snap activity ACT_MERC_LOADOUT 1 // Super Shotgun
+$sequence loadout_idle 				"loadout_supershotgun.dmx" 	 loop fps 30 snap activity ACT_MERC_LOADOUT 1 // Super Shotgun
 $sequence loadout_dynamite 			"loadout_dynamite.dmx" 		 loop fps 24 snap activity ACT_MERC_LOADOUT_DYNAMITE 1
 $sequence loadout_pistol 			"loadout_pistol.dmx" 		 loop fps 24 snap activity ACT_MERC_LOADOUT_PISTOL 1
 $sequence loadout_pistol_alt 		"loadout_pistol_alt.dmx" 	 loop fps 24 snap activity ACT_MERC_LOADOUT_PISTOL_ALT 1
 $sequence loadout_shotgun 			"loadout_shotgun.dmx" 		 loop fps 24 snap activity ACT_MERC_LOADOUT_SHOTGUN 1
 $sequence loadout_sixshooter 		"loadout_sixshooter.dmx" 	 loop fps 30 snap activity ACT_MERC_LOADOUT_REVOLVER 1
-$sequence loadout_tommygun 			"loadout_tommygun.dmx" 		 loop fps 24 snap activity ACT_MERC_LOADOUT_TOMMYGUN 1
+$sequence loadout_tommygun 			"loadout_tommygun.dmx" 		 loop fps 30 snap activity ACT_MERC_LOADOUT_TOMMYGUN 1
 $sequence loadout_rocketlauncher 	"loadout_rocketlauncher.dmx" loop fps 24 snap activity ACT_MERC_LOADOUT_ROCKETLAUNCHER 1
 $sequence loadout_chainsaw 			"loadout_chainsaw.dmx" 		 loop fps 24 snap activity ACT_MERC_LOADOUT_CHAINSAW 1
+$sequence loadout_crowbar			"loadout_crowbar.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_CROWBAR 1
+$sequence loadout_leadpipe			"loadout_leadpipe.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_LEADPIPE 1
+$sequence loadout_assault_rifle		"loadout_assault_rifle.dmx"	 loop fps 30 snap activity ACT_MERC_LOADOUT_ASSAULT_RIFLE 1
+$sequence loadout_grenadelauncher	"loadout_grenadelauncher.dmx" loop fps 30 snap activity ACT_MERC_LOADOUT_GRENADELAUNCHER 1
+$sequence loadout_lightning_gun		"loadout_lightning_gun.dmx"	 loop fps 30 snap activity ACT_MERC_LOADOUT_LIGHTNING_GUN 1
+$sequence loadout_nailgun			"loadout_nailgun.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_NAILGUN 1
+$sequence loadout_minigun_dm		"loadout_minigun_dm.dmx"	 loop fps 30 snap activity ACT_MERC_LOADOUT_MINIGUN_DM 1
+$sequence loadout_bouncer			"loadout_bouncer.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_BOUNCER 1
+$sequence loadout_railgun			"loadout_railgun.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_RAILGUN 1
+$sequence loadout_akimbo			"loadout_akimbo.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_AKIMBO 1
+$sequence loadout_flametemp			"loadout_flametemp.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_FLAMETEMP 1
 $sequence hud_ref					"hud_ref.dmx"				 loop fps 24 snap activity ACT_HUD_REF 1
 
 //-----------------------------------------------------------------------------------
