@@ -96,6 +96,7 @@ $sequence loadout_bouncer			"loadout_bouncer.dmx"		 loop fps 30 snap activity AC
 $sequence loadout_railgun			"loadout_railgun.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_RAILGUN 1
 $sequence loadout_akimbo			"loadout_akimbo.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_AKIMBO 1
 $sequence loadout_flametemp			"loadout_flametemp.dmx"		 loop fps 30 snap activity ACT_MERC_LOADOUT_FLAMETEMP 1
+$sequence loadout_fuckinsiiiiick	"loadout_fuckinsiiiiick.dmx" loop fps 30 snap activity ACT_MERC_LOADOUT_SICKASFUCK 1
 $sequence hud_ref					"hud_ref.dmx"				 loop fps 24 snap activity ACT_HUD_REF 1
 
 //-----------------------------------------------------------------------------------
