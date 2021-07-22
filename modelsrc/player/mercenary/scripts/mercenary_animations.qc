@@ -2211,7 +2211,7 @@ $sequence AttackCrouch_FLAMETHROWER {
         loop
 	delta
 	weightlist UpperbodyBlend
-	activity ACT_MERC_ATTACK_CROUCH_FLAMETHROWER 1
+	activity ACT_MERC_FLAMETHROWER_ATTACK_CROUCH_FLAMETHROWER 1
 }
 
 $sequence AttackCrouch_FLAMETHROWER_spoolup {
@@ -2220,7 +2220,7 @@ $sequence AttackCrouch_FLAMETHROWER_spoolup {
 	frames 0 6
 	delta
 	iklock rfoot 1 0 iklock lfoot 1 0
-	activity ACT_MERC_ATTACK_CROUCH_PREFIRE 1
+	activity ACT_MERC_FLAMETHROWER_ATTACK_CROUCH_PREFIRE 1
 }
 
 $sequence AttackCrouch_FLAMETHROWER_spooldown {
@@ -2230,7 +2230,7 @@ $sequence AttackCrouch_FLAMETHROWER_spooldown {
 	delta
 	weightlist UpperbodyBlend
 	iklock rfoot 1 0 iklock lfoot 1 0
-	activity ACT_MERC_ATTACK_CROUCH_POSTFIRE 1
+	activity ACT_MERC_FLAMETHROWER_ATTACK_CROUCH_POSTFIRE 1
 }
 
 // uncomment when airblast is added
@@ -2250,7 +2250,7 @@ $sequence AttackStand_FLAMETHROWER {
 	frames 6 51
 	delta
 	weightlist UpperbodyBlend
-	activity ACT_MERC_ATTACK_STAND_FLAMETHROWER 1
+	activity ACT_MERC_FLAMETHROWER_ATTACK_STAND_FLAMETHROWER 1
 }
 
 $sequence AttackStand_FLAMETHROWER_spoolup {
@@ -2259,7 +2259,7 @@ $sequence AttackStand_FLAMETHROWER_spoolup {
 	frames 0 6
 	delta
 	iklock rfoot 1 0 iklock lfoot 1 0
-	activity ACT_MERC_ATTACK_STAND_PREFIRE 1
+	activity ACT_MERC_FLAMETHROWER_ATTACK_STAND_PREFIRE 1
 }
 
 $sequence AttackStand_FLAMETHROWER_spooldown {
@@ -2269,7 +2269,7 @@ $sequence AttackStand_FLAMETHROWER_spooldown {
 	delta
 	weightlist UpperbodyBlend
 	iklock rfoot 1 0 iklock lfoot 1 0
-	activity ACT_MERC_ATTACK_STAND_POSTFIRE 1
+	activity ACT_MERC_FLAMETHROWER_ATTACK_STAND_POSTFIRE 1
 }
 
 // uncomment when airblast is added
@@ -2278,7 +2278,7 @@ $sequence AttackStand_FLAMETHROWER_spooldown {
 //	subtract FLAMETHROWER_fire 0
 //	frames 0 30
 //	delta
-//	activity ACT_MERC_ATTACK_STAND_SECONDARYFIRE 1
+//	activity ACT_MERC_FLAMETHROWER_ATTACK_STAND_SECONDARYFIRE 1
 //}
 
 
@@ -2289,7 +2289,7 @@ $sequence AttackSwim_FLAMETHROWER {
 	frames 2 47
 	delta
 	weightlist UpperbodyBlend
-	activity ACT_MERC_ATTACK_SWIM_FLAMETHROWER 1
+	activity ACT_MERC_FLAMETHROWER_ATTACK_SWIM_FLAMETHROWER 1
 }
 
 $sequence AttackSwim_FLAMETHROWER_spoolup {
@@ -2297,7 +2297,7 @@ $sequence AttackSwim_FLAMETHROWER_spoolup {
 	subtract FLAMETHROWER_fire 0
 	frames 0 3
 	delta
-	activity ACT_MERC_ATTACK_SWIM_PREFIRE 1
+	activity ACT_MERC_FLAMETHROWER_ATTACK_SWIM_PREFIRE 1
 }
 
 $sequence AttackSwim_FLAMETHROWER_spooldown {
@@ -2306,7 +2306,7 @@ $sequence AttackSwim_FLAMETHROWER_spooldown {
 	frames 47 57
 	delta
 	weightlist UpperbodyBlend
-	activity ACT_MERC_ATTACK_SWIM_POSTFIRE 1
+	activity ACT_MERC_FLAMETHROWER_ATTACK_SWIM_POSTFIRE 1
 }
 
 // uncomment when airblast is added
@@ -2316,7 +2316,7 @@ $sequence AttackSwim_FLAMETHROWER_spooldown {
 //	frames 0 30
 //	delta
 //	weightlist UpperbodyBlend
-//	activity ACT_MERC_ATTACK_SWIM_SECONDARYFIRE 1
+//	activity ACT_MERC_FLAMETHROWER_ATTACK_SWIM_SECONDARYFIRE 1
 //}
 
 $sequence Stand_FLAMETHROWER  FLAMETHROWER_idle loop alignto a_reference addlayer FLAMETHROWER_aimmatrix_idle activity ACT_MERC_STAND_FLAMETHROWER 1
