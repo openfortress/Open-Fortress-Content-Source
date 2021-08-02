@@ -3453,7 +3453,7 @@ $sequence DYNAMITE_Deployed_Movement {
 	activity ACT_MERC_DYNAMITE_DEPLOYED 1
 }
 
-$MPCrouchWalkWithWeapon Deployed_Crouch_Walk_DYNAMITE        0 0 0 0 0 0 0 0 DYNAMITE_deployed_crouch_walkN        DYNAMITE_deployed_Crouch_walkCenter        DYNAMITE_crouch_aimmatrix_deployed        ACT_MP_CROUCHWALK_DEPLOYED $infoNode$
+$MPCrouchWalkWithWeapon Deployed_Crouch_Walk_DYNAMITE        0 0 0 0 0 0 0 0 DYNAMITE_deployed_crouch_walkN        DYNAMITE_deployed_Crouch_walkCenter        DYNAMITE_crouch_aimmatrix_deployed        ACT_MERC_CROUCHWALK_DYNAMITE_DEPLOYED $infoNode$
 
 // run
 
