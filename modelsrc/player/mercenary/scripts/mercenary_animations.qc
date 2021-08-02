@@ -2811,7 +2811,7 @@ $sequence RAILGUN_Deployed_Movement {
 	activity ACT_MERC_RAILGUN_DEPLOYED 1
 }
 
-$MPCrouchWalkWithWeapon Deployed_Crouch_Walk_RAILGUN        0 0 0 0 0 0 0 0 RAILGUN_deployed_crouch_walkN        RAILGUN_deployed_Crouch_walkCenter        RAILGUN_crouch_aimmatrix_deployed        ACT_MP_CROUCHWALK_DEPLOYED $infoNode$
+$MPCrouchWalkWithWeapon Deployed_Crouch_Walk_RAILGUN        0 0 0 0 0 0 0 0 RAILGUN_deployed_crouch_walkN        RAILGUN_deployed_Crouch_walkCenter        RAILGUN_crouch_aimmatrix_deployed        ACT_MERC_CROUCHWALK_RAILGUN_DEPLOYED $infoNode$
 
 // run
 
