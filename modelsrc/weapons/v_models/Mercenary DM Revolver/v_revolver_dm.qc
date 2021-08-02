@@ -3,7 +3,11 @@
 $modelname "weapons/v_models/v_revolver_dm.mdl"
 
 $model "revolver" "v_revolver_dm_c_revolver.smd"
-$model "illumpos" "v_revolver_dm_illumpos.smd"
+$bodygroup "illumpos" {
+	blank
+	studio "v_revolver_dm_illumpos.smd"
+}
+$model "bullets" "v_revolver_dm_c_revolver_bullets.smd"
 
 $surfaceprop "default"
 
@@ -161,13 +165,12 @@ $sequence "fire" {
 }
 
 $sequence "fire_crit" {
-	"anims\fire.smd"
-	frames 0 34
+	"anims\firecrit.smd"
+	frames 0 50
 	activity "ACT_VM_PRIMARYATTACK_CRIT" 1
 	snap
 	fadeout 0.2
 	node "raised"
-	snap
 	fps 60
 }
 
@@ -177,7 +180,8 @@ $sequence "reload" {
 	{ event 5004 26 "Weapon_Revolver.Reload1" }
 	{ event 5004 58 "Weapon_Revolver.Reload2" }
 	{ event 5004 88 "Weapon_Revolver.Reload3" }
-	fadein 0.2
+	{ event AE_CL_BODYGROUP_SET_VALUE 2 "bullet 1" }
+	{ event AE_CL_BODYGROUP_SET_VALUE 92 "bullet 0" }
 	fadeout 0.2
 	snap
 	fps 60
