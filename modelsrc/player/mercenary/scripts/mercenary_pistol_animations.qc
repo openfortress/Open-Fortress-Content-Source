@@ -1,7 +1,7 @@
 // defining the upaxis is needed for maya exports
 $upaxis Y
 
-$modelname player/mercenary_pistol_animations.mdl
+$modelname player/mercenary_animations_pistol.mdl
 
 $definevariable infoNode "mercenaryInfo"
 $include "mercenary_definebones.qci"
@@ -18,54 +18,7 @@ $pushd "../animations/dmx"
 $animation a_reference "primary_idle.dmx" lx ly
 $sequence ragdollspawn "primary_idle.dmx" lx ly
 
-//-----------------------------------------------------------------------------------
-// mercenary-specific weightlists
-//-----------------------------------------------------------------------------------
-$weightlist armsblendMelee {
-	"bip_pelvis" 0.0
-	"bip_collar_r" 1.0
-	"bip_collar_l" 1.0
-}
 
-$Weightlist Airwalk_ArmsBlend {
-
-	"bip_pelvis" 0.0
-	"bip_hip_R" 0.0
-	"bip_hip_L" 0.0
-	"bip_spine_0" 0.2
-	"bip_spine_1" 0.4
-	"bip_spine_2" 0.6
-	"bip_spine_3" 1.0
-	}
-
-$Weightlist Swim_Melee_SwingBody {
-
-  "bip_spine_1" 1.0
-  "bip_spine_2" 1.0
-  "bip_spine_3" 1.0
-	}
-
-$Weightlist Swim_Melee_SwingArms {
-
-  "bip_collar_R" 1.0
-  "bip_upperArm_R" 1.0
-	"bip_lowerArm_R" 1.0
-	}
-
-$Weightlist ArmLGestureBlend {
-	"bip_pelvis" 0.0
-	"bip_spine_0" 0.0
-	"bip_spine_1" 0.0
-	"bip_neck" 0.0
-	"bip_collar_R" 0.0
-	"bip_collar_L" 1.0
-	"bip_upperArm_L" 1.0
-	}
-	
-$Weightlist armsblendstun {
-  "bip_pelvis" 1.0
-	}
-	
 //-----------------------------------------------------------------------------------
 // Weightlists
 //-----------------------------------------------------------------------------------
