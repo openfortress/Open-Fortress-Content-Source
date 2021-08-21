@@ -167,10 +167,4 @@ $sequence selectionMenu_all "selectionMenu_Anim01.dmx" fps 30 event AE_CL_PLAYSO
 //-----------------------------------------------------------------------------------
 $sequence primary_death_headshot "primary_death_headshot.dmx" ikrule lhand release ikrule rhand release ikrule lfoot release ikrule rfoot release
 
-//-----------------------------------------------------------------------------------//
-//-----------------------------------------------------------------------------------//
-// WEAPON-SPECIFIC animations
-// This is where the fun begins
-//-----------------------------------------------------------------------------------//
-//-----------------------------------------------------------------------------------//
 $popd

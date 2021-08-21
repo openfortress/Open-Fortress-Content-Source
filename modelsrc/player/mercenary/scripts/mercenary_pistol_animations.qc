@@ -1,7 +1,7 @@
 // defining the upaxis is needed for maya exports
 $upaxis Y
 
-$modelname player/mercenary_animations_pistol.mdl
+$modelname player/mercenary_pistol_animations.mdl
 
 $definevariable infoNode "mercenaryInfo"
 $include "mercenary_definebones.qci"
@@ -10,31 +10,14 @@ $include "mercenary_definebones.qci"
 $include "../../TF_animation_rules/ruleshierarchy.qci"
 $include "../../TF_animation_rules/TF_macros_list.qci"
 
+$pushd "../animations/dmx"
+
 //-----------------------------------------------------------------------------------
 // References
 //-----------------------------------------------------------------------------------
-
 $animation a_reference "primary_idle.dmx" lx ly
 $sequence ragdollspawn "primary_idle.dmx" lx ly
 
-$pushd "../animations/dmx"
-//-----------------------------------------------------------------------------------
-// Weightlists
-//-----------------------------------------------------------------------------------
-
-$Weightlist PistolMercenarySwimReloadArmsBlend {
-	"bip_pelvis" 0.0
-	"bip_hip_R" 0.0
-	"bip_hip_L" 0.0
-	"bip_spine_0" 0.0
-	"bip_collar_L" 1.0
-	"bip_upperArm_L" 1.0
-	"bip_lowerArm_L" 1.0
-	"bip_collar_R" 1.0
-	"bip_upperArm_R" 1.0
-	"bip_lowerArm_R" 1.0
-	}
-	
 //-----------------------------------------------------------------------------------
 // mercenary-specific weightlists
 //-----------------------------------------------------------------------------------
@@ -82,9 +65,23 @@ $Weightlist ArmLGestureBlend {
 $Weightlist armsblendstun {
   "bip_pelvis" 1.0
 	}
+	
+//-----------------------------------------------------------------------------------
+// Weightlists
+//-----------------------------------------------------------------------------------
 
-$pushd "../animations/dmx"
-
+$Weightlist PistolMercenarySwimReloadArmsBlend {
+	"bip_pelvis" 0.0
+	"bip_hip_R" 0.0
+	"bip_hip_L" 0.0
+	"bip_spine_0" 0.0
+	"bip_collar_L" 1.0
+	"bip_upperArm_L" 1.0
+	"bip_lowerArm_L" 1.0
+	"bip_collar_R" 1.0
+	"bip_upperArm_R" 1.0
+	"bip_lowerArm_R" 1.0
+	}
 
 //-----------------------------------------------------------------------------------
 // Mercenary Pistol
