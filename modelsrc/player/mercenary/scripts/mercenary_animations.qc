@@ -10,6 +10,7 @@ $include "mercenary_definebones.qci"
 $include "../../TF_animation_rules/ruleshierarchy.qci"
 $include "../../TF_animation_rules/TF_macros_list.qci"
 
+$include "mercenary_animations_set.qci"
 //-----------------------------------------------------------------------------------
 // Mercenary-specific weightlists
 //-----------------------------------------------------------------------------------
