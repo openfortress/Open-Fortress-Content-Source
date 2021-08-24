@@ -1,7 +1,7 @@
 // defining the upaxis is needed for maya exports
 $upaxis Y
 
-//$modelname player/merc_anim/animations_chainsaw.mdl
+$modelname player/merc_anim/animations_chainsaw.mdl
 
 $definevariable infoNode "mercenaryInfo"
 $include "../mercenary_definebones.qci"
