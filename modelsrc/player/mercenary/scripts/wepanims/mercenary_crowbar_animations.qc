@@ -41,6 +41,8 @@ $MPGestureAttack AttackSwim_CROWBAR   CROWBAR_swim_fire     ACT_MERC_ATTACK_SWIM
 $sequence Stand_CROWBAR  CROWBAR_idle loop alignto a_reference addlayer CROWBAR_aimmatrix_idle activity ACT_MERC_STAND_CROWBAR 1
 $sequence Crouch_CROWBAR CROWBAR_crouch_idle loop alignto a_reference addlayer CROWBAR_aimmatrix_crouch_idle activity ACT_MERC_CROUCH_CROWBAR 1
 
+$MPGestureAttackLEADPIPE AttackStand_CROWBAR_SpoolUp   CROWBAR_spoolup      Stand_Crowbar 0 ACT_MERC_ATTACK_STAND_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource
+
 // swim
 $MPAimLayer CROWBAR_aimmatrix_swim        CROWBAR_aimmatrix_idle        $infoNode$
 $MPswimWithWeapon CROWBAR 0 0 0 0 0 0 0 0 CROWBAR_SwimN	CROWBAR_SwimCenter	CROWBAR_aimmatrix_swim	ACT_MERC_SWIM_CROWBAR $infonode$

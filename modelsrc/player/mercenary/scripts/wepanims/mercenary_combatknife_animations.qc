@@ -160,10 +160,12 @@ $MPCrouchWalkWithWeaponNoIK Crouch_Walk_COMBATKNIFE 0 0 0 0 0 0 0 0 COMBATKNIFE_
 
 $animation a_combatknife_fire_backstab combatknife_fire_backstab.dmx frames 0 0 
 $sequence armslayer_combatknife_fire_backstab combatknife_fire_backstab.dmx { 
+ weightlist SPY_Melee_Armsblend 
  hidden 
 } 
 
 $sequence bodylayer_combatknife_fire_backstab combatknife_fire_backstab.dmx subtract a_combatknife_fire_backstab 0 { 
+ weightlist SPY_Melee_HipsTorso
  delta 
  hidden 
 } 
