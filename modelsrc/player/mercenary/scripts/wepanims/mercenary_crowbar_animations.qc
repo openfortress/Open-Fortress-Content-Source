@@ -35,7 +35,7 @@ $weightlist CrowbarMercStandArmsBlend {
 $MPWeaponAims		CROWBAR	$infoNode$
 
 $MPGestureAttack AttackStand_CROWBAR  CROWBAR_fire          ACT_MERC_ATTACK_STAND_CROWBAR weightlist CrowbarMercStandArmsBlend
-$MPGestureAttack AttackCrouch_CROWBAR CROWBAR_crouch_fire   ACT_MERC_ATTACK_CROUCH_CROWBAR
+$MPGestureAttack AttackCrouch_CROWBAR CROWBAR_crouch_fire   ACT_MERC_ATTACK_CROUCH_CROWBAR weightlist CrowbarMercStandArmsBlend
 $MPGestureAttack AttackSwim_CROWBAR   CROWBAR_swim_fire     ACT_MERC_ATTACK_SWIM_CROWBAR
 
 $sequence Stand_CROWBAR  CROWBAR_idle loop alignto a_reference addlayer CROWBAR_aimmatrix_idle activity ACT_MERC_STAND_CROWBAR 1
@@ -128,7 +128,7 @@ $sequence Run_CROWBAR {
 	  { event 7001 16 "left" }
 }
 
-$MPCrouchWalkWithWeapon Crouch_Walk_CROWBAR 0 0 0 0 0 0 0 0 CROWBAR_crouch_walkN CROWBAR_crouch_walkCenter CROWBAR_aimmatrix_crouch_idle ACT_MERC_CROUCHWALK_CROWBAR $infoNode$
+$MPCrouchWalkWithWeaponNoIK Crouch_Walk_CROWBAR 0 0 0 0 0 0 0 0 CROWBAR_crouch_walkN CROWBAR_crouch_walkCenter CROWBAR_aimmatrix_crouch_idle ACT_MERC_CROUCHWALK_CROWBAR $infoNode$
 
 //-----------------------------------------------------------------------------------
 // Airwalk
