@@ -52,7 +52,7 @@ $MPGestureAttack AttackSwim_CROWBAR   CROWBAR_swim_fire     ACT_MERC_ATTACK_SWIM
 $sequence Stand_CROWBAR  CROWBAR_idle loop alignto a_reference addlayer CROWBAR_aimmatrix_idle activity ACT_MERC_STAND_CROWBAR 1
 $sequence Crouch_CROWBAR CROWBAR_crouch_idle loop alignto a_reference addlayer CROWBAR_aimmatrix_crouch_idle activity ACT_MERC_CROUCH_CROWBAR 1
 
-$MPGestureAttackLEADPIPE AttackStand_CROWBAR_SpoolUp   CROWBAR_spoolup_long      	Stand_Crowbar 41 	ACT_MERC_ATTACK_STAND_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource weightlist CrowbarMercStandArmsBlend
+$MPGestureAttackLEADPIPE AttackStand_CROWBAR_SpoolUp   CROWBAR_spoolup     	Stand_Crowbar 41 	ACT_MERC_ATTACK_STAND_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource weightlist CrowbarMercStandArmsBlend
 $MPGestureAttackLEADPIPE AttackCrouch_CROWBAR_SpoolUp  CROWBAR_crouch_spoolup   Crouch_CROWBAR  41   ACT_MERC_ATTACK_CROUCH_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource weightlist CrowbarMercStandArmsBlend
 $MPGestureAttackLEADPIPE AttackSwim_CROWBAR_SpoolUp    CROWBAR_swim_spoolup     Stand_CROWBAR 41    	ACT_MERC_ATTACK_SWIM_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource weightlist CrowbarMercStandArmsBlend
 
