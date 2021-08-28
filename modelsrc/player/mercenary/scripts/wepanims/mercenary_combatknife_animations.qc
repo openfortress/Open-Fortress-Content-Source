@@ -79,7 +79,7 @@ $MPswimWithWeapon COMBATKNIFE 0 0 0 0 0 0 0 0 COMBATKNIFE_SwimN	COMBATKNIFE_Swim
 
 //COMBATKNIFE jump
 $sequence a_jumpStart_COMBATKNIFE COMBATKNIFE_jump frames 0 25 addlayer COMBATKNIFE_aimmatrix_swim alignto a_reference Z activity ACT_MERC_JUMP_START_KNIFE 1 LX LY 
-$sequence a_jumpfloat_COMBATKNIFE COMBATKNIFE_jump frames 26 189 addlayer COMBATKNIFE_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MERC_JUMP_FLOAT_KNIFE 1 LX LY 
+$sequence a_jumpfloat_COMBATKNIFE COMBATKNIFE_jump frames 25 44 addlayer COMBATKNIFE_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MERC_JUMP_FLOAT_KNIFE 1 LX LY 
 $sequence jumpLandPose_COMBATKNIFE COMBATKNIFE_jump frames 25 25 numframes 30 loop 
 $sequence jumpLand_COMBATKNIFE { 
 	COMBATKNIFE_jump_land 
@@ -183,7 +183,7 @@ $sequence combatknife_fire_backstab combatknife_fire_backstab.dmx noanimation nu
 //-----------------------------------------------------------------------------------
 $sequence Airwalk_COMBATKNIFE "COMBATKNIFE_airwalk.dmx" fps 30 loop {
 	addlayer COMBATKNIFE_aimmatrix_idle 
-	activity ACT_MERC_AIRWALK_sKNIFE 1
+	activity ACT_MERC_AIRWALK_KNIFE 1
 }
 
 $popd
