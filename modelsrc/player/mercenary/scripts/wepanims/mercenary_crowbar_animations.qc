@@ -24,8 +24,19 @@ $sequence ragdollspawn "primary_idle.dmx" lx ly
 //-----------------------------------------------------------------------------------	
 $weightlist CrowbarMercStandArmsBlend {
 	"bip_pelvis" 1.0
-	"bip_collar_r" 1.0
-	"bip_collar_l" 1.0
+	"bip_hip_R" 0.0
+	"bip_hip_L" 0.0
+	"bip_spine_0" 0.7
+	"bip_spine_1" 0.8
+	"bip_spine_2" 0.9
+	"bip_spine_3" 1.0
+	"bip_collar_R" 1.0
+	"bip_collar_L" 1.0
+	"bip_upperArm_R" 1.0
+	"bip_lowerArm_R" 1.0
+	"bip_upperArm_L" 1.0
+	"bip_lowerArm_L" 1.0
+	"bip_head" 0.5
 }
 
 //-----------------------------------------------------------------------------------
@@ -36,14 +47,14 @@ $MPWeaponAims		CROWBAR	$infoNode$
 
 $MPGestureAttack AttackStand_CROWBAR  CROWBAR_fire          ACT_MERC_ATTACK_STAND_CROWBAR weightlist CrowbarMercStandArmsBlend
 $MPGestureAttack AttackCrouch_CROWBAR CROWBAR_crouch_fire   ACT_MERC_ATTACK_CROUCH_CROWBAR weightlist CrowbarMercStandArmsBlend
-$MPGestureAttack AttackSwim_CROWBAR   CROWBAR_swim_fire     ACT_MERC_ATTACK_SWIM_CROWBAR
+$MPGestureAttack AttackSwim_CROWBAR   CROWBAR_swim_fire     ACT_MERC_ATTACK_SWIM_CROWBAR weightlist CrowbarMercStandArmsBlend
 
 $sequence Stand_CROWBAR  CROWBAR_idle loop alignto a_reference addlayer CROWBAR_aimmatrix_idle activity ACT_MERC_STAND_CROWBAR 1
 $sequence Crouch_CROWBAR CROWBAR_crouch_idle loop alignto a_reference addlayer CROWBAR_aimmatrix_crouch_idle activity ACT_MERC_CROUCH_CROWBAR 1
 
-$MPGestureAttackLEADPIPE AttackStand_CROWBAR_SpoolUp   CROWBAR_spoolup_long      	Stand_Crowbar 41 	ACT_MERC_ATTACK_STAND_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource
-$MPGestureAttackLEADPIPE AttackCrouch_CROWBAR_SpoolUp  CROWBAR_crouch_spoolup   Crouch_CROWBAR  41   ACT_MERC_ATTACK_CROUCH_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource
-$MPGestureAttackLEADPIPE AttackSwim_CROWBAR_SpoolUp    CROWBAR_swim_spoolup     Stand_CROWBAR 41    	ACT_MERC_ATTACK_SWIM_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource
+$MPGestureAttackLEADPIPE AttackStand_CROWBAR_SpoolUp   CROWBAR_spoolup_long      	Stand_Crowbar 41 	ACT_MERC_ATTACK_STAND_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource weightlist CrowbarMercStandArmsBlend
+$MPGestureAttackLEADPIPE AttackCrouch_CROWBAR_SpoolUp  CROWBAR_crouch_spoolup   Crouch_CROWBAR  41   ACT_MERC_ATTACK_CROUCH_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource weightlist CrowbarMercStandArmsBlend
+$MPGestureAttackLEADPIPE AttackSwim_CROWBAR_SpoolUp    CROWBAR_swim_spoolup     Stand_CROWBAR 41    	ACT_MERC_ATTACK_SWIM_PREFIRE_CROWBAR IKrule lhand touch "weapon_bone" usesource weightlist CrowbarMercStandArmsBlend
 
 // swim
 $MPAimLayer CROWBAR_aimmatrix_swim        CROWBAR_aimmatrix_idle        $infoNode$

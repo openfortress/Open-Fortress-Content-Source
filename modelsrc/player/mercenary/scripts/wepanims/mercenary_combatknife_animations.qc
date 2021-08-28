@@ -64,7 +64,7 @@ $MPWeaponAims		COMBATKNIFE	$infoNode$
 
 $MPGestureAttack AttackStand_COMBATKNIFE  COMBATKNIFE_fire          ACT_MERC_ATTACK_STAND_KNIFE weightlist CombatKnife_Merc_Stand_ArmsBlend
 $MPGestureAttack AttackCrouch_COMBATKNIFE COMBATKNIFE_crouch_fire   ACT_MERC_ATTACK_CROUCH_KNIFE weightlist CombatKnife_Merc_Stand_ArmsBlend
-$MPGestureAttack AttackSwim_COMBATKNIFE   COMBATKNIFE_swim_fire     ACT_MERC_ATTACK_SWIM_KNIFE
+$MPGestureAttack AttackSwim_COMBATKNIFE   COMBATKNIFE_swim_fire     ACT_MERC_ATTACK_SWIM_KNIFE weightlist CombatKnife_Merc_Stand_ArmsBlend
 
 $sequence Stand_COMBATKNIFE  COMBATKNIFE_idle loop alignto a_reference addlayer COMBATKNIFE_aimmatrix_idle activity ACT_MERC_STAND_KNIFE 1
 $sequence Crouch_COMBATKNIFE COMBATKNIFE_crouch_idle loop alignto a_reference addlayer COMBATKNIFE_aimmatrix_crouch_idle activity ACT_MERC_CROUCH_KNIFE 1
