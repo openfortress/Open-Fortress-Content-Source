@@ -17,13 +17,6 @@ $illumposition 0.057 -0.013 28.898
 $cdmaterials "models\pickups\"
 $cdmaterials ""
 
-$texturegroup "skinfamilies"
-{
-	{ "pickup_powerup_set_new"  }
-	{ "pickup_powerup_set_red"  }
-	{ "pickup_powerup_set_blue" }
-}
-
 $cbox 0 0 0 0 0 0
 
 $bbox -24.111 -24.044 0 24.136 24.159 58.047
