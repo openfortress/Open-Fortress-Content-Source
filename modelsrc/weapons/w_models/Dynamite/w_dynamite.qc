@@ -2,9 +2,16 @@
 
 $modelname "weapons\w_models\w_dynamite.mdl"
 
-$bodygroup "w_dynamite"
+$bodygroup "dynamite"
 {
 	studio "w_dynamite_bundle.smd"
+	blank
+}
+
+$bodygroup "lighter"
+{
+	studio "w_dynamite_lighter.smd"
+	blank
 }
 
 $surfaceprop "dm_grenade"
