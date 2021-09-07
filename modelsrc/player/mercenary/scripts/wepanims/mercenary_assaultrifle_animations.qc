@@ -49,10 +49,10 @@ $sequence layer_reload_airwalk_arms_ASSAULT_RIFLE "ASSAULT_RIFLE_swim_reload.dmx
 	hidden
 }
 
-$MPGestureReload_IK ReloadStand_ASSAULT_RIFLE     ASSAULT_RIFLE_reload        				ACT_MERC_RELOAD_STAND_ASSAULT_RIFLE    layer_reload_standing_arms_ASSAULT_RIFLE 0 4 55 67
-$MPGestureReload_IK ReloadCrouch_ASSAULT_RIFLE    ASSAULT_RIFLE_crouch_reload 				ACT_MERC_RELOAD_CROUCH_ASSAULT_RIFLE   layer_reload_crouching_arms_ASSAULT_RIFLE 0 4 55 67
-$MPGestureReload_IK ReloadSwim_ASSAULT_RIFLE      ASSAULT_RIFLE_swim_reload           ACT_MERC_RELOAD_SWIM_ASSAULT_RIFLE     layer_reload_swimming_arms_ASSAULT_RIFLE 0 4 55 67
-$MPGestureReload_IK ReloadAirwalk_ASSAULT_RIFLE   ASSAULT_RIFLE_reload        ACT_MERC_RELOAD_AIRWALK_ASSAULT_RIFLE  layer_reload_airwalk_arms_ASSAULT_RIFLE 0 4 55 67
+$MPGestureReload_IK_AssaultRifle ReloadStand_ASSAULT_RIFLE     ASSAULT_RIFLE_reload        				ACT_MERC_RELOAD_STAND_ASSAULT_RIFLE    layer_reload_standing_arms_ASSAULT_RIFLE 0 4 55 67
+$MPGestureReload_IK_AssaultRifle ReloadCrouch_ASSAULT_RIFLE    ASSAULT_RIFLE_crouch_reload 				ACT_MERC_RELOAD_CROUCH_ASSAULT_RIFLE   layer_reload_crouching_arms_ASSAULT_RIFLE 0 4 55 67
+$MPGestureReload_IK_AssaultRifle ReloadSwim_ASSAULT_RIFLE      ASSAULT_RIFLE_swim_reload           ACT_MERC_RELOAD_SWIM_ASSAULT_RIFLE     layer_reload_swimming_arms_ASSAULT_RIFLE 0 4 55 67
+$MPGestureReload_IK_AssaultRifle ReloadAirwalk_ASSAULT_RIFLE   ASSAULT_RIFLE_reload        ACT_MERC_RELOAD_AIRWALK_ASSAULT_RIFLE  layer_reload_airwalk_arms_ASSAULT_RIFLE 0 4 55 67
 
 $sequence Stand_ASSAULT_RIFLE  ASSAULT_RIFLE_idle loop alignto a_reference addlayer ASSAULT_RIFLE_aimmatrix_idle activity ACT_MERC_STAND_ASSAULT_RIFLE 1
 $sequence Crouch_ASSAULT_RIFLE ASSAULT_RIFLE_crouch_idle loop alignto a_reference addlayer ASSAULT_RIFLE_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_ASSAULT_RIFLE 1
