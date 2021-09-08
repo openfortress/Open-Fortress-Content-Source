@@ -43,33 +43,33 @@ $weightlist CrowbarMercStandArmsBlend {
 // CROWBAR
 //-----------------------------------------------------------------------------------
 
-$MPWeaponAims		CROWBAR	$infoNode$
+$MPWeaponAims MELEE	$infoNode$
 
-$MPGestureAttack AttackStand_CROWBAR  CROWBAR_fire          ACT_MP_ATTACK_STAND_MELEE weightlist CrowbarMercStandArmsBlend
-$MPGestureAttack AttackCrouch_CROWBAR CROWBAR_crouch_fire   ACT_MP_ATTACK_CROUCH_MELEE weightlist CrowbarMercStandArmsBlend
-$MPGestureAttack AttackSwim_CROWBAR   CROWBAR_swim_fire     ACT_MP_ATTACK_SWIM_MELEE weightlist CrowbarMercStandArmsBlend
+$MPGestureAttack Attack_Stand_MELEE  CROWBAR_fire          ACT_MP_ATTACK_STAND_MELEE weightlist CrowbarMercStandArmsBlend
+$MPGestureAttack Attack_Crouch_MELEE CROWBAR_crouch_fire   ACT_MP_ATTACK_CROUCH_MELEE weightlist CrowbarMercStandArmsBlend
+$MPGestureAttack Attack_Swim_MELEE   CROWBAR_swim_fire     ACT_MP_ATTACK_SWIM_MELEE weightlist CrowbarMercStandArmsBlend
 
-$sequence Stand_CROWBAR  CROWBAR_idle loop alignto a_reference addlayer CROWBAR_aimmatrix_idle activity ACT_MP_STAND_MELEE 1
-$sequence Crouch_CROWBAR CROWBAR_crouch_idle loop alignto a_reference addlayer CROWBAR_aimmatrix_crouch_idle activity ACT_MP_CROUCH_MELEE 1
+$sequence Stand_Melee  CROWBAR_idle loop alignto a_reference addlayer MELEE_aimmatrix_idle activity ACT_MP_STAND_MELEE 1
+$sequence Crouch_Melee CROWBAR_crouch_idle loop alignto a_reference addlayer MELEE_aimmatrix_crouch_idle activity ACT_MP_CROUCH_MELEE 1
 
 // swim
-$MPAimLayer CROWBAR_aimmatrix_swim        CROWBAR_aimmatrix_idle        $infoNode$
-$MPswimWithWeapon CROWBAR 0 0 0 0 0 0 0 0 CROWBAR_SwimN	CROWBAR_SwimCenter	CROWBAR_aimmatrix_swim	ACT_MP_SWIM_MELEE $infonode$
+$MPAimLayer MELEE_aimmatrix_swim        MELEE_aimmatrix_idle        $infoNode$
+$MPswimWithWeapon Melee 0 0 0 0 0 0 0 0 CROWBAR_SwimN	CROWBAR_SwimCenter	MELEE_aimmatrix_swim	ACT_MP_SWIM_MELEE $infonode$
 
 //-----------------------------------------------------------------------------------
 // JUMP
 //-----------------------------------------------------------------------------------
 
 //CROWBAR jump
-$sequence a_jumpStart_CROWBAR CROWBAR_jump frames 0 25 addlayer CROWBAR_aimmatrix_swim alignto a_reference Z activity ACT_MP_JUMP_START_MELEE 1 LX LY 
+$sequence a_jumpStart_MELEE CROWBAR_jump frames 0 25 addlayer MELEE_aimmatrix_swim alignto a_reference Z activity ACT_MP_JUMP_START_MELEE 1 LX LY 
 
-$sequence a_jumpfloat_CROWBAR CROWBAR_jump frames 26 189 addlayer CROWBAR_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_MELEE 1 LX LY 
+$sequence a_jumpfloat_MELEE CROWBAR_jump frames 26 189 addlayer MELEE_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_MELEE 1 LX LY 
 
-$sequence jumpLandPose_CROWBAR CROWBAR_jump frames 25 25 numframes 30 loop 
+$sequence jumpLandPose_MELEE CROWBAR_jump frames 25 25 numframes 30 loop 
 
-$sequence jumpLand_CROWBAR { 
+$sequence jumpLand_MELEE { 
 	CROWBAR_jump_land 
-	subtract jumpLand_CROWBAR 0 
+	subtract jumpLand_MELEE 0 
 	delta 
 	iklock rfoot 1 0 iklock lfoot 1 0 
 
@@ -131,24 +131,24 @@ $animation a_runSW_CROWBAR CROWBAR_runsw blockname $infoNode$ {
 	startloop 12
 	alignto a_reference
 }
-$sequence Run_CROWBAR {
+$sequence Run_MELEE {
 	a_runsw_CROWBAR	a_runS_CROWBAR		a_runSE_CROWBAR
 	a_runW_CROWBAR	a_runCenter_CROWBAR	a_runE_CROWBAR
 	a_runNW_CROWBAR	a_runN_CROWBAR		a_runNE_CROWBAR
 	blendwidth 3 blend move_y -1 1 blend move_x -1 1
-	addlayer CROWBAR_aimmatrix_run
+	addlayer MELEE_aimmatrix_run
 	activity ACT_MP_RUN_MELEE 1
 	  { event 7001 7 "right" }
 	  { event 7001 16 "left" }
 }
 
-$MPCrouchWalkWithWeaponNoIK Crouch_Walk_CROWBAR 0 0 0 0 0 0 0 0 CROWBAR_crouch_walkN CROWBAR_crouch_walkCenter CROWBAR_aimmatrix_crouch_idle ACT_MP_CROUCHWALK_MELEE $infoNode$
+$MPCrouchWalkWithWeaponNoIK Crouch_Walk_MELEE 0 0 0 0 0 0 0 0 CROWBAR_crouch_walkN CROWBAR_crouch_walkCenter MELEE_aimmatrix_crouch_idle ACT_MP_CROUCHWALK_MELEE $infoNode$
 
 //-----------------------------------------------------------------------------------
 // Airwalk
 //-----------------------------------------------------------------------------------
-$sequence Airwalk_CROWBAR "CROWBAR_airwalk.dmx" fps 30 loop {
-	addlayer CROWBAR_aimmatrix_idle 
+$sequence Airwalk_MELEE "CROWBAR_airwalk.dmx" fps 30 loop {
+	addlayer MELEE_aimmatrix_idle 
 	activity ACT_MP_AIRWALK_MELEE 1
 }
 
