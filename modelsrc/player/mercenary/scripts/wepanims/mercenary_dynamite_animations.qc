@@ -24,34 +24,37 @@ $sequence ragdollspawn "primary_idle.dmx" lx ly
 //-----------------------------------------------------------------------------------
 
 $MPWeaponAims	DYNAMITE	$infoNode$
-$MPAimLayer  DYNAMITE_aimmatrix_deployed        	DYNAMITE_aimmatrix_deployed      $infoNode$
-$MPAimLayer  DYNAMITE_crouch_aimmatrix_deployed	  DYNAMITE_crouch_aimmatrix_deployed	$infoNode$
-$MPGestureAttack_Dynamite AttackStand_DYNAMITE   DYNAMITE_fire         ACT_MERC_ATTACK_STAND_DYNAMITE  IKrule lhand touch "weapon_bone" usesource
-$MPGestureAttack_Dynamite AttackCrouch_DYNAMITE  DYNAMITE_crouch_fire  ACT_MERC_ATTACK_CROUCH_DYNAMITE IKrule lhand touch "weapon_bone" usesource
-$MPGestureAttack_Dynamite AttackSwim_DYNAMITE    DYNAMITE_fire         ACT_MERC_ATTACK_SWIM_DYNAMITE   IKrule lhand touch "weapon_bone" usesource
 
-$MPGestureAttack_Dynamite AttackCrouch_DYNAMITE_DEPLOYED  DYNAMITE_DEPLOYED_crouch_fire   ACT_MERC_ATTACK_CROUCH_DYNAMITE_DEPLOYED
-$MPGestureAttack_Dynamite AttackSwim_DYNAMITE_DEPLOYED    DYNAMITE_fire          ACT_MERC_ATTACK_SWIM_DYNAMITE_DEPLOYED
+//$MPAimLayer  DYNAMITE_aimmatrix_deployed        	DYNAMITE_aimmatrix_deployed      $infoNode$
+//$MPAimLayer  DYNAMITE_crouch_aimmatrix_deployed	  DYNAMITE_crouch_aimmatrix_deployed	$infoNode$
 
-$MPGestureReload ReloadStand_DYNAMITE_DEPLOYED   DYNAMITE_idle_deployed          ACT_MERC_RELOAD_STAND_DYNAMITE_DEPLOYED IKrule lhand touch "weapon_bone" usesource frames 0 0
-$MPGestureReload ReloadCrouch_DYNAMITE_DEPLOYED  DYNAMITE_idle_deployed          ACT_MERC_RELOAD_CROUCH_DYNAMITE_DEPLOYED IKrule lhand touch "weapon_bone" usesource frames 0 0
-$MPGestureReload ReloadSwim_DYNAMITE_DEPLOYED    DYNAMITE_idle_deployed          ACT_MERC_RELOAD_SWIM_DYNAMITE_DEPLOYED IKrule lhand touch "weapon_bone" usesource frames 0 0
+$MPGestureAttack_Dynamite AttackStand_DYNAMITE   DYNAMITE_fire         ACT_MERC_ATTACK_STAND_DYNAMITE
+$MPGestureAttack_Dynamite AttackCrouch_DYNAMITE  DYNAMITE_crouch_fire  ACT_MERC_ATTACK_CROUCH_DYNAMITE
+$MPGestureAttack_Dynamite AttackSwim_DYNAMITE    DYNAMITE_fire         ACT_MERC_ATTACK_SWIM_DYNAMITE 
 
-$MPGestureReload ReloadStand_DYNAMITE  DYNAMITE_idle        ACT_MERC_RELOAD_STAND_DYNAMITE IKrule lhand touch "weapon_bone" usesource frames 0 0
-$MPGestureReload ReloadCrouch_DYNAMITE  DYNAMITE_idle ACT_MERC_RELOAD_CROUCH_DYNAMITE IKrule lhand touch "weapon_bone" usesource frames 0 0
-$MPGestureReload ReloadSwim_DYNAMITE   DYNAMITE_idle   ACT_MERC_RELOAD_SWIM_DYNAMITE IKrule lhand touch "weapon_bone" usesource frames 0 0
+//$MPGestureAttack_Dynamite AttackCrouch_DYNAMITE_DEPLOYED  DYNAMITE_DEPLOYED_crouch_fire   ACT_MERC_ATTACK_CROUCH_DYNAMITE_DEPLOYED
+//$MPGestureAttack_Dynamite AttackSwim_DYNAMITE_DEPLOYED    DYNAMITE_fire          ACT_MERC_ATTACK_SWIM_DYNAMITE_DEPLOYED
 
+//$MPGestureReload ReloadStand_DYNAMITE_DEPLOYED   DYNAMITE_idle_deployed          ACT_MERC_RELOAD_STAND_DYNAMITE_DEPLOYED
+//$MPGestureReload ReloadCrouch_DYNAMITE_DEPLOYED  DYNAMITE_idle_deployed          ACT_MERC_RELOAD_CROUCH_DYNAMITE_DEPLOYED
+//$MPGestureReload ReloadSwim_DYNAMITE_DEPLOYED    DYNAMITE_idle_deployed          ACT_MERC_RELOAD_SWIM_DYNAMITE_DEPLOYED
+
+//$MPGestureReload ReloadStand_DYNAMITE  DYNAMITE_idle        ACT_MERC_RELOAD_STAND_DYNAMITE IKrule lhand touch "weapon_bone" usesource frames 0 0
+//$MPGestureReload ReloadCrouch_DYNAMITE  DYNAMITE_idle ACT_MERC_RELOAD_CROUCH_DYNAMITE IKrule lhand touch "weapon_bone" usesource frames 0 0
+//$MPGestureReload ReloadSwim_DYNAMITE   DYNAMITE_idle   ACT_MERC_RELOAD_SWIM_DYNAMITE IKrule lhand touch "weapon_bone" usesource frames 0 0
+
+/*
 $sequence attackstand_DYNAMITE_fire {
 	DYNAMITE_fire
 	subtract attackstand_DYNAMITE_fire 0
 	{ event AE_CL_BODYGROUP_SET_VALUE 5 "dynamite 1" }
 	{ event AE_CL_BODYGROUP_SET_VALUE 25 "dynamite 0" }
 	delta
-	ikrule lhand touch "weapon_bone" usesource
-	ikrule rhand release
+	ikrule lhand release
+	ikrule rhand touch "weapon_bone" usesource
 	iklock rfoot 1 0 iklock lfoot 1 0
  	activity ACT_MERC_ATTACK_STAND_DYNAMITE_DEPLOYED 1 
-}
+}*/
 
 $sequence Stand_DYNAMITE  DYNAMITE_idle loop addlayer DYNAMITE_aimmatrix_idle activity ACT_MERC_STAND_DYNAMITE 1
 $sequence Crouch_DYNAMITE DYNAMITE_crouch_idle loop addlayer DYNAMITE_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_DYNAMITE 1
@@ -73,10 +76,10 @@ $sequence jumpLand_DYNAMITE {
 
 $MPAimLayer_lefthandIK  DYNAMITE_aimmatrix_swim        DYNAMITE_aimmatrix_idle        $infoNode$
 $MPswimWithWeapon DYNAMITE 0 0 0 0 0 0 0 0 DYNAMITE_SwimN	DYNAMITE_SwimCenter	DYNAMITE_aimmatrix_swim	ACT_MERC_SWIM_DYNAMITE $infonode$
-$MPswimWithWeapon DYNAMITE_deployed 0 0 0 0 0 0 0 0 DYNAMITE_deployed_SwimN DYNAMITE_deployed_SwimCenter	DYNAMITE_aimmatrix_deployed	ACT_MERC_DYNAMITE_SWIM_DEPLOYED $infonode$
+//$MPswimWithWeapon DYNAMITE_deployed 0 0 0 0 0 0 0 0 DYNAMITE_deployed_SwimN DYNAMITE_deployed_SwimCenter	DYNAMITE_aimmatrix_deployed	ACT_MERC_DYNAMITE_SWIM_DEPLOYED $infonode$
 
 // deployed
-
+/*
 $sequence Crouch_Deployed_DYNAMITE  DYNAMITE_crouch_idle_deployed {
 	loop
 	addlayer DYNAMITE_crouch_aimmatrix_deployed
@@ -165,9 +168,9 @@ $sequence DYNAMITE_Deployed_Movement {
 	blendwidth 3 blend move_y -1 1 blend move_x -1 1
 	addlayer DYNAMITE_aimmatrix_deployed
 	activity ACT_MERC_DYNAMITE_DEPLOYED 1
-}
+}*/
 
-$MPCrouchWalkWithWeapon Deployed_Crouch_Walk_DYNAMITE        0 0 0 0 0 0 0 0 DYNAMITE_deployed_crouch_walkN        DYNAMITE_deployed_Crouch_walkCenter        DYNAMITE_crouch_aimmatrix_deployed        ACT_MERC_CROUCHWALK_DYNAMITE_DEPLOYED $infoNode$
+//$MPCrouchWalkWithWeapon Deployed_Crouch_Walk_DYNAMITE        0 0 0 0 0 0 0 0 DYNAMITE_deployed_crouch_walkN        DYNAMITE_deployed_Crouch_walkCenter        DYNAMITE_crouch_aimmatrix_deployed        ACT_MERC_CROUCHWALK_DYNAMITE_DEPLOYED $infoNode$
 
 // run
 
