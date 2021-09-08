@@ -66,6 +66,7 @@ $sequence a_jumpStart_CROWBAR CROWBAR_jump frames 0 25 addlayer CROWBAR_aimmatri
 $sequence a_jumpfloat_CROWBAR CROWBAR_jump frames 26 189 addlayer CROWBAR_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_MELEE 1 LX LY 
 
 $sequence jumpLandPose_CROWBAR CROWBAR_jump frames 25 25 numframes 30 loop 
+
 $sequence jumpLand_CROWBAR { 
 	CROWBAR_jump_land 
 	subtract jumpLand_CROWBAR 0 
