@@ -6,17 +6,16 @@ $bodygroup "pistol"
 {
 	studio "w_pistol_mercenary_pistol.smd"
 }
-//$bodygroup "magazine"
-//{
-//	studio "w_pistol_mercenary_mag.smd"
-//	blank
-//}
+$bodygroup "magazine"
+{
+	studio "w_pistol_mercenary_mag.smd"
+	blank
+}
 
-$surfaceprop "metal"
+
+$surfaceprop "default"
 
 $contents "solid"
-
-$illumposition 0 0 0
 
 $cdmaterials "models\weapons\v_pistol\"
 $cdmaterials ""
