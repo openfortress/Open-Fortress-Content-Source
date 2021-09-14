@@ -13,7 +13,7 @@ $bodygroup "magazine"
 }
 
 
-$surfaceprop "default"
+$surfaceprop "metal"
 
 $contents "solid"
 

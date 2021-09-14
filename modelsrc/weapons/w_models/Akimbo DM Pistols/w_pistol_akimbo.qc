@@ -19,7 +19,7 @@ $bodygroup "magazine_right"
 	blank
 }
 
-$surfaceprop "default"
+$surfaceprop "metal"
 
 $contents "solid"
 
