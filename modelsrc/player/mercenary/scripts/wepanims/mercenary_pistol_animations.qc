@@ -175,7 +175,7 @@ $sequence Run_PISTOL_MERCENARY {
     { event 7001 16 "left" }
 }
 
-$MPCrouchWalkWithWeapon Crouch_Walk_PISTOL_MERCENARY 0 0 0 0 0 0 0 0 PISTOL_MERCENARY_crouch_walkN PISTOL_MERCENARY_crouch_walkCenter PISTOL_MERCENARY_aimmatrix_crouch_idle ACT_MERC_CROUCHWALK_PISTOL_MERCENARY $infoNode$
+$MPCrouchWalkWithWeaponNoIK Crouch_Walk_PISTOL_MERCENARY 0 0 0 0 0 0 0 0 PISTOL_MERCENARY_crouch_walkN PISTOL_MERCENARY_crouch_walkCenter PISTOL_MERCENARY_aimmatrix_crouch_idle ACT_MERC_CROUCHWALK_PISTOL_MERCENARY $infoNode$
 
 $sequence Airwalk_PISTOL_MERCENARY "PISTOL_MERCENARY_airwalk.dmx" fps 30 loop {
 	addlayer PISTOL_MERCENARY_aimmatrix_idle 

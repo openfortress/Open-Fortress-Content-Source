@@ -30,29 +30,29 @@ $MPGestureAttack AttackCrouch_SUPERSHOTGUN SUPERSHOTGUN_crouch_fire   ACT_MERC_A
 $MPGestureAttack AttackSwim_SUPERSHOTGUN   SUPERSHOTGUN_swim_fire     ACT_MERC_ATTACK_SWIM_SUPERSHOTGUN
 
 $sequence layer_reload_standing_arms_SUPERSHOTGUN "SUPERSHOTGUN_reload.dmx" weightlist ArmsBlend {
-	ikrule lhand touch "weapon_bone" usesource range 0 4 45 55
+	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
 	hidden
 
 }
 $sequence layer_reload_crouching_arms_SUPERSHOTGUN "SUPERSHOTGUN_crouch_reload.dmx" weightlist ArmsBlend {
-	ikrule lhand touch "weapon_bone" usesource range 0 4 45 55
+	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
 	hidden
 }
 
 $sequence layer_reload_swimming_arms_SUPERSHOTGUN "SUPERSHOTGUN_swim_reload.dmx" weightlist ArmsBlend {
-	ikrule lhand touch "weapon_bone" usesource range 0 4 45 55
+	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
 	hidden
 }
 
 $sequence layer_reload_airwalk_arms_SUPERSHOTGUN "SUPERSHOTGUN_swim_reload.dmx" weightlist ArmsBlend {
-	ikrule lhand touch "weapon_bone" usesource range 0 4 45 55
+	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
 	hidden
 }
 
-$MPGestureReload_IK ReloadStand_SUPERSHOTGUN     SUPERSHOTGUN_reload        				ACT_MERC_RELOAD_STAND_SUPERSHOTGUN    layer_reload_standing_arms_SUPERSHOTGUN 0 4 45 55
-$MPGestureReload_IK ReloadCrouch_SUPERSHOTGUN    SUPERSHOTGUN_crouch_reload 				ACT_MERC_RELOAD_CROUCH_SUPERSHOTGUN   layer_reload_crouching_arms_SUPERSHOTGUN 0 4 45 55
-$MPGestureReload_IK ReloadSwim_SUPERSHOTGUN      SUPERSHOTGUN_swim_reload           ACT_MERC_RELOAD_SWIM_SUPERSHOTGUN     layer_reload_swimming_arms_SUPERSHOTGUN 0 4 45 55
-$MPGestureReload_IK ReloadAirwalk_SUPERSHOTGUN   SUPERSHOTGUN_reload        ACT_MERC_RELOAD_AIRWALK_SUPERSHOTGUN  layer_reload_airwalk_arms_SUPERSHOTGUN 0 4 45 55
+$MPGestureReload_IK ReloadStand_SUPERSHOTGUN     SUPERSHOTGUN_reload        				ACT_MERC_RELOAD_STAND_SUPERSHOTGUN    layer_reload_standing_arms_SUPERSHOTGUN 0 4 45 51
+$MPGestureReload_IK ReloadCrouch_SUPERSHOTGUN    SUPERSHOTGUN_crouch_reload 				ACT_MERC_RELOAD_CROUCH_SUPERSHOTGUN   layer_reload_crouching_arms_SUPERSHOTGUN 0 4 45 51
+$MPGestureReload_IK ReloadSwim_SUPERSHOTGUN      SUPERSHOTGUN_swim_reload           ACT_MERC_RELOAD_SWIM_SUPERSHOTGUN     layer_reload_swimming_arms_SUPERSHOTGUN 0 4 45 51
+$MPGestureReload_IK ReloadAirwalk_SUPERSHOTGUN   SUPERSHOTGUN_reload        ACT_MERC_RELOAD_AIRWALK_SUPERSHOTGUN  layer_reload_airwalk_arms_SUPERSHOTGUN 0 4 45 51
 
 $sequence Stand_SUPERSHOTGUN  SUPERSHOTGUN_idle loop alignto a_reference addlayer SUPERSHOTGUN_aimmatrix_idle activity ACT_MERC_STAND_SUPERSHOTGUN 1
 $sequence Crouch_SUPERSHOTGUN SUPERSHOTGUN_crouch_idle loop alignto a_reference addlayer SUPERSHOTGUN_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_SUPERSHOTGUN 1
