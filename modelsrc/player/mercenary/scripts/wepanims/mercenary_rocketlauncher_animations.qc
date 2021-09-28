@@ -49,25 +49,25 @@ $MPGestureAttack AttackCrouch_ROCKETLAUNCHER ROCKETLAUNCHER_crouch_fire   ACT_ME
 $MPGestureAttack AttackSwim_ROCKETLAUNCHER   ROCKETLAUNCHER_swim_fire     ACT_MERC_ATTACK_SWIM_ROCKETLAUNCHER weightlist RocketlauncherMercStandArmsBlend
 
 $sequence layer_reload_standing_arms_merc "ROCKETLAUNCHER_reload.dmx" weightlist ArmsBlend {
-	frames 0 38
-	numframes 38
+	frames 0 33
+	numframes 33
 	fps 30
 	ikrule lhand touch "bip_pelvis" usesource range 0 10 16 21
-	ikrule lhand touch "weapon_bone" usesource range 21 24 32 38
+	ikrule lhand touch "weapon_bone" usesource range 21 24 32 33
 	hidden
 }
 $animation merc_reload_startpose ROCKETLAUNCHER_reload frames 0 0
 $sequence ReloadStand_ROCKETLAUNCHER {
 	ROCKETLAUNCHER_reload
-	frames 0 38
-	numframes 38
+	frames 0 33
+	numframes 33
 	fps 30
 	subtract ReloadStand_ROCKETLAUNCHER 0
 	delta
 	ikrule lhand release
 	ikrule rhand release
 	iklock rfoot 1 0 iklock lfoot 1 0
- 	blendlayer layer_reload_standing_arms_merc 0 4 32 38
+ 	blendlayer layer_reload_standing_arms_merc 0 4 32 33
  	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER 1
  	event AE_CL_BODYGROUP_SET_VALUE 11 "rocket 1"
  	event AE_CL_BODYGROUP_SET_VALUE 21 "rocket 0"
@@ -75,8 +75,8 @@ $sequence ReloadStand_ROCKETLAUNCHER {
 
 $sequence ReloadCrouch_ROCKETLAUNCHER {
 	ROCKETLAUNCHER_reload
-	frames 0 38
-	numframes 38
+	frames 0 33
+	numframes 33
 	fps 30
 	subtract ReloadCrouch_ROCKETLAUNCHER 0
 	delta
@@ -91,8 +91,8 @@ $sequence ReloadCrouch_ROCKETLAUNCHER {
 
 $sequence ReloadAirwalk_ROCKETLAUNCHER {
 	ROCKETLAUNCHER_reload
-	frames 0 38
-	numframes 38
+	frames 0 33
+	numframes 33
 	fps 30
 	subtract ReloadAirwalk_ROCKETLAUNCHER 0
 	delta
@@ -106,7 +106,7 @@ $sequence ReloadAirwalk_ROCKETLAUNCHER {
 }
 
 $sequence layer_reload_standing_arms_loop_merc "ROCKETLAUNCHER_reload.dmx" weightlist ArmsBlend {
-	frames 38 76
+	frames 33 60
 	numframes 28
 	loop
 	fps 30
@@ -117,7 +117,7 @@ $sequence layer_reload_standing_arms_loop_merc "ROCKETLAUNCHER_reload.dmx" weigh
 }
 $sequence ReloadStand_ROCKETLAUNCHER_loop {
 	ROCKETLAUNCHER_reload
-	frames 38 76
+	frames 33 60
 	numframes 28
   loop
 	fps 30
@@ -135,7 +135,7 @@ $sequence ReloadStand_ROCKETLAUNCHER_loop {
 }
 $sequence ReloadCrouch_ROCKETLAUNCHER_loop {
 	ROCKETLAUNCHER_reload
-	frames 38 76
+	frames 33 60
 	numframes 28
   loop
 	fps 30
@@ -153,7 +153,7 @@ $sequence ReloadCrouch_ROCKETLAUNCHER_loop {
 }
 $sequence ReloadAirwalk_ROCKETLAUNCHER_loop {
 	ROCKETLAUNCHER_reload
-	frames 38 76
+	frames 33 60
 	numframes 28
   loop
 	fps 30
@@ -171,7 +171,7 @@ $sequence ReloadAirwalk_ROCKETLAUNCHER_loop {
 }
 
 $sequence layer_reload_standing_arms_end_merc "ROCKETLAUNCHER_reload.dmx" weightlist ArmsBlend {
-	frames 70 94
+	frames 70 88
 	numframes 21
 	fps 44
 	ikrule lhand touch "weapon_bone" usesource
@@ -179,7 +179,7 @@ $sequence layer_reload_standing_arms_end_merc "ROCKETLAUNCHER_reload.dmx" weight
 }
 $sequence ReloadStand_ROCKETLAUNCHER_end {
 	ROCKETLAUNCHER_reload
-	frames 70 94
+	frames 70 88
 	fps 30
 	subtract merc_reload_startpose 0
 	delta
@@ -193,7 +193,7 @@ $sequence ReloadStand_ROCKETLAUNCHER_end {
 }
 $sequence ReloadCrouch_ROCKETLAUNCHER_end {
 	ROCKETLAUNCHER_reload
-	frames 70 94
+	frames 70 88
 	fps 30
 	subtract merc_reload_startpose 0
 	delta
@@ -207,7 +207,7 @@ $sequence ReloadCrouch_ROCKETLAUNCHER_end {
 }
 $sequence ReloadAirwalk_ROCKETLAUNCHER_end {
 	ROCKETLAUNCHER_reload
-	frames 70 94
+	frames 70 88
 	fps 30
 	subtract merc_reload_startpose 0
 	delta
@@ -224,7 +224,7 @@ $sequence ReloadAirwalk_ROCKETLAUNCHER_end {
 $sequence layer_reload_swim_arms_merc "ROCKETLAUNCHER_swim_reload.dmx" weightlist ArmsBlend {
 	fps 44
 	ikrule lhand touch "bip_pelvis" usesource range 7 12 12 17
-	ikrule lhand touch "weapon_bone" usesource range 22 27 38 38
+	ikrule lhand touch "weapon_bone" usesource range 22 27 33 33
 	ikrule lhand touch "bip_pelvis" usesource range 48 53 53 58
 	ikrule lhand touch "weapon_bone" usesource range 59 64 68 73
 	hidden
