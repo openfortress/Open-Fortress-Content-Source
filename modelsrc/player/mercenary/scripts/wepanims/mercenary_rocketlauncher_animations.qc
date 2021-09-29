@@ -53,7 +53,8 @@ $sequence layer_reload_standing_arms_merc "ROCKETLAUNCHER_reload.dmx" weightlist
 	numframes 33
 	fps 30
 	//ikrule rhand touch "bip_pelvis" usesource range 1 8 16 32
-	ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
+	//ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
+	localhierarchy "weapon_bone" "bip_hand_l"
 	hidden
 }
 
@@ -65,7 +66,7 @@ $sequence ReloadStand_ROCKETLAUNCHER {
 	fps 30
 	subtract ReloadStand_ROCKETLAUNCHER 0
 	delta
-	ikrule lhand release
+	//ikrule lhand release
 	//ikrule rhand release
 	iklock rfoot 1 0 iklock lfoot 1 0
  	blendlayer layer_reload_standing_arms_merc 0 4 32 33
@@ -80,7 +81,8 @@ $sequence layer_reload_standing_arms_loop_merc "ROCKETLAUNCHER_reload.dmx" weigh
 	loop
 	fps 30
 	//ikrule rhand touch "bip_pelvis" usesource range 1 8 16 32
-	ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
+	//ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
+	localhierarchy "weapon_bone" "bip_hand_l"
 	hidden
 }
 $sequence ReloadStand_ROCKETLAUNCHER_loop {
@@ -92,10 +94,10 @@ $sequence ReloadStand_ROCKETLAUNCHER_loop {
 	subtract merc_reload_startpose 0
 	loop
 	delta
-	ikrule lhand release
+	//ikrule lhand release
 	//ikrule rhand release
 	iklock rfoot 1 0 iklock lfoot 1 0
- 	addlayer layer_reload_standing_arms_loop_merc
+ 	addlayer layer_reload_standing_arms_loop_merc	
  	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER_LOOP 1
  	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
  	event AE_CL_BODYGROUP_SET_VALUE 12 "rocket 1"
@@ -107,7 +109,8 @@ $sequence layer_reload_standing_arms_end_merc "ROCKETLAUNCHER_reload.dmx" weight
 	numframes 21
 	fps 44
 	//ikrule rhand touch "bip_pelvis" usesource range 1 8 16 32
-	ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
+	//ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
+	localhierarchy "weapon_bone" "bip_hand_l"
 	hidden
 }
 $sequence ReloadStand_ROCKETLAUNCHER_end {
