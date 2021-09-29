@@ -66,7 +66,24 @@ $Weightlist ArmLGestureBlend {
 $Weightlist armsblendstun {
   "bip_pelvis" 1.0
 	}
-	
+
+$Weightlist CrowbarMercStandArmsBlend {
+	"bip_pelvis" 1.0
+	"bip_hip_R" 0.0
+	"bip_hip_L" 0.0
+	"bip_spine_0" 0.7
+	"bip_spine_1" 0.8
+	"bip_spine_2" 0.9
+	"bip_spine_3" 1.0
+	"bip_collar_R" 1.0
+	"bip_collar_L" 1.0
+	"bip_upperArm_R" 1.0
+	"bip_lowerArm_R" 1.0
+	"bip_upperArm_L" 1.0
+	"bip_lowerArm_L" 1.0
+	"bip_head" 0.5
+}
+
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 // LEGACY animations (primary, secondary etc)
@@ -74,218 +91,7 @@ $Weightlist armsblendstun {
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 
-
-//-----------------------------------------------------------------------------------
-// Primary
-//-----------------------------------------------------------------------------------
-$MPWeaponAims_leftHandIK		PRIMARY	$infoNode$
-
-$sequence test primary_swim_reload.dmx
-
-
-$MPGestureAttack AttackStand_PRIMARY  PRIMARY_fire          ACT_MP_ATTACK_STAND_PRIMARY
-$MPGestureAttack AttackCrouch_PRIMARY PRIMARY_crouch_fire   ACT_MP_ATTACK_CROUCH_PRIMARY
-$MPGestureAttack AttackSwim_PRIMARY   PRIMARY_swim_fire     ACT_MP_ATTACK_SWIM_PRIMARY
-
-$sequence layer_reload_standing_arms "primary_reload.dmx" weightlist ArmsBlend {
-	frames 0 33
-	numframes 33
-	fps 30
-	ikrule lhand touch "bip_pelvis" usesource range 0 10 16 21
-	ikrule lhand touch "weapon_bone" usesource range 21 24 32 32
-	hidden
-}
-$animation a_reload_startpose primary_reload frames 0 0
-$sequence ReloadStand_PRIMARY {
-	PRIMARY_reload
-	frames 0 33
-	numframes 33
-	fps 30
-	subtract ReloadStand_PRIMARY 0
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	blendlayer layer_reload_standing_arms 0 4 32 32
- 	activity ACT_MP_RELOAD_STAND_PRIMARY 1
- 	event AE_CL_BODYGROUP_SET_VALUE 11 "rocket 1"
- 	event AE_CL_BODYGROUP_SET_VALUE 21 "rocket 0"
-}
-
-$sequence ReloadCrouch_PRIMARY {
-	PRIMARY_reload
-	frames 0 33
-	numframes 33
-	fps 30
-	subtract ReloadCrouch_PRIMARY 0
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	blendlayer layer_reload_standing_arms 0 4 32 32
- 	activity ACT_MP_RELOAD_CROUCH_PRIMARY 1
- 	event AE_CL_BODYGROUP_SET_VALUE 11 "rocket 1"
- 	event AE_CL_BODYGROUP_SET_VALUE 21 "rocket 0"
-}
-
-$sequence ReloadAirwalk_PRIMARY {
-	PRIMARY_reload
-	frames 0 33
-	numframes 33
-	fps 30
-	subtract ReloadAirwalk_PRIMARY 0
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	blendlayer layer_reload_standing_arms 0 4 32 32
- 	activity ACT_MP_RELOAD_AIRWALK_PRIMARY 1
- 	event AE_CL_BODYGROUP_SET_VALUE 11 "rocket 1"
- 	event AE_CL_BODYGROUP_SET_VALUE 21 "rocket 0"
-}
-
-$sequence layer_reload_standing_arms_loop "primary_reload.dmx" weightlist ArmsBlend {
-	frames 33 60
-	numframes 28
-	loop
-	fps 30
-	ikrule lhand touch "weapon_bone" usesource range 0 0 0 5
-	ikrule lhand touch "bip_pelvis" usesource range 8 11 14 17
-	ikrule lhand touch "weapon_bone" usesource range 19 22 27 27
-	hidden
-}
-
-$sequence ReloadStand_PRIMARY_loop {
-	PRIMARY_reload
-	frames 33 60
-	numframes 28
-  loop
-	fps 30
-	subtract a_reload_startpose 0
-	loop
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	addlayer layer_reload_standing_arms_loop
- 	activity ACT_MP_RELOAD_STAND_PRIMARY_LOOP 1
- 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
- 	event AE_CL_BODYGROUP_SET_VALUE 12 "rocket 1"
- 	event AE_CL_BODYGROUP_SET_VALUE 22 "rocket 0"
-}
-
-$sequence ReloadCrouch_PRIMARY_loop {
-	PRIMARY_reload
-	frames 33 60
-	numframes 28
-  loop
-	fps 30
-	subtract a_reload_startpose 0
-	loop
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	addlayer layer_reload_standing_arms_loop
- 	activity ACT_MP_RELOAD_CROUCH_PRIMARY_LOOP 1
- 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
- 	event AE_CL_BODYGROUP_SET_VALUE 12 "rocket 1"
- 	event AE_CL_BODYGROUP_SET_VALUE 22 "rocket 0"
-}
-
-$sequence ReloadAirwalk_PRIMARY_loop {
-	PRIMARY_reload
-	frames 33 60
-	numframes 28
-  loop
-	fps 30
-	subtract a_reload_startpose 0
-	loop
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	addlayer layer_reload_standing_arms_loop
- 	activity ACT_MP_RELOAD_AIRWALK_PRIMARY_LOOP 1
- 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
- 	event AE_CL_BODYGROUP_SET_VALUE 12 "rocket 1"
- 	event AE_CL_BODYGROUP_SET_VALUE 22 "rocket 0"
-}
-
-$sequence layer_reload_standing_arms_end "primary_reload.dmx" weightlist ArmsBlend {
-	frames 70 88
-	numframes 21
-	fps 44
-	ikrule lhand touch "weapon_bone" usesource
-	hidden
-}
-
-$sequence ReloadStand_PRIMARY_end {
-	PRIMARY_reload
-	frames 70 88
-	fps 30
-	subtract a_reload_startpose 0
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	blendlayer layer_reload_standing_arms_end 0 0 10 18 spline
- 	activity ACT_MP_RELOAD_STAND_PRIMARY_END 1
- 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
-
-}
-
-$sequence ReloadCrouch_PRIMARY_end {
-	PRIMARY_reload
-	frames 70 88
-	fps 30
-	subtract a_reload_startpose 0
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	blendlayer layer_reload_standing_arms_end 0 0 10 18 spline
- 	activity ACT_MP_RELOAD_CROUCH_PRIMARY_END 1
- 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
-
-}
-
-$sequence ReloadAirwalk_PRIMARY_end {
-	PRIMARY_reload
-	frames 70 88
-	fps 30
-	subtract a_reload_startpose 0
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	blendlayer layer_reload_standing_arms_end 0 0 10 18 spline
- 	activity ACT_MP_RELOAD_AIRWALK_PRIMARY_END 1
- 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
-
-}
-
-
-$sequence layer_reload_swim_arms "primary_swim_reload.dmx" weightlist ArmsBlend {
-	fps 44
-	ikrule lhand touch "bip_pelvis" usesource range 7 12 12 17
-	ikrule lhand touch "weapon_bone" usesource range 22 27 33 38
-	ikrule lhand touch "bip_pelvis" usesource range 48 53 53 58
-	ikrule lhand touch "weapon_bone" usesource range 59 64 68 73
-	hidden
-}
-
-$sequence ReloadSwim_PRIMARY {
-	PRIMARY_swim_reload
-	fps 44
-	subtract ReloadSwim_PRIMARY 0
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	addlayer layer_reload_swim_arms
- 	activity ACT_MP_RELOAD_SWIM_PRIMARY 1
-}
+$sequence layer_primary_jump_floatNoise primary_floatD subtract layer_primary_jump_floatNoise 0 delta realtime hidden
 
 //Hit flinch
 $sequence a_flinch01 "hit_flinch01.dmx" subtract a_flinch01 12 {
@@ -791,9 +597,6 @@ $sequence PRIMARY_stun_end {
 //
 //================================================================================================
 
-$MPAimLayer primary_aimmatrix_swim        primary_aimmatrix_swim        $infoNode$
-$MPswimWithWeapon Primary 0 0 0 0 0 0 0 0 primary_swimN	primary_swimCenter	primary_aimmatrix_swim	ACT_MP_SWIM_Primary $infonode$
-
 $MPAimLayer secondary_aimmatrix_swim        secondary_aimmatrix_swim        $infoNode$
 
 $animation a_swimCenter_secondary  secondary_swimCenter blockname "mercenaryInfo" loop
@@ -835,44 +638,6 @@ $sequence Swim_loser  {
 
 //================================================================================================
 //
-// JUMP PRIMARY
-//
-//================================================================================================
-
-$sequence Jump_Start_primary { 
-	primary_jump
-	alignto a_reference
-	z  //this extracts the up/down motion of the body
-	frames 0 23
-	ikrule lfoot release ikrule rfoot release
-	addlayer primary_aimmatrix_idle 
-	activity ACT_MP_JUMP_START_primary 1 
-} 
-
-$sequence layer_primary_jump_floatNoise primary_floatD subtract layer_primary_jump_floatNoise 0 delta realtime hidden
-
-$sequence Jump_Float_primary { 
-	primary_jump
-	alignto a_reference
-	frames 24 40
-	numframes 24
-	loop
-	addlayer layer_primary_jump_floatNoise
-	addlayer primary_aimmatrix_idle 
-	activity ACT_MP_JUMP_FLOAT_primary 1 
-} 
-
-$sequence jumpLand_primary { 
-	primary_jump_Land 
-	subtract jumpLand_primary 0 
-	delta 
-	iklock rfoot 1 0 iklock lfoot 1 0 
-	activity ACT_MP_JUMP_LAND_primary 1 
-}
-
-
-//================================================================================================
-//
 // JUMP SECONDARY
 //
 //================================================================================================
@@ -906,165 +671,6 @@ $sequence jumpLand_secondary {
 	iklock rfoot 1 0 iklock lfoot 1 0 
 	activity ACT_MP_JUMP_LAND_SECONDARY 1 
 }
-
-//================================================================================================
-//
-// RUN PRIMARY
-//
-//================================================================================================
-
-$animation a_runCenter_PRIMARY  primary_runCenter blockname $infoNode$ {
-	loop
-	alignto a_reference
-}
-$animation a_runS_PRIMARY primary_runs blockname $infoNode$ {
-	LX LY
-	rotateto -180
-	startloop 18
-	alignto a_reference
-}
-$animation a_runSE_PRIMARY primary_runse blockname $infoNode$ {
-	LX LY
-	rotateto -135
-	startloop 17
-	alignto a_reference
-}
-$animation a_runE_PRIMARY primary_rune blockname $infoNode$ {
-	LX LY
-	rotateto -90
-	startloop 17
-	alignto a_reference
-}
-$animation a_runNE_PRIMARY primary_runne blockname $infoNode$ {
-	LX LY
-	rotateto -45
-	startloop 4
-	alignto a_reference
-}
-$animation a_runN_PRIMARY primary_runn blockname $infoNode$ {
-	LX LY
-	rotateto 0
-	startloop 4
-	alignto a_reference
-}
-$animation a_runNW_PRIMARY primary_runnw blockname $infoNode$ {
-	LX LY
-	rotateto 45
-	startloop 4
-	alignto a_reference
-}
-$animation a_runW_PRIMARY primary_runw blockname $infoNode$ {
-	LX LY
-	rotateto 90
-	startloop 4
-	alignto a_reference
-}
-$animation a_runSW_PRIMARY primary_runsw blockname $infoNode$ {
-	LX LY
-	rotateto 135
-	startloop 17
-	alignto a_reference
-}
-$sequence Run_PRIMARY {
-	a_runsw_primary	a_runS_primary		a_runSE_primary
-	a_runW_primary	a_runCenter_primary	a_runE_primary
-	a_runNW_primary	a_runN_primary		a_runNE_primary
-	blendwidth 3 blend move_y -1 1 blend move_x -1 1
-	addlayer primary_aimmatrix_run
-	activity ACT_MP_RUN_PRIMARY 1
-			{ event 7001 2 "right" }
-	    { event 7001 11 "left" }
-}
-
-
-//================================================================================================
-//
-// Crouch walk PRIMARY
-//
-//================================================================================================
-
-$animation a_crouch_walkCenter_PRIMARY  primary_crouch_walkCenter blockname $infoNode$ {
-	loop
-	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 0 .. contact 0
-}
-$animation a_crouch_walkS_PRIMARY primary_crouch_walkS blockname $infoNode$ {
-	LX LY
-	rotateto -180
-	startloop 8
-	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
-}
-$animation a_crouch_walkSE_PRIMARY primary_crouch_walkSE blockname $infoNode$ {
-	LX LY
-	rotateto -135
-	startloop 7
-	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
-}
-$animation a_crouch_walkE_PRIMARY primary_crouch_walkE blockname $infoNode$ {
-	LX LY
-	rotateto -90
-	startloop 19
-	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
-}
-$animation a_crouch_walkNE_PRIMARY primary_crouch_walkNE blockname $infoNode$ {
-	LX LY
-	rotateto -45
-	startloop 20
-	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
-}
-$animation a_crouch_walkN_PRIMARY primary_crouch_walkN blockname $infoNode$ {
-	LX LY
-	rotateto 0
-	startloop 21
-	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
-}
-$animation a_crouch_walkNW_PRIMARY primary_crouch_walkNW blockname $infoNode$ {
-	LX LY
-	rotateto 45
-	startloop 21
-	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
-}
-$animation a_crouch_walkW_PRIMARY primary_crouch_walkW blockname $infoNode$ {
-	LX LY
-	rotateto 90
-	startloop 8
-	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
-}
-$animation a_crouch_walkSW_PRIMARY primary_crouch_walkSW blockname $infoNode$ {
-	LX LY
-	rotateto 135
-	startloop 8
-	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
-}
-$sequence CrouchWalk_PRIMARY {
-	a_crouch_walkSW_primary	a_crouch_walkS_primary		a_crouch_walkSE_primary
-	a_crouch_walkW_primary	a_crouch_walkCenter_primary	a_crouch_walkE_primary
-	a_crouch_walkNW_primary	a_crouch_walkN_primary		a_crouch_walkNE_primary
-	blendwidth 3 blend move_y -1 1 blend move_x -1 1
-	addlayer primary_aimmatrix_crouch_idle
-	activity ACT_MP_CROUCHWALK_PRIMARY 1
-}
-
-
-$MPCrouchWalkWithWeapon       CrouchWalk_Secondary        0 0 0 0 0 0 0 0 Secondary_crouch_walkN        Secondary_crouch_walkCenter        Secondary_aimmatrix_idle        ACT_MP_CROUCHWALK_Secondary $infoNode$
-
 
 //================================================================================================
 //
@@ -1141,24 +747,20 @@ $sequence Run_SECONDARY {
 //
 //================================================================================================
 
-$sequence Stand_PRIMARY  PRIMARY_idle loop alignto a_reference addlayer PRIMARY_aimmatrix_idle activity ACT_MP_STAND_PRIMARY 1
+
 $sequence Stand_SECONDARY  SECONDARY_idle loop alignto a_reference addlayer SECONDARY_aimmatrix_idle activity ACT_MP_STAND_SECONDARY 1
 $sequence Stand_LOSER  LOSER_idle loop alignto a_reference activity ACT_MP_STAND_LOSERSTATE 1
 
-$sequence Crouch_PRIMARY PRIMARY_crouch_idle loop alignto a_reference addlayer PRIMARY_aimmatrix_crouch_idle  activity ACT_MP_CROUCH_PRIMARY 1
 $sequence Crouch_SECONDARY SECONDARY_crouch_idle loop alignto a_reference addlayer SECONDARY_aimmatrix_crouch_idle  activity ACT_MP_CROUCH_SECONDARY 1
 $sequence Crouch_LOSER LOSER_crouch_idle loop alignto a_reference activity ACT_MP_CROUCH_LOSERSTATE 1
+
+$MPCrouchWalkWithWeapon       CrouchWalk_Secondary        0 0 0 0 0 0 0 0 Secondary_crouch_walkN        Secondary_crouch_walkCenter        Secondary_aimmatrix_idle        ACT_MP_CROUCHWALK_Secondary $infoNode$
 
 //================================================================================================
 //
 // AIRWALKS (getting knocked around by explosions, etc)
 //
 //================================================================================================
-
-$sequence Airwalk_PRIMARY "primary_floatA.dmx" fps 30 loop {
-	addlayer Primary_aimmatrix_swim 
-	activity ACT_MP_AIRWALK_PRIMARY 1
-}
 
 $sequence Airwalk_SECONDARY "secondary_airwalk.dmx" fps 30 loop {
 	addlayer secondary_aimmatrix_idle 
@@ -1249,5 +851,270 @@ $sequence Run_LOSER {
 			{ event 7001 2 "right" }
 	    { event 7001 11 "left" }
 }
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// START OF MELEE
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 
+//-----------------------------------------------------------------------------------
+// CROWBAR
+//-----------------------------------------------------------------------------------
+
+$MPAimLayer MELEE_aimmatrix_idle        CROWBAR_aimmatrix_idle        $infoNode$
+$MPAimLayer MELEE_aimmatrix_run         CROWBAR_aimmatrix_run         $infoNode$
+$MPAimLayer MELEE_aimmatrix_crouch_idle CROWBAR_aimmatrix_crouch_idle $infoNode$
+
+$MPGestureAttack Attack_Stand_MELEE  CROWBAR_fire          ACT_MP_ATTACK_STAND_MELEE weightlist CrowbarMercStandArmsBlend
+$MPGestureAttack Attack_Crouch_MELEE CROWBAR_crouch_fire   ACT_MP_ATTACK_CROUCH_MELEE weightlist CrowbarMercStandArmsBlend
+$MPGestureAttack Attack_Swim_MELEE   CROWBAR_swim_fire     ACT_MP_ATTACK_SWIM_MELEE weightlist CrowbarMercStandArmsBlend
+
+$sequence Stand_Melee  CROWBAR_idle loop alignto a_reference addlayer MELEE_aimmatrix_idle activity ACT_MP_STAND_MELEE 1
+$sequence Crouch_Melee CROWBAR_crouch_idle loop alignto a_reference addlayer MELEE_aimmatrix_crouch_idle activity ACT_MP_CROUCH_MELEE 1
+
+// swim
+$MPAimLayer MELEE_aimmatrix_swim        MELEE_aimmatrix_idle        $infoNode$
+$MPswimWithWeapon Melee 0 0 0 0 0 0 0 0 CROWBAR_SwimN	CROWBAR_SwimCenter	MELEE_aimmatrix_swim	ACT_MP_SWIM_MELEE $infonode$
+
+//-----------------------------------------------------------------------------------
+// JUMP
+//-----------------------------------------------------------------------------------
+
+//CROWBAR jump
+$sequence a_jumpStart_MELEE CROWBAR_jump frames 0 25 addlayer MELEE_aimmatrix_swim alignto a_reference Z activity ACT_MP_JUMP_START_MELEE 1 LX LY 
+
+$sequence a_jumpfloat_MELEE CROWBAR_jump frames 26 189 addlayer MELEE_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_MELEE 1 LX LY 
+
+$sequence jumpLandPose_MELEE CROWBAR_jump frames 25 25 numframes 30 loop 
+
+$sequence jumpLand_MELEE { 
+	CROWBAR_jump_land 
+	subtract jumpLand_MELEE 0 
+	delta 
+	iklock rfoot 1 0 iklock lfoot 1 0 
+
+	activity ACT_MP_JUMP_LAND_MELEE 1 
+}
+
+//-----------------------------------------------------------------------------------
+//  RUN
+//-----------------------------------------------------------------------------------
+$animation a_runCenter_CROWBAR  CROWBAR_runCenter blockname $infoNode$ {
+	loop
+	alignto a_reference
+}
+$animation a_runS_CROWBAR CROWBAR_runs blockname $infoNode$ {
+	LX LY
+	rotateto -180
+	startloop 12
+	alignto a_reference
+}
+$animation a_runSE_CROWBAR CROWBAR_runse blockname $infoNode$ {
+	LX LY
+	rotateto -135
+	startloop 12
+	alignto a_reference
+}
+$animation a_runE_CROWBAR CROWBAR_rune blockname $infoNode$ {
+	LX LY
+	rotateto -90
+	startloop 2
+	alignto a_reference
+}
+$animation a_runNE_CROWBAR CROWBAR_runne blockname $infoNode$ {
+	LX LY
+	rotateto -45
+	startloop 3
+	alignto a_reference
+}
+$animation a_runN_CROWBAR CROWBAR_runn blockname $infoNode$ {
+	LX LY
+	rotateto 0
+	startloop 3
+	alignto a_reference
+}
+$animation a_runNW_CROWBAR CROWBAR_runnw blockname $infoNode$ {
+	LX LY
+	rotateto 45
+	startloop 4
+	alignto a_reference
+}
+$animation a_runW_CROWBAR CROWBAR_runw blockname $infoNode$ {
+	LX LY
+	rotateto 90
+	startloop 3
+	alignto a_reference
+}
+$animation a_runSW_CROWBAR CROWBAR_runsw blockname $infoNode$ {
+	LX LY
+	rotateto 135
+	startloop 12
+	alignto a_reference
+}
+$sequence Run_MELEE {
+	a_runsw_CROWBAR	a_runS_CROWBAR		a_runSE_CROWBAR
+	a_runW_CROWBAR	a_runCenter_CROWBAR	a_runE_CROWBAR
+	a_runNW_CROWBAR	a_runN_CROWBAR		a_runNE_CROWBAR
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1
+	addlayer MELEE_aimmatrix_run
+	activity ACT_MP_RUN_MELEE 1
+	  { event 7001 7 "right" }
+	  { event 7001 16 "left" }
+}
+
+$MPCrouchWalkWithWeaponNoIK Crouch_Walk_MELEE 0 0 0 0 0 0 0 0 CROWBAR_crouch_walkN CROWBAR_crouch_walkCenter MELEE_aimmatrix_crouch_idle ACT_MP_CROUCHWALK_MELEE $infoNode$
+
+//-----------------------------------------------------------------------------------
+// Airwalk
+//-----------------------------------------------------------------------------------
+$sequence Airwalk_MELEE "CROWBAR_airwalk.dmx" fps 30 loop {
+	addlayer MELEE_aimmatrix_idle 
+	activity ACT_MP_AIRWALK_MELEE 1
+}
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// END OF MELEE
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+//SPACE
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// START OF PRIMARY
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------
+// Supershotgun
+//-----------------------------------------------------------------------------------
+
+$MPAimLayer_lefthandIK PRIMARY_aimmatrix_idle        SUPERSHOTGUN_aimmatrix_idle        $infoNode$
+$MPAimLayer_lefthandIK PRIMARY_aimmatrix_run         SUPERSHOTGUN_aimmatrix_run         $infoNode$
+$MPAimLayer_lefthandIK PRIMARY_aimmatrix_crouch_idle SUPERSHOTGUN_aimmatrix_crouch_idle $infoNode$
+
+$MPGestureAttack Attack_Stand_PRIMARY  SUPERSHOTGUN_fire          ACT_MP_ATTACK_STAND_PRIMARY
+$MPGestureAttack Attack_Crouch_PRIMARY SUPERSHOTGUN_crouch_fire   ACT_MP_ATTACK_CROUCH_PRIMARY
+$MPGestureAttack Attack_Swim_PRIMARY   SUPERSHOTGUN_swim_fire     ACT_MP_ATTACK_SWIM_PRIMARY
+
+$sequence layer_reload_standing_arms_SUPERSHOTGUN "SUPERSHOTGUN_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
+	hidden
+
+}
+$sequence layer_reload_crouching_arms_SUPERSHOTGUN "SUPERSHOTGUN_crouch_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
+	hidden
+}	
+
+$sequence layer_reload_swimming_arms_SUPERSHOTGUN "SUPERSHOTGUN_swim_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
+	hidden
+}
+
+$sequence layer_reload_airwalk_arms_SUPERSHOTGUN "SUPERSHOTGUN_swim_reload.dmx" weightlist ArmsBlend {
+	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
+	hidden
+}
+
+$MPGestureReload_IK ReloadStand_PRIMARY     SUPERSHOTGUN_reload			ACT_MP_RELOAD_STAND_PRIMARY    layer_reload_standing_arms_SUPERSHOTGUN 0 4 45 51
+$MPGestureReload_IK ReloadCrouch_PRIMARY   SUPERSHOTGUN_crouch_reload		ACT_MP_RELOAD_CROUCH_PRIMARY   layer_reload_crouching_arms_SUPERSHOTGUN 0 4 45 51
+$MPGestureReload_IK ReloadSwim_PRIMARY      SUPERSHOTGUN_swim_reload		ACT_MP_RELOAD_SWIM_PRIMARY     layer_reload_swimming_arms_SUPERSHOTGUN 0 4 45 51
+$MPGestureReload_IK ReloadAirwalk_PRIMARY   SUPERSHOTGUN_reload			ACT_MP_RELOAD_AIRWALK_PRIMARY  layer_reload_airwalk_arms_SUPERSHOTGUN 0 4 45 51
+
+$sequence Stand_PRIMARY  SUPERSHOTGUN_idle loop alignto a_reference addlayer PRIMARY_aimmatrix_idle 					activity ACT_MP_STAND_PRIMARY 1
+$sequence Crouch_PRIMARY SUPERSHOTGUN_crouch_idle loop alignto a_reference addlayer PRIMARY_aimmatrix_crouch_idle  	activity ACT_MP_CROUCH_PRIMARY 1
+
+// swim
+$MPAimLayer_lefthandIK PRIMARY_aimmatrix_swim        SUPERSHOTGUN_aimmatrix_idle        $infoNode$
+$MPswimWithWeapon PRIMARY 0 0 0 0 0 0 0 0 SUPERSHOTGUN_SwimN	SUPERSHOTGUN_SwimCenter	PRIMARY_aimmatrix_swim	ACT_MP_SWIM_PRIMARY $infonode$
+
+//SUPERSHOTGUN jump
+$sequence a_jumpStart_PRIMARY SUPERSHOTGUN_jump frames 0 25 addlayer PRIMARY_aimmatrix_swim alignto a_reference Z activity ACT_MP_JUMP_START_PRIMARY 1 LX LY
+$sequence a_jumpfloat_PRIMARY SUPERSHOTGUN_jump frames 26 189 addlayer PRIMARY_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_PRIMARY 1 LX LY
+$sequence jumpLandPose_PRIMARY SUPERSHOTGUN_jump frames 25 25 numframes 30 loop
+$sequence jumpLand_PRIMARY { 
+	PRIMARY_jump_land 
+	subtract jumpLand_PRIMARY 0 
+	delta 
+	iklock rfoot 1 0 iklock lfoot 1 0 
+
+	activity ACT_MP_JUMP_LAND_PRIMARY 1 
+}
+
+// run
+$animation a_runCenter_SUPERSHOTGUN  SUPERSHOTGUN_runCenter blockname $infoNode$ {
+	loop
+	alignto a_reference
+}
+$animation a_runS_SUPERSHOTGUN SUPERSHOTGUN_runs blockname $infoNode$ {
+	LX LY
+	rotateto -180
+	startloop 12
+	alignto a_reference
+}
+$animation a_runSE_SUPERSHOTGUN SUPERSHOTGUN_runse blockname $infoNode$ {
+	LX LY
+	rotateto -135
+	startloop 12
+	alignto a_reference
+}
+$animation a_runE_SUPERSHOTGUN SUPERSHOTGUN_rune blockname $infoNode$ {
+	LX LY
+	rotateto -90
+	startloop 2
+	alignto a_reference
+}
+$animation a_runNE_SUPERSHOTGUN SUPERSHOTGUN_runne blockname $infoNode$ {
+	LX LY
+	rotateto -45
+	startloop 3
+	alignto a_reference
+}
+$animation a_runN_SUPERSHOTGUN SUPERSHOTGUN_runn blockname $infoNode$ {
+	LX LY
+	rotateto 0
+	startloop 3
+	alignto a_reference
+}
+$animation a_runNW_SUPERSHOTGUN SUPERSHOTGUN_runnw blockname $infoNode$ {
+	LX LY
+	rotateto 45
+	startloop 4
+	alignto a_reference
+}
+$animation a_runW_SUPERSHOTGUN SUPERSHOTGUN_runw blockname $infoNode$ {
+	LX LY
+	rotateto 90
+	startloop 3
+	alignto a_reference
+}
+$animation a_runSW_SUPERSHOTGUN SUPERSHOTGUN_runsw blockname $infoNode$ {
+	LX LY
+	rotateto 135
+	startloop 12
+	alignto a_reference
+}
+$sequence Run_PRIMARY {
+	a_runsw_SUPERSHOTGUN	a_runS_SUPERSHOTGUN		a_runSE_SUPERSHOTGUN
+	a_runW_SUPERSHOTGUN	a_runCenter_SUPERSHOTGUN	a_runE_SUPERSHOTGUN
+	a_runNW_SUPERSHOTGUN	a_runN_SUPERSHOTGUN		a_runNE_SUPERSHOTGUN
+	blendwidth 3 blend move_y -1 1 blend move_x -1 1
+	addlayer PRIMARY_aimmatrix_run
+	activity ACT_MP_RUN_PRIMARY 1
+	  { event 7001 7 "right" }
+	  { event 7001 16 "left" }
+}
+
+$MPCrouchWalkWithWeapon Crouch_Walk_PRIMARY 0 0 0 0 0 0 0 0 SUPERSHOTGUN_crouch_walkN SUPERSHOTGUN_crouch_walkCenter PRIMARY_aimmatrix_crouch_idle ACT_MP_CROUCHWALK_PRIMARY $infoNode$
+
+// airwalk
+$sequence Airwalk_PRIMARY "SUPERSHOTGUN_airwalk.dmx" fps 30 loop {
+	addlayer PRIMARY_aimmatrix_idle 
+	activity ACT_MP_AIRWALK_PRIMARY 1
+}
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// END OF PRIMARY
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 $popd

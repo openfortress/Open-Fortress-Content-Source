@@ -42,7 +42,7 @@ $weightlist RocketlauncherMercStandArmsBlend {
 // ROCKETLAUNCHER
 //-----------------------------------------------------------------------------------
 
-$MPWeaponAims_leftHandIK		ROCKETLAUNCHER	$infoNode$
+$MPWeaponAims		ROCKETLAUNCHER	$infoNode$
 
 $MPGestureAttack AttackStand_ROCKETLAUNCHER  ROCKETLAUNCHER_fire          ACT_MERC_ATTACK_STAND_ROCKETLAUNCHER weightlist RocketlauncherMercStandArmsBlend
 $MPGestureAttack AttackCrouch_ROCKETLAUNCHER ROCKETLAUNCHER_crouch_fire   ACT_MERC_ATTACK_CROUCH_ROCKETLAUNCHER weightlist RocketlauncherMercStandArmsBlend
@@ -52,10 +52,11 @@ $sequence layer_reload_standing_arms_merc "ROCKETLAUNCHER_reload.dmx" weightlist
 	frames 0 33
 	numframes 33
 	fps 30
-	ikrule lhand touch "bip_pelvis" usesource range 0 10 16 21
-	ikrule lhand touch "weapon_bone" usesource range 21 24 32 33
+	//ikrule rhand touch "bip_pelvis" usesource range 1 8 16 32
+	ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
 	hidden
 }
+
 $animation merc_reload_startpose ROCKETLAUNCHER_reload frames 0 0
 $sequence ReloadStand_ROCKETLAUNCHER {
 	ROCKETLAUNCHER_reload
@@ -65,12 +66,63 @@ $sequence ReloadStand_ROCKETLAUNCHER {
 	subtract ReloadStand_ROCKETLAUNCHER 0
 	delta
 	ikrule lhand release
-	ikrule rhand release
+	//ikrule rhand release
 	iklock rfoot 1 0 iklock lfoot 1 0
  	blendlayer layer_reload_standing_arms_merc 0 4 32 33
  	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER 1
  	event AE_CL_BODYGROUP_SET_VALUE 11 "rocket 1"
  	event AE_CL_BODYGROUP_SET_VALUE 21 "rocket 0"
+}
+
+$sequence layer_reload_standing_arms_loop_merc "ROCKETLAUNCHER_reload.dmx" weightlist ArmsBlend {
+	frames 33 60
+	numframes 28
+	loop
+	fps 30
+	//ikrule rhand touch "bip_pelvis" usesource range 1 8 16 32
+	ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
+	hidden
+}
+$sequence ReloadStand_ROCKETLAUNCHER_loop {
+	ROCKETLAUNCHER_reload
+	frames 33 60
+	numframes 28
+  loop
+	fps 30
+	subtract merc_reload_startpose 0
+	loop
+	delta
+	ikrule lhand release
+	//ikrule rhand release
+	iklock rfoot 1 0 iklock lfoot 1 0
+ 	addlayer layer_reload_standing_arms_loop_merc
+ 	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER_LOOP 1
+ 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
+ 	event AE_CL_BODYGROUP_SET_VALUE 12 "rocket 1"
+ 	event AE_CL_BODYGROUP_SET_VALUE 22 "rocket 0"
+}
+
+$sequence layer_reload_standing_arms_end_merc "ROCKETLAUNCHER_reload.dmx" weightlist ArmsBlend {
+	frames 70 88
+	numframes 21
+	fps 44
+	//ikrule rhand touch "bip_pelvis" usesource range 1 8 16 32
+	ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
+	hidden
+}
+$sequence ReloadStand_ROCKETLAUNCHER_end {
+	ROCKETLAUNCHER_reload
+	frames 70 88
+	fps 30
+	subtract merc_reload_startpose 0
+	delta
+	//ikrule lhand release
+	//ikrule rhand release
+	iklock rfoot 1 0 iklock lfoot 1 0
+ 	blendlayer layer_reload_standing_arms_end_merc 0 0 10 18 spline
+ 	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER_END 1
+ 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
+
 }
 
 $sequence ReloadCrouch_ROCKETLAUNCHER {
@@ -105,34 +157,6 @@ $sequence ReloadAirwalk_ROCKETLAUNCHER {
  	event AE_CL_BODYGROUP_SET_VALUE 21 "rocket 0"
 }
 
-$sequence layer_reload_standing_arms_loop_merc "ROCKETLAUNCHER_reload.dmx" weightlist ArmsBlend {
-	frames 33 60
-	numframes 28
-	loop
-	fps 30
-	ikrule lhand touch "weapon_bone" usesource range 0 0 0 5
-	ikrule lhand touch "bip_pelvis" usesource range 8 11 14 17
-	ikrule lhand touch "weapon_bone" usesource range 19 22 27 27
-	hidden
-}
-$sequence ReloadStand_ROCKETLAUNCHER_loop {
-	ROCKETLAUNCHER_reload
-	frames 33 60
-	numframes 28
-  loop
-	fps 30
-	subtract merc_reload_startpose 0
-	loop
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	addlayer layer_reload_standing_arms_loop_merc
- 	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER_LOOP 1
- 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
- 	event AE_CL_BODYGROUP_SET_VALUE 12 "rocket 1"
- 	event AE_CL_BODYGROUP_SET_VALUE 22 "rocket 0"
-}
 $sequence ReloadCrouch_ROCKETLAUNCHER_loop {
 	ROCKETLAUNCHER_reload
 	frames 33 60
@@ -170,27 +194,6 @@ $sequence ReloadAirwalk_ROCKETLAUNCHER_loop {
  	event AE_CL_BODYGROUP_SET_VALUE 22 "rocket 0"
 }
 
-$sequence layer_reload_standing_arms_end_merc "ROCKETLAUNCHER_reload.dmx" weightlist ArmsBlend {
-	frames 70 88
-	numframes 21
-	fps 44
-	ikrule lhand touch "weapon_bone" usesource
-	hidden
-}
-$sequence ReloadStand_ROCKETLAUNCHER_end {
-	ROCKETLAUNCHER_reload
-	frames 70 88
-	fps 30
-	subtract merc_reload_startpose 0
-	delta
-	ikrule lhand release
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	blendlayer layer_reload_standing_arms_end_merc 0 0 10 18 spline
- 	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER_END 1
- 	event AE_CL_BODYGROUP_SET_VALUE 1 "rocket 0"
-
-}
 $sequence ReloadCrouch_ROCKETLAUNCHER_end {
 	ROCKETLAUNCHER_reload
 	frames 70 88
@@ -223,10 +226,8 @@ $sequence ReloadAirwalk_ROCKETLAUNCHER_end {
 
 $sequence layer_reload_swim_arms_merc "ROCKETLAUNCHER_swim_reload.dmx" weightlist ArmsBlend {
 	fps 44
-	ikrule lhand touch "bip_pelvis" usesource range 7 12 12 17
-	ikrule lhand touch "weapon_bone" usesource range 22 27 33 33
-	ikrule lhand touch "bip_pelvis" usesource range 48 53 53 58
-	ikrule lhand touch "weapon_bone" usesource range 59 64 68 73
+	ikrule rhand touch "bip_pelvis" usesource range 0 1 1 32
+	ikrule rhand touch "weapon_bone" usesource range 0 1 1 32
 	hidden
 }
 $sequence ReloadSwim_ROCKETLAUNCHER {
@@ -245,7 +246,7 @@ $sequence Stand_ROCKETLAUNCHER  ROCKETLAUNCHER_idle loop alignto a_reference add
 $sequence Crouch_ROCKETLAUNCHER ROCKETLAUNCHER_crouch_idle loop alignto a_reference addlayer ROCKETLAUNCHER_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_ROCKETLAUNCHER 1
 
 // swim
-$MPAimLayer_lefthandIK ROCKETLAUNCHER_aimmatrix_swim        ROCKETLAUNCHER_aimmatrix_idle        $infoNode$
+$MPAimLayer ROCKETLAUNCHER_aimmatrix_swim        ROCKETLAUNCHER_aimmatrix_idle        $infoNode$
 $MPswimWithWeapon ROCKETLAUNCHER 0 0 0 0 0 0 0 0 ROCKETLAUNCHER_SwimN	ROCKETLAUNCHER_SwimCenter	ROCKETLAUNCHER_aimmatrix_swim	ACT_MERC_SWIM_ROCKETLAUNCHER $infonode$
 
 //ROCKETLAUNCHER jump
