@@ -53,8 +53,8 @@ $sequence layer_reload_standing_arms_merc "ROCKETLAUNCHER_reload.dmx" weightlist
 	numframes 33
 	fps 30
 	//ikrule rhand touch "bip_pelvis" usesource range 1 8 16 32
-	//ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
-	localhierarchy "weapon_bone" "bip_hand_l"
+	//ikrule rhand touch "weapon_bone" usesource range 1 8 16 32
+	//localhierarchy "weapon_bone" "bip_hand_l"
 	hidden
 }
 
@@ -68,6 +68,7 @@ $sequence ReloadStand_ROCKETLAUNCHER {
 	delta
 	//ikrule lhand release
 	//ikrule rhand release
+	//localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	blendlayer layer_reload_standing_arms_merc 0 4 32 33
  	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER 1
@@ -81,7 +82,7 @@ $sequence layer_reload_standing_arms_loop_merc "ROCKETLAUNCHER_reload.dmx" weigh
 	loop
 	fps 30
 	//ikrule rhand touch "bip_pelvis" usesource range 1 8 16 32
-	//ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
+	//ikrule rhand touch "weapon_bone" usesource range 1 8 16 32
 	localhierarchy "weapon_bone" "bip_hand_l"
 	hidden
 }
@@ -96,6 +97,7 @@ $sequence ReloadStand_ROCKETLAUNCHER_loop {
 	delta
 	//ikrule lhand release
 	//ikrule rhand release
+	localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	addlayer layer_reload_standing_arms_loop_merc	
  	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER_LOOP 1
@@ -109,8 +111,8 @@ $sequence layer_reload_standing_arms_end_merc "ROCKETLAUNCHER_reload.dmx" weight
 	numframes 21
 	fps 44
 	//ikrule rhand touch "bip_pelvis" usesource range 1 8 16 32
-	//ikrule lhand touch "weapon_bone" usesource range 1 8 16 32
-	localhierarchy "weapon_bone" "bip_hand_l"
+	//ikrule rhand touch "weapon_bone" usesource range 1 8 16 32
+	//localhierarchy "weapon_bone" "bip_hand_l"
 	hidden
 }
 $sequence ReloadStand_ROCKETLAUNCHER_end {
@@ -121,6 +123,7 @@ $sequence ReloadStand_ROCKETLAUNCHER_end {
 	delta
 	//ikrule lhand release
 	//ikrule rhand release
+	//localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	blendlayer layer_reload_standing_arms_end_merc 0 0 10 18 spline
  	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER_END 1
