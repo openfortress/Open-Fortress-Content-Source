@@ -45,19 +45,22 @@ $weightlist SHOTGUNMercStandArmsBlend {
 
 $MPWeaponAims_leftHandIK		SHOTGUN	$infoNode$
 
-$MPGestureAttack AttackStand_SHOTGUN  SHOTGUN_fire          ACT_MERC_ATTACK_STAND_SHOTGUN weightlist SHOTGUNMercStandArmsBlend 
-$MPGestureAttack AttackCrouch_SHOTGUN SHOTGUN_crouch_fire   ACT_MERC_ATTACK_CROUCH_SHOTGUN weightlist SHOTGUNMercStandArmsBlend 
-$MPGestureAttack AttackSwim_SHOTGUN   SHOTGUN_swim_fire     ACT_MERC_ATTACK_SWIM_SHOTGUN weightlist SHOTGUNMercStandArmsBlend 
+$MPGestureAttackShotgun AttackStand_SHOTGUN  SHOTGUN_fire          ACT_MERC_ATTACK_STAND_SHOTGUN weightlist SHOTGUNMercStandArmsBlend 
+$MPGestureAttackShotgun AttackCrouch_SHOTGUN SHOTGUN_crouch_fire   ACT_MERC_ATTACK_CROUCH_SHOTGUN weightlist SHOTGUNMercStandArmsBlend 
+$MPGestureAttackShotgun AttackSwim_SHOTGUN   SHOTGUN_swim_fire     ACT_MERC_ATTACK_SWIM_SHOTGUN weightlist SHOTGUNMercStandArmsBlend 
+
+$MPGestureReload ReloadSwim_SHOTGUN   SHOTGUN_swim_reload   ACT_MERC_RELOAD_SWIM_SHOTGUN
 
 $sequence layer_reload_standing_arms_merc "SHOTGUN_reload.dmx" weightlist ArmsBlend {
 	frames 0 20
 	numframes 21
 	fps 30
-	ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
-	ikrule lhand touch "weapon_bone" usesource range 11 15 21 21
+	//ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
+	//ikrule lhand touch "weapon_bone" usesource range 11 15 21 21
+	//ikrule rhand touch "bip_pelvis" usesource range 0 9 9 11
+	//ikrule rhand touch "weapon_bone" usesource range 11 15 21 21
 	hidden
 }
-$MPGestureReload ReloadSwim_SHOTGUN   SHOTGUN_swim_reload   ACT_MERC_RELOAD_SWIM_SHOTGUN
 
 $animation a_reload_SHOTGUN_startpose SHOTGUN_reload frames 0 0
 $animation a_reload_crouch_SHOTGUN_startpose SHOTGUN_crouch_reload frames 0 0
@@ -66,8 +69,10 @@ $sequence layer_reload_standing_SHOTGUN_arms "SHOTGUN_reload.dmx" weightlist Arm
 	frames 0 20
 	numframes 21
 	fps 30
-	ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
-	ikrule lhand touch "weapon_bone" usesource range 11 15 21 21
+	//ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
+	//ikrule lhand touch "weapon_bone" usesource range 11 15 21 21
+	//ikrule rhand touch "bip_pelvis" usesource range 0 9 9 11
+	//ikrule rhand touch "weapon_bone" usesource range 11 15 21 21
 	hidden
 }
 
@@ -139,7 +144,8 @@ $sequence layer_reload_crouch_SHOTGUN_arms "SHOTGUN_crouch_reload.dmx" weightlis
 	numframes 21
 	fps 30
 	ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
-	ikrule lhand touch "weapon_bone" usesource range 11 15 21 21
+	ikrule lhand touch "weapon_bone_1" usesource range 11 15 21 21
+	//localhierarchy "weapon_bone_1" "bip_hand_l"
 	hidden
 }
 
