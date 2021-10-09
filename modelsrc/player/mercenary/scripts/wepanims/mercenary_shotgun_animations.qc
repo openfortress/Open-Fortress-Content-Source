@@ -143,8 +143,8 @@ $sequence layer_reload_crouch_SHOTGUN_arms "SHOTGUN_crouch_reload.dmx" weightlis
 	frames 0 20
 	numframes 21
 	fps 30
-	ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
-	ikrule lhand touch "weapon_bone_1" usesource range 11 15 21 21
+	//ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
+	//ikrule lhand touch "weapon_bone_1" usesource range 11 15 21 21
 	//localhierarchy "weapon_bone_1" "bip_hand_l"
 	hidden
 }
