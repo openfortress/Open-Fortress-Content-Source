@@ -138,8 +138,9 @@ $sequence ReloadCrouch_ROCKETLAUNCHER {
 	fps 30
 	subtract ReloadCrouch_ROCKETLAUNCHER 0
 	delta
-	ikrule lhand release
-	ikrule rhand release
+	//ikrule lhand release
+	//ikrule rhand release
+	localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	blendlayer layer_reload_standing_arms_merc 0 4 32 32
  	activity ACT_MERC_RELOAD_CROUCH_ROCKETLAUNCHER 1
@@ -154,8 +155,9 @@ $sequence ReloadAirwalk_ROCKETLAUNCHER {
 	fps 30
 	subtract ReloadAirwalk_ROCKETLAUNCHER 0
 	delta
-	ikrule lhand release
-	ikrule rhand release
+	//ikrule lhand release
+	//ikrule rhand release
+	localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	blendlayer layer_reload_standing_arms_merc 0 4 32 32
  	activity ACT_MERC_RELOAD_AIRWALK_ROCKETLAUNCHER 1
@@ -172,8 +174,9 @@ $sequence ReloadCrouch_ROCKETLAUNCHER_loop {
 	subtract merc_reload_startpose 0
 	loop
 	delta
-	ikrule lhand release
-	ikrule rhand release
+	//ikrule lhand release
+	//ikrule rhand release
+	localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	addlayer layer_reload_standing_arms_loop_merc
  	activity ACT_MERC_RELOAD_CROUCH_ROCKETLAUNCHER_LOOP 1
@@ -190,8 +193,9 @@ $sequence ReloadAirwalk_ROCKETLAUNCHER_loop {
 	subtract merc_reload_startpose 0
 	loop
 	delta
-	ikrule lhand release
-	ikrule rhand release
+	//ikrule lhand release
+	//ikrule rhand release
+	localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	addlayer layer_reload_standing_arms_loop_merc
  	activity ACT_MERC_RELOAD_AIRWALK_ROCKETLAUNCHER_LOOP 1
@@ -206,8 +210,9 @@ $sequence ReloadCrouch_ROCKETLAUNCHER_end {
 	fps 30
 	subtract merc_reload_startpose 0
 	delta
-	ikrule lhand release
-	ikrule rhand release
+	//ikrule lhand release
+	//ikrule rhand release
+	localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	blendlayer layer_reload_standing_arms_end_merc 0 0 10 18 spline
  	activity ACT_MERC_RELOAD_CROUCH_ROCKETLAUNCHER_END 1
@@ -220,8 +225,9 @@ $sequence ReloadAirwalk_ROCKETLAUNCHER_end {
 	fps 30
 	subtract merc_reload_startpose 0
 	delta
-	ikrule lhand release
-	ikrule rhand release
+	//ikrule lhand release
+	//ikrule rhand release
+	localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	blendlayer layer_reload_standing_arms_end_merc 0 0 10 18 spline
  	activity ACT_MERC_RELOAD_AIRWALK_ROCKETLAUNCHER_END 1
@@ -234,6 +240,7 @@ $sequence layer_reload_swim_arms_merc "ROCKETLAUNCHER_swim_reload.dmx" weightlis
 	fps 44
 	ikrule rhand touch "bip_pelvis" usesource range 0 1 1 32
 	ikrule rhand touch "weapon_bone" usesource range 0 1 1 32
+	localhierarchy "weapon_bone" "bip_hand_l"
 	hidden
 }
 $sequence ReloadSwim_ROCKETLAUNCHER {
@@ -243,6 +250,7 @@ $sequence ReloadSwim_ROCKETLAUNCHER {
 	delta
 	ikrule lhand release
 	ikrule rhand release
+	localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	addlayer layer_reload_swim_arms_merc
  	activity ACT_MERC_RELOAD_SWIM_ROCKETLAUNCHER 1
