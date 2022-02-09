@@ -95,10 +95,42 @@ $sequence layer_reload_crouch_arms_PISTOL_AKIMBO "PISTOL_AKIMBO_crouch_reload.dm
 	fps 35
 }
 
+//$MPGestureReload_IK ReloadStand_PISTOL_AKIMBO     PISTOL_AKIMBO_reload                ACT_MERC_RELOAD_STAND_PISTOL_AKIMBO    layer_reload_standing_arms_PISTOL_AKIMBO 0 4 76 86
+//$MPGestureReload_IK ReloadCrouch_PISTOL_AKIMBO    PISTOL_AKIMBO_crouch_reload 	      ACT_MERC_RELOAD_CROUCH_PISTOL_AKIMBO   layer_reload_crouch_arms_PISTOL_AKIMBO 0 4 76 86
+//$MPGestureReload_IK ReloadSwim_PISTOL_AKIMBO      PISTOL_AKIMBO_swim_reload           ACT_MERC_RELOAD_SWIM_PISTOL_AKIMBO     layer_reload_standing_arms_PISTOL_AKIMBO 0 4 76 86
+//$MPGestureReload_IK ReloadAirwalk_PISTOL_AKIMBO   PISTOL_AKIMBO_reload                ACT_MERC_RELOAD_AIRWALK_PISTOL_AKIMBO  layer_reload_airwalk_arms_PISTOL_AKIMBO 0 4 76 86
+
 $MPGestureReload_IK ReloadStand_PISTOL_AKIMBO     PISTOL_AKIMBO_reload                ACT_MERC_RELOAD_STAND_PISTOL_AKIMBO    layer_reload_standing_arms_PISTOL_AKIMBO 0 4 76 86
+{ 
+	event AE_CL_BODYGROUP_SET_VALUE 11 "magazine_left 1"
+	event AE_CL_BODYGROUP_SET_VALUE 40 "magazine_left 0"
+	event AE_CL_BODYGROUP_SET_VALUE 11 "magazine_right 1"
+	event AE_CL_BODYGROUP_SET_VALUE 40 "magazine_right 0"
+}
+
 $MPGestureReload_IK ReloadCrouch_PISTOL_AKIMBO    PISTOL_AKIMBO_crouch_reload 	      ACT_MERC_RELOAD_CROUCH_PISTOL_AKIMBO   layer_reload_crouch_arms_PISTOL_AKIMBO 0 4 76 86
+{ 
+	event AE_CL_BODYGROUP_SET_VALUE 11 "magazine_left 1"
+	event AE_CL_BODYGROUP_SET_VALUE 40 "magazine_left 0"
+	event AE_CL_BODYGROUP_SET_VALUE 11 "magazine_right 1"
+	event AE_CL_BODYGROUP_SET_VALUE 40 "magazine_right 0"
+}
+
 $MPGestureReload_IK ReloadSwim_PISTOL_AKIMBO      PISTOL_AKIMBO_swim_reload           ACT_MERC_RELOAD_SWIM_PISTOL_AKIMBO     layer_reload_standing_arms_PISTOL_AKIMBO 0 4 76 86
+{ 
+	event AE_CL_BODYGROUP_SET_VALUE 11 "magazine_left 1"
+	event AE_CL_BODYGROUP_SET_VALUE 40 "magazine_left 0"
+	event AE_CL_BODYGROUP_SET_VALUE 11 "magazine_right 1"
+	event AE_CL_BODYGROUP_SET_VALUE 40 "magazine_right 0"
+}
+
 $MPGestureReload_IK ReloadAirwalk_PISTOL_AKIMBO   PISTOL_AKIMBO_reload                ACT_MERC_RELOAD_AIRWALK_PISTOL_AKIMBO  layer_reload_airwalk_arms_PISTOL_AKIMBO 0 4 76 86
+{ 
+	event AE_CL_BODYGROUP_SET_VALUE 11 "magazine_left 1"
+	event AE_CL_BODYGROUP_SET_VALUE 40 "magazine_left 0"
+	event AE_CL_BODYGROUP_SET_VALUE 11 "magazine_right 1"
+	event AE_CL_BODYGROUP_SET_VALUE 40 "magazine_right 0"
+}
 
 $sequence Stand_PISTOL_AKIMBO  PISTOL_AKIMBO_idle loop alignto a_reference addlayer PISTOL_AKIMBO_aimmatrix_idle activity ACT_MERC_STAND_PISTOL_AKIMBO 1
 $sequence Crouch_PISTOL_AKIMBO PISTOL_AKIMBO_crouch_idle loop alignto a_reference addlayer PISTOL_AKIMBO_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_PISTOL_AKIMBO 1
