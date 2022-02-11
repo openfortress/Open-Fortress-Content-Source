@@ -121,7 +121,7 @@ $sequence taunt02 "taunt_soclose.dmx" noanimation {
 	blendlayer layer_taunt02  0 5 89 104
 	event AE_WPN_HIDE 1
 	event AE_WPN_UNHIDE 100
-	} { event 5004 13 "Taunt.mercenary01ClothesSwipe" } { event 5004 24 "Taunt.mercenary01HeelClick" } { event 5004 80 "Taunt.mercenary01ClothesRustle" }
+	} { event 5004 13 "Taunt.Soldier01ClothesSwipe" } { event 5004 24 "Taunt.Soldier01HeelClick" } { event 5004 80 "Taunt.Soldier01ClothesRustle" }
 	
 	
 $sequence layer_taunt03 "taunt_groovy.dmx" fps 30 hidden
@@ -130,7 +130,7 @@ $sequence taunt03 "taunt_groovy.dmx" noanimation {
 	blendlayer layer_taunt03 0 5 52 60
 	event AE_WPN_HIDE 1
 	event AE_WPN_UNHIDE 60
-	}{ event 5004 17 "Taunt.mercenary01ClothesSwipe" }{ event 5004 17 "Taunt.mercenary01HeelClick" }{ event 5004 47 "Taunt.mercenary01ClothesRustle" }{ event 5004 59 "Taunt.mercenary01HelmetJostle" }
+	}{ event 5004 17 "Taunt.Soldier01ClothesSwipe" }{ event 5004 17 "Taunt.Soldier01HeelClick" }{ event 5004 47 "Taunt.Soldier01ClothesRustle" }{ event 5004 59 "Taunt.Soldier01HelmetJostle" }
 
 $sequence layer_taunt04 "taunt_threat.dmx" fps 30 hidden
 $sequence taunt04 "taunt_threat.dmx" noanimation {
@@ -138,14 +138,14 @@ $sequence taunt04 "taunt_threat.dmx" noanimation {
 	blendlayer layer_taunt04  0 5 65 70
 	event AE_WPN_HIDE 1
 	event AE_WPN_UNHIDE 70
-	} { event 5004 12 "Taunt.mercenary01ClothesSwipe" } { event 5004 19 "Taunt.mercenary01HeelClick" } { event 5004 35 "Taunt.mercenary01ClothesRustle" } { event 5004 65 "Taunt.mercenary01HeelClick" }
+	} { event 5004 12 "Taunt.Soldier01ClothesSwipe" } { event 5004 19 "Taunt.Soldier01HeelClick" } { event 5004 35 "Taunt.Soldier01ClothesRustle" } { event 5004 65 "Taunt.Soldier01HeelClick" }
 	
 
 $sequence layer_taunt05 "taunt_bombscare.dmx" fps 30 hidden
 $sequence taunt05 "taunt_bombscare.dmx" noanimation {
 	numframes 246
 	blendlayer layer_taunt05  0 5 240 246
-	} { event 5004 27 "Taunt.mercenary03FootStomp" } { event 5004 79 "Taunt.mercenary03HelmetHit" } { event 5004 89 "Taunt.mercenary03HelmetHit" } { event 5004 99 "Taunt.mercenary03HelmetHit" } { event 5004 27 "Taunt.mercenary03ClothesRustle" } { event 5004 60 "Taunt.mercenary03ClothesSwipe" } { event 5004 40 "Taunt.mercenary03HelmetJostle" }
+	} { event 5004 27 "Taunt.Soldier03FootStomp" } { event 5004 79 "Taunt.Soldier03HelmetHit" } { event 5004 89 "Taunt.Soldier03HelmetHit" } { event 5004 99 "Taunt.Soldier03HelmetHit" } { event 5004 27 "Taunt.Soldier03ClothesRustle" } { event 5004 60 "Taunt.Soldier03ClothesSwipe" } { event 5004 40 "Taunt.Soldier03HelmetJostle" }
 
 // We don't put numbered taunts beyond this
 // Because its shared stuff like the thriller dance
