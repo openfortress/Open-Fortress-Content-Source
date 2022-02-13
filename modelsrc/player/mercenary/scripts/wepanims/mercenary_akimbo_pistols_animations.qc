@@ -77,9 +77,6 @@ $sequence layer_reload_standing_arms_PISTOL_AKIMBO "PISTOL_AKIMBO_reload.dmx" we
 	hidden
 	ikrule lhand touch "bip_pelvis" usesource range 30 37 37 43
 	ikrule rhand touch "bip_pelvis" usesource range 30 37 37 43
-	localhierarchy "weapon_bone" "bip_hand_l"
-	localhierarchy "weapon_bone_1" "weapon_bone"
-	localhierarchy "weapon_bone_2" "bip_hand_l"
 	fps 35
 }
 
@@ -88,9 +85,6 @@ $sequence layer_reload_airwalk_arms_PISTOL_AKIMBO "PISTOL_AKIMBO_reload_airwalk.
 	hidden
 	ikrule lhand touch "bip_pelvis" usesource range 30 37 37 43
 	ikrule rhand touch "bip_pelvis" usesource range 30 37 37 43
-	localhierarchy "weapon_bone" "bip_hand_l"
-	localhierarchy "weapon_bone_1" "weapon_bone"
-	localhierarchy "weapon_bone_2" "bip_hand_l"
 	fps 35
 }
 
@@ -98,9 +92,6 @@ $sequence layer_reload_crouch_arms_PISTOL_AKIMBO "PISTOL_AKIMBO_crouch_reload.dm
 	hidden
 	ikrule lhand touch "bip_pelvis" usesource range 30 37 37 43
 	ikrule rhand touch "bip_pelvis" usesource range 30 37 37 43
-	localhierarchy "weapon_bone" "bip_hand_l"
-	localhierarchy "weapon_bone_1" "weapon_bone"
-	localhierarchy "weapon_bone_2" "bip_hand_l"
 	fps 35
 }
 
