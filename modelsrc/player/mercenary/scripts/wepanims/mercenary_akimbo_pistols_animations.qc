@@ -156,7 +156,6 @@ $sequence jumpLand_PISTOL_AKIMBO {
 	subtract jumpLand_PISTOL_AKIMBO 0 
 	delta 
 	iklock rfoot 1 0 iklock lfoot 1 0 
-
 	activity ACT_MERC_JUMP_LAND_PISTOL_AKIMBO 1 
 }
 
@@ -164,72 +163,54 @@ $sequence jumpLand_PISTOL_AKIMBO {
 $animation a_runCenter_PISTOL_AKIMBO  PISTOL_AKIMBO_runCenter blockname $infoNode$ {
 	loop
 	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 0 .. contact 0
 }
 $animation a_runS_PISTOL_AKIMBO PISTOL_AKIMBO_runs blockname $infoNode$ {
 	LX LY
 	rotateto -180
 	startloop 12
 	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
 }
 $animation a_runSE_PISTOL_AKIMBO PISTOL_AKIMBO_runse blockname $infoNode$ {
 	LX LY
 	rotateto -135
 	startloop 12
 	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
 }
 $animation a_runE_PISTOL_AKIMBO PISTOL_AKIMBO_rune blockname $infoNode$ {
 	LX LY
 	rotateto -90
 	startloop 2
 	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
 }
 $animation a_runNE_PISTOL_AKIMBO PISTOL_AKIMBO_runne blockname $infoNode$ {
 	LX LY
 	rotateto -45
 	startloop 3
 	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
 }
 $animation a_runN_PISTOL_AKIMBO PISTOL_AKIMBO_runn blockname $infoNode$ {
 	LX LY
 	rotateto 0
 	startloop 3
 	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
 }
 $animation a_runNW_PISTOL_AKIMBO PISTOL_AKIMBO_runnw blockname $infoNode$ {
 	LX LY
 	rotateto 45
 	startloop 4
 	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
 }
 $animation a_runW_PISTOL_AKIMBO PISTOL_AKIMBO_runw blockname $infoNode$ {
 	LX LY
 	rotateto 90
 	startloop 3
 	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
 }
 $animation a_runSW_PISTOL_AKIMBO PISTOL_AKIMBO_runsw blockname $infoNode$ {
 	LX LY
 	rotateto 135
 	startloop 12
 	alignto a_reference
-	ikrule lfoot footstep range .. 0 2 .. contact 1
-	ikrule rfoot footstep range .. 0 2 .. contact 1
 }
 
 //$MPAimLayer PISTOL_AKIMBO_aimMatrix	    PISTOL_AKIMBO_aimMatrix	$infoNode$
