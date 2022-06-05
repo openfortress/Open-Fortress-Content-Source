@@ -1,11 +1,7 @@
-// Created by Crowbar 0.68
-
 $modelname "weapons\v_models\v_grenadelauncher_dm.mdl"
 
-$bodygroup "shotgun"
-{
-	studio "v_grenadelauncher_dm_v_shotgun_merc_c_shotgun_dm.001.smd"
-}
+$model "shotgun" "v_grenadelauncher_dm_v_shotgun_merc_c_shotgun_dm.001.smd"
+
 $bodygroup "illumpos"
 {
 	studio "v_grenadelauncher_dm_v_shotgun_merc_illumpos.smd"
@@ -22,7 +18,7 @@ $cdmaterials "models\weapons\v_grenadelauncher\"
 $cdmaterials ""
 
 $attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0
-$attachment "muzzle" "weapon_bone" 0 3.73 34.92 rotate -90 0 0
+$attachment "muzzle" "weapon_bone" 0 3.73 34.92 rotate 0 0 0
 $attachment "eject_brass" "weapon_bone" 0.8 3.25 9.76 rotate -12 18 -18
 
 $cbox 0 0 0 0 0 0
@@ -30,7 +26,7 @@ $cbox 0 0 0 0 0 0
 $bbox -6.854 -20.31 -32.863 49.553 16.949 1.18
 
 $hboxset "default"
-$hbox 0 "weapon_bone" -10 -10 -10 10 10 10
+$hbox 0 "weapon_bone"	    -2.50   -3.50   -5.50     2.50    5.50   29.50
 
 $definebone "root" "" 0 3.788849 65.927551 0 0 89.999982 0 0 0 0 0 0
 $definebone "weapon_bone" "" 0 0 0 0 0 89.999982 0 0 0 0 0 0
