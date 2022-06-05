@@ -1,11 +1,7 @@
-// Created by Crowbar 0.68
-
 $modelname "weapons/v_models/v_dynamite_bundle.mdl"
 
-$bodygroup "v_dynamite"
-{
-	studio "v_dynamite_bundle_v_dynamite.smd"
-}
+$model "v_dynamite" "v_dynamite_bundle_v_dynamite.smd"
+
 $bodygroup "illumpos"
 {
 	studio "v_dynamite_bundle_illumpos.smd"
@@ -29,7 +25,8 @@ $cbox 0 0 0 0 0 0
 $bbox -3.02 -29.045 -23.659 35.076 24.779 6.538
 
 $hboxset "default"
-$hbox 0 "weapon_bone" -10 -10 -10 10 10 10
+$hbox 0 "weapon_bone"	   -12.00   -7.50   -1.00    -4.00    3.50    7.00
+$hbox 0 "weapon_bone_L"	    -2.50   -2.50   -2.50     2.50    2.50    2.50
 
 $definebone "root" "" 0 70.500832 -4.842813 0 0 -170.261398 0 0 0 0 0 0
 $definebone "bip_collar_L" "root" 3.712229 0.237961 -0.699356 -10.749435 -69.923023 -177.151502 0 0 0 0 0 0
