@@ -1,11 +1,7 @@
-// Created by Crowbar 0.68
-
 $modelname "weapons\v_models\v_shotgun_merc.mdl"
 
-$bodygroup "shotgun"
-{
-	studio "v_shotgun_merc_c_shotgun_dm.smd"
-}
+$model "shotgun" "v_shotgun_merc_c_shotgun_dm.smd"
+
 $bodygroup "illumpos"
 {
 	studio "v_shotgun_merc_illumpos.smd"
@@ -30,7 +26,7 @@ $cbox 0 0 0 0 0 0
 $bbox -6.854 -20.31 -32.863 49.553 16.949 1.18
 
 $hboxset "default"
-$hbox 0 "weapon_bone" -10 -10 -10 10 10 10
+$hbox 0 "weapon_bone"	    -1.50   -0.50    2.00     1.50    4.50   34.00
 
 $definebone "root" "" 0 3.788849 65.927551 0 0 89.999982 0 0 0 0 0 0
 $definebone "weapon_bone" "" 0 0 0 0 0 89.999982 0 0 0 0 0 0

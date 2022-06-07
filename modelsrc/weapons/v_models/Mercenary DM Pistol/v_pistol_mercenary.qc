@@ -1,11 +1,7 @@
-// Created by Crowbar 0.71
-
 $modelname "weapons/v_models/v_pistol_mercenary.mdl"
 
-$bodygroup "pistol"
-{
-	studio "v_pistol_mercenary_pistol.smd"
-}
+$model "pistol" "v_pistol_mercenary_pistol.smd"
+
 $bodygroup "empty_mag"
 {
 	studio "v_pistol_mercenary_mag.smd"
@@ -37,7 +33,7 @@ $cbox 0 0 0 0 0 0
 $bbox -0.021 -26.61 -40.826 53.087 20.711 17.142
 
 $hboxset "default"
-$hbox 0 "weapon_bone" -10 -10 -10 10 10 10
+$hbox 0 "weapon_bone"	    -1.50   -4.00   -4.00     1.50    8.00    8.00
 
 $definebone "root" "" 0 60.106396 -4.292783 0 0 0 0 0 0 0 0 0
 $definebone "bip_upperArm_L" "root" 10.092304 0 0 -0.34641 27.875139 -9.114151 0 0 0 0 0 0
