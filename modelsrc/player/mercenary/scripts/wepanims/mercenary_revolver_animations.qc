@@ -34,7 +34,22 @@ $Weightlist RevolverMercenarySwimReloadArmsBlend {
 	"bip_upperArm_R" 1.0
 	"bip_lowerArm_R" 1.0
 	}
-
+//-----------------------------------------------------------------------------------
+// Weightlists
+//-----------------------------------------------------------------------------------
+	
+$Weightlist RevolverMercenaryCrouchBlend {
+	"bip_pelvis" 0.0
+	"bip_hip_R" 0.0
+	"bip_hip_L" 0.0
+	"bip_spine_0" 0.0
+	"bip_collar_L" 1.0
+	"bip_upperArm_L" 1.0
+	"bip_lowerArm_L" 1.0
+	"bip_collar_R" 1.0
+	"bip_upperArm_R" 1.0
+	"bip_lowerArm_R" 1.0
+	}
 //-----------------------------------------------------------------------------------
 // Revolver Mercenary
 //-----------------------------------------------------------------------------------
@@ -154,7 +169,7 @@ $sequence Run_REVOLVER_MERCENARY {
 	  { event 7001 16 "left" }
 }
 
-$MPCrouchWalkWithWeapon Crouch_Walk_REVOLVER_MERCENARY 0 0 0 0 0 0 0 0 REVOLVER_MERCENARY_crouch_walkN REVOLVER_MERCENARY_crouch_walkCenter REVOLVER_MERCENARY_aimmatrix_crouch_idle ACT_MERC_CROUCHWALK_REVOLVER_MERCENARY $infoNode$
+$MPCrouchWalkWithWeaponNoIK Crouch_Walk_REVOLVER_MERCENARY 0 0 0 0 0 0 0 0 REVOLVER_MERCENARY_crouch_walkN REVOLVER_MERCENARY_crouch_walkCenter REVOLVER_MERCENARY_aimmatrix_crouch_idle ACT_MERC_CROUCHWALK_REVOLVER_MERCENARY $infoNode$
 
 // airwalk
 $sequence Airwalk_REVOLVER_MERCENARY "REVOLVER_MERCENARY_airwalk.dmx" fps 30 loop {
