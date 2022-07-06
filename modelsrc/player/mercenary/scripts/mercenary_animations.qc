@@ -145,7 +145,9 @@ $sequence layer_taunt05 "taunt_bombscare.dmx" fps 30 hidden
 $sequence taunt05 "taunt_bombscare.dmx" noanimation {
 	numframes 246
 	blendlayer layer_taunt05  0 5 240 246
-	} { event 5004 27 "Taunt.Soldier03FootStomp" } { event 5004 79 "Taunt.Soldier03HelmetHit" } { event 5004 89 "Taunt.Soldier03HelmetHit" } { event 5004 99 "Taunt.Soldier03HelmetHit" } { event 5004 27 "Taunt.Soldier03ClothesRustle" } { event 5004 60 "Taunt.Soldier03ClothesSwipe" } { event 5004 40 "Taunt.Soldier03HelmetJostle" }
+	event AE_WPN_HIDE 1
+	event AE_WPN_UNHIDE 245
+	} { event 5004 11 "Taunt.Soldier01ClothesRustle"} { event 5004 24 "Taunt.Soldier01HelmetJostle"} { event 5004 45 "Taunt.Soldier02GrenadeCatch" } { event 5004 60 "Taunt.Soldier01HelmetJostle"} { event 5004 84 "Taunt.Soldier01ClothesSwipe" } { event 5004 98 "Taunt.Soldier01ClothesSwipe"} { event 5004 176 "Taunt.Soldier03FootStomp" } { event 5004 211 "Taunt.Soldier01HelmetJostle"} { event 5004 219 "Taunt.Soldier03FootStomp" }
 
 $sequence layer_taunt06 "taunt06.dmx" fps 30 hidden
 $sequence taunt06 "taunt06.dmx" noanimation {
