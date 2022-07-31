@@ -141,12 +141,16 @@ $sequence taunt04 "taunt_threat.dmx" noanimation {
 	} { event 5004 12 "Taunt.Soldier01ClothesSwipe" } { event 5004 19 "Taunt.Soldier01HeelClick" } { event 5004 35 "Taunt.Soldier01ClothesRustle" } { event 5004 65 "Taunt.Soldier01HeelClick" }
 	
 
-$sequence layer_taunt05 "taunt_bombscare.dmx" fps 30 hidden
+$sequence layer_taunt05 "taunt_bombscare.dmx" fps 30 hidden {
+	localhierarchy weapon_bone_1 ""
+}
+
 $sequence taunt05 "taunt_bombscare.dmx" noanimation {
 	numframes 246
 	blendlayer layer_taunt05  0 5 240 246
 	event AE_WPN_HIDE 1
 	event AE_WPN_UNHIDE 245
+	localhierarchy weapon_bone_1 ""
 	} { event 5004 11 "Taunt.Soldier01ClothesRustle"} { event 5004 24 "Taunt.Soldier01HelmetJostle"} { event 5004 45 "Taunt.Soldier02GrenadeCatch" } { event 5004 60 "Taunt.Soldier01HelmetJostle"} { event 5004 84 "Taunt.Soldier01ClothesSwipe" } { event 5004 98 "Taunt.Soldier01ClothesSwipe"} { event 5004 176 "Taunt.Soldier03FootStomp" } { event 5004 211 "Taunt.Soldier01HelmetJostle"} { event 5004 219 "Taunt.Soldier03FootStomp" }
 
 $sequence layer_taunt06 "taunt06.dmx" fps 30 hidden
