@@ -1,7 +1,7 @@
 // defining the upaxis is needed for maya exports
 $upaxis Y
 
-$modelname player/merc_anim/animations_CHINA_LAKE.mdl
+$modelname player/merc_anim/animations_chinalake.mdl
 
 $definevariable infoNode "mercenaryInfo"
 $include "../mercenary_definebones.qci"
@@ -22,7 +22,7 @@ $sequence ragdollspawn "primary_idle.dmx" lx ly
 //-----------------------------------------------------------------------------------
 // Weightlists
 //-----------------------------------------------------------------------------------	
-$weightlist CHINA_LAKEMercStandArmsBlend {
+$weightlist ChinaLakeMercStandArmsBlend {
 	"bip_pelvis" 1.0
 	"bip_hip_R" 0.0
 	"bip_hip_L" 0.0
@@ -45,9 +45,9 @@ $weightlist CHINA_LAKEMercStandArmsBlend {
 
 $MPWeaponAims_leftHandIK		CHINA_LAKE	$infoNode$
 
-$MPGestureAttackCHINA_LAKE AttackStand_CHINA_LAKE  CHINA_LAKE_fire          ACT_MERC_ATTACK_STAND_CHINA_LAKE weightlist CHINA_LAKEMercStandArmsBlend 
-$MPGestureAttackCHINA_LAKE AttackCrouch_CHINA_LAKE CHINA_LAKE_crouch_fire   ACT_MERC_ATTACK_CROUCH_CHINA_LAKE weightlist CHINA_LAKEMercStandArmsBlend 
-$MPGestureAttackCHINA_LAKE AttackSwim_CHINA_LAKE   CHINA_LAKE_swim_fire     ACT_MERC_ATTACK_SWIM_CHINA_LAKE weightlist CHINA_LAKEMercStandArmsBlend 
+$MPGestureAttackShotgun AttackStand_CHINA_LAKE  CHINA_LAKE_fire          ACT_MERC_ATTACK_STAND_CHINA_LAKE weightlist ChinaLakeMercStandArmsBlend 
+$MPGestureAttackShotgun AttackCrouch_CHINA_LAKE CHINA_LAKE_crouch_fire   ACT_MERC_ATTACK_CROUCH_CHINA_LAKE weightlist ChinaLakeMercStandArmsBlend 
+$MPGestureAttackShotgun AttackSwim_CHINA_LAKE   CHINA_LAKE_swim_fire     ACT_MERC_ATTACK_SWIM_CHINA_LAKE weightlist ChinaLakeMercStandArmsBlend 
 
 $MPGestureReload ReloadSwim_CHINA_LAKE   CHINA_LAKE_swim_reload   ACT_MERC_RELOAD_SWIM_CHINA_LAKE
 
