@@ -297,16 +297,28 @@ $sequence PRIMARY_stun_end {
   blendlayer layer_PRIMARY_Stun_end 0 0 10 21
  	activity ACT_MP_STUN_END 1
 }
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// START OF LOSER
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 
-//================================================================================================
-//
-// JUMP LOSER
-//
-//================================================================================================
+//-----------------------------------------------------------------------------------
+// STAND/CROUCH IDLES
+//-----------------------------------------------------------------------------------
+$sequence Stand_LOSER  LOSER_idle loop alignto a_reference activity ACT_MP_STAND_LOSERSTATE 1
 
+$sequence Crouch_LOSER LOSER_crouch_idle loop alignto a_reference activity ACT_MP_CROUCH_LOSERSTATE 1
+
+//-----------------------------------------------------------------------------------
+// JUMP
+//-----------------------------------------------------------------------------------
 $sequence a_jumpStart_loser loser_jump frames 0 25 alignto a_reference Z activity ACT_MP_JUMP_START_LOSERSTATE 1 LX LY
+
 $sequence a_jumpfloat_loser loser_jump frames 26 103	loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_LOSERSTATE 1 LX LY
+
 $sequence jumpLandPose_loser loser_jump frames 25 25 numframes 30 loop
+
 $sequence jumpLand_loser { 
 	loser_jump_land 
 	subtract jumpLand_loser 0 
@@ -316,7 +328,9 @@ $sequence jumpLand_loser {
 	activity ACT_MP_JUMP_LAND_LOSERSTATE 1 
 }
 
-
+//-----------------------------------------------------------------------------------
+// RUN
+//-----------------------------------------------------------------------------------
 $animation a_runCenter_loser  loser_runCenter blockname $infoNode$ {
 	loop
 	alignto a_reference
@@ -327,48 +341,56 @@ $animation a_runS_loser loser_runs blockname $infoNode$ {
 	startloop 4
 	alignto a_reference
 }
+
 $animation a_runSE_loser loser_runse blockname $infoNode$ {
 	LX LY
 	rotateto -135
 	startloop 0
 	alignto a_reference
 }
+
 $animation a_runE_loser loser_rune blockname $infoNode$ {
 	LX LY
 	rotateto -90
 	startloop 14
 	alignto a_reference
 }
+
 $animation a_runNE_loser loser_runne blockname $infoNode$ {
 	LX LY
 	rotateto -45
 	startloop 15
 	alignto a_reference
 }
+
 $animation a_runN_loser loser_runn blockname $infoNode$ {
 	LX LY
 	rotateto 0
 	startloop 15
 	alignto a_reference
 }
+
 $animation a_runNW_loser loser_runnw blockname $infoNode$ {
 	LX LY
 	rotateto 45
 	startloop 14
 	alignto a_reference
 }
+
 $animation a_runW_loser loser_runw blockname $infoNode$ {
 	LX LY
 	rotateto 90
 	startloop 13
 	alignto a_reference
 }
+
 $animation a_runSW_loser loser_runsw blockname $infoNode$ {
 	LX LY
 	rotateto 135
 	startloop 4
 	alignto a_reference
 }
+
 $sequence Run_LOSER {
 	a_runsw_loser	a_runS_loser		a_runSE_loser
 	a_runW_loser	a_runCenter_loser	a_runE_loser
@@ -378,6 +400,12 @@ $sequence Run_LOSER {
 			{ event 7001 2 "right" }
 	    { event 7001 11 "left" }
 }
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// END OF LOSER
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// SPACE
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 // START OF MELEE
@@ -652,41 +680,62 @@ $sequence Airwalk_PRIMARY "SUPERSHOTGUN_airwalk.dmx" fps 30 loop {
 //-----------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------
+// Weightlists
+//-----------------------------------------------------------------------------------
+
+$Weightlist SecondarySwimReloadArmsBlend {
+	"bip_pelvis" 0.0
+	"bip_hip_R" 0.0
+	"bip_hip_L" 0.0
+	"bip_spine_0" 0.0
+	"bip_collar_L" 1.0
+	"bip_upperArm_L" 1.0
+	"bip_lowerArm_L" 1.0
+	"bip_collar_R" 1.0
+	"bip_upperArm_R" 1.0
+	"bip_lowerArm_R" 1.0
+	}
+	
+//-----------------------------------------------------------------------------------
 // Pistol Mercenary
 //-----------------------------------------------------------------------------------
 
-$MPAimLayer_lefthandIK SECONDARY_aimmatrix_idle        PISTOL_MERCENARY_aimmatrix_idle        $infoNode$
-$MPAimLayer_lefthandIK SECONDARY_aimmatrix_run         PISTOL_MERCENARY_aimmatrix_run         $infoNode$
-$MPAimLayer_lefthandIK SECONDARY_aimmatrix_crouch_idle PISTOL_MERCENARY_aimmatrix_crouch_idle $infoNode$
+$MPAimLayer SECONDARY_aimmatrix_idle        PISTOL_MERCENARY_aimmatrix_idle        $infoNode$
+$MPAimLayer SECONDARY_aimmatrix_run         PISTOL_MERCENARY_aimmatrix_run         $infoNode$
+$MPAimLayer SECONDARY_aimmatrix_crouch_idle PISTOL_MERCENARY_aimmatrix_crouch_idle $infoNode$
 
-$MPGestureAttack Attack_Stand_SECONDARY  PISTOL_MERCENARY_fire          ACT_MP_ATTACK_STAND_SECONDARY
-$MPGestureAttack Attack_Crouch_SECONDARY PISTOL_MERCENARY_crouch_fire   ACT_MP_ATTACK_CROUCH_SECONDARY
-$MPGestureAttack Attack_Swim_SECONDARY   PISTOL_MERCENARY_swim_fire     ACT_MP_ATTACK_SWIM_SECONDARY
+$MPGestureAttack AttackStand_SECONDARY  PISTOL_MERCENARY_fire          ACT_MERC_ATTACK_STAND_SECONDARY
+$MPGestureAttack AttackCrouch_SECONDARY PISTOL_MERCENARY_crouch_fire   ACT_MERC_ATTACK_CROUCH_SECONDARY
+$MPGestureAttack AttackSwim_SECONDARY   PISTOL_MERCENARY_swim_fire     ACT_MERC_ATTACK_SWIM_SECONDARY
 
 $sequence layer_reload_standing_arms_PISTOL_MERCENARY "PISTOL_MERCENARY_reload.dmx" weightlist ArmsBlend {
-	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
+	//ikrule lhand touch "bip_pelvis" usesource range 0 14 17 46
+	ikrule lhand touch "weapon_bone_1" usesource range 17 20 25 46
 	hidden
 
 }
 $sequence layer_reload_crouching_arms_PISTOL_MERCENARY "PISTOL_MERCENARY_crouch_reload.dmx" weightlist ArmsBlend {
-	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
+	//ikrule lhand touch "bip_pelvis" usesource range 19 25 26 29
+	ikrule lhand touch "weapon_bone_1" usesource range 17 20 25 46
 	hidden
 }	
 
-$sequence layer_reload_swimming_arms_PISTOL_MERCENARY "PISTOL_MERCENARY_swim_reload.dmx" weightlist ArmsBlend {
-	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
+$sequence layer_reload_swimming_arms_PISTOL_MERCENARY "PISTOL_MERCENARY_swim_reload.dmx" weightlist SecondarySwimReloadArmsBlend {
+	//ikrule lhand touch "bip_pelvis" usesource range 19 25 26 29
+	ikrule lhand touch "weapon_bone_1" usesource range 17 20 25 46
 	hidden
 }
 
-$sequence layer_reload_airwalk_arms_PISTOL_MERCENARY "PISTOL_MERCENARY_swim_reload.dmx" weightlist ArmsBlend {
-	ikrule lhand touch "weapon_bone" usesource range 0 4 45 51
+$sequence layer_reload_airwalk_arms_PISTOL_MERCENARY "PISTOL_MERCENARY_swim_reload.dmx" weightlist SecondarySwimReloadArmsBlend {
+	//ikrule lhand touch "bip_pelvis" usesource range 19 25 26 29
+	ikrule lhand touch "weapon_bone_1" usesource range 17 20 25 46
 	hidden
 }
 
-$MPGestureReload_IK ReloadStand_SECONDARY     PISTOL_MERCENARY_reload			ACT_MP_RELOAD_STAND_SECONDARY    layer_reload_standing_arms_PISTOL_MERCENARY 0 4 45 51
-$MPGestureReload_IK ReloadCrouch_SECONDARY   PISTOL_MERCENARY_crouch_reload		ACT_MP_RELOAD_CROUCH_SECONDARY   layer_reload_crouching_arms_PISTOL_MERCENARY 0 4 45 51
-$MPGestureReload_IK ReloadSwim_SECONDARY      PISTOL_MERCENARY_swim_reload		ACT_MP_RELOAD_SWIM_SECONDARY     layer_reload_swimming_arms_PISTOL_MERCENARY 0 4 45 51
-$MPGestureReload_IK ReloadAirwalk_SECONDARY   PISTOL_MERCENARY_reload			ACT_MP_RELOAD_AIRWALK_SECONDARY  layer_reload_airwalk_arms_PISTOL_MERCENARY 0 4 45 51
+$MPGestureReload_IK ReloadStand_SECONDARY     PISTOL_MERCENARY_reload			ACT_MP_RELOAD_STAND_SECONDARY    layer_reload_standing_arms_PISTOL_MERCENARY 0 14 17 46
+$MPGestureReload_IK ReloadCrouch_SECONDARY   PISTOL_MERCENARY_crouch_reload		ACT_MP_RELOAD_CROUCH_SECONDARY   layer_reload_crouching_arms_PISTOL_MERCENARY 0 14 17 46
+$MPGestureReload_IK ReloadSwim_SECONDARY      PISTOL_MERCENARY_swim_reload		ACT_MP_RELOAD_SWIM_SECONDARY     layer_reload_swimming_arms_PISTOL_MERCENARY 0 14 17 46
+$MPGestureReload_IK ReloadAirwalk_SECONDARY   PISTOL_MERCENARY_reload			ACT_MP_RELOAD_AIRWALK_SECONDARY  layer_reload_airwalk_arms_PISTOL_MERCENARY 0 14 17 46
 
 $sequence Stand_SECONDARY  PISTOL_MERCENARY_idle loop alignto a_reference addlayer SECONDARY_aimmatrix_idle 					activity ACT_MP_STAND_SECONDARY 1
 $sequence Crouch_SECONDARY PISTOL_MERCENARY_crouch_idle loop alignto a_reference addlayer SECONDARY_aimmatrix_crouch_idle  	activity ACT_MP_CROUCH_SECONDARY 1
@@ -697,7 +746,7 @@ $MPswimWithWeapon SECONDARY 0 0 0 0 0 0 0 0 PISTOL_MERCENARY_SwimN	PISTOL_MERCEN
 
 //PISTOL_MERCENARY jump
 $sequence a_jumpStart_SECONDARY PISTOL_MERCENARY_jump frames 0 25 addlayer SECONDARY_aimmatrix_swim alignto a_reference Z activity ACT_MP_JUMP_START_SECONDARY 1 LX LY
-$sequence a_jumpfloat_SECONDARY PISTOL_MERCENARY_jump frames 26 189 addlayer SECONDARY_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_SECONDARY 1 LX LY
+$sequence a_jumpfloat_SECONDARY PISTOL_MERCENARY_jump frames 26 44 addlayer SECONDARY_aimmatrix_swim loop  fps 30 alignto a_reference activity ACT_MP_JUMP_FLOAT_SECONDARY 1 LX LY
 $sequence jumpLandPose_SECONDARY PISTOL_MERCENARY_jump frames 25 25 numframes 30 loop
 $sequence jumpLand_SECONDARY { 
 	SECONDARY_jump_land 
