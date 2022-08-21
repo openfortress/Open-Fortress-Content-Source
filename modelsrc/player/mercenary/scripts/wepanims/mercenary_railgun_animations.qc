@@ -24,14 +24,18 @@ $sequence ragdollspawn "primary_idle.dmx" lx ly
 //-----------------------------------------------------------------------------------
 
 $MPWeaponAims_leftHandIK	RAILGUN	$infoNode$
+
 $MPAimLayer_leftHandIK  RAILGUN_aimmatrix_deployed        	RAILGUN_aimmatrix_deployed      $infoNode$
 $MPAimLayer_leftHandIK  RAILGUN_crouch_aimmatrix_deployed	  RAILGUN_crouch_aimmatrix_deployed	$infoNode$
+
 $MPGestureAttack AttackStand_RAILGUN   RAILGUN_fire         ACT_MERC_ATTACK_STAND_RAILGUN  IKrule lhand touch "weapon_bone" usesource
 $MPGestureAttack AttackCrouch_RAILGUN  RAILGUN_crouch_fire  ACT_MERC_ATTACK_CROUCH_RAILGUN IKrule lhand touch "weapon_bone" usesource
 $MPGestureAttack AttackSwim_RAILGUN    RAILGUN_fire         ACT_MERC_ATTACK_SWIM_RAILGUN   IKrule lhand touch "weapon_bone" usesource
 
+$MPGestureAttack AttackStand_RAILGUN_DEPLOYED   RAILGUN_DEPLOYED_fire         ACT_MERC_ATTACK_STAND_RAILGUN_DEPLOYED
 $MPGestureAttack AttackCrouch_RAILGUN_DEPLOYED  RAILGUN_DEPLOYED_crouch_fire   ACT_MERC_ATTACK_CROUCH_RAILGUN_DEPLOYED
 $MPGestureAttack AttackSwim_RAILGUN_DEPLOYED    RAILGUN_DEPLOYED_fire          ACT_MERC_ATTACK_SWIM_RAILGUN_DEPLOYED
+
 $MPGestureReload ReloadStand_RAILGUN_DEPLOYED   RAILGUN_idle_deployed          ACT_MERC_RELOAD_STAND_RAILGUN_DEPLOYED IKrule lhand touch "weapon_bone" usesource frames 0 0
 $MPGestureReload ReloadCrouch_RAILGUN_DEPLOYED  RAILGUN_idle_deployed          ACT_MERC_RELOAD_CROUCH_RAILGUN_DEPLOYED IKrule lhand touch "weapon_bone" usesource frames 0 0
 $MPGestureReload ReloadSwim_RAILGUN_DEPLOYED    RAILGUN_idle_deployed          ACT_MERC_RELOAD_SWIM_RAILGUN_DEPLOYED IKrule lhand touch "weapon_bone" usesource frames 0 0
@@ -40,16 +44,7 @@ $MPGestureReload ReloadStand_RAILGUN  RAILGUN_idle        ACT_MERC_RELOAD_STAND_
 $MPGestureReload ReloadCrouch_RAILGUN  RAILGUN_idle ACT_MERC_RELOAD_CROUCH_RAILGUN IKrule lhand touch "weapon_bone" usesource frames 0 0
 $MPGestureReload ReloadSwim_RAILGUN   RAILGUN_idle   ACT_MERC_RELOAD_SWIM_RAILGUN IKrule lhand touch "weapon_bone" usesource frames 0 0
 
-$sequence attackstand_RAILGUN_deployed_fire {
-	RAILGUN_deployed_fire
-	subtract attackstand_RAILGUN_deployed_fire 0
-	delta
-	ikrule lhand touch "weapon_bone" usesource
-	ikrule rhand release
-	iklock rfoot 1 0 iklock lfoot 1 0
- 	activity ACT_MERC_ATTACK_STAND_RAILGUN_DEPLOYED 1 
-}
-
+$sequence Stand_RAILGUN_DEPLOYED  RAILGUN_idle_DEPLOYED loop addlayer RAILGUN_aimmatrix_deployed activity ACT_MERC_STAND_RAILGUN_DEPLOYED 1
 $sequence Stand_RAILGUN  RAILGUN_idle loop addlayer RAILGUN_aimmatrix_idle activity ACT_MERC_STAND_RAILGUN 1
 $sequence Crouch_RAILGUN RAILGUN_crouch_idle loop addlayer RAILGUN_aimmatrix_crouch_idle  activity ACT_MERC_CROUCH_RAILGUN 1
 
