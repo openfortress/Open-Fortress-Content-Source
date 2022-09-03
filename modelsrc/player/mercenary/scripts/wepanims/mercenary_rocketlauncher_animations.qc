@@ -97,7 +97,7 @@ $sequence ReloadStand_ROCKETLAUNCHER_loop {
 	delta
 	//ikrule lhand release
 	//ikrule rhand release
-	localhierarchy "weapon_bone" "bip_hand_l"
+	//localhierarchy "weapon_bone" "bip_hand_l"
 	iklock rfoot 1 0 iklock lfoot 1 0
  	addlayer layer_reload_standing_arms_loop_merc	
  	activity ACT_MERC_RELOAD_STAND_ROCKETLAUNCHER_LOOP 1
