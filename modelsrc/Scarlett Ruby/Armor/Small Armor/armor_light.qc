@@ -30,3 +30,15 @@ $sequence "idle" {
 	fps 10
 	loop
 }
+
+$collisionmodel "ammopack_medium_physics.smd"
+{
+	$mass 1
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 1
+
+}
