@@ -165,9 +165,9 @@ $sequence "idle" {
 $sequence "fire" {
 	"v_shotgun_merc_anims\fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event 5004 14 "Weapon_ShotgunEngineer.Cock_Back" }
-	{ event 5004 20 "Weapon_ShotgunEngineer.Cock_Forward" }
-	{ event 6002 23 "4" }
+	{ event 5004 7 "Weapon_ShotgunEngineer.Cock_Back" }
+	{ event 5004 11 "Weapon_ShotgunEngineer.Cock_Forward" }
+	{ event 6002 12 "4" }
 	fadein 0.2
 	fadeout 0.2
 	node "raised"
