@@ -110,6 +110,10 @@ $sequence loadout_flametemp			"loadout_flametemp.dmx"		 loop fps 30 snap activit
 $sequence loadout_fuckinsiiiiick	"loadout_fuckinsiiiiick.dmx" loop fps 30 snap activity ACT_MERC_LOADOUT_SICKASFUCK 1
 $sequence hud_ref					"hud_ref.dmx"				 loop fps 24 snap activity ACT_HUD_REF 1
 
+$sequence camdroid_stand			"camdroid_standalt.dmx"				loop fps 30 snap activity ACT_CAMDROID_STAND 1
+$sequence camdroid_shutdown			"camdroid_shutdown.dmx"				loop fps 30 snap activity ACT_CAMDROID_SHUTDOWN 1
+$sequence camdroid_crouch			"camdroid_crouch.dmx"				loop fps 30 snap activity ACT_CAMDROID_SIT 1
+
 //-----------------------------------------------------------------------------------
 // Winscreen anims
 //-----------------------------------------------------------------------------------
