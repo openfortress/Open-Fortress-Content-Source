@@ -192,11 +192,11 @@ $sequence "bet_draw" {
 $sequence "bet_reload_loop" {
 	"anims/reload.dmx"
 	activity "ACT_VM_RELOAD" 1
-	{ event 5004 22 "Weapon_Fist.HitHand" }
-	{ event 5004 23 "Weapon_Tommmygun.DrumIn" }
-	{ event 5004 27 "Weapon_Tommmygun.BoltForward" }
-	{ event 5004 59 "Weapon_RPG.Reload" }
-	{ event 5004 61 "Weapon_Fist.HitHand" }
+	//{ event 5004 22 "Weapon_Fist.HitHand" }
+	{ event 5004 22 "Weapon_Tommmygun.DrumIn" }
+	{ event 5004 24 "Weapon_Tommmygun.BoltForward" }
+	{ event 5004 60 "Weapon_RPG.Reload" }
+	{ event 5004 60 "Weapon_Fist.HitHand" }
 	{ event 5004 79 "Weapon_Tommmygun.DrumOut" }
 	{ event 5004 80 "Weapon_Tommmygun.BoltBack" }
 	fadein 0.2
