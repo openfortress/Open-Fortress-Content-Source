@@ -672,7 +672,7 @@ $sequence PRIMARY_stun_end {
 //
 //-----------------------------------------------------------------------------------
 
-$sequence selectionMenu_StartPose "selectionMenu_Anim01.dmx" frames 0 0  fps 30
+$sequence selectionMenu_StartPose "selectionMenu_Anim01.dmx" frames 0 0 fps 30
 
 $sequence selectionMenu_Anim01 "selectionMenu_Anim01.dmx" frames 0 70  fps 30 event AE_CL_PLAYSOUND 4 "Selection.PyroFootStomp" event AE_CL_PLAYSOUND 7 "Selection.PyroClothesRustle" event AE_CL_PLAYSOUND 9 "Selection.PyroEquipment1" event AE_CL_PLAYSOUND 32 "Selection.PyroEquipment2"
 
