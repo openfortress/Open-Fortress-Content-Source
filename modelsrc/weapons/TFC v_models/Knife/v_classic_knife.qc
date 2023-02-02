@@ -1,4 +1,4 @@
-$modelname "weapons/v_models/v_classic_knife.mdl"
+$modelname "weapons/v_models/v_classic_knife_spy.mdl"
 
 $origin 0 3 0
 
