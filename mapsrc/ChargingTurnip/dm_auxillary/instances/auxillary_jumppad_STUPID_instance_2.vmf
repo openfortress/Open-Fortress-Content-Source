@@ -1,0 +1,672 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "8864"
+	"mapversion" "126"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "16"
+}
+palette_plus
+{
+	"color0" "255 255 255"
+	"color1" "255 255 255"
+	"color2" "255 255 255"
+	"color3" "255 255 255"
+	"color4" "255 255 255"
+	"color5" "255 255 255"
+	"color6" "255 255 255"
+	"color7" "255 255 255"
+	"color8" "255 255 255"
+	"color9" "255 255 255"
+	"color10" "255 255 255"
+	"color11" "255 255 255"
+	"color12" "255 255 255"
+	"color13" "255 255 255"
+	"color14" "255 255 255"
+	"color15" "255 255 255"
+}
+colorcorrection_plus
+{
+	"name0" ""
+	"weight0" "1"
+	"name1" ""
+	"weight1" "1"
+	"name2" ""
+	"weight2" "1"
+	"name3" ""
+	"weight3" "1"
+}
+light_plus
+{
+	"samples_sun" "6"
+	"samples_ambient" "40"
+	"samples_vis" "256"
+	"texlight" ""
+	"incremental_delay" "0"
+	"bake_dist" "1024"
+	"radius_scale" "1"
+	"brightness_scale" "1"
+	"ao_scale" "0"
+	"bounced" "1"
+	"incremental" "1"
+	"supersample" "0"
+	"bleed_hack" "1"
+	"soften_cosine" "0"
+	"debug" "0"
+	"cubemap" "1"
+	"hdr" "0"
+}
+bgimages_plus
+{
+}
+world
+{
+	"id" "1"
+	"mapversion" "126"
+	"classname" "worldspawn"
+	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxpropscreenwidth" "-1"
+	"skyname" "sky_tf2_04"
+}
+entity
+{
+	"id" "3257"
+	"classname" "info_target"
+	"angles" "0 0 0"
+	"spawnflags" "0"
+	"targetname" "jumppad_2"
+	"origin" "320 1312 464"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "2896"
+		"classname" "item_healthkit_tiny"
+		"angles" "0 0 0"
+		"AutoMaterialize" "1"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"model" "models/items/medkit_overheal.mdl"
+		"pickup_sound" "HealthKitTiny.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "0"
+		"spawn_sound" "Item.Materialize"
+		"texframeindex" "0"
+		"origin" "144 1184 256"
+		editor
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 0]"
+		}
+	}
+}
+entity
+{
+	"id" "3251"
+	"classname" "ofd_trigger_jump"
+	"apex_height_boost" "64"
+	"no_aircontrol" "0"
+	"no_compensation" "0"
+	"origin" "400 1312 32"
+	"soft_landing" "0"
+	"spawnflags" "1"
+	"StartDisabled" "0"
+	"target" "jumppad_2"
+	solid
+	{
+		"id" "3249"
+		side
+		{
+			"id" "2806"
+			"plane" "(352 1392 64) (448 1392 64) (448 1232 64)"
+			vertices_plus
+			{
+				"v" "352 1392 64"
+				"v" "448 1392 64"
+				"v" "448 1232 64"
+				"v" "352 1232 64"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2805"
+			"plane" "(352 1232 0) (448 1232 0) (448 1392 0)"
+			vertices_plus
+			{
+				"v" "352 1232 0"
+				"v" "448 1232 0"
+				"v" "448 1392 0"
+				"v" "352 1392 0"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2804"
+			"plane" "(352 1392 64) (352 1232 64) (352 1232 0)"
+			vertices_plus
+			{
+				"v" "352 1392 64"
+				"v" "352 1232 64"
+				"v" "352 1232 0"
+				"v" "352 1392 0"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2803"
+			"plane" "(448 1392 0) (448 1232 0) (448 1232 64)"
+			vertices_plus
+			{
+				"v" "448 1392 0"
+				"v" "448 1232 0"
+				"v" "448 1232 64"
+				"v" "448 1392 64"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2802"
+			"plane" "(448 1392 64) (352 1392 64) (352 1392 0)"
+			vertices_plus
+			{
+				"v" "448 1392 64"
+				"v" "352 1392 64"
+				"v" "352 1392 0"
+				"v" "448 1392 0"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2801"
+			"plane" "(448 1232 0) (352 1232 0) (352 1232 64)"
+			vertices_plus
+			{
+				"v" "448 1232 0"
+				"v" "352 1232 0"
+				"v" "352 1232 64"
+				"v" "448 1232 64"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3118"
+		"classname" "dm_weapon_spawner"
+		"angles" "0 270 0"
+		"AutoMaterialize" "1"
+		"disable_glow" "0"
+		"disable_spin" "0"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"Index" "0"
+		"pickup_sound" "AmmoPack.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "2"
+		"spawn_sound" "WeaponSpawner.Respawn"
+		"texframeindex" "0"
+		"weaponname" "tf_weapon_flamethrower_mercenary"
+		"origin" "0 1136 112"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "2944"
+		"classname" "item_healthkit_tiny"
+		"angles" "0 0 0"
+		"AutoMaterialize" "1"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"model" "models/items/medkit_overheal.mdl"
+		"pickup_sound" "HealthKitTiny.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "0"
+		"spawn_sound" "Item.Materialize"
+		"texframeindex" "0"
+		"origin" "-96 1216 448"
+		editor
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 2500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "2900"
+		"classname" "item_healthkit_tiny"
+		"angles" "0 0 0"
+		"AutoMaterialize" "1"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"model" "models/items/medkit_overheal.mdl"
+		"pickup_sound" "HealthKitTiny.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "0"
+		"spawn_sound" "Item.Materialize"
+		"texframeindex" "0"
+		"origin" "144 1040 256"
+		editor
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 0]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "2949"
+		"classname" "item_healthkit_tiny"
+		"angles" "0 0 0"
+		"AutoMaterialize" "1"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"model" "models/items/medkit_overheal.mdl"
+		"pickup_sound" "HealthKitTiny.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "0"
+		"spawn_sound" "Item.Materialize"
+		"texframeindex" "0"
+		"origin" "96 880 448"
+		editor
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 2500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3106"
+		"classname" "dm_weapon_spawner"
+		"angles" "0 270 0"
+		"AutoMaterialize" "1"
+		"disable_glow" "0"
+		"disable_spin" "0"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"Index" "0"
+		"pickup_sound" "AmmoPack.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "2"
+		"spawn_sound" "WeaponSpawner.Respawn"
+		"texframeindex" "0"
+		"weaponname" "tf_weapon_grenadelauncher_mercenary"
+		"origin" "0 512 416"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "2963"
+		"classname" "item_healthkit_tiny"
+		"angles" "0 0 0"
+		"AutoMaterialize" "1"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"model" "models/items/medkit_overheal.mdl"
+		"pickup_sound" "HealthKitTiny.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "0"
+		"spawn_sound" "Item.Materialize"
+		"texframeindex" "0"
+		"origin" "192 1696 448"
+		editor
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 2500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "2960"
+		"classname" "item_healthkit_tiny"
+		"angles" "0 0 0"
+		"AutoMaterialize" "1"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"model" "models/items/medkit_overheal.mdl"
+		"pickup_sound" "HealthKitTiny.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "0"
+		"spawn_sound" "Item.Materialize"
+		"texframeindex" "0"
+		"origin" "32 1696 448"
+		editor
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 2500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "3092"
+		"classname" "dm_weapon_spawner"
+		"angles" "0 270 0"
+		"AutoMaterialize" "1"
+		"disable_glow" "0"
+		"disable_spin" "0"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"Index" "0"
+		"pickup_sound" "AmmoPack.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "2"
+		"spawn_sound" "WeaponSpawner.Respawn"
+		"texframeindex" "0"
+		"weaponname" "tf_weapon_revolver_mercenary"
+		"origin" "144 928 264"
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "2952"
+		"classname" "item_healthkit_tiny"
+		"angles" "0 0 0"
+		"AutoMaterialize" "1"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"model" "models/items/medkit_overheal.mdl"
+		"pickup_sound" "HealthKitTiny.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "0"
+		"spawn_sound" "Item.Materialize"
+		"texframeindex" "0"
+		"origin" "-96 880 448"
+		editor
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 2500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "2929"
+		"classname" "item_healthkit_tiny"
+		"angles" "0 0 0"
+		"AutoMaterialize" "1"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"model" "models/items/medkit_overheal.mdl"
+		"pickup_sound" "HealthKitTiny.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "0"
+		"spawn_sound" "Item.Materialize"
+		"texframeindex" "0"
+		"origin" "64 1216 448"
+		editor
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 2500]"
+		}
+	}
+}
+hidden
+{
+	entity
+	{
+		"id" "2887"
+		"classname" "item_healthkit_tiny"
+		"angles" "0 0 0"
+		"AutoMaterialize" "1"
+		"disablereceiveshadows" "0"
+		"disableshadows" "0"
+		"effects" "0"
+		"HiddenWhenRespawning" "1"
+		"model" "models/items/medkit_overheal.mdl"
+		"pickup_sound" "HealthKitTiny.Touch"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"renderfx" "0"
+		"rendermode" "0"
+		"respawndelay" "0"
+		"respawntime" "10"
+		"SetBodyGroup" "0"
+		"shadowcastdist" "0"
+		"skin" "0"
+		"spawn_sound" "Item.Materialize"
+		"texframeindex" "0"
+		"origin" "144 1328 256"
+		editor
+		{
+			"color" "0 0 200"
+			"visgroupshown" "1"
+			"visgroupautoshown" "0"
+			"logicalpos" "[0 0]"
+		}
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordons
+{
+	"active" "0"
+}
