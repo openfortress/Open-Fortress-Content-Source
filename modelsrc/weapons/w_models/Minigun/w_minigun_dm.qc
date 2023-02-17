@@ -2,33 +2,7 @@ $modelname "weapons/w_models/w_minigun_dm.mdl"
 
 $upaxis Y
 
-$model "minigun" "w_minigun_dm_w_minigun_reference.smd"
-
-$lod 20
-{
-	replacemodel "w_minigun_dm_w_minigun_reference.smd" "w_minigun_dm_w_minigun_reference_lod1.smd"
-	nofacial
-}
-$lod 30
-{
-	replacemodel "w_minigun_dm_w_minigun_reference.smd" "w_minigun_dm_w_minigun_reference_lod2.smd"
-	nofacial
-}
-$lod 40
-{
-	replacemodel "w_minigun_dm_w_minigun_reference.smd" "w_minigun_dm_w_minigun_reference_lod3.smd"
-	nofacial
-}
-$lod 50
-{
-	replacemodel "w_minigun_dm_w_minigun_reference.smd" "w_minigun_dm_w_minigun_reference_lod4.smd"
-	nofacial
-}
-$lod 70
-{
-	replacemodel "w_minigun_dm_w_minigun_reference.smd" "w_minigun_dm_w_minigun_reference_lod5.smd"
-	nofacial
-}
+$model "minigun" "overlordlettuce_chaingun.smd"
 
 $surfaceprop "metal"
 
