@@ -123,60 +123,80 @@ $bonemerge "bip_pinky_0_R"
 $bonemerge "bip_pinky_1_R"
 $bonemerge "bip_pinky_2_R"
 
+$sequence "berserk_swing_left" {
+	"anims\berserk_swing_left.smd"
+	activity "ACT_VM_HITLEFT" 2
+	fadein 0.1
+	fadeout 0.1
+	node "raised"
+	//snap
+	fps 60
+}
 
-$sectionframes 30 149
-
-$sequence "swing_left" {
-	"anims\swing_left.smd"
+$sequence "berserk_swing_left_alt" {
+	"anims\berserk_swing_left_alt.smd"
 	activity "ACT_VM_HITLEFT" 1
-	fadein 0.2
-	fadeout 0.2
+	fadein 0.1
+	fadeout 0.1
 	node "raised"
-	snap
-	fps 60
-}
-$sequence "swing_left_alt" {
-	"anims\swing_left_alt.smd"
-	activity "ACT_VM_HITLEFT" 1
-	fadein 0.2
-	fadeout 0.2
-	node "raised"
-	snap
+	//snap
 	fps 60
 }
 
-$sequence "swing_right" {
-	"anims\swing_right.smd"
+$sequence "berserk_swing_right" {
+	"anims\berserk_swing_right.smd"
+	activity "ACT_VM_HITRIGHT" 2
+	fadein 0.1
+	fadeout 0.1
+	node "raised"
+	//snap
+	fps 60
+}
+
+$sequence "berserk_swing_right_alt" {
+	"anims\berserk_swing_right_alt.smd"
 	activity "ACT_VM_HITRIGHT" 1
-	fadein 0.2
-	fadeout 0.2
+	fadein 0.1
+	fadeout 0.1
 	node "raised"
-	snap
+	//snap
 	fps 60
 }
 
-$sequence "swing_right_alt" {
-	"anims\swing_right_alt.smd"
-	activity "ACT_VM_HITRIGHT" 1
-	fadein 0.2
-	fadeout 0.2
-	node "raised"
-	snap
-	fps 60
-}
-
-$sequence "swing_crit" {
-	"anims\swing_crit.smd"
+$sequence "berserk_swing_crit_chop" {
+	"anims\berserk_swing_crit_chop.smd"
 	activity "ACT_VM_SWINGHARD" 1
-	fadein 0.2
-	fadeout 0.2
+	fadein 0.1
+	fadeout 0.1
 	node "raised"
-	snap
+	//snap
 	fps 60
 }
 
-$sequence "idle" {
-	"anims\idle.smd"
+$sequence "berserk_swing_crit_manhattan" {
+	"anims\berserk_swing_crit_manhattan.smd"
+	activity "ACT_VM_SWINGHARD" 1
+	{ event 5004 14 "Weapon_Fist.HitHand" }
+	fadein 0.1
+	fadeout 0.1
+	node "raised"
+	//snap
+	fps 60
+}
+
+$sequence "berserk_swing_crit_snap" {
+	"anims\berserk_swing_crit_snap.smd"
+	activity "ACT_VM_SWINGHARD" 1
+	{ event 5004 14 "Weapon_Fist.HitHand" }
+	fadein 0.1
+	fadeout 0.1
+	node "raised"
+	//snap
+	fps 60
+}
+
+$sequence "berserk_idle" {
+	"anims\berserk_idle.smd"
 	activity "ACT_VM_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
@@ -184,8 +204,8 @@ $sequence "idle" {
 	fps 60
 }
 
-$sequence "draw" {
-	"anims\draw.smd"
+$sequence "berserk_draw" {
+	"anims\berserk_draw.smd"
 	activity "ACT_VM_DRAW" 1
 	{ event 5004 1 "Weapon_Fist.Draw" }
 	{ event 5004 12 "Weapon_Fist.HitHand" }

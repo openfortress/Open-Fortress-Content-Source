@@ -121,69 +121,57 @@ $bonemerge "bip_pinky_0_R"
 $bonemerge "bip_pinky_1_R"
 $bonemerge "bip_pinky_2_R"
 
-$animation "a_ref" "anims\ref.smd"
-$animation "a_FingerSwingAOverlayFix" "anims\FingerSwingAOverlayFix.smd" {
-	subtract "a_ref" 0
-}
-$sequence "ILostTheAnimationForSwingASoICantEditItLol" {
-	"a_FingerSwingAOverlayFix"
-	hidden
-	delta
-	node "raised"
-	fps 60
-}
-$sequence "swing" {
-	"anims\swingA.smd"
-	activity "ACT_VM_HITCENTER" 1
-	fadein 0.2
-	fadeout 0.2
-	node "raised"
-	addlayer "ILostTheAnimationForSwingASoICantEditItLol"
-	fps 60
-}
-
-$sequence "swingB" {
-	"anims\swingB.smd"
-	activity "ACT_VM_HITCENTER" 1
-	fadein 0.2
-	fadeout 0.2
+$sequence "claws_draw" {
+	"anims\claws_draw.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event 5004 1 "Weapon_Fist.Draw" }
+	snap
 	node "raised"
 	fps 60
 }
 
-$sequence "swingC" {
-	"anims\swingC.smd"
-	activity "ACT_VM_HITCENTER" 1
-	fadein 0.2
-	fadeout 0.2
-	node "raised"
-	fps 60
-}
-
-$sequence "swingD" {
-	"anims\swingD.smd"
-	activity "ACT_VM_HITCENTER" 1
-	fadein 0.2
-	fadeout 0.2
-	node "raised"
-	fps 60
-}
-
-$sequence "idle" {
-	"anims\idle.smd"
+$sequence "claws_idle" {
+	"anims\claws_idle.smd"
 	activity "ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
+	loop
 	node "raised"
 	fps 30
 }
 
-$sequence "draw" {
-	"anims\draw.smd"
-	activity "ACT_VM_DRAW" 1
-	{ event 5004 1 "Weapon_Fist.Draw" }
-	fadein 0.2
-	fadeout 0.2
+$sequence "claws_swing" {
+	"anims\claws_swing_a.smd"
+	activity "ACT_VM_HITCENTER" 1
+	snap
+	fadeout 0.3
 	node "raised"
 	fps 60
 }
+
+$sequence "claws_swing_b" {
+	"anims\claws_swing_b.smd"
+	activity "ACT_VM_HITCENTER" 3
+	snap
+	fadeout 0.3
+	node "raised"
+	fps 60
+}
+
+$sequence "claws_swing_c" {
+	"anims\claws_swing_c.smd"
+	activity "ACT_VM_HITCENTER" 3
+	snap
+	fadeout 0.3
+	node "raised"
+	fps 60
+}
+
+$sequence "claws_swing_d" {
+	"anims\claws_swing_d.smd"
+	activity "ACT_VM_HITCENTER" 1
+	snap
+	fadeout 0.3
+	node "raised"
+	fps 60
+}
+
+
