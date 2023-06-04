@@ -17,7 +17,6 @@ $contents "solid"
 $illumposition 0 0 0 "illumpos"
 
 $cdmaterials "models\weapons\v_grenadelauncher\"
-$cdmaterials "models\weapons\w_grenade_grenadelauncher"
 $cdmaterials ""
 
 $attachment "weapon_bone" "weapon_bone" 0 0 0 rotate 0 0 0
