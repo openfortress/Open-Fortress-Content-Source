@@ -98,7 +98,7 @@ $sequence "saw_spinning" "a_saw_spinning" {
 $sequence "saw_draw" {
 	"anims\saw_draw.smd"
 	activity "ACT_VM_DRAW" 1
-	{ event 5004 1 "Weapon_Minigun.Draw" }
+	{ event 5004 1 "Weapon_SawBallista.Draw" }
 	fadeout 0.5
 	addlayer "saw_spinning"
 	blendlayer "saw_idle"  60 100 120 120
