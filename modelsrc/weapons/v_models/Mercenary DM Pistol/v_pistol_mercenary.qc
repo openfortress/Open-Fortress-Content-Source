@@ -4,7 +4,6 @@ $model "pistol_R" "pistol_R.smd"
 $model "pistol_L" "pistol_L.smd"
 $bodygroup "illumpos"
 {
-	blank
 	studio "illumpos.smd"
 }
 
@@ -12,7 +11,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition 0 0 0 "illumpos"
+//$illumposition 0 0 0 "illumpos"
 
 $cdmaterials "models\weapons\v_pistol\"
 
@@ -80,18 +79,6 @@ $sequence "draw" {
 	fps 75
 }
 
-$sequence "draw_alt" {
-	"anims\pistol_draw_simple.smd"
-	activity "ACT_VM_DRAW" 1
-	{ event 5004 1 "Weapon_Pistol.Draw" }
-	{ event 5004 25 "Weapon_Pistol.SlideForward" }
-	fadein 0.2
-	fadeout 0.2
-	node "raised"
-	snap
-	fps 75
-}
-
 $sequence "idle" {
 	"anims\pistol_idle.smd"
 	activity "ACT_VM_IDLE" 1
@@ -124,4 +111,16 @@ $sequence "reload" {
 	fadeout 0
 	snap
 	fps 60
+}
+
+$sequence "draw_alt" {
+	"anims\pistol_draw_simple.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event 5004 1 "Weapon_Pistol.Draw" }
+	{ event 5004 25 "Weapon_Pistol.SlideForward" }
+	fadein 0.2
+	fadeout 0.2
+	node "raised"
+	snap
+	fps 75
 }
