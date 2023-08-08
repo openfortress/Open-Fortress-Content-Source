@@ -92,7 +92,7 @@ $sequence "idle" {
 $sequence "fire" {
 	"anims\pistol_fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event 6002 0 "3" }
+	{ event 6002 0 "2" }
 	snap
 	fadeout 0.2
 	node "raised"
