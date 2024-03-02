@@ -28,9 +28,6 @@ $attachment "prop_bone_5" "prop_bone_5" 0 0 0 rotate 0 0 0
 $attachment "prop_bone_6" "prop_bone_6" 0 0 0 rotate 0 0 0
 
 $model mercenary $dmxFile$ {
-	eyeball righteye "bip_head"  -1.31 78.46 3.42 "mercenary_head" 1.4  4 "pupil_r" 0.75
-	eyeball lefteye  "bip_head"  1.31 78.46 3.42 "mercenary_head" 1.4 -4 "pupil_l" 0.75
-
     localvar %dummy_eyelid_flex
 
 	flexcontroller eyes range -45 45 eyes_updown
@@ -84,11 +81,3 @@ $CDMaterials "models\player\mercenary\hwm"
 $CDMaterials "models\player\mercenary\"
 $CDMaterials "models\player\items\hole_closer"
 $CDMaterials "\"
-
-$TextureGroup "skinfamilies"
-{
-	{ "mercenary_head"			}
-	{ "mercenary_head"			}
-	{ "mercenary_head_custom"	}
-	{ "mercenary_head_sport"	}
-}

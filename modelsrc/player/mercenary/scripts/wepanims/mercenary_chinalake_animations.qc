@@ -52,8 +52,8 @@ $MPGestureAttackShotgun AttackSwim_CHINA_LAKE   CHINA_LAKE_swim_fire     ACT_MER
 $MPGestureReload ReloadSwim_CHINA_LAKE   CHINA_LAKE_swim_reload   ACT_MERC_RELOAD_SWIM_CHINA_LAKE
 
 $sequence layer_reload_standing_arms_merc "CHINA_LAKE_reload.dmx" weightlist ArmsBlend {
-	frames 0 20
-	numframes 21
+	frames 0 25
+	numframes 26
 	fps 30
 	//ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
 	//ikrule lhand touch "weapon_bone" usesource range 11 15 21 21
@@ -66,8 +66,8 @@ $animation a_reload_CHINA_LAKE_startpose CHINA_LAKE_reload frames 0 0
 $animation a_reload_crouch_CHINA_LAKE_startpose CHINA_LAKE_crouch_reload frames 0 0
 
 $sequence layer_reload_standing_CHINA_LAKE_arms "CHINA_LAKE_reload.dmx" weightlist ArmsBlend {
-	frames 0 20
-	numframes 21
+	frames 0 25
+	numframes 26
 	fps 30
 	//ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
 	//ikrule lhand touch "weapon_bone" usesource range 11 15 21 21
@@ -78,8 +78,8 @@ $sequence layer_reload_standing_CHINA_LAKE_arms "CHINA_LAKE_reload.dmx" weightli
 
 $sequence ReloadStand_CHINA_LAKE {
 	CHINA_LAKE_reload
-	frames 0 20
-	numframes 21
+	frames 0 25
+	numframes 26
 	fps 30
 	subtract ReloadStand_CHINA_LAKE 0
 	delta
@@ -91,8 +91,8 @@ $sequence ReloadStand_CHINA_LAKE {
 }
 
 $sequence layer_reload_standing_CHINA_LAKE_arms_loop "CHINA_LAKE_reload.dmx" weightlist ArmsBlend {
-	frames 20 40
-	numframes 20
+	frames 30 56
+	numframes 27
 	fps 30
 	ikrule lhand release
 	ikrule rhand release
@@ -102,8 +102,8 @@ $sequence layer_reload_standing_CHINA_LAKE_arms_loop "CHINA_LAKE_reload.dmx" wei
 
 $sequence ReloadStand_CHINA_LAKE_loop {
 	CHINA_LAKE_reload
-	frames 20 40
-	numframes 20
+	frames 30 56
+	numframes 27
 	fps 30
 	subtract a_reload_CHINA_LAKE_startpose 0
 	loop
@@ -116,8 +116,8 @@ $sequence ReloadStand_CHINA_LAKE_loop {
 }
 
 $sequence layer_reload_standing_CHINA_LAKE_arms_end "CHINA_LAKE_reload.dmx" weightlist ArmsBlend {
-	frames 40 63
-	numframes 23
+	frames 61 87
+	numframes 27
 	fps 30
 	ikrule lhand touch "weapon_bone" usesource
 	hidden
@@ -125,8 +125,8 @@ $sequence layer_reload_standing_CHINA_LAKE_arms_end "CHINA_LAKE_reload.dmx" weig
 
 $sequence ReloadStand_CHINA_LAKE_end {
 	CHINA_LAKE_reload
-	frames 40 63
-	numframes 23
+	frames 61 87
+	numframes 27
 	fps 30
 	subtract a_reload_CHINA_LAKE_startpose 0
 	delta
@@ -140,8 +140,8 @@ $sequence ReloadStand_CHINA_LAKE_end {
 
 //crouch reload
 $sequence layer_reload_crouch_CHINA_LAKE_arms "CHINA_LAKE_crouch_reload.dmx" weightlist ArmsBlend {
-	frames 0 20
-	numframes 21
+	frames 0 25
+	numframes 26
 	fps 30
 	//ikrule lhand touch "bip_pelvis" usesource range 0 9 9 11
 	//ikrule lhand touch "weapon_bone_1" usesource range 11 15 21 21
@@ -151,8 +151,8 @@ $sequence layer_reload_crouch_CHINA_LAKE_arms "CHINA_LAKE_crouch_reload.dmx" wei
 
 $sequence ReloadCrouch_CHINA_LAKE {
 	CHINA_LAKE_crouch_reload
-	frames 0 20
-	numframes 20
+	frames 0 25
+	numframes 26
 	fps 30
 	subtract a_reload_crouch_CHINA_LAKE_startpose 0
 	delta
@@ -164,8 +164,8 @@ $sequence ReloadCrouch_CHINA_LAKE {
 }
 
 $sequence layer_reload_crouch_CHINA_LAKE_arms_loop "CHINA_LAKE_crouch_reload.dmx" weightlist ArmsBlend {
-	frames 20 40
-	numframes 20
+	frames 30 56
+	numframes 27
 	fps 30
 	ikrule lhand release
 	ikrule rhand release
@@ -175,8 +175,8 @@ $sequence layer_reload_crouch_CHINA_LAKE_arms_loop "CHINA_LAKE_crouch_reload.dmx
 
 $sequence ReloadCrouch_CHINA_LAKE_loop {
 	CHINA_LAKE_crouch_reload
-	frames 20 40
-	numframes 20
+	frames 30 56
+	numframes 27
 	fps 30
 	subtract a_reload_crouch_CHINA_LAKE_startpose 0
 	loop
@@ -189,8 +189,8 @@ $sequence ReloadCrouch_CHINA_LAKE_loop {
 }
 
 $sequence layer_reload_crouch_CHINA_LAKE_arms_end "CHINA_LAKE_crouch_reload.dmx" weightlist ArmsBlend {
-	frames 40 63
-	numframes 23
+	frames 61 87
+	numframes 27
 	fps 30
 	ikrule lhand touch "weapon_bone" usesource
 	hidden
@@ -198,8 +198,8 @@ $sequence layer_reload_crouch_CHINA_LAKE_arms_end "CHINA_LAKE_crouch_reload.dmx"
 
 $sequence ReloadCrouch_CHINA_LAKE_end {
 	CHINA_LAKE_crouch_reload
-	frames 40 63
-	numframes 23
+	frames 61 87
+	numframes 27
 	fps 30
 	subtract a_reload_crouch_CHINA_LAKE_startpose 0
 	delta
@@ -220,7 +220,7 @@ $sequence layer_reload_arms_CHINA_LAKE "CHINA_LAKE_reload.dmx" frames 0 20 weigh
 
 $sequence CHINA_LAKE_reload_airwalk {
 	"CHINA_LAKE_reload.dmx"
-	frames 0 20
+	frames 0 25
 	subtract a_CHINA_LAKE_reload_airwalk 0
 	delta
 	ikrule lhand release
@@ -237,7 +237,7 @@ $sequence layer_reload_arms_CHINA_LAKE_loop "CHINA_LAKE_reload.dmx" frames 20 40
 
 $sequence CHINA_LAKE_reload_airwalk_loop {
 	"CHINA_LAKE_reload.dmx"
-	 frames 20 40
+	 frames 30 56
 	 subtract a_CHINA_LAKE_reload_airwalk 0
 	 delta
 	 ikrule lhand release
@@ -255,7 +255,7 @@ $sequence layer_reload_arms_CHINA_LAKE_end "CHINA_LAKE_reload.dmx" frames 40 55 
 
 $sequence CHINA_LAKE_reload_airwalk_end {
 	"CHINA_LAKE_reload.dmx"
-	frames 40 63
+	frames 61 87
 	subtract a_CHINA_LAKE_reload_airwalk 0
 	delta
 	fadeout 1
@@ -275,7 +275,7 @@ $sequence layer_reload_arms_CHINA_LAKE_swim "CHINA_LAKE_reload.dmx" frames 0 20 
 
 $sequence CHINA_LAKE_reload_swim {
 	"CHINA_LAKE_reload.dmx"
-	frames 0 20
+	frames 0 25
 	subtract a_CHINA_LAKE_reload_airwalk 0
 	delta
 	ikrule lhand release
@@ -292,7 +292,7 @@ $sequence layer_reload_arms_CHINA_LAKE_loop_swim "CHINA_LAKE_reload.dmx" frames 
 
 $sequence CHINA_LAKE_reload_swim_loop {
 	"CHINA_LAKE_reload.dmx"
-	frames 20 40
+	frames 30 56
 	subtract a_CHINA_LAKE_reload_swim 0
 	delta
 	ikrule lhand release
@@ -310,7 +310,7 @@ $sequence layer_reload_arms_CHINA_LAKE_end_swim "CHINA_LAKE_reload.dmx" frames 4
 
 $sequence CHINA_LAKE_reload_swim_end {
 	"CHINA_LAKE_reload.dmx"
-	frames 40 63
+	frames 61 87
 	subtract a_CHINA_LAKE_reload_swim 0
 	delta
 	fadeout 1
