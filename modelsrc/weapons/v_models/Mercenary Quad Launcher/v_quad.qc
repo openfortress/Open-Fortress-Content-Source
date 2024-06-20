@@ -162,7 +162,6 @@ $sequence "bet_idle" {
 	fadein 0.2
 	fadeout 0.2
 	node "raised"
-	snap
 	fps 30
 	loop
 }
