@@ -11,6 +11,7 @@ $bodygroup "glove"
 
 $bodygroup "illumpos"
 {
+	blank
 	studio "illumpos.smd"
 }
 
