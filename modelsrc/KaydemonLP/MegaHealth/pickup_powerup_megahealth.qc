@@ -19,9 +19,10 @@ $cdmaterials ""
 
 $texturegroup "skinfamilies"
 {
-	{ "pickup_powerup_set_temp"      "pickup_powerup_set_new"  }
+	{ "pickup_powerup_set_temp_blue" "pickup_powerup_set_blue" }
 	{ "pickup_powerup_set_temp_red"  "pickup_powerup_set_red"  }
 	{ "pickup_powerup_set_temp_blue" "pickup_powerup_set_blue" }
+	{ "pickup_powerup_set_temp"      "pickup_powerup_set_new"  }
 }
 
 $cbox 0 0 0 0 0 0
