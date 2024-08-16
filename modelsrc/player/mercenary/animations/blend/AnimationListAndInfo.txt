@@ -1,0 +1,41 @@
+Animations exported into "AnimationTemplateBlends\anims\" need to be moved to "AnimationTemplateCompile\AnimationTemplateCompile\mercenary\animations\dmx" after exporting
+
+List of DMX animations you MUST have (total 35):
+
+(weapon)_aimmatrix_crouch_idle 		//can usually be same as (weapon)_aimmatrix_idle*
+(weapon)_aimmatrix_idle			//each frame is an aim-direction: down-left, down-center, down-right, left, center, right, up-left, up-center, up-right, and directly up
+(weapon)_aimmatrix_run 			//can usually be same as (weapon)_aimmatrix_idle*
+(weapon)_aimmatrix_swim 		//can usually be same as (weapon)_aimmatrix_idle*
+(weapon)_airwalk
+(weapon)_crouch_fire 			//weapon-dependent frame count, can usually be same as (weapon)_fire*
+(weapon)_crouch_idle 
+(weapon)_crouch_reload 			//weapon-dependent frame count, can usually be same as (weapon)_reload*
+(weapon)_crouch_walkcenter
+(weapon)_crouch_walkn
+(weapon)_fire 				//weapon-dependent frame count
+(weapon)_idle
+(weapon)_jump				//frames 26-189 need to loop
+(weapon)_jump_land
+(weapon)_reload 			//weapon-dependent frame count
+(weapon)_runcenter 			//must be 21 frames long with no animation
+(weapon)_rune
+(weapon)_runn
+(weapon)_runne
+(weapon)_runnw
+(weapon)_runs
+(weapon)_runse
+(weapon)_runsw
+(weapon)_runw
+(weapon)_swim_fire 			//weapon-dependent frame count, can usually be same as (weapon)_fire*
+(weapon)_swim_reload 			//weapon-dependent frame count, can usually be same as (weapon)_reload*
+(weapon)_swimcenter
+(weapon)_swime
+(weapon)_swimn
+(weapon)_swimne
+(weapon)_swimnw
+(weapon)_swims
+(weapon)_swimse
+(weapon)_swimsw
+(weapon)_swimw
+
+*may need specific edits depending on animations you make
